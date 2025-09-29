@@ -1,0 +1,50 @@
+import '../index.css';
+import { useLang } from '../layout/Layout.jsx';
+
+const imgs = Array.from({ length: 34 }, (_, i) => `/portfolio/${i + 1}.jpg`);
+
+export default function Portfolio() {
+    const { lang } = useLang ? useLang() : { lang: 'zh' };
+    const base = (import.meta.env.BASE_URL || '/').replace(/\/+$/, '');
+    const withBase = (p) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
+    const moreText = lang === 'en' ? 'Contact us for more work' : '联系我们，获取更多案例';
+    const titleText = lang === 'en' ? 'Portfolio' : '作品集';
+	const col = (start, step) => imgs.filter((_, i) => i % 3 === start);
+	return (
+		<section className="max-w-6xl mx-auto px-6 py-12">
+			<div className="flex items-end justify-between mb-5">
+				<h1 className="text-2xl md:text-3xl font-semibold">{titleText}</h1>
+				<a href={withBase('/pages/contact.html')} className="text-sm text-[#9A7B4F] hover:underline">{moreText}</a>
+			</div>
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-4 [--dur:36s] [--gap:1rem]">
+				{[0, 1, 2].map((s) => (
+					<MarqueeColumn key={s} images={col(s)} reverse={s !== 1} />
+				))}
+			</div>
+		</section>
+	);
+}
+
+function MarqueeColumn({ images, reverse }) {
+	const cls = `flex flex-col gap-4 marquee-runner marquee-allow-motion`;
+	return (
+		<div className="overflow-hidden rounded-xl border border-[#eee] p-2 fade-soft" style={{ ['--fade-size']: '24px' }}>
+			<div
+				className={cls}
+				style={{
+					['--gap']: '1rem',
+					animationName: 'marquee-y',
+					animationDuration: 'var(--dur, 36s)',
+					animationTimingFunction: 'linear',
+					animationIterationCount: 'infinite',
+					animationDirection: reverse ? 'reverse' : 'normal'
+				}}
+			>
+				{[...images, ...images].map((src, i) => (
+					<img key={src + i} src={src} alt="work" className="w-full max-w-full h-auto object-contain rounded-lg bg-white" />
+				))}
+			</div>
+		</div>
+	);
+}
+

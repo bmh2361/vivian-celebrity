@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+	height: 100%;
+}
+
+body {
+	font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+	color: #111;
+	background: #fff;
+}
+
+/* Reduce motion respect */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* 全局纵向跑马灯动画（作品集） */
+@keyframes marquee-y { from { transform: translateY(0); } to { transform: translateY(calc(-50% - var(--gap))); } }
+/* 默认尊重系统减少动效设置，必要时可用 .marquee-allow-motion 在特定容器上恢复动画 */
+@media (prefers-reduced-motion: reduce) {
+	.marquee-allow-motion { animation-duration: var(--dur, 36s) !important; animation-iteration-count: infinite !important; }
+}
+
+/* 跑马灯列：悬停暂停 */
+.marquee-runner:hover { animation-play-state: paused; }
+
+/* 跑马灯外容器：上下边缘渐隐（当图片接近离开视口时淡出） */
+.fade-edges {
+	-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+			mask-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+}
+

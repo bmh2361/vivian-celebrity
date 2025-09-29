@@ -1,0 +1,45 @@
+[
+  {
+    "photo": "/team/1.jpg",
+    "zh": {
+      "name": "VIVIAN WANG",
+      "role": "化妆总监 | VIVIAN CELEBRITY 创始人",
+      "bio": "资深影视与时尚，专注中英及国际项目：\n• 英国电影电视剧造型总监\n• 加拿大电影服化道总执行\n• 尚美巴黎（Chaumet）高珠晚宴、时装周秀场及明星红毯特邀合作造型总监\n• 服务领域：电影制作、短剧、综艺、广告、时尚、婚礼定制、高端定制、明星同款旅拍"
+    },
+    "en": {
+      "name": "Vivian Wang",
+      "role": "Makeup Director | Founder of VIVIAN CELEBRITY",
+      "bio": "Experienced in film and fashion, specialized in Chinese/English and international projects:\n• Chief Styling Director for UK films and TV series\n• Executive Head of Costume & Makeup Department for Canadian films\n• Specially invited Styling Director for Chaumet high jewelry gala, fashion week shows, and celebrity red carpets\n• Services: film production, short dramas, variety shows, commercials, fashion, wedding couture, bespoke shoots, celebrity-style travel shoots"
+    }
+  },
+  {
+    "photo": "/team/2.png",
+    "zh": { "name": "成员 2", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 2", "role": "Role", "bio": "Profile coming soon." }
+  },
+  {
+    "photo": "/team/3.png",
+    "zh": { "name": "成员 3", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 3", "role": "Role", "bio": "Profile coming soon." }
+  },
+  {
+    "photo": "/team/4.png",
+    "zh": { "name": "成员 4", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 4", "role": "Role", "bio": "Profile coming soon." }
+  },
+  {
+    "photo": "/team/5.png",
+    "zh": { "name": "成员 5", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 5", "role": "Role", "bio": "Profile coming soon." }
+  },
+  {
+    "photo": "/team/6.png",
+    "zh": { "name": "成员 6", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 6", "role": "Role", "bio": "Profile coming soon." }
+  },
+  {
+    "photo": "/team/7.png",
+    "zh": { "name": "成员 7", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 7", "role": "Role", "bio": "Profile coming soon." }
+  }
+]

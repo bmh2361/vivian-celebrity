@@ -1,0 +1,37 @@
+[
+  {
+    "photo": "/team/1.jpg",
+    "zh": { "name": "成员 1", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 1", "role": "Role", "bio": "Profile coming soon." }
+  },
+  {
+    "photo": "/team/2.png",
+    "zh": { "name": "成员 2", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 2", "role": "Role", "bio": "Profile coming soon." }
+  },
+  {
+    "photo": "/team/3.png",
+    "zh": { "name": "成员 3", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 3", "role": "Role", "bio": "Profile coming soon." }
+  },
+  {
+    "photo": "/team/4.png",
+    "zh": { "name": "成员 4", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 4", "role": "Role", "bio": "Profile coming soon." }
+  },
+  {
+    "photo": "/team/5.png",
+    "zh": { "name": "成员 5", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 5", "role": "Role", "bio": "Profile coming soon." }
+  },
+  {
+    "photo": "/team/6.png",
+    "zh": { "name": "成员 6", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 6", "role": "Role", "bio": "Profile coming soon." }
+  },
+  {
+    "photo": "/team/7.png",
+    "zh": { "name": "成员 7", "role": "职位", "bio": "简介待补充。" },
+    "en": { "name": "Member 7", "role": "Role", "bio": "Profile coming soon." }
+  }
+]
