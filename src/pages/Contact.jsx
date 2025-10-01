@@ -48,6 +48,14 @@ export default function Contact() {
 	const phoneE164 = '447443735746'; // for tel:/wa.me
 	const email = 'vivianadventureofficial@gmail.com';
 
+	// RED/Xiaohongshu: 如有固定 profileId（UID）可填入，否则按名称构造搜索链接
+	// 提示：请将 xhsName 改为你的小红书号/名称；如果知道 UID，将 xhsProfileId 填为字符串，例如 '5ff2b3e4...'。
+	const xhsName = 'VIVIAN CELEBRITY';
+	const xhsProfileId = '';
+	const xhsLink = xhsProfileId
+		? `https://www.xiaohongshu.com/user/profile/${xhsProfileId}`
+		: `https://www.bing.com/search?q=${encodeURIComponent('site:xiaohongshu.com ' + xhsName)}`;
+
 	// 表单状态
 	const [people, setPeople] = useState(1);
 	const [contact, setContact] = useState('');
@@ -98,6 +106,7 @@ export default function Contact() {
 			<p className="text-[#666] mt-3">{t.intro}</p>
 
 			<ul className="mt-4 space-y-2 text-[#444]">
+				<li>{t.red}：<a className="text-[#9A7B4F] hover:underline" href={xhsLink} target="_blank" rel="noreferrer noopener">{xhsName}</a></li>
 				<li>{t.wechat}：<span className="font-medium">{wechatId}</span></li>
 				<li>{t.phone}：<a className="text-[#9A7B4F] hover:underline" href={`tel:+${phoneE164}`}>{phoneDisplay}</a></li>
 				<li>{t.whatsapp}：<a className="text-[#9A7B4F] hover:underline" href={`https://wa.me/${phoneE164}`} target="_blank" rel="noreferrer noopener">wa.me/{phoneE164}</a></li>

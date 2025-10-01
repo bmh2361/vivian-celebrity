@@ -103,7 +103,7 @@
 			"args": [
 				"-NoProfile",
 				"-Command",
-				"Start-Process http://localhost:5174/pages/home.html"
+				"Start-Process http://localhost:5173/pages/home.html"
 			]
 		}
 	]
