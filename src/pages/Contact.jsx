@@ -9,6 +9,7 @@ export default function Contact() {
 		zh: {
 			title: '联系我们',
 			intro: '请通过以下方式预约咨询：',
+			red: '小红书',
 			wechat: '微信',
 			phone: '电话',
 			whatsapp: 'WhatsApp',
@@ -26,6 +27,7 @@ export default function Contact() {
 		en: {
 			title: 'Contact us',
 			intro: 'Book a consultation via:',
+			red: 'Rednote account',
 			wechat: 'WeChat',
 			phone: 'Phone',
 			whatsapp: 'WhatsApp',
@@ -48,13 +50,17 @@ export default function Contact() {
 	const phoneE164 = '447443735746'; // for tel:/wa.me
 	const email = 'vivianadventureofficial@gmail.com';
 
-	// RED/Xiaohongshu: 如有固定 profileId（UID）可填入，否则按名称构造搜索链接
-	// 提示：请将 xhsName 改为你的小红书号/名称；如果知道 UID，将 xhsProfileId 填为字符串，例如 '5ff2b3e4...'。
+	// RED/Xiaohongshu：优先使用你提供的完整链接，其次使用 UID，再否则回退到搜索链接
+	// 填写方式：
+	// 1) 若你有完整链接（示例：https://www.xiaohongshu.com/user/profile/xxxxxxxx）请填到 xhsUrl
+	// 2) 若你只有 UID（profileId），请填到 xhsProfileId
+	// 3) 都没有就只填 xhsName，我们会构造搜索链接
 	const xhsName = 'VIVIAN CELEBRITY';
 	const xhsProfileId = '';
-	const xhsLink = xhsProfileId
-		? `https://www.xiaohongshu.com/user/profile/${xhsProfileId}`
-		: `https://www.bing.com/search?q=${encodeURIComponent('site:xiaohongshu.com ' + xhsName)}`;
+	const xhsUrl = 'https://xhslink.com/m/1bLDIX03RdL';
+	const xhsLink = xhsUrl
+		? xhsUrl
+		: (xhsProfileId ? `https://www.xiaohongshu.com/user/profile/${xhsProfileId}` : `https://www.bing.com/search?q=${encodeURIComponent('site:xiaohongshu.com ' + xhsName)}`);
 
 	// 表单状态
 	const [people, setPeople] = useState(1);
