@@ -92,8 +92,8 @@ export default function Home() {
 					</div>
 
 					{/* 右侧倾斜卡片图 */}
-						<motion.div {...fade(0.15)} className="relative">
-							<div className="relative mx-auto w-[94%] md:w-[96%] aspect-[4/3] bg-white rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] overflow-hidden">
+					<motion.div {...fade(0.15)} className="relative">
+						<div className="relative mx-auto w-[86%] md:w-[88%] aspect-[4/3] bg-white rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] overflow-hidden transform rotate-2">
 							<img src={withBase('/hero-company.jpg')} alt="cover" className="absolute inset-0 w-full h-full object-cover" />
 							{/* 底部金色柔光阴影 */}
 							<div className="pointer-events-none absolute inset-x-0 bottom-0 h-16" aria-hidden

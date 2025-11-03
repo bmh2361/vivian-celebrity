@@ -1,6 +1,5 @@
 import '../index.css';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import { useLang } from '../layout/Layout.jsx';
 
 // 极简图标
@@ -92,27 +91,23 @@ export default function Bespoke() {
 	const base = (import.meta.env.BASE_URL || '/').replace(/\/+$/, '');
 	const withBase = (p) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
 
-	// 单张案例图片，自适应尺寸（不裁切），并自动尝试多种后缀
+	// 单张案例图片，自动尝试多种后缀，完整展示
 	function CaseImg({ index }) {
 		const exts = ['.jpg', '.jpeg', '.png', '.webp'];
-		const [ei, setEi] = useState(0);
-		const [loaded, setLoaded] = useState(false);
-		const src = withBase(`/bespoke-cases/${index}${exts[ei]}`);
-		const label = lang === 'zh' ? `案例图片 ${index}` : `Case Image ${index}`;
+		const srcs = exts.map((e) => withBase(`/bespoke-cases/${index}${e}`));
 		return (
-			<figure className="break-inside-avoid mb-4 rounded-2xl border border-[#eee] bg-white overflow-hidden shadow-[0_4px_18px_rgba(0,0,0,0.04)]">
-				<img
-					src={src}
-					alt={label}
-					className="w-full h-auto object-contain"
-					loading="lazy"
-					onLoad={() => setLoaded(true)}
-					onError={() => { if (ei < exts.length - 1) setEi(ei + 1); }}
-				/>
-				{!loaded && (
-					<figcaption className="p-3 text-sm text-[#888]">{label}</figcaption>
-				)}
-			</figure>
+			<div className="relative rounded-2xl border border-[#eee] overflow-hidden bg-white shadow-[0_4px_18px_rgba(0,0,0,0.04)]">
+				<div className="aspect-[4/3] grid place-items-center">
+					{/* 使用 picture 尝试多种后缀，任一成功即可 */}
+					<picture>
+						{srcs.map((s) => (
+							<source key={s} srcSet={s} />
+						))}
+						<img src={srcs[0]} alt={`case-${index}`} className="h-full w-full object-contain" loading="lazy" onError={(e)=>{e.currentTarget.style.display='none'; e.currentTarget.parentElement?.nextElementSibling && (e.currentTarget.parentElement.nextElementSibling.style.display='grid');}} />
+					</picture>
+					<div className="hidden absolute inset-0 place-items-center text-sm text-[#888]">{lang==='zh'?`案例图片 ${index}`:`Case Image ${index}`}</div>
+				</div>
+			</div>
 		);
 	}
 
@@ -144,10 +139,10 @@ export default function Bespoke() {
 				))}
 			</div>
 
-			{/* 案例展示（放在服务流程上方）——自适应尺寸，瀑布流布局 */}
+			{/* 案例展示（放在服务流程上方） */}
 			<motion.div {...fade(0.15)}>
 				<h2 className="text-xl md:text-2xl font-bold text-[#111]">{t.caseTitle}</h2>
-				<div className="mt-4 columns-1 sm:columns-2 md:columns-3 [column-gap:1rem]">
+				<div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 					{Array.from({ length: 6 }).map((_, i) => (
 						<CaseImg key={i} index={i+1} />
 					))}

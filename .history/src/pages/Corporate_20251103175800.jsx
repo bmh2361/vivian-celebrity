@@ -187,14 +187,17 @@ export default function Corporate() {
         </div>
       </motion.section>
 
-      {/* Partnership Cases: restore previous fill style (object-cover, .jpg) */}
+      {/* Partnership Cases: 6 image slots under public/corporate-cases/1..6 (auto ext) */}
       <motion.section {...fade(0.1)}>
         <h2 className="text-xl md:text-2xl font-bold text-[#111]">{t.caseTitle}</h2>
         <p className="text-[#666] mt-2">{t.caseDesc}</p>
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {Array.from({ length: 6 }).map((_, idx) => {
             const i = idx + 1;
-            const src = withBase(`/corporate-cases/${i}.jpg`);
+            const exts = ['.jpg', '.jpeg', '.png', '.webp'];
+            const [ei, setEi] = useState(0);
+            const [found, setFound] = useState(false);
+            const src = withBase(`/corporate-cases/${i}${exts[ei]}`);
             const fallbackLabel = lang === 'zh' ? `案例图片 ${i}` : `Case Image ${i}`;
             return (
               <motion.div key={i} {...fade(idx * 0.03)} className="relative rounded-2xl border border-[#eee] bg-white overflow-hidden shadow-[0_4px_18px_rgba(0,0,0,0.04)]">
@@ -202,12 +205,12 @@ export default function Corporate() {
                   <img
                     src={src}
                     alt={fallbackLabel}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    onLoad={(e) => { const label = e.currentTarget.nextElementSibling; if (label) label.style.display = 'none'; }}
-                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    className="absolute inset-0 w-full h-full object-contain"
                     loading="lazy"
+                    onLoad={() => setFound(true)}
+                    onError={() => { if (ei < exts.length - 1) setEi(ei + 1); }}
                   />
-                  <div className="text-sm text-[#888]">{fallbackLabel}</div>
+                  {!found && <div className="text-sm text-[#888]">{fallbackLabel}</div>}
                 </div>
               </motion.div>
             );
