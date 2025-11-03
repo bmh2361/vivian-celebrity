@@ -5,12 +5,12 @@ import '../index.css';
 const brand = { glass: 'backdrop-blur-sm bg-white/70 border border-[#e8e8e8]' };
 const dict = {
   zh: {
-    nav: { home: '主页', makeup: '妆造', photography: '摄影', bespoke: '高端定制', portfolio: '作品集', about: '团队', contact: '联系我们' },
+    nav: { home: '主页', makeup: '妆造', photography: '摄影', bespoke: '高端定制', corporate: '企业策划', portfolio: '作品集', about: '团队', contact: '联系我们' },
     cta: '预约咨询',
     footer: '© VIVIAN CELEBRITY. All rights reserved.'
   },
   en: {
-    nav: { home: 'Home', makeup: 'Makeup', photography: 'Photography', bespoke: 'Bespoke', portfolio: 'Portfolio', about: 'Team', contact: 'Contact' },
+    nav: { home: 'Home', makeup: 'Makeup', photography: 'Photography', bespoke: 'Bespoke', corporate: 'Corporate', portfolio: 'Portfolio', about: 'Team', contact: 'Contact' },
     cta: 'Consult',
     footer: '© VIVIAN CELEBRITY. All rights reserved.'
   }
@@ -84,6 +84,7 @@ export default function Layout({ pageKey, children }) {
             {link('/pages/makeup.html', t.nav.makeup)}
             {link('/pages/photography.html', t.nav.photography)}
             {link('/pages/bespoke.html', t.nav.bespoke)}
+            {link('/pages/corporate.html', t.nav.corporate)}
             {link('/pages/portfolio.html', t.nav.portfolio)}
             {link('/pages/about.html', t.nav.about)}
             {link('/pages/contact.html', t.nav.contact)}
@@ -116,6 +117,7 @@ export default function Layout({ pageKey, children }) {
               <a href={withBase('/pages/makeup.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.makeup}</a>
               <a href={withBase('/pages/photography.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.photography}</a>
               <a href={withBase('/pages/bespoke.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.bespoke}</a>
+              <a href={withBase('/pages/corporate.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.corporate}</a>
               <a href={withBase('/pages/portfolio.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.portfolio}</a>
               <a href={withBase('/pages/about.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.about}</a>
               <a href={withBase('/pages/contact.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.contact}</a>

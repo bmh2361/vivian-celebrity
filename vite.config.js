@@ -19,6 +19,7 @@ export default defineConfig({
 				makeup: resolve(__dirname, 'pages/makeup.html'),
 				photography: resolve(__dirname, 'pages/photography.html'),
 				bespoke: resolve(__dirname, 'pages/bespoke.html'),
+				corporate: resolve(__dirname, 'pages/corporate.html'),
 				portfolio: resolve(__dirname, 'pages/portfolio.html'),
 				about: resolve(__dirname, 'pages/about.html'),
 				contact: resolve(__dirname, 'pages/contact.html'),
