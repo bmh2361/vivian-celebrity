@@ -65,6 +65,7 @@ export default function Corporate() {
       ],
 
       caseTitle: '合作案例',
+  caseDesc: '我们为多家企业、品牌及机构提供了定制化策划与执行服务，以下为部分合作案例。',
 
       flowTitle: '合作流程',
       steps: [
@@ -130,11 +131,11 @@ export default function Corporate() {
     const [found, setFound] = useState(false);
     const src = withBase(`/partners-logos/${index}${exts[ei]}`);
     return (
-      <div className="h-48 md:h-56 px-8 md:px-10 py-6 md:py-8 rounded-lg border border-[#eee] bg-white relative overflow-hidden grid place-items-center shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+      <div className="h-20 md:h-24 rounded-lg border border-[#eee] bg-white relative overflow-hidden grid place-items-center shadow-[0_2px_10px_rgba(0,0,0,0.04)]">
         <img
           src={src}
           alt={`Partner Logo ${index}`}
-          className="block h-full w-full object-contain z-[1]"
+          className="max-h-[70%] max-w-[80%] object-contain drop-shadow-[0_1px_1px_rgba(0,0,0,0.18)]"
           loading="lazy"
           onLoad={() => setFound(true)}
           onError={() => {
@@ -142,7 +143,7 @@ export default function Corporate() {
           }}
         />
         {!found && (
-          <div className="absolute inset-0 grid place-items-center text-xs text-[#888] pointer-events-none z-0">LOGO</div>
+          <div className="absolute inset-0 grid place-items-center text-xs text-[#888]">LOGO</div>
         )}
       </div>
     );

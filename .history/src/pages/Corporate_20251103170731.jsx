@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useLang } from '../layout/Layout.jsx';
 import '../index.css';
@@ -65,6 +64,7 @@ export default function Corporate() {
       ],
 
       caseTitle: '合作案例',
+      caseDesc: '我们为多家企业、品牌及机构提供了定制化策划与执行服务，以下为案例位。请在“public/corporate-cases/”上传 1.jpg–6.jpg。',
 
       flowTitle: '合作流程',
       steps: [
@@ -99,8 +99,8 @@ export default function Corporate() {
         { title: 'Cross-Brand Collaboration', desc: 'Build unique collaborations, exhibitions, and premium business events.', icon: 'link' },
       ],
 
-  caseTitle: 'Partnership Cases',
-  caseDesc: 'Selected partnership highlights from launches to executive events.',
+      caseTitle: 'Partnership Cases',
+      caseDesc: 'Upload 1.jpg–6.jpg to “public/corporate-cases/”. Six slots below will display your images once uploaded.',
 
       flowTitle: 'Our Process',
       steps: [
@@ -122,31 +122,6 @@ export default function Corporate() {
 
   const t = copy[lang] || copy.zh;
   const fade = (d = 0) => ({ initial: { opacity: 0, y: 12 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.2 }, transition: { duration: 0.5, delay: d } });
-
-  // 合作伙伴 LOGO：多后缀兜底，自动尝试 .png/.jpg/.jpeg/.webp/.svg
-  const LogoCell = ({ index }) => {
-    const exts = ['.png', '.jpg', '.jpeg', '.webp', '.svg'];
-    const [ei, setEi] = useState(0);
-    const [found, setFound] = useState(false);
-    const src = withBase(`/partners-logos/${index}${exts[ei]}`);
-    return (
-      <div className="h-48 md:h-56 px-8 md:px-10 py-6 md:py-8 rounded-lg border border-[#eee] bg-white relative overflow-hidden grid place-items-center shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
-        <img
-          src={src}
-          alt={`Partner Logo ${index}`}
-          className="block h-full w-full object-contain z-[1]"
-          loading="lazy"
-          onLoad={() => setFound(true)}
-          onError={() => {
-            if (ei < exts.length - 1) setEi(ei + 1);
-          }}
-        />
-        {!found && (
-          <div className="absolute inset-0 grid place-items-center text-xs text-[#888] pointer-events-none z-0">LOGO</div>
-        )}
-      </div>
-    );
-  };
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 space-y-12">
@@ -198,16 +173,17 @@ export default function Corporate() {
             const fallbackLabel = lang === 'zh' ? `案例图片 ${i}` : `Case Image ${i}`;
             return (
               <motion.div key={i} {...fade(idx * 0.03)} className="relative rounded-2xl border border-[#eee] bg-white overflow-hidden shadow-[0_4px_18px_rgba(0,0,0,0.04)]">
-                <div className="aspect-[4/3] relative grid place-items-center bg-gradient-to-br from-[#faf7ef] to-white">
+                <div className="aspect-[4/3] relative">
                   <img
                     src={src}
                     alt={fallbackLabel}
                     className="absolute inset-0 w-full h-full object-cover"
-                    onLoad={(e) => { const label = e.currentTarget.nextElementSibling; if (label) label.style.display = 'none'; }}
                     onError={(e) => { e.currentTarget.style.display = 'none'; }}
                     loading="lazy"
                   />
-                  <div className="text-sm text-[#888]">{fallbackLabel}</div>
+                  <div className="absolute inset-0 grid place-items-center bg-gradient-to-br from-[#faf7ef] to-white text-sm text-[#888]">
+                    {fallbackLabel}
+                  </div>
                 </div>
               </motion.div>
             );
@@ -232,9 +208,9 @@ export default function Corporate() {
       <motion.section {...fade(0.2)} className="rounded-2xl border border-[#eee] bg-white p-6 shadow-[0_4px_18px_rgba(0,0,0,0.04)]">
         <h2 className="text-xl md:text-2xl font-bold text-[#111]">{t.partnerTitle}</h2>
         <blockquote className="mt-3 text-[#444] italic">{t.quote}</blockquote>
-        <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-          {Array.from({ length: 6 }).map((_, idx) => (
-            <LogoCell key={idx} index={idx + 1} />
+        <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div key={i} className="h-14 rounded-lg border border-[#eee] bg-[#fafafa] grid place-items-center text-xs text-[#888]">LOGO</div>
           ))}
         </div>
       </motion.section>

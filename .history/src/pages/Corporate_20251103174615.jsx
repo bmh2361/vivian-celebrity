@@ -65,6 +65,7 @@ export default function Corporate() {
       ],
 
       caseTitle: '合作案例',
+  caseDesc: '我们为多家企业、品牌及机构提供了定制化策划与执行服务，以下为部分合作案例。',
 
       flowTitle: '合作流程',
       steps: [
@@ -134,7 +135,7 @@ export default function Corporate() {
         <img
           src={src}
           alt={`Partner Logo ${index}`}
-          className="block h-full w-full object-contain z-[1]"
+          className="block max-h-[98%] max-w-[98%] object-contain z-[1]"
           loading="lazy"
           onLoad={() => setFound(true)}
           onError={() => {

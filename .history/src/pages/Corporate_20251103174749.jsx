@@ -65,6 +65,7 @@ export default function Corporate() {
       ],
 
       caseTitle: '合作案例',
+  caseDesc: '我们为多家企业、品牌及机构提供了定制化策划与执行服务，以下为部分合作案例。',
 
       flowTitle: '合作流程',
       steps: [
