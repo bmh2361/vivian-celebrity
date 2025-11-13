@@ -1,0 +1,119 @@
+[
+  {
+    "photo": "/team/1.jpg",
+    "zh": {
+      "name": "VIVIAN WANG",
+      "role": "化妆总监 | VIVIAN ADVENTURE 创始人",
+      "bio": "资深影视与时尚，专注中英及国际项目：\n• 英国电影电视剧造型总监\n• 加拿大电影服化道总执行\n• 尚美巴黎（Chaumet）高珠晚宴、时装周秀场及明星红毯特邀合作造型总监\n• 服务领域：电影制作、短剧、综艺、广告、时尚、婚礼定制、高端定制、明星同款旅拍"
+    },
+    "en": {
+      "name": "Vivian Wang",
+      "role": "Makeup Director | Founder of VIVIAN ADVENTURE",
+      "bio": "Experienced in film and fashion across UK–China projects:\n• Styling Director (UK film & TV)\n• Executive Head of Costume & Makeup (Canadian films)\n• Invited lead for Chaumet high jewelry gala, fashion weeks & red carpet\n• Services: film, short dramas, variety, commercials, fashion, wedding couture, bespoke destination shoots"
+    }
+  },
+  {
+    "photo": "/team/2.png",
+    "zh": {
+      "name": "Hao",
+      "role": "摄影总监｜摄影师",
+      "bio": "专注时尚与艺人肖像光影塑造，注重高级质感与可传播视觉。\n风格：稳健光比、克制修饰、定制化方案。\n领域：时尚拍摄、形象升级、品牌与艺人肖像。"
+    },
+    "en": {
+      "name": "Hao",
+      "role": "Director of Photography | Photographer",
+      "bio": "Focuses on fashion & artist portrait light shaping with a refined, shareable finish.\nStyle: controlled ratios, restrained retouch, tailored planning.\nDomains: fashion shoots, image refinement, brand & artist portraits." 
+    }
+  },
+  {
+    "photo": "/team/3.png",
+    "zh": {
+      "name": "Jade",
+      "role": "摄影师",
+      "bio": "电影与时尚影像创作，擅长情绪光影与人物表达。\n特点：叙事张力、镜头节奏感、技术与美学平衡。"
+    },
+    "en": {
+      "name": "Jade",
+      "role": "Photographer",
+      "bio": "Film & fashion visual creator; strong at mood lighting and character expression.\nTraits: narrative tension, rhythmic framing, balance of craft and aesthetics." 
+    }
+  },
+  {
+    "photo": "/team/lori.jpg",
+    "zh": {
+      "name": "Lori",
+      "role": "化妆师｜造型与发型设计",
+      "bio": "重视妆容与发型结构统一，强化整体线条与光泽层次。\n擅长：婚礼精致造型、快速换造、饰品与发型融合。\n风格：干净、不过度堆砌、轻留白。"
+    },
+    "en": {
+      "name": "Lori",
+      "role": "Makeup Artist | Styling & Hair Design",
+      "bio": "Aligns makeup and hair structure for cohesive silhouettes and soft sheen.\nStrengths: refined bridal looks, efficient restyling, accessory integration.\nStyle: clean, minimal excess, subtle negative space." 
+    }
+  },
+  {
+    "photo": "/team/johnny.jpg",
+    "zh": {
+      "name": "Johnny",
+      "role": "男士造型师｜男士发型",
+      "bio": "聚焦男士气质与发型流向，结合骨骼与发量做自然过渡。\n擅长：商务形象、人像清爽定型、快速现场调整。\n风格：自然纹理、低饱和、细节收尾。"
+    },
+    "en": {
+      "name": "Johnny",
+      "role": "Men's Stylist | Men's Hair",
+      "bio": "Focuses on men's grooming with natural flow aligned to structure.\nStrengths: business polish, clean portrait setting, fast event adjustments.\nStyle: natural texture, restrained palette, neat finish." 
+    }
+  },
+  {
+    "photo": "/team/ivy.jpg",
+    "zh": {
+      "name": "Ivy",
+      "role": "摄影与妆造助理｜客户与档期协调",
+      "bio": "负责客户沟通、物料清单与档期协调，现场支持灯光与基础补妆。\n特点：节奏与细节跟进、跨组联络、快速响应。"
+    },
+    "en": {
+      "name": "Ivy",
+      "role": "Photo & Styling Assistant | Client & Scheduling Coordinator",
+      "bio": "Manages client updates, asset lists and scheduling; supports lighting and minor touch‑ups on set.\nTraits: pace tracking, cross‑team liaison, responsive support." 
+    }
+  },
+  {
+    "photo": "/team/5.png",
+    "zh": {
+      "name": "Patrick Xue",
+      "role": "摄影师｜影像艺术创作者",
+      "bio": "结合传统与实验媒介，探索材质与情绪的影像表达。\n擅长：胶片/即时成像、叙事型 MV、材质肌理营造。"
+    },
+    "en": {
+      "name": "Patrick Xue",
+      "role": "Photographer | Visual Artist",
+      "bio": "Blends traditional and experimental media to explore texture and mood.\nStrengths: film & instant formats, narrative MV, material tactility." 
+    }
+  },
+  {
+    "photo": "/team/6.png",
+    "zh": {
+      "name": "Kris",
+      "role": "摄影师",
+      "bio": "以富士色彩与自然光构建富有呼吸感的人像氛围。\n擅长：自然街拍、克制细节、色温渐变。"
+    },
+    "en": {
+      "name": "Kris",
+      "role": "Photographer",
+      "bio": "Uses Fujifilm color and natural light for airy, restrained portraits.\nStrengths: candid urban sessions, subtle detail, gentle temperature shifts." 
+    }
+  },
+  {
+    "photo": "/team/7.png",
+    "zh": {
+      "name": "Fu",
+      "role": "摄影师",
+      "bio": "专注色彩与情绪的平衡，构建带时间质感的光影。\n特点：留白控制、光影层次、真实情绪捕捉。"
+    },
+    "en": {
+      "name": "Fu",
+      "role": "Photographer",
+      "bio": "Balances color and emotion, shaping time‑layered light.\nTraits: managed negative space, layered illumination, authentic mood capture." 
+    }
+  }
+]

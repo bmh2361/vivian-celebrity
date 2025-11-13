@@ -15,12 +15,13 @@ export default function About() {
 		const load = async () => {
 			// 1) 优先尝试 index.json（对象数组或字符串数组）
 			try {
-				const r = await fetch(withBase('/team/index.json'));
+				// 加一个极轻的缓存绕过，避免 GitHub Pages 上 JSON 被旧缓存阻塞
+				const r = await fetch(withBase('/team/index.json') + '?v=1', { cache: 'no-store' });
 				if (r.ok) {
 					const arr = await r.json();
 					if (Array.isArray(arr) && arr.length) {
 						const normalized = arr.map((item, idx) => normalizeItem(item, idx, withBase));
-						if (!cancelled) setMembers(normalized.slice(0, 7));
+						if (!cancelled) setMembers(normalized.slice(0, 10));
 						return;
 					}
 				}
@@ -29,7 +30,7 @@ export default function About() {
 			// 2) 回退：1..7 自动探测图片，生成占位信息
 			const exts = ['jpg', 'jpeg', 'png', 'webp'];
 			const fallback = [];
-			for (let i = 1; i <= 7; i++) {
+			for (let i = 1; i <= 10; i++) {
 				let hit = null;
 				for (const ext of exts) {
 					const url = withBase(`/team/${i}.${ext}`);

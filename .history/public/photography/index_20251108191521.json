@@ -1,0 +1,14 @@
+[
+	{ "type": "video", "src": "/photography/1.mp4", "poster": "/photography/1.jpg", "mime": "video/mp4" },
+	{ "type": "image", "src": "/photography/1.jpg" },
+	{ "type": "video", "src": "/photography/2.MP4", "poster": "/photography/2.jpg", "mime": "video/mp4" },
+	{ "type": "image", "src": "/photography/2.jpg" },
+	{ "type": "video", "src": "/photography/3.mp4", "poster": "/photography/3.jpg", "mime": "video/mp4" },
+	{ "type": "image", "src": "/photography/3.jpg" },
+	{ "type": "video", "src": "/photography/4.mp4", "poster": "/photography/4.jpg", "mime": "video/mp4" },
+	{ "type": "image", "src": "/photography/4.jpg" },
+	{ "type": "video", "src": "/photography/5.mp4", "poster": "/photography/5.jpg", "mime": "video/mp4" },
+	{ "type": "image", "src": "/photography/5.jpg" },
+	{ "type": "video", "src": "/photography/6.mp4", "poster": "/photography/6.jpg", "mime": "video/mp4" },
+	{ "type": "image", "src": "/photography/6.jpg" }
+]
