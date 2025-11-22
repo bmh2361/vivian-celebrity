@@ -40,7 +40,7 @@ export default function Home() {
 			tag2: 'Film · Fashion · Wedding · Travel · Brand Partnerships',
 			ctaConsult: 'Consult',
 			ctaPortfolio: 'View Portfolio',
-			founderRole: 'Fashion Director · VIVIAN ADVENTURE Founder',
+			founderRole: 'Styling Director · VIVIAN ADVENTURE Founder',
 			founderBio:
 				'A seasoned film and fashion styling director, deeply engaged in UK–China and international projects. Focused on bespoke work and narrative visual aesthetics, transforming footage and brand temperament into elegant, distinctive expressions.',
 			coreTitle: 'Core Credentials',
