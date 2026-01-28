@@ -5,12 +5,24 @@ import '../index.css';
 const brand = { glass: 'backdrop-blur-sm bg-white/70 border border-[#e8e8e8]' };
 const dict = {
   zh: {
-    nav: { home: '主页', makeup: '妆造', photography: '摄影', bespoke: '高端定制', corporate: '企业策划', portfolio: '作品集', about: '团队', contact: '联系我们' },
+    nav: { home: '主页', beauty: '高端美业', media: '影视传媒', makeup: '妆造美学', bespoke: '高端定制', photography: '影像美学', corporate: '企业策划', portfolio: '作品集', about: '团队', contact: '联系我们' },
+    navDesc: {
+      makeup: '影视/时尚/婚礼造型 · 妆发与风格统筹',
+      bespoke: '高定级私人定制 · 形象顾问与试妆',
+      photography: '短剧/短视频制作 · 拍摄策划 · 后期与传播',
+      corporate: '品牌活动策划 · 执行统筹 · 传播物料',
+    },
     cta: '预约咨询',
     footer: '© VIVIAN ADVENTURE. All rights reserved.'
   },
   en: {
-    nav: { home: 'Home', makeup: 'Makeup', photography: 'Photography', bespoke: 'Bespoke', corporate: 'Corporate', portfolio: 'Portfolio', about: 'Team', contact: 'Contact' },
+    nav: { home: 'Home', beauty: 'Luxury Beauty', media: 'Media', makeup: 'Makeup', bespoke: 'Bespoke', photography: 'Photography', corporate: 'Corporate', portfolio: 'Portfolio', about: 'Team', contact: 'Contact' },
+    navDesc: {
+      makeup: 'Film/Fashion/Bridal styling · Beauty & wardrobe direction',
+      bespoke: 'Private bespoke looks · Image consulting',
+      photography: 'Short-form / short drama · Production · Post & distribution',
+      corporate: 'Brand events · Execution · Content & comms',
+    },
     cta: 'Consult',
     footer: '© VIVIAN ADVENTURE. All rights reserved.'
   }
@@ -45,6 +57,10 @@ export default function Layout({ pageKey, children }) {
 
   const t = useMemo(() => dict[lang], [lang]);
 
+  const isActiveKey = (key) => pageKey === key || (key === 'home' && pageKey === 'home');
+  const isBeautyActive = pageKey === 'makeup' || pageKey === 'bespoke';
+  const isMediaActive = pageKey === 'photography' || pageKey === 'corporate';
+
   const link = (href, label) => {
     const full = withBase(href);
     const isActive = href.includes(`${pageKey}.html`) || (href === '/pages/home.html' && pageKey === 'home');
@@ -55,6 +71,41 @@ export default function Layout({ pageKey, children }) {
       >
         {label}
       </a>
+    );
+  };
+
+  const chevron = (
+    <svg viewBox="0 0 24 24" width="14" height="14" className="opacity-70" stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  );
+
+  const navGroup = ({ label, href, active, items }) => {
+    const full = withBase(href);
+    return (
+      <div className="relative group">
+        <a
+          href={full}
+          className={`inline-flex items-center gap-1 ${active ? 'text-[#111] font-medium' : 'text-[#555]'} hover:text-[#CFAF6B] transition-colors duration-200`}
+        >
+          {label}
+          {chevron}
+        </a>
+        <div className="absolute left-0 top-full pt-3 hidden group-hover:block">
+          <div className="min-w-[220px] rounded-2xl border border-[#e8e8e8] bg-white/95 backdrop-blur shadow-[0_18px_42px_rgba(0,0,0,0.10)] p-2">
+            {items.map((it) => (
+              <a
+                key={it.href}
+                href={withBase(it.href)}
+                className={`block rounded-xl px-3 py-2 ${it.active ? 'bg-[#fbfaf7]' : ''} hover:bg-[#fbfaf7] transition-colors`}
+              >
+                <div className={`text-sm ${it.active ? 'text-[#111] font-medium' : 'text-[#555]'} group-hover:text-[#111]`}>{it.label}</div>
+                {it.desc ? <div className="mt-0.5 text-[12px] leading-5 text-[#777]">{it.desc}</div> : null}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
     );
   };
 
@@ -76,15 +127,29 @@ export default function Layout({ pageKey, children }) {
       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
         <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
           <a href={withBase('/pages/home.html')} className="flex items-center gap-2 font-semibold tracking-widest text-[#CFAF6B]">
-            <img src={withBase('/logo.png')} alt="logo" className="h-10 w-auto object-contain" />
+            <img src={withBase('/logo.png')} alt="logo" className="h-10 w-auto object-contain" loading="eager" decoding="async" fetchpriority="high" />
             <span className="tracking-[0.15em]">VIVIAN ADVENTURE</span>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm">
             {link('/pages/home.html', t.nav.home)}
-            {link('/pages/makeup.html', t.nav.makeup)}
-            {link('/pages/photography.html', t.nav.photography)}
-            {link('/pages/bespoke.html', t.nav.bespoke)}
-            {link('/pages/corporate.html', t.nav.corporate)}
+            {navGroup({
+              label: t.nav.beauty,
+              href: '/pages/makeup.html',
+              active: isBeautyActive,
+              items: [
+                { href: '/pages/makeup.html', label: t.nav.makeup, desc: t.navDesc?.makeup, active: isActiveKey('makeup') },
+                { href: '/pages/bespoke.html', label: t.nav.bespoke, desc: t.navDesc?.bespoke, active: isActiveKey('bespoke') },
+              ],
+            })}
+            {navGroup({
+              label: t.nav.media,
+              href: '/pages/photography.html',
+              active: isMediaActive,
+              items: [
+                { href: '/pages/photography.html', label: t.nav.photography, desc: t.navDesc?.photography, active: isActiveKey('photography') },
+                { href: '/pages/corporate.html', label: t.nav.corporate, desc: t.navDesc?.corporate, active: isActiveKey('corporate') },
+              ],
+            })}
             {link('/pages/portfolio.html', t.nav.portfolio)}
             {link('/pages/about.html', t.nav.about)}
             {link('/pages/contact.html', t.nav.contact)}
@@ -114,10 +179,15 @@ export default function Layout({ pageKey, children }) {
           <div className="md:hidden border-t border-[#e8e8e8] bg-white/95 backdrop-blur-sm">
             <div className="px-6 py-4 grid grid-cols-1 gap-1 text-base">
               <a href={withBase('/pages/home.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.home}</a>
-              <a href={withBase('/pages/makeup.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.makeup}</a>
-              <a href={withBase('/pages/photography.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.photography}</a>
-              <a href={withBase('/pages/bespoke.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.bespoke}</a>
-              <a href={withBase('/pages/corporate.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.corporate}</a>
+
+              <div className="pt-2 pb-1 text-xs tracking-[0.2em] text-[#CFAF6B]">{t.nav.beauty}</div>
+              <a href={withBase('/pages/makeup.html')} onClick={() => setOpen(false)} className="py-3 pl-3 rounded-xl hover:bg-[#fbfaf7] hover:text-[#111] transition-colors">{t.nav.makeup}</a>
+              <a href={withBase('/pages/bespoke.html')} onClick={() => setOpen(false)} className="py-3 pl-3 rounded-xl hover:bg-[#fbfaf7] hover:text-[#111] transition-colors">{t.nav.bespoke}</a>
+
+              <div className="pt-3 pb-1 text-xs tracking-[0.2em] text-[#CFAF6B]">{t.nav.media}</div>
+              <a href={withBase('/pages/photography.html')} onClick={() => setOpen(false)} className="py-3 pl-3 rounded-xl hover:bg-[#fbfaf7] hover:text-[#111] transition-colors">{t.nav.photography}</a>
+              <a href={withBase('/pages/corporate.html')} onClick={() => setOpen(false)} className="py-3 pl-3 rounded-xl hover:bg-[#fbfaf7] hover:text-[#111] transition-colors">{t.nav.corporate}</a>
+
               <a href={withBase('/pages/portfolio.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.portfolio}</a>
               <a href={withBase('/pages/about.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.about}</a>
               <a href={withBase('/pages/contact.html')} onClick={() => setOpen(false)} className="py-3 hover:text-[#CFAF6B] transition-colors">{t.nav.contact}</a>

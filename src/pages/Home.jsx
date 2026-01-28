@@ -13,8 +13,20 @@ export default function Home() {
 	const copy = {
 		zh: {
 			heroTitle: '英伦美学巅峰叙事',
-			tag1: '英国高端美业',
-			tag2: '影视 · 时尚 · 婚礼 · 旅拍 · 品牌合作',
+			tagBeauty: '英国高端美业',
+			tagMedia: '影视传媒',
+			beautyKicker: 'BEAUTY',
+			mediaKicker: 'MEDIA',
+			beautyPoints: [
+				'影视 / 时尚 / 婚礼｜造型艺术指导',
+				'妆发与服装整体风格统筹',
+				'高定级私人定制 · 形象顾问',
+			],
+			mediaPoints: [
+				'视觉策展 · 创意方向',
+				'内容制作与制片统筹',
+				'品牌叙事与传播 · 合作统筹',
+			],
 			ctaConsult: '预约咨询',
 			ctaPortfolio: '查看作品集',
 			founderRole: '时尚总监 · VIVIAN ADVENTURE 创始人',
@@ -36,8 +48,20 @@ export default function Home() {
 		},
 			en: {
 			heroTitle: 'British Aesthetics, Peak Storytelling',
-			tag1: 'UK Luxury Beauty',
-			tag2: 'Film · Fashion · Wedding · Travel · Brand Partnerships',
+			tagBeauty: 'UK Luxury Beauty',
+			tagMedia: 'Media Production',
+			beautyKicker: 'BEAUTY',
+			mediaKicker: 'MEDIA',
+			beautyPoints: [
+				'Film / Fashion / Bridal — Styling Direction',
+				'Beauty & wardrobe look development',
+				'Private bespoke looks · Image consulting',
+			],
+			mediaPoints: [
+				'Visual curation · Creative direction',
+				'Content production · Line producing',
+				'Brand storytelling · Partnerships',
+			],
 			ctaConsult: 'Consult',
 			ctaPortfolio: 'View Portfolio',
 			founderRole: 'Fashion Director · VIVIAN ADVENTURE Founder',
@@ -67,38 +91,72 @@ export default function Home() {
 		<div className="">
 			{/* Hero：文字在左，图卡片置于右上角（非全屏背景） */}
 			<section className="relative overflow-hidden bg-white">
-				<div className="max-w-7xl mx-auto px-6 pt-14 md:pt-20 pb-16 md:pb-24 relative">
-					<div className="flex items-stretch justify-between gap-6">
+				<div className="max-w-7xl mx-auto px-6 pt-14 md:pt-20 pb-12 md:pb-16 relative">
+					<div className="grid gap-6 md:grid-cols-2 md:items-stretch">
 						{/* 内容容器 */}
-						<div className="max-w-xl md:w-[36rem] lg:w-[36rem] bg-white/85 backdrop-blur-[2px] rounded-2xl p-6 shadow-[0_8px_28px_-4px_rgba(0,0,0,0.10)] border border-[#f2f2f2]">
-						<motion.div {...fadeUp(0)} className="inline-flex items-center gap-2 text-xs text-[#9A7B4F] rounded-full border border-[#E6CF9A] px-3 py-1 bg-white/80">
-							<span className="tracking-widest">VIVIAN ADVENTURE</span>
-						</motion.div>
-						<motion.h1 {...fadeUp(0.1)} className="mt-5 text-3xl md:text-[40px] leading-tight font-extrabold text-[#111]">
-							{t.heroTitle}
-						</motion.h1>
-						<motion.div {...fadeUp(0.2)} className="mt-4 text-[#555]">
-							<div className="inline-flex flex-wrap items-center gap-2 text-sm">
-								<span className="rounded-full bg-[#f9f7f1] text-[#9A7B4F] border border-[#E6CF9A] px-3 py-1">{t.tag1}</span>
-								<span className="rounded-full bg-[#f9f7f1] text-[#9A7B4F] border border-[#E6CF9A] px-3 py-1">{t.tag2}</span>
-							</div>
-						</motion.div>
-						<motion.div {...fadeUp(0.3)} className="mt-7 flex items-center gap-4">
-							<a href={withBase('/pages/contact.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white bg-[#111] hover:bg-black transition-colors">
-								<Icon name="CalendarDays" /> {t.ctaConsult}
-							</a>
-							<a href={withBase('/pages/portfolio.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors">
-								{t.ctaPortfolio}
-							</a>
-						</motion.div>
+						<div className="w-full h-full bg-white/85 backdrop-blur-[2px] rounded-2xl p-7 md:p-8 shadow-[0_8px_28px_-4px_rgba(0,0,0,0.10)] border border-[#f2f2f2] flex flex-col">
+							<motion.div {...fadeUp(0)} className="flex items-center gap-3 text-[#CFAF6B]">
+								<span className="text-xs font-semibold tracking-[0.15em]">VIVIAN ADVENTURE</span>
+								<span className="h-px flex-1 bg-[#E6CF9A]" />
+							</motion.div>
+							<motion.h1 {...fadeUp(0.1)} className="mt-5 text-3xl md:text-[40px] leading-tight font-extrabold text-[#111]">
+								{t.heroTitle}
+							</motion.h1>
+							<motion.div {...fadeUp(0.2)} className="mt-4">
+								<div className="flex flex-wrap items-center gap-2 text-sm">
+									<span className="rounded-full bg-[#111] text-white px-3 py-1">{t.tagBeauty}</span>
+									<span className="rounded-full bg-white text-[#9A7B4F] border border-[#E6CF9A] px-3 py-1">{t.tagMedia}</span>
+								</div>
+								<div className="mt-4 rounded-2xl border border-[#eee] bg-white/80 overflow-hidden">
+									<div className="grid sm:grid-cols-2">
+										<div className="p-4 md:p-5">
+											<div className="flex items-baseline justify-between gap-3">
+												<div className="text-[12px] font-semibold tracking-[0.08em] text-[#111]">{t.tagBeauty}</div>
+												<div className="text-[10px] tracking-[0.2em] text-[#CFAF6B]">{t.beautyKicker}</div>
+											</div>
+											<div className="mt-3 space-y-2 text-[13px] leading-6 text-[#333]">
+												{t.beautyPoints.map((line, idx) => (
+													<div key={idx} className="flex gap-2">
+														<span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#CFAF6B] shrink-0" />
+														<span>{line}</span>
+													</div>
+												))}
+											</div>
+										</div>
+										<div className="p-4 md:p-5 sm:border-l border-[#eee] bg-[#fbfaf7]">
+											<div className="flex items-baseline justify-between gap-3">
+												<div className="text-[12px] font-semibold tracking-[0.08em] text-[#111]">{t.tagMedia}</div>
+												<div className="text-[10px] tracking-[0.2em] text-[#CFAF6B]">{t.mediaKicker}</div>
+											</div>
+											<div className="mt-3 space-y-2 text-[13px] leading-6 text-[#333]">
+												{t.mediaPoints.map((line, idx) => (
+													<div key={idx} className="flex gap-2">
+														<span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#CFAF6B] shrink-0" />
+														<span>{line}</span>
+													</div>
+												))}
+											</div>
+										</div>
+									</div>
+								</div>
+							</motion.div>
+
+							<motion.div {...fadeUp(0.3)} className="mt-6 flex flex-wrap items-center gap-4">
+								<a href={withBase('/pages/contact.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white bg-[#111] hover:bg-black transition-colors">
+									<Icon name="CalendarDays" /> {t.ctaConsult}
+								</a>
+								<a href={withBase('/pages/portfolio.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors">
+									{t.ctaPortfolio}
+								</a>
+							</motion.div>
 						</div>
 
-						{/* 右上角图片卡片（md+ 显示），更大并与左侧对齐 */}
-						<motion.div initial={{ opacity: 0, y: -6 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, ease: 'easeOut' }} className="hidden md:block shrink-0 md:w-[36rem] lg:w-[36rem]">
+						{/* 右侧图片卡片（移动端也展示） */}
+						<motion.div initial={{ opacity: 0, y: -6 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, ease: 'easeOut' }} className="w-full h-[320px] sm:h-[360px] md:h-full">
 							<div className="group h-full rounded-3xl p-[1.5px] bg-gradient-to-br from-[#F4E7BE] via-[#CFAF6B] to-[#9A7B4F] shadow-[0_18px_42px_rgba(0,0,0,0.14)] transition-transform duration-500 will-change-transform">
-								<div className="h-full rounded-[22px] overflow-hidden bg-white/90 backdrop-blur-[1.5px] relative group-hover:shadow-[0_22px_48px_rgba(0,0,0,0.16)] group-hover:-translate-y-1 transition-all duration-500">
-									{/* 与左侧保持完全一致宽度，高度随左侧拉伸 */}
-									<HeroImage withBase={withBase} className="block w-full h-full object-cover" />
+								<div className="h-full rounded-[22px] overflow-hidden bg-[#fbfaf7] relative group-hover:shadow-[0_22px_48px_rgba(0,0,0,0.16)] group-hover:-translate-y-1 transition-all duration-500">
+									{/* 以“模糊背景 + 前景完整展示”的方式避免黑边且不裁切 */}
+									<HeroImage withBase={withBase} className="relative w-full h-full" />
 									{/* 细腻高亮层 */}
 									<div className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(120% 80% at 0% 0%, rgba(255,255,255,0.48) 0%, rgba(255,255,255,0.16) 40%, rgba(255,255,255,0) 68%)' }} />
 								</div>
@@ -117,6 +175,8 @@ export default function Home() {
 								src={withBase('/founder.jpg')}
 							alt="founder"
 							className="w-full h-[360px] md:h-full object-cover"
+							loading="lazy"
+							decoding="async"
 							initial={{ scale: 1.05, opacity: 0 }}
 							whileInView={{ scale: 1, opacity: 1 }}
 							viewport={{ once: true }}
@@ -167,17 +227,32 @@ export default function Home() {
 
 // 右上角图片卡片组件，带缺图回退
 function HeroImage({ withBase, className }) {
-	const [rel, setRel] = useState('/hero-bg-city.jpg');
+	// Hero 右侧主图：优先使用 /public/hero-right.jpg（可按需替换），失败则回退到现有图片
+	const [rel, setRel] = useState('/hero-right.jpg');
 	const src = withBase(rel);
+	const onError = () => setRel(prev => (prev === '/hero-company.jpg' ? prev : '/hero-company.jpg'));
 	return (
-		<img
-			src={src}
-			alt="hero"
-			className={className || "w-[360px] lg:w-[420px] h-[240px] lg:h-[300px] object-cover"}
-			onError={() => setRel(prev => (prev === '/hero-company.jpg' ? prev : '/hero-company.jpg'))}
-			loading="eager"
-			decoding="async"
-		/>
+		<div className={className}>
+			<img
+				src={src}
+				alt=""
+				aria-hidden="true"
+				className="absolute inset-0 w-full h-full object-cover blur-2xl scale-110 opacity-60"
+				onError={onError}
+				loading="eager"
+				decoding="async"
+				fetchpriority="low"
+			/>
+			<img
+				src={src}
+				alt="hero"
+				className="relative w-full h-full object-contain"
+				onError={onError}
+				loading="eager"
+				decoding="async"
+				fetchpriority="high"
+			/>
+		</div>
 	);
 }
 

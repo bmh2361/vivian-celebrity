@@ -136,6 +136,7 @@ export default function Corporate() {
           alt={`Partner Logo ${index}`}
           className="block h-full w-full object-contain z-[1]"
           loading="lazy"
+          decoding="async"
           onLoad={() => setFound(true)}
           onError={() => {
             if (ei < exts.length - 1) setEi(ei + 1);
@@ -206,6 +207,7 @@ export default function Corporate() {
                     onLoad={(e) => { const label = e.currentTarget.nextElementSibling; if (label) label.style.display = 'none'; }}
                     onError={(e) => { e.currentTarget.style.display = 'none'; }}
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="text-sm text-[#888]">{fallbackLabel}</div>
                 </div>

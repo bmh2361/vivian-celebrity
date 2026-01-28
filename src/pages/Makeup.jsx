@@ -178,7 +178,7 @@ export default function Makeup() {
 				>
 					{items.slice(0,6).map((src, i) => (
 						<motion.div key={i} variants={{ hidden: { y: 12, opacity: 0 }, show: { y: 0, opacity: 1 } }} className="group overflow-hidden rounded-2xl border border-[#eee] bg-white shadow-sm">
-							<img loading="lazy" src={src} alt={`case-${i+1}`} className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+							<img loading="lazy" decoding="async" src={src} alt={`case-${i+1}`} className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
 						</motion.div>
 					))}
 				</motion.div>

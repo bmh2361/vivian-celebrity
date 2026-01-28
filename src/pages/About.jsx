@@ -81,7 +81,7 @@ export default function About() {
 				{members.map((m, i) => (
 					<motion.div key={i} {...fade(i * 0.03)} className="md:flex md:items-start md:gap-5 rounded-2xl border border-[#eee] bg-white p-4 md:p-5">
 						<div className="md:w-[360px] lg:w-[420px] w-full">
-							<img src={m.photo} alt={m.name} className="w-full h-auto rounded-xl object-contain bg-[#f7f7f7]" />
+							<img src={m.photo} alt={m.name} className="w-full h-auto rounded-xl object-contain bg-[#f7f7f7]" loading="lazy" decoding="async" />
 						</div>
 						<div className="flex-1 mt-4 md:mt-0 flex flex-col">
 							<div className="text-xl font-semibold text-[#111]">{display(m.name, m.nameEn, lang)}</div>

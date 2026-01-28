@@ -106,6 +106,7 @@ export default function Bespoke() {
 					alt={label}
 					className="w-full h-auto object-contain"
 					loading="lazy"
+					decoding="async"
 					onLoad={() => setLoaded(true)}
 					onError={() => { if (ei < exts.length - 1) setEi(ei + 1); }}
 				/>
