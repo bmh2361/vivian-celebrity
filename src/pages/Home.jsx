@@ -2,7 +2,7 @@ import '../index.css';
 import { motion } from 'framer-motion';
 import { Icon } from '../icons.jsx';
 import { useLang } from '../layout/Layout.jsx';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 export default function Home() {
 	const { lang } = useLang();
@@ -87,6 +87,54 @@ export default function Home() {
 	const fadeUp = (delay = 0) => ({ initial: { y: 20, opacity: 0 }, animate: { y: 0, opacity: 1 }, transition: { duration: 0.6, ease: 'easeOut', delay } });
 	const fade = (delay = 0) => ({ initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 0.7, ease: 'easeOut', delay } });
 
+	// 合作伙伴 LOGO 数量：按序号命名（1.png/1.svg ... N.png/N.svg）
+	// 你只要往 /public/partners-logos/ 继续放 13.png、14.svg…，再把这里的数量加大即可。
+	const PARTNER_LOGO_COUNT = 12;
+	const partnerIndices = useMemo(() => Array.from({ length: PARTNER_LOGO_COUNT }).map((_, i) => i + 1), []);
+
+	// 合作伙伴 LOGO：多后缀兜底，自动尝试 .png/.jpg/.jpeg/.webp/.svg
+	const PartnerLogo = ({ index, className = '' }) => {
+		const exts = ['.png', '.jpg', '.jpeg', '.webp', '.svg'];
+		const [ei, setEi] = useState(0);
+		const [found, setFound] = useState(false);
+		const src = withBase(`/partners-logos/${index}${exts[ei]}`);
+		return (
+			<div className={`relative grid place-items-center p-8 md:p-10 ${className}`}>
+				<img
+					src={src}
+					alt={`Partner Logo ${index}`}
+					className="block max-h-[88%] max-w-[92%] h-auto w-auto object-contain relative z-[1]"
+					loading="lazy"
+					decoding="async"
+					onLoad={() => setFound(true)}
+					onError={() => {
+						if (ei < exts.length - 1) setEi(ei + 1);
+					}}
+				/>
+				{!found && (
+					<div className="absolute inset-0 grid place-items-center text-xs text-[#888] pointer-events-none z-0">LOGO</div>
+				)}
+			</div>
+		);
+	};
+
+	const PartnersGrid = () => (
+		<div className="mt-7 grid grid-cols-2 gap-5 sm:grid-cols-[repeat(auto-fit,minmax(260px,1fr))] sm:gap-6">
+			{partnerIndices.map((idx, i) => (
+				<motion.div
+					key={idx}
+					initial={{ opacity: 0, y: 10 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, amount: 0.25 }}
+					transition={{ duration: 0.45, delay: i * 0.02 }}
+					className="group relative overflow-hidden h-40 md:h-48 lg:h-52 rounded-2xl border border-[#eee] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(0,0,0,0.10)] transition-all"
+				>
+					<PartnerLogo index={idx} className="h-full w-full" />
+				</motion.div>
+			))}
+		</div>
+	);
+
 	return (
 		<div className="">
 			{/* Hero：文字在左，图卡片置于右上角（非全屏背景） */}
@@ -166,60 +214,37 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* 创始人模块 */}
+			{/* 影视传媒 · 企业策划：合作伙伴（首页展示） */}
 			<section className="max-w-7xl mx-auto px-6 pb-16">
-				<motion.div {...fade(0.05)} className="grid md:grid-cols-[1.1fr_1.4fr] gap-8 items-stretch border border-[#eee] rounded-3xl p-4 md:p-6 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
-					{/* 左图 */}
-					<div className="overflow-hidden rounded-2xl">
-							<motion.img
-								src={withBase('/founder.jpg')}
-							alt="founder"
-							className="w-full h-[360px] md:h-full object-cover"
-							loading="lazy"
-							decoding="async"
-							initial={{ scale: 1.05, opacity: 0 }}
-							whileInView={{ scale: 1, opacity: 1 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.8, ease: 'easeOut' }}
-						/>
+				<motion.section
+					initial={{ opacity: 0, y: 12 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, amount: 0.25 }}
+					transition={{ duration: 0.6, ease: 'easeOut' }}
+					className="rounded-3xl border border-[#eee] bg-white p-5 md:p-7 shadow-[0_10px_34px_rgba(0,0,0,0.06)] relative overflow-hidden"
+				>
+					<div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_45%_at_20%_0%,rgba(207,175,107,0.16),transparent)]" />
+					<div className="relative flex items-end justify-between gap-4 flex-wrap">
+						<div>
+							<div className="inline-flex items-center gap-2 text-xs tracking-[0.18em] text-[#9A7B4F]">
+								<span className="px-3 py-1 rounded-full border border-[#E6CF9A] bg-[#fbf8ef]">MEDIA</span>
+								<span className="hidden sm:inline h-px w-10 bg-[#E6CF9A]" />
+								<span className="hidden sm:inline">CORPORATE PLANNING</span>
+							</div>
+							<h2 className="mt-3 text-xl md:text-2xl font-extrabold text-[#111]">合作伙伴</h2>
+							<p className="mt-2 text-sm text-[#555]">影视传媒企业策划合作品牌 · Logo 展示</p>
+						</div>
+						<a
+							href={withBase('/pages/corporate.html')}
+							className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors"
+						>
+							{lang === 'en' ? 'Corporate Planning' : '查看企业策划'}
+						</a>
 					</div>
 
-					{/* 右文案 */}
-					<div className="flex flex-col">
-																<motion.h2 {...fadeUp(0.05)} className="text-2xl md:text-3xl font-extrabold tracking-wide text-[#111]">VIVIAN WANG</motion.h2>
-																<motion.div {...fadeUp(0.12)} className="mt-1 text-xs md:text-sm tracking-widest text-[#CFAF6B]">{t.founderRole}</motion.div>
-																<motion.p {...fadeUp(0.16)} className="mt-3 text-sm leading-7 text-[#444]">
-																	{t.founderBio}
-																</motion.p>
-
-						<motion.div {...fadeUp(0.18)} className="mt-5 grid sm:grid-cols-2 gap-4">
-							{/* 核心服务 */}
-							<div className="rounded-2xl border border-[#eee] bg-white p-4">
-																<div className="text-[#CFAF6B] font-semibold mb-2">{t.coreTitle}</div>
-																<ul className="text-sm text-[#555] space-y-1 list-disc list-inside">
-																	{t.coreList.map((line, idx) => (
-																		<li key={idx}>{line}</li>
-																	))}
-																</ul>
-							</div>
-							{/* 服务领域 */}
-							<div className="rounded-2xl border border-[#eee] bg-white p-4">
-																<div className="text-[#CFAF6B] font-semibold mb-2">{t.scopeTitle}</div>
-																<ul className="text-sm text-[#555] space-y-1 list-disc list-inside">
-																	{t.scopeList.map((line, idx) => (
-																		<li key={idx}>{line}</li>
-																	))}
-																</ul>
-							</div>
-						</motion.div>
-
-						<motion.div {...fadeUp(0.24)} className="mt-6">
-							<a href={withBase('/pages/contact.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white bg-[#111] hover:bg-black transition-colors">
-								<Icon name="CalendarDays" /> {t.ctaDeep}
-							</a>
-						</motion.div>
-					</div>
-				</motion.div>
+					{/* 跑马灯无缝滚动（全端展示 1-12） */}
+					<PartnersGrid />
+				</motion.section>
 			</section>
 		</div>
 	);

@@ -130,11 +130,11 @@ export default function Corporate() {
     const [found, setFound] = useState(false);
     const src = withBase(`/partners-logos/${index}${exts[ei]}`);
     return (
-      <div className="h-48 md:h-56 px-8 md:px-10 py-6 md:py-8 rounded-lg border border-[#eee] bg-white relative overflow-hidden grid place-items-center shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+      <div className="group relative overflow-hidden h-40 md:h-48 lg:h-52 rounded-2xl border border-[#eee] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(0,0,0,0.10)] transition-all grid place-items-center p-8 md:p-10">
         <img
           src={src}
           alt={`Partner Logo ${index}`}
-          className="block h-full w-full object-contain z-[1]"
+          className="block max-h-[88%] max-w-[92%] h-auto w-auto object-contain z-[1]"
           loading="lazy"
           decoding="async"
           onLoad={() => setFound(true)}
@@ -234,8 +234,8 @@ export default function Corporate() {
       <motion.section {...fade(0.2)} className="rounded-2xl border border-[#eee] bg-white p-6 shadow-[0_4px_18px_rgba(0,0,0,0.04)]">
         <h2 className="text-xl md:text-2xl font-bold text-[#111]">{t.partnerTitle}</h2>
         <blockquote className="mt-3 text-[#444] italic">{t.quote}</blockquote>
-        <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-          {Array.from({ length: 8 }).map((_, idx) => (
+        <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-[repeat(auto-fit,minmax(260px,1fr))] sm:gap-6">
+          {Array.from({ length: 12 }).map((_, idx) => (
             <LogoCell key={idx} index={idx + 1} />
           ))}
         </div>

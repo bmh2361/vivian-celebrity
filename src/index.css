@@ -13,6 +13,15 @@ body {
 	overflow-x: hidden; /* 防止移动端横向滚动条 */
 }
 
+/* Hide scrollbar but keep scrolling (used for mobile swipe carousels) */
+.scrollbar-hide {
+	-ms-overflow-style: none; /* IE/Edge */
+	scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+	display: none; /* Chrome/Safari */
+}
+
 /* Reduce motion respect */
 @media (prefers-reduced-motion: reduce) {
 	* {
@@ -29,6 +38,15 @@ body {
 @keyframes marquee-tight { from { transform: translateY(0); } to { transform: translateY(-50%); } }
 /* 动态高度变量驱动的跑马灯，用于精确按首份真实高度位移（JS 写入 --h） */
 @keyframes marquee-dyn { from { transform: translateY(0); } to { transform: translateY(calc(-1 * var(--h))); } }
+
+/* 横向跑马灯（合作伙伴 Logo） */
+@keyframes marquee-x-tight { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.marquee-x {
+	animation: marquee-x-tight var(--dur, 28s) linear infinite;
+	will-change: transform;
+}
+.marquee-x:hover { animation-play-state: paused; }
 /* 默认尊重系统减少动效设置，必要时可用 .marquee-allow-motion 在特定容器上恢复动画 */
 @media (prefers-reduced-motion: reduce) {
 	.marquee-allow-motion { animation-duration: var(--dur, 36s) !important; animation-iteration-count: infinite !important; }
