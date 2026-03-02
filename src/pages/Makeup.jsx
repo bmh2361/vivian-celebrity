@@ -120,14 +120,14 @@ export default function Makeup() {
 		},
 		en: {
 				title: 'Makeup & Styling',
-				subtitle: 'Film‑grade workflow ensures on‑camera consistency across scenes and occasions.',
+				subtitle: 'A film‑grade workflow for consistent, camera‑ready looks across every setting.',
 				cards: [
-					{ icon: 'clapper', title: 'Film Styling Direction', desc: 'End‑to‑end styling visual systems and cross‑team alignment for film/series.' },
+					{ icon: 'clapper', title: 'Film & TV Styling Direction', desc: 'End‑to‑end styling systems and cross‑team alignment for film and series.' },
 					{ icon: 'runway', title: 'Fashion & Red Carpet', desc: 'Backstage runway and red‑carpet looks with refined lines and long‑wear complexion.' },
-					{ icon: 'ring', title: 'Bridal Styling', desc: 'Bride/Groom total look: base structure, hair design, wardrobe coordination and trial.' },
-					{ icon: 'plane', title: 'Travel Shoot Upgrade', desc: 'London & Europe destinations: lightweight setups that still deliver cinematic mood.' },
-					{ icon: 'face', title: 'Makeover for Everyone', desc: 'Identity positioning and feature enhancement; sustainable daily + on‑camera routines.' },
-					{ icon: 'hanger', title: 'Wardrobe Styling Plan', desc: 'Efficient wardrobe and styling matrix by style, scenario and bodyline.' },
+					{ icon: 'ring', title: 'Bridal Styling', desc: 'Bride & groom total look: base, hair design, wardrobe coordination, and trial (optional).' },
+					{ icon: 'plane', title: 'Destination Shoot Upgrade', desc: 'London & Europe destinations: lightweight setups that still feel cinematic.' },
+					{ icon: 'face', title: 'Personal Makeover', desc: 'Identity positioning and feature enhancement; sustainable daily and on‑camera routines.' },
+					{ icon: 'hanger', title: 'Wardrobe Styling Plan', desc: 'Efficient wardrobe and styling matrix by style, occasion, and body type.' },
 				],
 			showcase: 'Case Showcase',
 			more: 'Contact us for more work',
@@ -152,7 +152,7 @@ export default function Makeup() {
 									<MiniIcon name={c.icon} />
 								</div>
 								<div>
-									<div className="text-[#111] font-semibold">{c.title}</div>
+									<div className="text-[#111] font-semibold break-words">{c.title}</div>
 									<div className="text-sm text-[#666] mt-1 leading-6">{c.desc}</div>
 								</div>
 							</div>

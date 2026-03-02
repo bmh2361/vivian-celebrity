@@ -27,7 +27,8 @@ export default function Home() {
 				'内容制作与制片统筹',
 				'品牌叙事与传播 · 合作统筹',
 			],
-			ctaConsult: '预约咨询',
+				ctaConsult: '查看妆造美学',
+				ctaImaging: '查看影像美学',
 			ctaPortfolio: '查看作品集',
 			founderRole: '时尚总监 · VIVIAN ADVENTURE 创始人',
 			founderBio:
@@ -47,9 +48,9 @@ export default function Home() {
 			ctaDeep: '预约深度沟通',
 		},
 			en: {
-			heroTitle: 'British Aesthetics, Peak Storytelling',
+			heroTitle: 'Peak British Aesthetics, Elevated Storytelling',
 			tagBeauty: 'UK Luxury Beauty',
-			tagMedia: 'Media Production',
+			tagMedia: 'Film & Media',
 			beautyKicker: 'BEAUTY',
 			mediaKicker: 'MEDIA',
 			beautyPoints: [
@@ -59,14 +60,15 @@ export default function Home() {
 			],
 			mediaPoints: [
 				'Visual curation · Creative direction',
-				'Content production · Line producing',
+				'Production coordination · On‑set execution',
 				'Brand storytelling · Partnerships',
 			],
-			ctaConsult: 'Consult',
+				ctaConsult: 'View Makeup & Styling',
+				ctaImaging: 'View Visual Aesthetics',
 			ctaPortfolio: 'View Portfolio',
 			founderRole: 'Fashion Director · VIVIAN ADVENTURE Founder',
 			founderBio:
-				'A seasoned film and fashion styling director, deeply engaged in UK–China and international projects. Focused on bespoke work and narrative visual aesthetics, transforming footage and brand temperament into elegant, distinctive expressions.',
+				'A seasoned film and fashion styling director with extensive UK–China and international experience. Focused on bespoke work and narrative visual aesthetics—translating stories and brand identity into elegant, distinctive looks.',
 			coreTitle: 'Core Credentials',
 			coreList: [
 				'Styling director for UK film & TV',
@@ -89,7 +91,7 @@ export default function Home() {
 
 	// 合作伙伴 LOGO 数量：按序号命名（1.png/1.svg ... N.png/N.svg）
 	// 你只要往 /public/partners-logos/ 继续放 13.png、14.svg…，再把这里的数量加大即可。
-	const PARTNER_LOGO_COUNT = 12;
+	const PARTNER_LOGO_COUNT = 40;
 	const partnerIndices = useMemo(() => Array.from({ length: PARTNER_LOGO_COUNT }).map((_, i) => i + 1), []);
 
 	// 合作伙伴 LOGO：多后缀兜底，自动尝试 .png/.jpg/.jpeg/.webp/.svg
@@ -99,11 +101,11 @@ export default function Home() {
 		const [found, setFound] = useState(false);
 		const src = withBase(`/partners-logos/${index}${exts[ei]}`);
 		return (
-			<div className={`relative grid place-items-center p-8 md:p-10 ${className}`}>
+			<div className={`relative grid place-items-center p-5 sm:p-6 ${className}`}>
 				<img
 					src={src}
 					alt={`Partner Logo ${index}`}
-					className="block max-h-[88%] max-w-[92%] h-auto w-auto object-contain relative z-[1]"
+					className="block max-h-[86%] max-w-[92%] h-auto w-auto object-contain relative z-[1]"
 					loading="lazy"
 					decoding="async"
 					onLoad={() => setFound(true)}
@@ -119,7 +121,7 @@ export default function Home() {
 	};
 
 	const PartnersGrid = () => (
-		<div className="mt-7 grid grid-cols-2 gap-5 sm:grid-cols-[repeat(auto-fit,minmax(260px,1fr))] sm:gap-6">
+		<div className="mt-7 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
 			{partnerIndices.map((idx, i) => (
 				<motion.div
 					key={idx}
@@ -127,11 +129,22 @@ export default function Home() {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, amount: 0.25 }}
 					transition={{ duration: 0.45, delay: i * 0.02 }}
-					className="group relative overflow-hidden h-40 md:h-48 lg:h-52 rounded-2xl border border-[#eee] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(0,0,0,0.10)] transition-all"
+					className="group relative overflow-hidden h-24 sm:h-28 md:h-32 rounded-2xl border border-[#eee] bg-[#fbfaf7] shadow-[0_6px_18px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(0,0,0,0.10)] transition-all"
 				>
 					<PartnerLogo index={idx} className="h-full w-full" />
 				</motion.div>
 			))}
+			<motion.div
+				initial={{ opacity: 0, y: 10 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true, amount: 0.25 }}
+				transition={{ duration: 0.45, delay: Math.min(partnerIndices.length, 40) * 0.02 }}
+				className="group relative overflow-hidden h-24 sm:h-28 md:h-32 rounded-2xl border border-[#eee] bg-[#fbfaf7] shadow-[0_6px_18px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(0,0,0,0.10)] transition-all col-span-2 sm:col-span-2"
+			>
+				<div className="h-full w-full grid place-items-center px-6">
+					<div className="text-[#9A7B4F] text-sm sm:text-base font-semibold tracking-[0.18em]">More To Come...</div>
+				</div>
+			</motion.div>
 		</div>
 	);
 
@@ -166,7 +179,7 @@ export default function Home() {
 												{t.beautyPoints.map((line, idx) => (
 													<div key={idx} className="flex gap-2">
 														<span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#CFAF6B] shrink-0" />
-														<span>{line}</span>
+														<span className="break-words">{line}</span>
 													</div>
 												))}
 											</div>
@@ -180,7 +193,7 @@ export default function Home() {
 												{t.mediaPoints.map((line, idx) => (
 													<div key={idx} className="flex gap-2">
 														<span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#CFAF6B] shrink-0" />
-														<span>{line}</span>
+														<span className="break-words">{line}</span>
 													</div>
 												))}
 											</div>
@@ -190,10 +203,13 @@ export default function Home() {
 							</motion.div>
 
 							<motion.div {...fadeUp(0.3)} className="mt-6 flex flex-wrap items-center gap-4">
-								<a href={withBase('/pages/contact.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white bg-[#111] hover:bg-black transition-colors">
+								<a href={withBase('/pages/makeup.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white bg-[#111] hover:bg-black transition-colors">
 									<Icon name="CalendarDays" /> {t.ctaConsult}
 								</a>
-								<a href={withBase('/pages/portfolio.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors">
+								<a href={withBase('/pages/photography.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors">
+									{t.ctaImaging}
+								</a>
+								<a href={withBase('/pages/portfolio.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors sm:ml-auto">
 									{t.ctaPortfolio}
 								</a>
 							</motion.div>
@@ -231,8 +247,8 @@ export default function Home() {
 								<span className="hidden sm:inline h-px w-10 bg-[#E6CF9A]" />
 								<span className="hidden sm:inline">CORPORATE PLANNING</span>
 							</div>
-							<h2 className="mt-3 text-xl md:text-2xl font-extrabold text-[#111]">合作伙伴</h2>
-							<p className="mt-2 text-sm text-[#555]">影视传媒企业策划合作品牌 · Logo 展示</p>
+							<h2 className="mt-3 text-xl md:text-2xl font-extrabold text-[#111]">{lang === 'en' ? 'Partners' : '合作伙伴'}</h2>
+							<p className="mt-2 text-sm text-[#555] break-words">{lang === 'en' ? 'One project, long‑term partnership · Trusted by leading brands' : '一次合作，长久合作 · 携手共赢'}</p>
 						</div>
 						<a
 							href={withBase('/pages/corporate.html')}
@@ -242,7 +258,7 @@ export default function Home() {
 						</a>
 					</div>
 
-					{/* 跑马灯无缝滚动（全端展示 1-12） */}
+					{/* 合作伙伴 LOGO 网格（全端展示） */}
 					<PartnersGrid />
 				</motion.section>
 			</section>

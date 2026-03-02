@@ -16,14 +16,14 @@ const dict = {
     footer: '© VIVIAN ADVENTURE. All rights reserved.'
   },
   en: {
-    nav: { home: 'Home', beauty: 'Luxury Beauty', media: 'Media', makeup: 'Makeup', bespoke: 'Bespoke', photography: 'Photography', corporate: 'Corporate', portfolio: 'Portfolio', about: 'Team', contact: 'Contact' },
+    nav: { home: 'Home', beauty: 'Luxury Beauty', media: 'Film & Media', makeup: 'Makeup & Styling', bespoke: 'Bespoke', photography: 'Visual Aesthetics', corporate: 'Corporate Planning', portfolio: 'Portfolio', about: 'Team', contact: 'Contact Us' },
     navDesc: {
       makeup: 'Film/Fashion/Bridal styling · Beauty & wardrobe direction',
       bespoke: 'Private bespoke looks · Image consulting',
-      photography: 'Short-form / short drama · Production · Post & distribution',
-      corporate: 'Brand events · Execution · Content & comms',
+      photography: 'Short-form / short drama · Production · Post & delivery',
+      corporate: 'Brand events · Execution · Content & communication',
     },
-    cta: 'Consult',
+    cta: 'Book a consult',
     footer: '© VIVIAN ADVENTURE. All rights reserved.'
   }
 };

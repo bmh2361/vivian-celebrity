@@ -94,10 +94,10 @@ export default function Portfolio() {
 				<a href={withBase('/pages/contact.html')} className="text-sm text-[#9A7B4F] hover:underline">{moreText}</a>
 			</div>
 			{loading && (
-				<div className="text-sm text-[#999] py-8">{lang === 'en' ? 'Loading works...' : '图片加载中...'}</div>
+				<div className="text-sm text-[#999] py-8">{lang === 'en' ? 'Loading...' : '图片加载中...'}</div>
 			)}
 			{!loading && images.length === 0 && (
-				<div className="text-sm text-[#999] py-8">{lang === 'en' ? 'No images found.' : '暂无图片。'}</div>
+				<div className="text-sm text-[#999] py-8">{lang === 'en' ? 'No works found.' : '暂无图片。'}</div>
 			)}
 			{!loading && images.length > 0 && (
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-4 [--dur:36s] [--gap:1rem]">

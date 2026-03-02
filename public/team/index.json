@@ -13,6 +13,19 @@
     }
   },
   {
+    "photo": "/team/wangziming.png",
+    "zh": {
+      "name": "Ziming Wang",
+      "role": "明星化妆造型师 ｜ 时尚造型导师 ｜ 美妆KOL",
+      "bio": "王梓铭，资深化妆造型师，活跃于时尚、娱乐与新媒体领域，自2009年起从事明星艺人化妆与整体造型设计工作，是东田造型新生代签约造型师之一，同时担任东田造型学校高级讲师。\n\n长期服务于影视艺人、音乐人及时尚品牌，擅长根据人物气质进行整体形象塑造与风格定位，涵盖舞台造型、时尚大片、商业拍摄及媒体视觉形象设计。其作品多次刊登于时尚杂志及主流新媒体平台。\n\n专业经历\n\n明星化妆造型师\n东田造型签约造型师\n东田造型学校高级讲师\n美妆博主 / KOL\n\n自2009年进入行业以来，持续为艺人、品牌与媒体提供专业造型服务，并参与大量商业视觉及时尚内容制作。\n\n合作艺人（部分）\n\n曾合作艺人及演艺团体包括（节选）：\n宁静、李宇春、金莎、刘恋（Mr.Miss）、谢霆锋、陈伟霆、李希侃、庆怜、黄大炜、李泉、费玉清、赵传、沙宝亮、辛晓琪、苏有朋、罗言、鸽子Dove、诺曼德、永彬、徐子未、旅行新蜜蜂、光合少年、胡烨韬、玲羽、李昊瀚、黄雅莉、冯家妹、崔开潮、孙八一、LionBabe、肉食动物、杨九郎、潘长江等众多艺人"
+    },
+    "en": {
+      "name": "Ziming Wang",
+      "role": "Celebrity Makeup Artist | Fashion Styling Instructor | Beauty KOL",
+      "bio": "Wang Ziming is a senior makeup artist and stylist active across fashion, entertainment and new media. Since 2009, he has worked on celebrity makeup and total look design. He is a new-generation signed stylist at Dongtian Styling and also serves as a senior lecturer at Dongtian Styling School.\n\nHe has long provided styling services for screen talents, musicians and fashion brands. Known for tailoring the overall image and style positioning to each client’s temperament, his work spans stage looks, fashion editorials, commercial shoots and media visual identities. His work has been featured in fashion magazines and major new-media platforms.\n\nProfessional Experience\n\n• Celebrity makeup & styling\n• Dongtian Styling signed stylist\n• Senior lecturer, Dongtian Styling School\n• Beauty creator / KOL\n\nSelected Collaborations\n\nNing Jing, Chris Lee (Li Yuchun), Jin Sha, Liu Lian (Mr.Miss), Nicholas Tse, William Chan, Li Xikan, Qing Lian, Huang Dawei, Li Quan, Fei Yuqing, Zhao Chuan, Sha Baoliang, Xin Xiaoqi, Su Youpeng, Luo Yan, Dove, Normande, Yongbin, Xu Ziwei, Travel New Bees, Photosynthesis Youth, Hu Yetao, Ling Yu, Li Haohan, Huang Yali, Feng Jiamei, Cui Kaichao, Sun Bayi, LionBabe, Carnivores, Yang Jiulang, Pan Changjiang, and more."
+    }
+  },
+  {
     "photo": "/team/Minghan.jpg",
     "zh": {
       "name": "包铭涵 博士",
@@ -23,6 +36,19 @@
       "name": "Dr. Minghan Bao",
       "role": "Co‑founder & Chief Technology Officer (CTO) | UK PhD in AI & Royal Academy of Engineering GTV Global Talent recipient",
       "bio": "Dr. Minghan Bao, a UK PhD in Artificial Intelligence and Royal Academy of Engineering GTV Global Talent recipient, serves as Co‑founder and Chief Technology Officer (CTO) at Vivian Adventure. He leads the company’s technology strategy, including AI system architecture, digital platform development and intelligent content‑production workflows.\n\nMinghan advances the studio’s core capabilities in:\n• Enterprise‑level collaborations and project enablement\n• Tech‑integrated creative content and curatorial projects\n• Brand innovation and digital transformation\n• Technical direction for large‑scale events, exhibitions and partnership programmes\n\nWith a solid background in AI and computer science, he drives Vivian Adventure’s digital transformation across fashion and media, corporate partnerships, brand co‑creation and cross‑sector commercial initiatives, continually raising the studio’s operational excellence and industry profile."
+    }
+  },
+  {
+    "photo": "/team/Patrick%20Lenihan.png",
+    "zh": {
+      "name": "Dr. Patrick Lenihan",
+      "role": "英国计算机科学博士｜AI系统与机器学习优化专家",
+      "bio": "Lenihan博士为英国计算机科学博士，人工智能系统与机器学习优化领域专家，长期致力于将前沿 AI 技术应用于数字内容生产、智能系统开发与跨国技术协作，他在人工智能工程与产业实践方面拥有丰富经验，曾参与华为 “Seeds for the Future” 国际人才项目，接受 5G 网络架构、云计算与人工智能技术国际技术交流与创新合作项目，具备跨文化科技合作与全球化项目沟通经验。在 Vivian Adventure 团队中，Patrick 主要负责推动 AI 技术与影视创意制作的融合应用，探索人工智能在影像生成、内容优化与数字创意生产流程中的创新实践，同时参与跨国企业合作策划与技术解决方案设计，支持中英之间在科技、文化与创意产业领域的深度协作。Patrick 致力于通过 AI 技术连接科技与艺术，推动跨国创意产业的数字化升级与全球合作发展。"
+    },
+    "en": {
+      "name": "Dr. Patrick Lenihan",
+      "role": "UK PhD in Computer Science | AI Systems & ML Optimization",
+      "bio": "Dr. Lenihan holds a UK PhD in Computer Science and specializes in AI systems and machine-learning optimization. He focuses on applying frontier AI technologies to digital content production, intelligent system development and cross-border technical collaboration. He previously participated in Huawei’s “Seeds for the Future” global talent programme, engaging in international exchanges around 5G network architecture, cloud computing and AI.\n\nAt Vivian Adventure, Patrick drives the integration of AI with film and creative production, exploring innovation in image generation, content optimization and digital creative workflows. He also supports cross-border corporate collaboration planning and technical solution design, enabling deeper UK–China cooperation across technology, culture and the creative industries."
     }
   },
   {

@@ -58,19 +58,19 @@ export default function Bespoke() {
 			],
 			note: '注：试妆/试装为可选；空域审批周期因地区与航线不同而异。'
 		},
-			en: {
-			title: 'Bespoke Production',
-			caseTitle: 'Case Highlights',
+		en: {
+			title: 'Bespoke Services',
+			caseTitle: 'Case Showcase',
 			services: [
 				{
 					title: 'Luxury Car Shoot',
-					desc: 'Route control and model matching to craft a striking, share‑worthy premium image.',
-					points: ['Car model & color scheme', 'Road coordination & permits', 'Driving & safety assurance', 'In‑car/on‑car multi‑camera']
+					desc: 'Route planning and coordination, styling aligned to the car—crafted for premium, share‑worthy visuals.',
+					points: ['Car model & color palette', 'Route coordination & permits', 'Driving & safety management', 'In‑car / exterior multi‑camera']
 				},
 				{
 					title: 'Helicopter Shoot',
-					desc: 'Airspace clearance and helipad coordination, custom flight plan and air‑ground sync.',
-					points: ['Airspace/route permits', 'Helipad & ground liaison', 'Flight plan & safety review', 'Air‑ground multi‑camera']
+					desc: 'Airspace clearance and helipad coordination, custom flight plans, and air‑ground sync for cinematic aerial perspectives.',
+					points: ['Airspace & route permits', 'Helipad & ground liaison', 'Flight plan & safety review', 'Air‑ground multi‑camera coordination']
 				},
 			],
 			flowTitle: 'Workflow',
@@ -82,7 +82,7 @@ export default function Bespoke() {
 				{ k: '05 Production', v: 'Direction, lighting & gear, security and on‑site safety; efficient execution.' },
 				{ k: '06 Post & Delivery', v: 'Selects, edit & grade, sound, deliverables spec and backups.' },
 			],
-			note: 'Note: Test look/makeup optional; airspace lead time varies by region and route.'
+			note: 'Note: Test look & makeup is optional; airspace lead time varies by region and route.'
 		}
 	};
 
@@ -136,7 +136,7 @@ export default function Bespoke() {
 								<p className="text-[#666] mt-1">{s.desc}</p>
 								<ul className="mt-3 grid grid-cols-2 gap-2 text-sm text-[#444]">
 									{s.points.map((p) => (
-										<li key={p} className="px-3 py-2 rounded-lg border border-[#f0f0f0] bg-[#fafafa]">{p}</li>
+										<li key={p} className="px-3 py-2 rounded-lg border border-[#f0f0f0] bg-[#fafafa] break-words">{p}</li>
 									))}
 								</ul>
 							</div>

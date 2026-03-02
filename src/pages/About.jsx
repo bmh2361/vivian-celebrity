@@ -9,6 +9,7 @@ export default function About() {
 	const withBase = (p) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
 
 	const [members, setMembers] = useState([]);
+	const [expanded, setExpanded] = useState(() => ({}));
 
 	useEffect(() => {
 		let cancelled = false;
@@ -21,16 +22,16 @@ export default function About() {
 					const arr = await r.json();
 					if (Array.isArray(arr) && arr.length) {
 						const normalized = arr.map((item, idx) => normalizeItem(item, idx, withBase));
-						if (!cancelled) setMembers(normalized.slice(0, 10));
+						if (!cancelled) setMembers(normalized);
 						return;
 					}
 				}
 			} catch {}
 
-			// 2) 回退：1..7 自动探测图片，生成占位信息
+			// 2) 回退：按序号自动探测图片，生成占位信息
 			const exts = ['jpg', 'jpeg', 'png', 'webp'];
 			const fallback = [];
-			for (let i = 1; i <= 10; i++) {
+			for (let i = 1; i <= 30; i++) {
 				let hit = null;
 				for (const ext of exts) {
 					const url = withBase(`/team/${i}.${ext}`);
@@ -59,7 +60,7 @@ export default function About() {
 		},
 		en: {
 			title: 'Team',
-			subtitle: 'We are a bilingual creative team across fashion and film. From premium styling and portrait photography to commercials, brand films and red-carpet events, we deliver high-aesthetic, business-effective visuals with international standards and bespoke workflows. Core services include makeup & styling, fashion/portrait photography, short films & MV, events and wedding couture, and bespoke destination shoots.',
+			subtitle: 'We are a bilingual creative team bridging fashion and film. From premium styling and portrait photography to commercials, brand films, and red‑carpet events, we deliver high‑aesthetic, business‑effective visuals with international standards and bespoke workflows. Core services include makeup & styling, fashion/portrait photography, short films & MVs, events and wedding couture, and bespoke destination shoots.',
 		}
 	}[lang] || {}), [lang]);
 
@@ -70,7 +71,7 @@ export default function About() {
 			<motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="flex items-start justify-between gap-4">
 				<div>
 					<h1 className="text-2xl md:text-3xl font-extrabold tracking-wide text-[#111]">{t.title}</h1>
-					<p className="text-[#666] mt-2">{t.subtitle}</p>
+					<p className={`text-[#666] mt-2 ${lang === 'en' ? 'leading-7 max-w-3xl break-words' : ''}`}>{t.subtitle}</p>
 				</div>
 				<a href={withBase('/pages/contact.html')} className="shrink-0 inline-flex items-center text-[#9A7B4F] hover:opacity-80 font-medium border-b border-transparent hover:border-[#9A7B4F]" title={lang === 'en' ? 'Contact us' : '联系我们'}>
 					{lang === 'en' ? 'Contact us' : '联系我们'}
@@ -78,18 +79,49 @@ export default function About() {
 			</motion.div>
 
 			<div className="mt-8 space-y-6">
-				{members.map((m, i) => (
-					<motion.div key={i} {...fade(i * 0.03)} className="md:flex md:items-start md:gap-5 rounded-2xl border border-[#eee] bg-white p-4 md:p-5">
-						<div className="md:w-[360px] lg:w-[420px] w-full">
-							<img src={m.photo} alt={m.name} className="w-full h-auto rounded-xl object-contain bg-[#f7f7f7]" loading="lazy" decoding="async" />
-						</div>
-						<div className="flex-1 mt-4 md:mt-0 flex flex-col">
-							<div className="text-xl font-semibold text-[#111]">{display(m.name, m.nameEn, lang)}</div>
-							<div className="text-[#9A7B4F] mt-1">{display(m.role, m.roleEn, lang)}</div>
-							<p className="text-[#555] mt-3 leading-7 whitespace-pre-line">{display(m.bio, m.bioEn, lang)}</p>
-						</div>
-					</motion.div>
-				))}
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+					{members.map((m, i) => {
+						const bioText = display(m.bio, m.bioEn, lang);
+						const isExpanded = !!expanded[i];
+						const canExpand = !!bioText && bioText.length > 220;
+						return (
+						<motion.div key={i} {...fade(i * 0.03)} className="rounded-2xl border border-[#eee] bg-white p-4 shadow-[0_4px_18px_rgba(0,0,0,0.04)]">
+							<div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-[#f7f7f7]">
+								<img
+									src={m.photo}
+									alt={m.nameEn || m.name || ''}
+									className="w-full h-full object-contain"
+									loading="lazy"
+									decoding="async"
+								/>
+							</div>
+							<div className="mt-4">
+								<div className="text-lg font-semibold text-[#111] leading-snug">{m.nameEn || m.name || ''}</div>
+								<div className="text-[#9A7B4F] mt-1 text-sm leading-6 break-words">{display(m.role, m.roleEn, lang)}</div>
+								<p
+									className="text-[#555] mt-3 text-sm leading-6 whitespace-pre-line break-words"
+									style={
+										isExpanded
+											? undefined
+											: { display: '-webkit-box', WebkitLineClamp: 10, WebkitBoxOrient: 'vertical', overflow: 'hidden' }
+									}
+								>
+									{bioText}
+								</p>
+								{canExpand && (
+									<button
+										type="button"
+										onClick={() => setExpanded((prev) => ({ ...prev, [i]: !prev[i] }))}
+										className="mt-2 text-sm font-medium text-[#9A7B4F] hover:underline"
+									>
+										{lang === 'en' ? (isExpanded ? 'Collapse' : 'Read more') : (isExpanded ? '收起' : '展开全文')}
+									</button>
+								)}
+							</div>
+						</motion.div>
+					);
+					})}
+				</div>
 			</div>
 		</div>
 	);

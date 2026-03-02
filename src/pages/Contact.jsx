@@ -25,22 +25,22 @@ export default function Contact() {
 			options: ['妆造造型', '人像/时尚摄影', '短片/MV', '活动/婚礼', '高端定制', '其他']
 		},
 		en: {
-			title: 'Contact us',
+			title: 'Contact Us',
 			intro: 'Book a consultation via:',
-			red: 'Rednote account',
+			red: 'Xiaohongshu (RED)',
 			wechat: 'WeChat',
 			phone: 'Phone',
 			whatsapp: 'WhatsApp',
 			email: 'Email',
 			formTitle: 'Quick Booking Form',
 			people: 'No. of people',
-			contact: 'Contact (phone/email/wechat)',
+			contact: 'Contact (phone/email/WeChat)',
 			date: 'Appointment Date',
 			services: 'Services',
-			send: 'Email us in one click',
-			requiredHint: 'Please provide contact and appointment date',
+			send: 'Email Us',
+			requiredHint: 'Please provide your contact and appointment date.',
 			sentSubject: 'Booking Inquiry',
-			options: ['Makeup & Styling', 'Portrait/Fashion Photography', 'Short Film/MV', 'Event/Wedding', 'Bespoke', 'Other']
+			options: ['Makeup & Styling', 'Portrait/Fashion Photography', 'Short Film / MV', 'Event / Wedding', 'Bespoke', 'Other']
 		}
 	})[lang], [lang]);
 

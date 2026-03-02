@@ -69,29 +69,29 @@ export default function Photography() {
 		},
 		en: {
 			title: 'Visual Aesthetics',
-			subtitle: 'Cinematic visual language for content that travels—strategy, shoot, post, and delivery tailored for UK visibility.',
+			subtitle: 'Cinematic visuals built for UK settings—planning, shooting, post‑production, and delivery ready for distribution.',
 			forWhoTitle: 'Best For',
 			forWho: [
-				'Short drama / short-form teams — UK-based shoots & production coordination',
-				'KOL/KOC/Influencers — premium personal content system for UK visibility',
-				'Brands & products — UK market content assets and distribution-ready materials',
-				'Personal branding — premium portraits and cohesive social identity',
+				'Short drama / short‑form teams — UK‑based shooting & production coordination',
+				'Influencers — premium personal content systems with a British feel',
+				'Brands & products — UK market assets and campaign‑ready content materials',
+				'Personal branding — premium portraits and a cohesive social identity',
 			],
 			platformsTitle: 'Platforms',
 			platforms: ['Xiaohongshu', 'Douyin', 'TikTok', 'Instagram'],
 			aestheticsTitle: 'Aesthetic Range',
 			aesthetics: [
-				'Asian detail-driven polish × European cinematic mood',
-				'Character-first framing aligned with UK settings',
-				'Skin-tone & lighting friendly across changing weather and venues',
+				'Asian detail‑driven polish × European cinematic mood',
+				'Character‑first framing aligned with UK locations',
+				'Skin‑tone & lighting friendly across changing weather and venues',
 			],
 			capTitle: 'What We Cover',
 			caps: [
-				{ t: 'Cameras & lighting', d: 'Film-grade setup with consistent output across locations.' },
-				{ t: 'Planning & storyboards', d: 'Positioning, scripting, shot lists and on-set execution plans.' },
+				{ t: 'Cameras & lighting', d: 'Film‑grade setups with consistent output across locations.' },
+				{ t: 'Planning & storyboards', d: 'Positioning, scripting, shot lists, and on‑set execution plans.' },
 				{ t: 'Short-form production', d: 'Production coordination and pacing for platform-first content.' },
-				{ t: 'Post-production', d: 'Edit, grade, subtitles and visual packaging that looks premium.' },
-				{ t: 'UK-ready delivery', d: 'Multi-format exports plus release suggestions (CN/EN optional).' },
+				{ t: 'Post-production', d: 'Edit, grade, subtitles, and visual packaging that looks premium.' },
+				{ t: 'UK‑ready delivery', d: 'Multi‑format exports plus release suggestions (CN/EN optional).' },
 			],
 			showcase: 'Case Showcase',
 			more: 'Contact us for more work',
@@ -117,7 +117,7 @@ export default function Photography() {
 								{t.forWho.map((line, idx) => (
 									<li key={idx} className="flex gap-2">
 										<span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#CFAF6B] shrink-0" />
-										<span>{line}</span>
+										<span className="break-words">{line}</span>
 									</li>
 								))}
 							</ul>
@@ -140,7 +140,7 @@ export default function Photography() {
 										{t.aesthetics.map((line, idx) => (
 											<li key={idx} className="flex gap-2">
 												<span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#CFAF6B] shrink-0" />
-												<span>{line}</span>
+												<span className="break-words">{line}</span>
 											</li>
 										))}
 									</ul>

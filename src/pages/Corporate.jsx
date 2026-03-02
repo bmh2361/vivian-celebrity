@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useLang } from '../layout/Layout.jsx';
 import '../index.css';
@@ -45,6 +44,9 @@ export default function Corporate() {
   const base = (import.meta.env.BASE_URL || '/').replace(/\/+$/, '');
   const withBase = (p) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
 
+  // 合作案例图片数量：按序号命名（1.jpg ... N.jpg）放在 /public/corporate-cases/
+  const CORPORATE_CASE_COUNT = 9;
+
   const copy = {
     zh: {
       heroTitle: '企业策划',
@@ -65,6 +67,7 @@ export default function Corporate() {
       ],
 
       caseTitle: '合作案例',
+      caseDesc: '从发布会到高端活动执行，精选合作案例展示。',
 
       flowTitle: '合作流程',
       steps: [
@@ -75,32 +78,30 @@ export default function Corporate() {
         { k: '05 效果复盘 · Review & Feedback', v: '数据复盘与媒体物料交付，提出后续增效建议。' },
       ],
 
-      partnerTitle: '合作伙伴',
-      quote: '“Vivian Adventure 的团队把我们的活动提升到了国际水准。” — 合作品牌代表',
-
       callTitle: '开启您的品牌旅程',
       callText: '让我们为您的企业打造专属的视觉与策划体验。联系我们，了解更多合作细节。',
       callBtn: '立即咨询'
     },
     en: {
       heroTitle: 'Corporate Planning',
-      heroSub: 'Strategy · Creative · Execution',
+      heroSub: 'Professional Planning · Creative Execution · Brand Elevation',
       heroDesc: [
-        'Vivian Adventure provides one-stop corporate event and brand planning solutions.',
-        'From concept to execution, we deliver impactful brand moments — product launches, corporate galas, media productions, and private events — all crafted with creativity and precision.',
+        'Vivian Adventure delivers end‑to‑end planning and execution for corporate brands.',
+        'From product launches and annual galas to media production and private events,',
+        'we craft premium experiences with creativity, precision, and reliable delivery.',
       ],
       cta: 'Get in Touch',
 
       svcTitle: 'Services',
       services: [
-        { title: 'Brand Event Planning', desc: 'Plan and execute creative, customized corporate events from concept to completion.', icon: 'event' },
-        { title: 'Visual & Media Production', desc: 'Professional photography, video production, and promotional media for your brand.', icon: 'media' },
-        { title: 'Brand Identity Design', desc: 'Enhance your brand identity through refined design and visual storytelling.', icon: 'identity' },
-        { title: 'Cross-Brand Collaboration', desc: 'Build unique collaborations, exhibitions, and premium business events.', icon: 'link' },
+        { title: 'Brand Event Planning', desc: 'End‑to‑end event strategy, creative concepting, and on‑site execution.', icon: 'event' },
+        { title: 'Visual & Media Production', desc: 'Brand films, event coverage, photography, and video production.', icon: 'media' },
+        { title: 'Brand Visual Upgrade', desc: 'Refine your visual system and content packaging for stronger brand impact.', icon: 'identity' },
+        { title: 'Cross‑Brand Collaboration', desc: 'Partnership campaigns, exhibitions, and premium business events.', icon: 'link' },
       ],
 
-  caseTitle: 'Partnership Cases',
-  caseDesc: 'Selected partnership highlights from launches to executive events.',
+      caseTitle: 'Case Showcase',
+      caseDesc: 'Selected collaborations—from launches to premium corporate events.',
 
       flowTitle: 'Our Process',
       steps: [
@@ -111,43 +112,14 @@ export default function Corporate() {
         { k: '05 Review & Feedback', v: 'Reporting and media delivery, with follow‑up suggestions.' },
       ],
 
-      partnerTitle: 'Trusted by',
-      quote: '“Vivian Adventure’s team elevated our event to a global‑class experience.” — Partner Brand Representative',
-
-      callTitle: 'Start Your Next Chapter',
-      callText: 'Let us tailor an integrated visual and planning experience for your brand. Contact us to learn more.',
+      callTitle: 'Start Your Brand Journey',
+      callText: 'Let’s tailor an integrated visual and planning experience for your brand. Contact us to discuss details and timelines.',
       callBtn: 'Contact Us'
     }
   };
 
   const t = copy[lang] || copy.zh;
   const fade = (d = 0) => ({ initial: { opacity: 0, y: 12 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.2 }, transition: { duration: 0.5, delay: d } });
-
-  // 合作伙伴 LOGO：多后缀兜底，自动尝试 .png/.jpg/.jpeg/.webp/.svg
-  const LogoCell = ({ index }) => {
-    const exts = ['.png', '.jpg', '.jpeg', '.webp', '.svg'];
-    const [ei, setEi] = useState(0);
-    const [found, setFound] = useState(false);
-    const src = withBase(`/partners-logos/${index}${exts[ei]}`);
-    return (
-      <div className="group relative overflow-hidden h-40 md:h-48 lg:h-52 rounded-2xl border border-[#eee] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(0,0,0,0.10)] transition-all grid place-items-center p-8 md:p-10">
-        <img
-          src={src}
-          alt={`Partner Logo ${index}`}
-          className="block max-h-[88%] max-w-[92%] h-auto w-auto object-contain z-[1]"
-          loading="lazy"
-          decoding="async"
-          onLoad={() => setFound(true)}
-          onError={() => {
-            if (ei < exts.length - 1) setEi(ei + 1);
-          }}
-        />
-        {!found && (
-          <div className="absolute inset-0 grid place-items-center text-xs text-[#888] pointer-events-none z-0">LOGO</div>
-        )}
-      </div>
-    );
-  };
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 space-y-12">
@@ -157,7 +129,7 @@ export default function Corporate() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[rgba(207,175,107,0.18)] to-transparent" />
         <h1 className="text-2xl md:text-3xl font-extrabold tracking-wide text-[#111]">{t.heroTitle}</h1>
         <p className="text-[#9A7B4F] mt-2 font-medium">{t.heroSub}</p>
-        <div className="mt-3 text-[#555] space-y-1">
+        <div className={`mt-3 text-[#555] space-y-1 ${lang === 'en' ? 'leading-7 break-words' : ''}`}>
           {t.heroDesc.map((line) => (<p key={line}>{line}</p>))}
         </div>
         <div className="mt-5">
@@ -188,12 +160,12 @@ export default function Corporate() {
         </div>
       </motion.section>
 
-      {/* Partnership Cases: restore previous fill style (object-cover, .jpg) */}
+      {/* Case Showcase: restore previous fill style (object-cover, .jpg) */}
       <motion.section {...fade(0.1)}>
         <h2 className="text-xl md:text-2xl font-bold text-[#111]">{t.caseTitle}</h2>
-        <p className="text-[#666] mt-2">{t.caseDesc}</p>
+        <p className="text-[#666] mt-2 break-words">{t.caseDesc}</p>
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {Array.from({ length: 6 }).map((_, idx) => {
+          {Array.from({ length: CORPORATE_CASE_COUNT }).map((_, idx) => {
             const i = idx + 1;
             const src = withBase(`/corporate-cases/${i}.jpg`);
             const fallbackLabel = lang === 'zh' ? `案例图片 ${i}` : `Case Image ${i}`;
@@ -228,17 +200,6 @@ export default function Corporate() {
             </li>
           ))}
         </ol>
-      </motion.section>
-
-      {/* Partners & Testimonials */}
-      <motion.section {...fade(0.2)} className="rounded-2xl border border-[#eee] bg-white p-6 shadow-[0_4px_18px_rgba(0,0,0,0.04)]">
-        <h2 className="text-xl md:text-2xl font-bold text-[#111]">{t.partnerTitle}</h2>
-        <blockquote className="mt-3 text-[#444] italic">{t.quote}</blockquote>
-        <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-[repeat(auto-fit,minmax(260px,1fr))] sm:gap-6">
-          {Array.from({ length: 12 }).map((_, idx) => (
-            <LogoCell key={idx} index={idx + 1} />
-          ))}
-        </div>
       </motion.section>
 
       {/* CTA */}
