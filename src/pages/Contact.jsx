@@ -45,7 +45,7 @@ export default function Contact() {
 	})[lang], [lang]);
 
 	// 固定联系方式
-	const wechatId = 'Makeupp711711';
+	const wechatId = 'VIVIANADVENTUREUK';
 	const phoneDisplay = '+44 7443735746';
 	const phoneE164 = '447443735746'; // for tel:/wa.me
 	const email = 'vivianadventureofficial@gmail.com';
