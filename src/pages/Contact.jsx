@@ -1,172 +1,133 @@
-import '../index.css';
 import { motion } from 'framer-motion';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useLang } from '../layout/Layout.jsx';
+import '../index.css';
+
+const copy = {
+	zh: {
+		title: '告诉我们您的项目',
+		intro: '先提供关键需求即可；使用范围、授权周期等细节可在后续沟通中确认。',
+		formTitle: '项目需求',
+		name: '姓名',
+		company: '公司',
+		email: '邮箱',
+		projectType: '项目类型',
+		date: '项目日期',
+		location: '项目地点',
+		talent: '人才 / 人数需求',
+		brief: '项目简介',
+		send: '发送项目需求',
+		required: '请填写姓名、邮箱、项目类型和项目简介。',
+		subject: '项目咨询',
+		options: ['商业广告', '达人 / 网红广告', '展会 / 活动', '摄影 / 视频制作', '品牌合作', '其他'],
+		placeholders: { name: '您的姓名', company: '公司 / 品牌', email: 'name@company.com', location: '城市 / 场地（如已知）', talent: '人数、类型或外形方向（如适用）', brief: '目标、时间安排和希望我们提供的支持' },
+	},
+	en: {
+		title: 'Tell Us About Your Project',
+		intro: 'Start with the essentials. Usage, licensing period and detailed requirements can follow in conversation.',
+		formTitle: 'Project Brief',
+		name: 'Name',
+		company: 'Company',
+		email: 'Email',
+		projectType: 'Project Type',
+		date: 'Project Date',
+		location: 'Location',
+		talent: 'Talent Requirement',
+		brief: 'Brief / Additional Details',
+		send: 'Send Us Your Brief',
+		required: 'Please provide your name, email, project type and brief.',
+		subject: 'Project Enquiry',
+		options: ['Commercial Campaign', 'Creator / Influencer Campaign', 'Exhibition / Event', 'Photo / Video Production', 'Brand Partnership', 'Other'],
+		placeholders: { name: 'Your name', company: 'Company / brand', email: 'name@company.com', location: 'City / venue, if known', talent: 'Number, type or appearance direction, if relevant', brief: 'Objective, timing and support required' },
+	},
+};
 
 export default function Contact() {
-	const { lang } = useLang ? useLang() : { lang: 'zh' };
-	const t = useMemo(() => ({
-		zh: {
-			title: '联系我们',
-			intro: '请通过以下方式预约咨询：',
-			red: '小红书',
-			wechat: '微信',
-			phone: '电话',
-			whatsapp: 'WhatsApp',
-			email: '邮箱',
-			formTitle: '快速预约表单',
-			people: '人数',
-			contact: '联系方式（手机号/邮箱/微信）',
-			date: '预约日期',
-			services: '服务项目',
-			send: '一键邮件联系',
-			requiredHint: '请填写联系方式与预约日期',
-			sentSubject: '预约咨询',
-			options: ['妆造造型', '人像/时尚摄影', '短片/MV', '活动/婚礼', '高端定制', '其他']
-		},
-		en: {
-			title: 'Contact Us',
-			intro: 'Book a consultation via:',
-			red: 'Xiaohongshu (RED)',
-			wechat: 'WeChat',
-			phone: 'Phone',
-			whatsapp: 'WhatsApp',
-			email: 'Email',
-			formTitle: 'Quick Booking Form',
-			people: 'No. of people',
-			contact: 'Contact (phone/email/WeChat)',
-			date: 'Appointment Date',
-			services: 'Services',
-			send: 'Email Us',
-			requiredHint: 'Please provide your contact and appointment date.',
-			sentSubject: 'Booking Inquiry',
-			options: ['Makeup & Styling', 'Portrait/Fashion Photography', 'Short Film / MV', 'Event / Wedding', 'Bespoke', 'Other']
-		}
-	})[lang], [lang]);
-
-	// 固定联系方式
-	const wechatId = 'VIVIANADVENTUREUK';
-	const phoneDisplay = '+44 7443735746';
-	const phoneE164 = '447443735746'; // for tel:/wa.me
-	const email = 'vivianadventureofficial@gmail.com';
-
-	// RED/Xiaohongshu：优先使用你提供的完整链接，其次使用 UID，再否则回退到搜索链接
-	// 填写方式：
-	// 1) 若你有完整链接（示例：https://www.xiaohongshu.com/user/profile/xxxxxxxx）请填到 xhsUrl
-	// 2) 若你只有 UID（profileId），请填到 xhsProfileId
-	// 3) 都没有就只填 xhsName，我们会构造搜索链接
-	const xhsName = 'VIVIAN ADVENTURE';
-	const xhsProfileId = '';
-	const xhsUrl = 'https://xhslink.com/m/1bLDIX03RdL';
-	const xhsLink = xhsUrl
-		? xhsUrl
-		: (xhsProfileId ? `https://www.xiaohongshu.com/user/profile/${xhsProfileId}` : `https://www.bing.com/search?q=${encodeURIComponent('site:xiaohongshu.com ' + xhsName)}`);
-
-	// 表单状态
-	const [people, setPeople] = useState(1);
-	const [contact, setContact] = useState('');
+	const { lang } = useLang();
+	const t = copy[lang] || copy.en;
+	const initialProject = useMemo(() => {
+		const value = new URLSearchParams(window.location.search).get('project');
+		if (value === 'talent') return lang === 'zh' ? '商业广告' : 'Commercial Campaign';
+		if (value === 'business') return lang === 'zh' ? '展会 / 活动' : 'Exhibition / Event';
+		return '';
+	}, [lang]);
+	const initialTalent = useMemo(() => new URLSearchParams(window.location.search).get('talent') || '', []);
+	const [name, setName] = useState('');
+	const [company, setCompany] = useState('');
+	const [senderEmail, setSenderEmail] = useState('');
+	const [projectType, setProjectType] = useState(initialProject);
 	const [date, setDate] = useState('');
-	const [selected, setSelected] = useState([]);
+	const [location, setLocation] = useState('');
+	const [talentRequirement, setTalentRequirement] = useState(initialTalent);
+	const [brief, setBrief] = useState('');
+	useEffect(() => {
+		const value = new URLSearchParams(window.location.search).get('project');
+		if (value === 'talent') setProjectType(lang === 'zh' ? '商业广告' : 'Commercial Campaign');
+		if (value === 'business') setProjectType(lang === 'zh' ? '展会 / 活动' : 'Exhibition / Event');
+	}, [lang]);
 
-	// 预约日期下限（本地时区的今天）
-	const todayStr = useMemo(() => {
-		const d = new Date();
-		const y = d.getFullYear();
-		const m = String(d.getMonth() + 1).padStart(2, '0');
-		const day = String(d.getDate()).padStart(2, '0');
-		return `${y}-${m}-${day}`;
+	const recipientEmail = 'vivianadventureofficial@gmail.com';
+	const phoneDisplay = '+44 7443735746';
+	const phoneE164 = '447443735746';
+	const wechatId = 'VIVIANADVENTUREUK';
+	const xhsLink = 'https://xhslink.com/m/1bLDIX03RdL';
+
+	const today = useMemo(() => {
+		const current = new Date();
+		return `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(2, '0')}-${String(current.getDate()).padStart(2, '0')}`;
 	}, []);
-
-	const toggle = (opt) => {
-		setSelected((prev) => prev.includes(opt) ? prev.filter(o => o !== opt) : [...prev, opt]);
-	};
-
-	const mailtoHref = useMemo(() => {
-		const subject = encodeURIComponent(`${t.sentSubject} - ${date || ''}`.trim());
-		const bodyLines = [
-			`${t.people}: ${people || ''}`,
-			`${t.contact}: ${contact || ''}`,
-			`${t.date}: ${date || ''}`,
-			`${t.services}: ${selected.join(', ')}`,
+	const canSend = name.trim() && senderEmail.trim() && projectType && brief.trim() && (!date || date >= today);
+	const mailto = useMemo(() => {
+		const body = [
+			`${t.name}: ${name}`,
+			`${t.company}: ${company}`,
+			`${t.email}: ${senderEmail}`,
+			`${t.projectType}: ${projectType}`,
+			`${t.date}: ${date}`,
+			`${t.location}: ${location}`,
+			`${t.talent}: ${talentRequirement}`,
 			'',
-			'——',
-			(lang === 'en' ? 'Submitted from website contact form' : '来自网站联系表单')
-		];
-		const body = encodeURIComponent(bodyLines.join('\n'));
-		return `mailto:${email}?subject=${subject}&body=${body}`;
-	}, [people, contact, date, selected, email, t, lang]);
+			`${t.brief}:`,
+			brief,
+		].join('\n');
+		return `mailto:${recipientEmail}?subject=${encodeURIComponent(`${t.subject} - ${projectType}`)}&body=${encodeURIComponent(body)}`;
+	}, [brief, company, date, location, name, projectType, senderEmail, t, talentRequirement]);
 
-	const isDateValid = date && date >= todayStr; // 字符串比较在 YYYY-MM-DD 形式下有效
-	const canSend = contact.trim() && isDateValid;
+	const fieldClass = 'mt-2 min-h-11 w-full rounded-none border border-[#d8d3ca] bg-white px-3 py-2.5 outline-none transition-colors focus:border-[#9A7B4F]';
 
-	const tip = lang === 'en' ? 'We will get back to you as soon as possible.' : '我们会尽快回复您的消息';
 	return (
-		<motion.section initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto px-6 py-12">
-			<div className="flex items-start justify-between gap-4">
-				<h1 className="text-2xl md:text-3xl font-semibold">{t.title}</h1>
-				<span className="inline-flex items-center gap-2 rounded-full bg-[#F4EDE2] text-[#7F6742] px-3 py-1.5 text-sm md:text-base font-medium md:mt-0.5 shadow-sm border border-[#eadfce]">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 md:w-5 md:h-5"><path fillRule="evenodd" d="M2.25 12a9.75 9.75 0 1119.5 0 9.75 9.75 0 01-19.5 0zm14.03-2.53a.75.75 0 10-1.06-1.06l-4.72 4.72-1.72-1.72a.75.75 0 10-1.06 1.06l2.25 2.25c.3.3.77.3 1.06 0l5.25-5.25z" clipRule="evenodd"/></svg>
-					{tip}
-				</span>
-			</div>
-			<p className="text-[#666] mt-3">{t.intro}</p>
-
-			<ul className="mt-4 space-y-2 text-[#444]">
-				<li>{t.red}：<a className="text-[#9A7B4F] hover:underline" href={xhsLink} target="_blank" rel="noreferrer noopener">{xhsName}</a></li>
-				<li>{t.wechat}：<span className="font-medium">{wechatId}</span></li>
-				<li>{t.phone}：<a className="text-[#9A7B4F] hover:underline" href={`tel:+${phoneE164}`}>{phoneDisplay}</a></li>
-				<li>{t.whatsapp}：<a className="text-[#9A7B4F] hover:underline" href={`https://wa.me/${phoneE164}`} target="_blank" rel="noreferrer noopener">wa.me/{phoneE164}</a></li>
-				<li>{t.email}：<a className="text-[#9A7B4F] hover:underline" href={`mailto:${email}`}>{email}</a></li>
-			</ul>
-
-			<div className="mt-10 rounded-2xl border border-[#eee] bg-white p-5">
-				<h2 className="text-xl font-semibold text-[#111]">{t.formTitle}</h2>
-				<div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-					<label className="block">
-						<span className="text-sm text-[#666]">{t.people}</span>
-						<input type="number" min={1} value={people} onChange={(e) => setPeople(parseInt(e.target.value || '1', 10))} className="mt-1 w-full rounded-lg border border-[#ddd] px-3 py-2 outline-none focus:border-[#9A7B4F]" />
-					</label>
-					<label className="block md:col-span-1">
-						<span className="text-sm text-[#666]">{t.contact}</span>
-						<input type="text" value={contact} onChange={(e) => setContact(e.target.value)} placeholder={lang === 'en' ? 'Phone/Email/WeChat' : '手机号/邮箱/微信'} className="mt-1 w-full rounded-lg border border-[#ddd] px-3 py-2 outline-none focus:border-[#9A7B4F]" />
-					</label>
-					<label className="block">
-						<span className="text-sm text-[#666]">{t.date}</span>
-						<input
-							type="date"
-							min={todayStr}
-							value={date}
-							onChange={(e) => {
-								const v = e.target.value;
-								if (v && v < todayStr) {
-									setDate(todayStr);
-								} else {
-									setDate(v);
-								}
-							}}
-							className="mt-1 w-full rounded-lg border border-[#ddd] px-3 py-2 outline-none focus:border-[#9A7B4F]"
-						/>
-					</label>
-					<div className="block md:col-span-2">
-						<span className="text-sm text-[#666]">{t.services}</span>
-						<div className="mt-2 grid grid-cols-2 sm:grid-cols-3 gap-2">
-							{t.options.map((opt) => (
-								<label key={opt} className="inline-flex items-center gap-2 rounded-lg border border-[#eee] px-3 py-2 cursor-pointer hover:bg-[#faf9f6]">
-									<input type="checkbox" className="accent-[#9A7B4F]" checked={selected.includes(opt)} onChange={() => toggle(opt)} />
-									<span className="text-sm">{opt}</span>
-								</label>
-							))}
-						</div>
+		<motion.section initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="mx-auto max-w-6xl px-6 py-12 md:py-20">
+			<div className="grid gap-12 md:grid-cols-[.65fr_1.35fr]">
+				<aside>
+					<p className="text-xs font-semibold tracking-[0.25em] text-[#9A7B4F]">START A PROJECT</p>
+					<h1 className="mt-5 text-4xl font-medium tracking-[-0.03em] md:text-5xl">{t.title}</h1>
+					<p className="mt-5 leading-7 text-[#666]">{t.intro}</p>
+					<div className="mt-9 space-y-3 border-t border-[#ded9cf] pt-6 text-sm text-[#555]">
+						<p><span className="text-[#888]">Email</span><br /><a href={`mailto:${recipientEmail}`} className="text-[#725d38] hover:underline">{recipientEmail}</a></p>
+						<p><span className="text-[#888]">Phone / WhatsApp</span><br /><a href={`https://wa.me/${phoneE164}`} className="text-[#725d38] hover:underline">{phoneDisplay}</a></p>
+						<p><span className="text-[#888]">WeChat</span><br />{wechatId}</p>
+						<p><a href={xhsLink} target="_blank" rel="noreferrer noopener" className="text-[#725d38] hover:underline">Xiaohongshu / RED</a></p>
 					</div>
-				</div>
-				<div className="mt-5 flex items-center gap-3">
-					<a href={canSend ? mailtoHref : undefined} onClick={(e) => { if (!canSend) e.preventDefault(); }} className={`inline-flex items-center justify-center rounded-lg px-4 py-2 text-white ${canSend ? 'bg-[#9A7B4F] hover:opacity-90' : 'bg-gray-300 cursor-not-allowed'}`}>{t.send}</a>
-					{!canSend && (
-						<span className="text-sm text-[#999]">{t.requiredHint}</span>
-					)}
+				</aside>
+
+				<div className="border border-[#ded9cf] bg-white p-6 md:p-9">
+					<h2 className="text-2xl font-medium">{t.formTitle}</h2>
+					<div className="mt-7 grid gap-5 sm:grid-cols-2">
+						<label className="block text-sm text-[#666]"><span>{t.name} *</span><input value={name} onChange={(event) => setName(event.target.value)} placeholder={t.placeholders.name} className={fieldClass} /></label>
+						<label className="block text-sm text-[#666]"><span>{t.company}</span><input value={company} onChange={(event) => setCompany(event.target.value)} placeholder={t.placeholders.company} className={fieldClass} /></label>
+						<label className="block text-sm text-[#666] sm:col-span-2"><span>{t.email} *</span><input type="email" value={senderEmail} onChange={(event) => setSenderEmail(event.target.value)} placeholder={t.placeholders.email} className={fieldClass} /></label>
+						<label className="block text-sm text-[#666]"><span>{t.projectType} *</span><select value={projectType} onChange={(event) => setProjectType(event.target.value)} className={fieldClass}><option value="">—</option>{t.options.map((option) => <option key={option}>{option}</option>)}</select></label>
+						<label className="block text-sm text-[#666]"><span>{t.date}</span><input type="date" min={today} value={date} onChange={(event) => setDate(event.target.value)} className={fieldClass} /></label>
+						<label className="block text-sm text-[#666]"><span>{t.location}</span><input value={location} onChange={(event) => setLocation(event.target.value)} placeholder={t.placeholders.location} className={fieldClass} /></label>
+						<label className="block text-sm text-[#666]"><span>{t.talent}</span><input value={talentRequirement} onChange={(event) => setTalentRequirement(event.target.value)} placeholder={t.placeholders.talent} className={fieldClass} /></label>
+						<label className="block text-sm text-[#666] sm:col-span-2"><span>{t.brief} *</span><textarea rows="5" value={brief} onChange={(event) => setBrief(event.target.value)} placeholder={t.placeholders.brief} className={fieldClass} /></label>
+					</div>
+					<div className="mt-7 flex flex-wrap items-center gap-4">
+						<a href={canSend ? mailto : undefined} aria-disabled={!canSend} className={`inline-flex min-h-12 items-center rounded-full px-7 py-3 text-sm font-medium ${canSend ? 'bg-[#111] text-white hover:bg-black' : 'cursor-not-allowed bg-[#ddd] text-[#888]'}`}>{t.send}</a>
+						{!canSend ? <span className="text-xs text-[#888]">{t.required}</span> : null}
+					</div>
 				</div>
 			</div>
 		</motion.section>
 	);
 }
-

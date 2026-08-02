@@ -13,12 +13,14 @@ export default function Home() {
 	const copy = {
 		zh: {
 			heroTitle: '英伦美学巅峰叙事',
-			tagBeauty: '英国高端美业',
+			tagBeauty: '高端美业',
 			tagMedia: '影视传媒',
+			tagBusiness: '企业传播',
 			beautyKicker: 'BEAUTY',
 			mediaKicker: 'MEDIA',
+			businessKicker: 'BUSINESS COMMS',
 			beautyPoints: [
-				'影视 / 时尚 / 婚礼｜造型艺术指导',
+				'影视 / 时尚 / 婚礼 | 造型艺术指导',
 				'妆发与服装整体风格统筹',
 				'高定级私人定制 · 形象顾问',
 			],
@@ -27,9 +29,16 @@ export default function Home() {
 				'内容制作与制片统筹',
 				'品牌叙事与传播 · 合作统筹',
 			],
+			businessPoints: [
+				'品牌策略 · 海外传播',
+				'达人网红 · 模特资源',
+				'商业内容 · 活动执行',
+				'英国本地 · 项目落地',
+			],
 				ctaConsult: '查看妆造美学',
 				ctaImaging: '查看影像美学',
-			ctaPortfolio: '查看作品集',
+			ctaBusiness: '查看企业传播',
+			ctaPortfolio: '查看精选作品',
 			founderRole: '时尚总监 · VIVIAN ADVENTURE 创始人',
 			founderBio:
 				'资深影视与时尚造型指导，深耕中英与国际项目，专注高端定制与叙事视觉美学，将影片与品牌气质转化为优雅而具有辨识度的形象表现。',
@@ -49,10 +58,12 @@ export default function Home() {
 		},
 			en: {
 			heroTitle: 'Peak British Aesthetics, Elevated Storytelling',
-			tagBeauty: 'UK Luxury Beauty',
+			tagBeauty: 'Luxury Beauty',
 			tagMedia: 'Film & Media',
+			tagBusiness: 'Business Comms',
 			beautyKicker: 'BEAUTY',
 			mediaKicker: 'MEDIA',
+			businessKicker: 'BUSINESS COMMS',
 			beautyPoints: [
 				'Film / Fashion / Bridal — Styling Direction',
 				'Beauty & wardrobe look development',
@@ -63,9 +74,16 @@ export default function Home() {
 				'Production coordination · On‑set execution',
 				'Brand storytelling · Partnerships',
 			],
+			businessPoints: [
+				'Brand Strategy · International Communications',
+				'Creators · Influencers · Models',
+				'Commercial Content · Activations',
+				'UK Delivery · Local Execution',
+			],
 				ctaConsult: 'View Makeup & Styling',
 				ctaImaging: 'View Visual Aesthetics',
-			ctaPortfolio: 'View Portfolio',
+			ctaBusiness: 'View Business Comms',
+			ctaPortfolio: 'View Selected Work',
 			founderRole: 'Fashion Director · VIVIAN ADVENTURE Founder',
 			founderBio:
 				'A seasoned film and fashion styling director with extensive UK–China and international experience. Focused on bespoke work and narrative visual aesthetics—translating stories and brand identity into elegant, distinctive looks.',
@@ -165,14 +183,15 @@ export default function Home() {
 							</motion.h1>
 							<motion.div {...fadeUp(0.2)} className="mt-4">
 								<div className="flex flex-wrap items-center gap-2 text-sm">
-									<span className="rounded-full bg-[#111] text-white px-3 py-1">{t.tagBeauty}</span>
-									<span className="rounded-full bg-white text-[#9A7B4F] border border-[#E6CF9A] px-3 py-1">{t.tagMedia}</span>
+									<span className="whitespace-nowrap rounded-full bg-[#111] text-white px-3 py-1">{t.tagBeauty}</span>
+									<span className="whitespace-nowrap rounded-full bg-white text-[#9A7B4F] border border-[#E6CF9A] px-3 py-1">{t.tagMedia}</span>
+									<span className="whitespace-nowrap rounded-full bg-white text-[#9A7B4F] border border-[#E6CF9A] px-3 py-1">{t.tagBusiness}</span>
 								</div>
 								<div className="mt-4 rounded-2xl border border-[#eee] bg-white/80 overflow-hidden">
-									<div className="grid sm:grid-cols-2">
+									<div className="grid sm:grid-cols-2 lg:grid-cols-3">
 										<div className="p-4 md:p-5">
 											<div className="flex items-baseline justify-between gap-3">
-												<div className="text-[12px] font-semibold tracking-[0.08em] text-[#111]">{t.tagBeauty}</div>
+												<div className="whitespace-nowrap text-[12px] font-semibold tracking-[0.08em] text-[#111]">{t.tagBeauty}</div>
 												<div className="text-[10px] tracking-[0.2em] text-[#CFAF6B]">{t.beautyKicker}</div>
 											</div>
 											<div className="mt-3 space-y-2 text-[13px] leading-6 text-[#333]">
@@ -186,7 +205,7 @@ export default function Home() {
 										</div>
 										<div className="p-4 md:p-5 sm:border-l border-[#eee] bg-[#fbfaf7]">
 											<div className="flex items-baseline justify-between gap-3">
-												<div className="text-[12px] font-semibold tracking-[0.08em] text-[#111]">{t.tagMedia}</div>
+												<div className="whitespace-nowrap text-[12px] font-semibold tracking-[0.08em] text-[#111]">{t.tagMedia}</div>
 												<div className="text-[10px] tracking-[0.2em] text-[#CFAF6B]">{t.mediaKicker}</div>
 											</div>
 											<div className="mt-3 space-y-2 text-[13px] leading-6 text-[#333]">
@@ -198,20 +217,42 @@ export default function Home() {
 												))}
 											</div>
 										</div>
+										<div className="p-4 md:p-5 sm:col-span-2 lg:col-span-1 sm:border-t lg:border-l lg:border-t-0 border-[#eee] bg-white">
+											<div className="flex items-baseline justify-between gap-3">
+												<div className="whitespace-nowrap text-[12px] font-semibold tracking-[0.08em] text-[#111]">{t.tagBusiness}</div>
+												<div className="text-[10px] tracking-[0.2em] text-[#CFAF6B]">{t.businessKicker}</div>
+											</div>
+											<div className="mt-3 space-y-2 text-[13px] leading-6 text-[#333]">
+												{t.businessPoints.map((line, idx) => (
+													<div key={idx} className="flex gap-2">
+														<span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#CFAF6B] shrink-0" />
+														<span className="break-words">{line}</span>
+													</div>
+												))}
+											</div>
+										</div>
 									</div>
 								</div>
 							</motion.div>
 
-							<motion.div {...fadeUp(0.3)} className="mt-6 flex flex-wrap items-center gap-4">
-								<a href={withBase('/pages/makeup.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white bg-[#111] hover:bg-black transition-colors">
-									<Icon name="CalendarDays" /> {t.ctaConsult}
-								</a>
-								<a href={withBase('/pages/photography.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors">
-									{t.ctaImaging}
-								</a>
-								<a href={withBase('/pages/portfolio.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors sm:ml-auto">
-									{t.ctaPortfolio}
-								</a>
+							<motion.div {...fadeUp(0.3)} className="mt-6">
+								<div className="flex flex-wrap items-center gap-4">
+									<a href={withBase('/pages/makeup.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white bg-[#111] hover:bg-black transition-colors">
+										<Icon name="CalendarDays" /> {t.ctaConsult}
+									</a>
+									<a href={withBase('/pages/photography.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors">
+										{t.ctaImaging}
+									</a>
+									<a href={withBase('/business/')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors">
+										{t.ctaBusiness}
+									</a>
+								</div>
+								<div className="mt-5 flex justify-start sm:justify-end">
+									<a href={withBase('/pages/portfolio.html')} className="group inline-flex items-center gap-2 border-b border-[#E6CF9A] pb-1 text-xs font-medium tracking-[0.08em] text-[#8B7048] transition-colors hover:border-[#9A7B4F] hover:text-[#6F5737]">
+										{t.ctaPortfolio}
+										<span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+									</a>
+								</div>
 							</motion.div>
 						</div>
 
@@ -243,7 +284,7 @@ export default function Home() {
 					<div className="relative flex items-end justify-between gap-4 flex-wrap">
 						<div>
 							<div className="inline-flex items-center gap-2 text-xs tracking-[0.18em] text-[#9A7B4F]">
-								<span className="px-3 py-1 rounded-full border border-[#E6CF9A] bg-[#fbf8ef]">MEDIA</span>
+								<span className="px-3 py-1 rounded-full border border-[#E6CF9A] bg-[#fbf8ef]">BUSINESS</span>
 								<span className="hidden sm:inline h-px w-10 bg-[#E6CF9A]" />
 								<span className="hidden sm:inline">CORPORATE PLANNING</span>
 							</div>
@@ -251,7 +292,7 @@ export default function Home() {
 							<p className="mt-2 text-sm text-[#555] break-words">{lang === 'en' ? 'One project, long‑term partnership · Trusted by leading brands' : '一次合作，长久合作 · 携手共赢'}</p>
 						</div>
 						<a
-							href={withBase('/pages/corporate.html')}
+							href={withBase('/business/')}
 							className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors"
 						>
 							{lang === 'en' ? 'Corporate Planning' : '查看企业策划'}

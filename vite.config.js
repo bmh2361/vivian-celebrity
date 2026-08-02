@@ -25,7 +25,9 @@ export default defineConfig({
 				contact: resolve(__dirname, 'pages/contact.html'),
 				models: resolve(__dirname, 'pages/models.html'),
 				culture: resolve(__dirname, 'pages/culture.html'),
-				members: resolve(__dirname, 'pages/members.html')
+				members: resolve(__dirname, 'pages/members.html'),
+				talent: resolve(__dirname, 'talent/index.html'),
+				business: resolve(__dirname, 'business/index.html')
 			}
 		}
 	}

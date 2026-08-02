@@ -56,11 +56,11 @@ export default function About() {
 	const t = useMemo(() => ({
 		zh: {
 			title: '团队',
-			subtitle: '我们是一支跨中英文化、覆盖时尚与影视的精英团队：从高端造型与人像摄影，到商业广告、品牌短片与红毯活动，我们以国际化标准与定制化流程，打造具有审美张力与商业影响力的影像作品。核心服务涵盖妆造造型、时尚与人像摄影、短片与MV、活动与婚礼定制，以及高端私人定制旅拍。',
+			subtitle: '我们是一支连接中英、覆盖创意、影视制作、技术研究与企业合作的复合团队：从高端造型与商业影像，到品牌内容、跨境项目协调与英国本地执行，我们以国际化标准和清晰的协作流程，为客户组织兼具审美表达与商业价值的项目交付。',
 		},
 		en: {
 			title: 'Team',
-			subtitle: 'We are a bilingual creative team bridging fashion and film. From premium styling and portrait photography to commercials, brand films, and red‑carpet events, we deliver high‑aesthetic, business‑effective visuals with international standards and bespoke workflows. Core services include makeup & styling, fashion/portrait photography, short films & MVs, events and wedding couture, and bespoke destination shoots.',
+			subtitle: 'We are a UK–China team spanning creative direction, film production, technology, research and corporate collaboration. From premium styling and commercial visuals to brand content, cross-border coordination and UK-based execution, we organise clear delivery around both aesthetic quality and commercial purpose.',
 		}
 	}[lang] || {}), [lang]);
 
