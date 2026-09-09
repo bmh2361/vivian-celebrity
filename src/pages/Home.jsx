@@ -1,6 +1,5 @@
 import '../index.css';
 import { motion } from 'framer-motion';
-import { Icon } from '../icons.jsx';
 import { useLang } from '../layout/Layout.jsx';
 import { useMemo, useState } from 'react';
 
@@ -12,32 +11,49 @@ export default function Home() {
 
 	const copy = {
 		zh: {
-			heroTitle: '英伦美学巅峰叙事',
-			tagBeauty: '高端美业',
-			tagMedia: '影视传媒',
-			tagBusiness: '企业传播',
-			beautyKicker: 'BEAUTY',
-			mediaKicker: 'MEDIA',
-			businessKicker: 'BUSINESS COMMS',
-			beautyPoints: [
-				'影视 / 时尚 / 婚礼 | 造型艺术指导',
-				'妆发与服装整体风格统筹',
-				'高定级私人定制 · 形象顾问',
+			heroTitle: '以审美塑造形象，\n以内容构建品牌，以人才延展表达。',
+			heroSupport: '立足伦敦，从私人形象、品牌内容到人才合作，以创意方向与本地执行完成统一而有辨识度的视觉表达。',
+			pillars: [
+				{
+					index: '01',
+					eyebrow: 'PRIVATE CLIENTS',
+					title: '私人形象',
+					description: '围绕个人气质、场景与表达，完成从妆造到影像的整体形象塑造。',
+					items: [
+						{ label: '妆造美学', href: '/pages/makeup.html' },
+						{ label: '影像美学', href: '/pages/photography.html' },
+						{ label: '高端定制', href: '/pages/bespoke.html' },
+					],
+				},
+				{
+					index: '02',
+					eyebrow: 'COMMERCIAL',
+					title: '商业项目',
+					description: '从品牌内容到活动执行，将创意方向转化为真正落地的英国商业表达。',
+					items: [
+						{ label: '品牌与商业执行', href: '/business/' },
+						{ label: '企业策划', href: '/pages/corporate.html' },
+						{ label: '商业内容' },
+						{ label: '英国本地项目落地' },
+					],
+					cta: '查看商业项目',
+					ctaHref: '/business/',
+				},
+				{
+					index: '03',
+					eyebrow: 'TALENT',
+					title: 'Talent',
+					description: '围绕品牌调性、受众与项目目标，筛选并协调真正适合的人才合作。',
+					items: [
+						{ label: '模特 · 演员' },
+						{ label: 'Creator · Influencer' },
+						{ label: '广告与活动人才' },
+						{ label: '品牌合作' },
+					],
+					cta: '查看 Talent',
+					ctaHref: '/talent/',
+				},
 			],
-			mediaPoints: [
-				'视觉策展 · 创意方向',
-				'内容制作与制片统筹',
-				'品牌叙事与传播 · 合作统筹',
-			],
-			businessPoints: [
-				'品牌策略 · 海外传播',
-				'达人网红 · 模特资源',
-				'商业内容 · 活动执行',
-				'英国本地 · 项目落地',
-			],
-				ctaConsult: '查看妆造美学',
-				ctaImaging: '查看影像美学',
-			ctaBusiness: '查看企业传播',
 			ctaPortfolio: '查看精选作品',
 			founderRole: '时尚总监 · VIVIAN ADVENTURE 创始人',
 			founderBio:
@@ -56,33 +72,47 @@ export default function Home() {
 			],
 			ctaDeep: '预约深度沟通',
 		},
-			en: {
-			heroTitle: 'Peak British Aesthetics, Elevated Storytelling',
-			tagBeauty: 'Luxury Beauty',
-			tagMedia: 'Film & Media',
-			tagBusiness: 'Business Comms',
-			beautyKicker: 'BEAUTY',
-			mediaKicker: 'MEDIA',
-			businessKicker: 'BUSINESS COMMS',
-			beautyPoints: [
-				'Film / Fashion / Bridal — Styling Direction',
-				'Beauty & wardrobe look development',
-				'Private bespoke looks · Image consulting',
+		en: {
+			heroTitle: 'Image, Brand & Talent —\nShaped with Intention.',
+			heroSupport: 'A London creative house creating refined personal imagery, distinctive brand presence and talent-led experiences — from creative direction through to local execution.',
+			pillars: [
+				{
+					index: '01',
+					eyebrow: 'PRIVATE CLIENTS',
+					description: 'Refined image-making shaped around identity, occasion and presence.',
+					items: [
+						{ label: 'Makeup & Styling', href: '/pages/makeup.html' },
+						{ label: 'Visual Aesthetics', href: '/pages/photography.html' },
+						{ label: 'Bespoke', href: '/pages/bespoke.html' },
+					],
+				},
+				{
+					index: '02',
+					eyebrow: 'COMMERCIAL',
+					description: 'From brand content to activations, we translate creative direction into polished UK-based execution.',
+					items: [
+						{ label: 'Brand & Commercial Execution', href: '/business/' },
+						{ label: 'Business Planning', href: '/pages/corporate.html' },
+						{ label: 'Commercial Content' },
+						{ label: 'UK Delivery' },
+					],
+					cta: 'Explore Commercial',
+					ctaHref: '/business/',
+				},
+				{
+					index: '03',
+					eyebrow: 'TALENT',
+					description: 'Curated talent sourcing and collaboration shaped around the brand, audience and project.',
+					items: [
+						{ label: 'Models · Actors' },
+						{ label: 'Creators · Influencers' },
+						{ label: 'Campaign Talent' },
+						{ label: 'Brand Partnerships' },
+					],
+					cta: 'Explore Talent',
+					ctaHref: '/talent/',
+				},
 			],
-			mediaPoints: [
-				'Visual curation · Creative direction',
-				'Production coordination · On‑set execution',
-				'Brand storytelling · Partnerships',
-			],
-			businessPoints: [
-				'Brand Strategy · International Communications',
-				'Creators · Influencers · Models',
-				'Commercial Content · Activations',
-				'UK Delivery · Local Execution',
-			],
-				ctaConsult: 'View Makeup & Styling',
-				ctaImaging: 'View Visual Aesthetics',
-			ctaBusiness: 'View Business Comms',
 			ctaPortfolio: 'View Selected Work',
 			founderRole: 'Fashion Director · VIVIAN ADVENTURE Founder',
 			founderBio:
@@ -170,100 +200,64 @@ export default function Home() {
 		<div className="">
 			{/* Hero：文字在左，图卡片置于右上角（非全屏背景） */}
 			<section className="relative overflow-hidden bg-white">
-				<div className="max-w-7xl mx-auto px-6 pt-14 md:pt-20 pb-12 md:pb-16 relative">
-					<div className="grid gap-6 md:grid-cols-2 md:items-stretch">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 pt-14 md:pt-20 pb-12 md:pb-16 relative">
+					<div className="grid gap-6 lg:grid-cols-2 lg:items-stretch">
 						{/* 内容容器 */}
-						<div className="w-full h-full bg-white/85 backdrop-blur-[2px] rounded-2xl p-7 md:p-8 shadow-[0_8px_28px_-4px_rgba(0,0,0,0.10)] border border-[#f2f2f2] flex flex-col">
+						<div className="w-full h-full bg-white/85 backdrop-blur-[2px] rounded-2xl p-5 sm:p-7 md:p-8 shadow-[0_8px_28px_-4px_rgba(0,0,0,0.10)] border border-[#f2f2f2] flex flex-col">
 							<motion.div {...fadeUp(0)} className="flex items-center gap-3 text-[#CFAF6B]">
 								<span className="text-xs font-semibold tracking-[0.15em]">VIVIAN ADVENTURE</span>
 								<span className="h-px flex-1 bg-[#E6CF9A]" />
 							</motion.div>
-							<motion.h1 {...fadeUp(0.1)} className="mt-5 text-3xl md:text-[40px] leading-tight font-extrabold text-[#111]">
+			<motion.h1 {...fadeUp(0.1)} className={`mt-5 whitespace-pre-line leading-tight font-extrabold text-[#111] ${lang === 'zh' ? 'text-[26px] sm:text-[30px]' : 'text-[24px] sm:text-3xl md:text-[34px] lg:text-[32px] xl:text-[36px]'}`}>
 								{t.heroTitle}
 							</motion.h1>
-							<motion.div {...fadeUp(0.2)} className="mt-4">
-								<div className="flex flex-wrap items-center gap-2 text-sm">
-									<span className="whitespace-nowrap rounded-full bg-[#111] text-white px-3 py-1">{t.tagBeauty}</span>
-									<span className="whitespace-nowrap rounded-full bg-white text-[#9A7B4F] border border-[#E6CF9A] px-3 py-1">{t.tagMedia}</span>
-									<span className="whitespace-nowrap rounded-full bg-white text-[#9A7B4F] border border-[#E6CF9A] px-3 py-1">{t.tagBusiness}</span>
-								</div>
-								<div className="mt-4 rounded-2xl border border-[#eee] bg-white/80 overflow-hidden">
-									<div className="grid sm:grid-cols-2 lg:grid-cols-3">
-										<div className="p-4 md:p-5">
-											<div className="flex items-baseline justify-between gap-3">
-												<div className="whitespace-nowrap text-[12px] font-semibold tracking-[0.08em] text-[#111]">{t.tagBeauty}</div>
-												<div className="text-[10px] tracking-[0.2em] text-[#CFAF6B]">{t.beautyKicker}</div>
-											</div>
-											<div className="mt-3 space-y-2 text-[13px] leading-6 text-[#333]">
-												{t.beautyPoints.map((line, idx) => (
-													<div key={idx} className="flex gap-2">
-														<span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#CFAF6B] shrink-0" />
-														<span className="break-words">{line}</span>
+							<motion.p {...fadeUp(0.2)} className="mt-4 max-w-xl text-sm leading-6 text-[#666]">
+								{t.heroSupport}
+							</motion.p>
+							<motion.div {...fadeUp(0.3)} className="mt-5">
+								<div className="border-t border-[#eee]">
+									{t.pillars.map((pillar) => (
+										<div key={pillar.index} className="grid grid-cols-[28px_minmax(0,1fr)] gap-3 border-b border-[#eee] py-5">
+											<div className="pt-0.5 text-[11px] font-semibold tracking-[0.16em] text-[#CFAF6B]">{pillar.index}</div>
+											<div className="min-w-0 xl:grid xl:grid-cols-[minmax(0,1.05fr)_minmax(190px,.95fr)] xl:gap-5">
+											<div>
+												<div className="text-[10px] font-semibold tracking-[0.18em] text-[#9A7B4F]">{pillar.eyebrow}</div>
+												{pillar.title && <h2 className="mt-1 text-lg font-semibold leading-snug text-[#111]">{pillar.title}</h2>}
+													<p className="mt-2 text-[13px] leading-5 text-[#555]">{pillar.description}</p>
+												</div>
+												<div className="mt-3 xl:mt-0">
+													<div className="flex flex-wrap gap-x-3 gap-y-2 text-xs leading-5">
+														{pillar.items.map((item) => item.href ? (
+															<a key={item.label} href={withBase(item.href)} className="border-b border-[#E6CF9A] text-[#333] transition-colors hover:border-[#9A7B4F] hover:text-[#9A7B4F]">{item.label}</a>
+														) : (
+															<span key={item.label} className="text-[#666]">{item.label}</span>
+														))}
 													</div>
-												))}
+													{pillar.cta && (
+														<a href={withBase(pillar.ctaHref)} className="group mt-3 inline-flex items-center gap-2 text-xs font-medium tracking-[0.08em] text-[#8B7048] transition-colors hover:text-[#6F5737]">
+															{pillar.cta}<span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+														</a>
+													)}
+												</div>
 											</div>
 										</div>
-										<div className="p-4 md:p-5 sm:border-l border-[#eee] bg-[#fbfaf7]">
-											<div className="flex items-baseline justify-between gap-3">
-												<div className="whitespace-nowrap text-[12px] font-semibold tracking-[0.08em] text-[#111]">{t.tagMedia}</div>
-												<div className="text-[10px] tracking-[0.2em] text-[#CFAF6B]">{t.mediaKicker}</div>
-											</div>
-											<div className="mt-3 space-y-2 text-[13px] leading-6 text-[#333]">
-												{t.mediaPoints.map((line, idx) => (
-													<div key={idx} className="flex gap-2">
-														<span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#CFAF6B] shrink-0" />
-														<span className="break-words">{line}</span>
-													</div>
-												))}
-											</div>
-										</div>
-										<div className="p-4 md:p-5 sm:col-span-2 lg:col-span-1 sm:border-t lg:border-l lg:border-t-0 border-[#eee] bg-white">
-											<div className="flex items-baseline justify-between gap-3">
-												<div className="whitespace-nowrap text-[12px] font-semibold tracking-[0.08em] text-[#111]">{t.tagBusiness}</div>
-												<div className="text-[10px] tracking-[0.2em] text-[#CFAF6B]">{t.businessKicker}</div>
-											</div>
-											<div className="mt-3 space-y-2 text-[13px] leading-6 text-[#333]">
-												{t.businessPoints.map((line, idx) => (
-													<div key={idx} className="flex gap-2">
-														<span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#CFAF6B] shrink-0" />
-														<span className="break-words">{line}</span>
-													</div>
-												))}
-											</div>
-										</div>
-									</div>
+									))}
 								</div>
 							</motion.div>
 
-							<motion.div {...fadeUp(0.3)} className="mt-6">
-								<div className="flex flex-wrap items-center gap-4">
-									<a href={withBase('/pages/makeup.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white bg-[#111] hover:bg-black transition-colors">
-										<Icon name="CalendarDays" /> {t.ctaConsult}
-									</a>
-									<a href={withBase('/pages/photography.html')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors">
-										{t.ctaImaging}
-									</a>
-									<a href={withBase('/business/')} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors">
-										{t.ctaBusiness}
-									</a>
-								</div>
-								<div className="mt-5 flex justify-start sm:justify-end">
-									<a href={withBase('/pages/portfolio.html')} className="group inline-flex items-center gap-2 border-b border-[#E6CF9A] pb-1 text-xs font-medium tracking-[0.08em] text-[#8B7048] transition-colors hover:border-[#9A7B4F] hover:text-[#6F5737]">
-										{t.ctaPortfolio}
-										<span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-									</a>
-								</div>
+							<motion.div {...fadeUp(0.3)} className="mt-5 flex justify-start sm:justify-end">
+								<a href={withBase('/pages/portfolio.html')} className="group inline-flex items-center gap-2 border-b border-[#E6CF9A] pb-1 text-xs font-medium tracking-[0.08em] text-[#8B7048] transition-colors hover:border-[#9A7B4F] hover:text-[#6F5737]">
+									{t.ctaPortfolio}
+									<span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+								</a>
 							</motion.div>
 						</div>
 
 						{/* 右侧图片卡片（移动端也展示） */}
-						<motion.div initial={{ opacity: 0, y: -6 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, ease: 'easeOut' }} className="w-full h-[320px] sm:h-[360px] md:h-full">
-							<div className="group h-full rounded-3xl p-[1.5px] bg-gradient-to-br from-[#F4E7BE] via-[#CFAF6B] to-[#9A7B4F] shadow-[0_18px_42px_rgba(0,0,0,0.14)] transition-transform duration-500 will-change-transform">
-								<div className="h-full rounded-[22px] overflow-hidden bg-[#fbfaf7] relative group-hover:shadow-[0_22px_48px_rgba(0,0,0,0.16)] group-hover:-translate-y-1 transition-all duration-500">
-									{/* 以“模糊背景 + 前景完整展示”的方式避免黑边且不裁切 */}
-									<HeroImage withBase={withBase} className="relative w-full h-full" />
-									{/* 细腻高亮层 */}
-									<div className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(120% 80% at 0% 0%, rgba(255,255,255,0.48) 0%, rgba(255,255,255,0.16) 40%, rgba(255,255,255,0) 68%)' }} />
+						<motion.div initial={{ opacity: 0, y: -6 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, ease: 'easeOut' }} className="w-full lg:h-full">
+							<div className="group rounded-3xl p-[1.5px] bg-gradient-to-br from-[#F4E7BE] via-[#CFAF6B] to-[#9A7B4F] shadow-[0_18px_42px_rgba(0,0,0,0.14)] transition-transform duration-500 will-change-transform lg:h-full">
+								<div className="overflow-hidden rounded-[22px] bg-[#fbfaf7] group-hover:shadow-[0_22px_48px_rgba(0,0,0,0.16)] group-hover:-translate-y-1 transition-all duration-500 lg:h-full">
+									<HeroImage withBase={withBase} className="block h-auto w-full object-contain lg:h-full" />
 								</div>
 							</div>
 						</motion.div>
@@ -314,27 +308,15 @@ function HeroImage({ withBase, className }) {
 	const src = withBase(rel);
 	const onError = () => setRel(prev => (prev === '/hero-company.jpg' ? prev : '/hero-company.jpg'));
 	return (
-		<div className={className}>
-			<img
-				src={src}
-				alt=""
-				aria-hidden="true"
-				className="absolute inset-0 w-full h-full object-cover blur-2xl scale-110 opacity-60"
-				onError={onError}
-				loading="eager"
-				decoding="async"
-				fetchpriority="low"
-			/>
-			<img
-				src={src}
-				alt="hero"
-				className="relative w-full h-full object-contain"
-				onError={onError}
-				loading="eager"
-				decoding="async"
-				fetchpriority="high"
-			/>
-		</div>
+		<img
+			src={src}
+			alt="hero"
+			className={className}
+			onError={onError}
+			loading="eager"
+			decoding="async"
+			fetchpriority="high"
+		/>
 	);
 }
 
