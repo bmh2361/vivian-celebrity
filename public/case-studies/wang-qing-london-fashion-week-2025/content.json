@@ -1,0 +1,162 @@
+{
+  "id": "C05",
+  "slug": "wang-qing-london-fashion-week-2025",
+  "status": "published",
+  "sortOrder": 10,
+  "primaryCategory": "fashion-week",
+  "year": 2025,
+  "date": null,
+  "location": "London",
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "王青｜伦敦时装周 2025",
+      "summary": "王青伦敦时装周人物项目：统筹形象准备、场景与内容制作。",
+      "preview": "时装周人物项目需要把出席时的形象准备与内容制作衔接起来。本案围绕王青在伦敦的项目，将人员沟通和场景安排纳入同一组制作工作。",
+      "role": "Vivian Adventure 将形象准备、场景安排与人员沟通连接到影像制作，承担人物项目中这些环节的统筹。场景与人员的安排服务于同一项内容交付。",
+      "context": "王青是本次伦敦时装周人物项目的核心。项目围绕形象准备与时尚内容制作展开，需要把人物、场景和参与制作的人员组织起来。",
+      "narrativeSections": [
+        {
+          "heading": "从形象准备进入制作",
+          "text": "人物项目的准备工作直接影响后续拍摄：形象需要结合出现场景，场景安排又需要与参与人员沟通。我们的工作覆盖这些相互依赖的环节，使形象准备与现场制作成为连续的工作。"
+        },
+        {
+          "heading": "交付围绕人物项目",
+          "text": "本案交付包括形象准备、制作协调、场景安排和人物造型影像。它体现的是将时装周人物呈现落实为具体制作的能力，覆盖准备与内容产出两个阶段。"
+        }
+      ],
+      "deliverables": [
+        "形象准备、场景安排与人员沟通",
+        "王青人物造型影像及相关制作协调"
+      ],
+      "outcomes": [
+        "形成与王青此次伦敦项目对应的人物内容，连同前期形象准备和现场制作工作一并完成。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "Wang Qing | London Fashion Week 2025",
+      "summary": "Talent production for Wang Qing at London Fashion Week, connecting image preparation, settings and content.",
+      "preview": "A fashion week talent project links the preparation for an appearance with the work needed to produce content. For Wang Qing in London, that included people liaison and the settings for the shoot.",
+      "role": "Vivian Adventure coordinated image preparation, settings and people liaison alongside photography. These connected responsibilities supported the same talent content brief.",
+      "context": "Wang Qing was the subject of this London Fashion Week talent project. The work centred on image preparation and fashion content, bringing together the person, the settings and the people involved in production.",
+      "narrativeSections": [
+        {
+          "heading": "Preparation that carries into production",
+          "text": "The chosen look informs the setting, while the setting requires coordination with the people taking part. Our scope covered these dependencies, connecting preparation for the talent with the practical work of making the content."
+        },
+        {
+          "heading": "A defined talent delivery",
+          "text": "The work comprised image preparation, production coordination, settings and photographs of Wang Qing’s looks. It demonstrates the ability to take a fashion week talent project through preparation and into content production."
+        }
+      ],
+      "deliverables": [
+        "Image preparation, settings and people liaison",
+        "Wang Qing fashion imagery and associated production coordination"
+      ],
+      "outcomes": [
+        "The project brought together the preparation and production work behind a set of talent content specific to Wang Qing’s London project."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/wang-qing-london-fashion-week-2025/ca1cc5b74a8de3d1ddbafa5a5832e754.jpg",
+      "alt": {
+        "zh": "活动现场中的深色刺绣造型",
+        "en": "Dark embroidered look within an event setting"
+      },
+      "width": 1440,
+      "height": 1080,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "1440 / 1080",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/wang-qing-london-fashion-week-2025/1d12f5f4018a0bffe5e462bec1c40982.jpg",
+      "alt": {
+        "zh": "红色店面前的深色刺绣全身造型",
+        "en": "Full-length dark embroidered look against a red storefront"
+      },
+      "width": 1256,
+      "height": 1000,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/wang-qing-london-fashion-week-2025/0d6cfe2df525acb231b8980d9100ff8c.jpg",
+      "alt": {
+        "zh": "伦敦街头的深色刺绣造型近景",
+        "en": "Close street portrait in a dark embroidered look"
+      },
+      "width": 1279,
+      "height": 1972,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "1 / 1",
+          "fit": "cover",
+          "position": "50% 15%"
+        }
+      }
+    },
+    "gallery": [
+      {
+        "src": "/case-studies/wang-qing-london-fashion-week-2025/c6792189e952c45aab77caa930cf041e.jpg",
+        "alt": {
+          "zh": "建筑空间中的横幅环境造型",
+          "en": "Landscape fashion portrait within an architectural setting"
+        },
+        "width": 1440,
+        "height": 928,
+        "focalPoint": "center"
+      },
+      {
+        "src": "/case-studies/wang-qing-london-fashion-week-2025/ca1cc5b74a8de3d1ddbafa5a5832e754.jpg",
+        "alt": {
+          "zh": "活动现场中的深色刺绣造型",
+          "en": "Dark embroidered look within an event setting"
+        },
+        "width": 1440,
+        "height": 1080,
+        "focalPoint": "center"
+      },
+      {
+        "src": "/case-studies/wang-qing-london-fashion-week-2025/87a20c4874efc1107a896524d9f2f8dc.jpg",
+        "alt": {
+          "zh": "建筑背景前的深色刺绣造型",
+          "en": "Dark embroidered look against architectural details"
+        },
+        "width": 960,
+        "height": 1604,
+        "focalPoint": "center"
+      },
+      {
+        "src": "/case-studies/wang-qing-london-fashion-week-2025/d9a2c2ab767c44041c4104671bcceb2b.jpg",
+        "alt": {
+          "zh": "深色刺绣造型的人物近景",
+          "en": "Close portrait highlighting the dark embroidered look"
+        },
+        "width": 1280,
+        "height": 2276,
+        "focalPoint": "center"
+      },
+      {
+        "src": "/case-studies/wang-qing-london-fashion-week-2025/6314eeecbdf9c942e90571966e8da7df.jpg",
+        "alt": {
+          "zh": "带伦敦时装周文字的创意人物构图",
+          "en": "Editorial portrait composition with London Fashion Week text"
+        },
+        "width": 1279,
+        "height": 1555,
+        "focalPoint": "center"
+      }
+    ],
+    "layoutFamily": "portrait",
+    "layoutVariant": "fashion-diptych"
+  }
+}

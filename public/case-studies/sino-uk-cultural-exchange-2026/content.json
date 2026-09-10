@@ -1,0 +1,129 @@
+{
+  "id": "C01",
+  "slug": "sino-uk-cultural-exchange-2026",
+  "status": "published",
+  "sortOrder": 80,
+  "primaryCategory": "brand-cultural-events",
+  "year": 2026,
+  "date": null,
+  "location": null,
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "中英生命科学与文化交流",
+      "summary": "中英生命科学与文化交流活动：将现场安排与人员协作纳入整体统筹。",
+      "preview": "交流活动需要把参与人员与现场安排组织到一起。Vivian Adventure 的职责是活动整体统筹，重点落在现场与人员之间的衔接。",
+      "role": "Vivian Adventure 承担活动整体统筹，将现场安排与人员协作作为相互关联的工作处理。现场需求通过人员协调落实，人员安排也需要与活动现场相匹配。",
+      "context": "这是一项以中英生命科学与文化交流为主题的活动。本案的执行任务围绕活动组织展开，为参与者的现场交流提供配套安排。",
+      "narrativeSections": [
+        {
+          "heading": "交流背后的组织工作",
+          "text": "项目的核心是交流活动本身。我们的工作落在组织层面：把现场安排与参与执行的人员联系起来，让活动内容有对应的执行支持。整体统筹的范围在本案中体现为现场与人员两条工作线。"
+        }
+      ],
+      "deliverables": [
+        "活动整体统筹",
+        "现场安排与人员协调"
+      ],
+      "outcomes": [
+        "本案形成了活动现场与人员协作的组织交付，体现正式交流活动的统筹能力。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "Sino–UK Life Sciences & Cultural Exchange",
+      "summary": "Event coordination for Sino-UK life sciences and cultural exchange, connecting people with on-site arrangements.",
+      "preview": "An exchange event needs its people and practical arrangements to work together. Vivian Adventure’s scope was overall event coordination, centred on the relationship between the site and those involved.",
+      "role": "Vivian Adventure undertook overall event coordination, linking on-site arrangements with people liaison. Each part of the work informed the other: practical requirements needed people in place, and people needed arrangements that matched the event.",
+      "context": "The event focused on Sino-UK life sciences and cultural exchange. The production assignment concerned the organisation behind that meeting and the arrangements supporting it on site.",
+      "narrativeSections": [
+        {
+          "heading": "The organisation behind the exchange",
+          "text": "The exchange itself was the purpose of the event. Our contribution was its practical organisation: connecting on-site arrangements with the people involved in execution. These were the two linked strands of the overall coordination scope."
+        }
+      ],
+      "deliverables": [
+        "Overall event coordination",
+        "On-site arrangements and people liaison"
+      ],
+      "outcomes": [
+        "The delivery comprised the event’s on-site organisation and people coordination, demonstrating practical coordination for a formal exchange event."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/sino-uk-cultural-exchange-2026/C01-02.jpg",
+      "alt": {
+        "zh": "正式交流场合的来宾互动",
+        "en": "Guest interaction during a formal gathering"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1618,
+      "height": 1080,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "1618 / 1080",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/sino-uk-cultural-exchange-2026/C01-01.jpg",
+      "alt": {
+        "zh": "木饰面大厅中的接待场景",
+        "en": "Reception setting in a wood-panelled hall"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1280,
+      "height": 1600,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/sino-uk-cultural-exchange-2026/C01-02.jpg",
+      "alt": {
+        "zh": "正式交流场合的来宾互动",
+        "en": "Guest interaction during a formal gathering"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1618,
+      "height": 1080,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "1618 / 1080",
+          "fit": "contain"
+        }
+      }
+    },
+    "gallery": [
+      {
+        "src": "/case-studies/sino-uk-cultural-exchange-2026/C01-02.jpg",
+        "alt": {
+          "zh": "正式交流场合的来宾互动",
+          "en": "Guest interaction during a formal gathering"
+        },
+        "caption": {
+          "zh": "",
+          "en": ""
+        },
+        "width": 1618,
+        "height": 1080,
+        "focalPoint": "center"
+      }
+    ],
+    "layoutFamily": "portrait",
+    "layoutVariant": "venue-experience"
+  }
+}

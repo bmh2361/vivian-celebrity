@@ -96,7 +96,7 @@ export default function Contact() {
 	const fieldClass = 'mt-2 min-h-11 w-full rounded-none border border-[#d8d3ca] bg-white px-3 py-2.5 outline-none transition-colors focus:border-[#9A7B4F]';
 
 	return (
-		<motion.section initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="mx-auto max-w-6xl px-6 py-12 md:py-20">
+		<motion.section initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="layout-focused contact-page mx-auto max-w-6xl px-6 py-12 md:py-20">
 			<div className="grid gap-12 md:grid-cols-[.65fr_1.35fr]">
 				<aside>
 					<p className="text-xs font-semibold tracking-[0.25em] text-[#9A7B4F]">START A PROJECT</p>
@@ -106,7 +106,7 @@ export default function Contact() {
 						<p><span className="text-[#888]">Email</span><br /><a href={`mailto:${recipientEmail}`} className="text-[#725d38] hover:underline">{recipientEmail}</a></p>
 						<p><span className="text-[#888]">Phone / WhatsApp</span><br /><a href={`https://wa.me/${phoneE164}`} className="text-[#725d38] hover:underline">{phoneDisplay}</a></p>
 						<p><span className="text-[#888]">WeChat</span><br />{wechatId}</p>
-						<p><a href={xhsLink} target="_blank" rel="noreferrer noopener" className="text-[#725d38] hover:underline">Xiaohongshu / RED</a></p>
+						<p><a href={xhsLink} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 max-w-full items-center gap-2 whitespace-normal py-2 leading-6 text-[#725d38] underline decoration-[#E6CF9A] underline-offset-4 hover:decoration-current focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9A7B4F]"><span className="min-w-0 break-words">Xiaohongshu / RED</span><span aria-hidden="true" className="shrink-0">↗</span></a></p>
 					</div>
 				</aside>
 

@@ -1,0 +1,152 @@
+{
+  "id": "C10",
+  "slug": "lil-ghost-london-live-2026",
+  "status": "published",
+  "sortOrder": 20,
+  "primaryCategory": "live-performance",
+  "year": 2026,
+  "date": null,
+  "location": "London",
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "小鬼王琳凯｜伦敦现场 2026",
+      "summary": "小鬼王琳凯伦敦演出：衔接现场制作执行、团队沟通与影像交付。",
+      "preview": "现场演出与内容制作发生在同一项目中。我们的工作把团队沟通和综合制作执行连接到影像任务及后续交付。",
+      "role": "Vivian Adventure 承担演出影像工作，并参与综合制作执行、团队沟通与内容交付。这些职责把现场协作与最终影像交付联系起来。",
+      "context": "本案围绕小鬼王琳凯 2026 年的伦敦现场演出展开。项目同时涉及演出执行配合与内容制作，需要让影像工作与演出团队的沟通保持联系。",
+      "narrativeSections": [
+        {
+          "heading": "影像工作进入演出执行",
+          "text": "演出影像工作需要与现场执行相互配合。本案中，团队沟通和综合制作执行都在参与范围内，影像任务因此与演出项目的实际工作衔接。"
+        },
+        {
+          "heading": "从现场延伸到交付",
+          "text": "演出与观众内容构成影像交付。案例的商业价值在于参与范围覆盖现场制作配合、团队沟通和内容交付，连接了执行现场与最终产出。"
+        }
+      ],
+      "deliverables": [
+        "现场制作执行配合与团队沟通",
+        "演出及观众影像内容交付"
+      ],
+      "outcomes": [
+        "完成演出影像内容及相关执行配合，体现现场制作与内容交付相衔接的能力。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "Lil Ghost | Live in London 2026",
+      "summary": "Live production, team liaison and content delivery for Lil Ghost in London.",
+      "preview": "The live show and its content production formed part of the same assignment. Our work connected team liaison and production execution with photography and delivery.",
+      "role": "Vivian Adventure undertook performance photography and contributed to production execution, team communication and content delivery, connecting work on site with the final output.",
+      "context": "This project centred on Lil Ghost’s 2026 London live performance. It involved both production support and content, linking the visual assignment with communication around the show.",
+      "narrativeSections": [
+        {
+          "heading": "Photography within the production",
+          "text": "Performance photography depends on its relationship with the live event. Team communication and production execution were both within our involvement, connecting the visual assignment with the practical work around the show."
+        },
+        {
+          "heading": "From the event to the content",
+          "text": "The imagery covered the performance and its audience. The case demonstrates a scope extending across production support, team liaison and content delivery, linking the live event with its resulting assets."
+        }
+      ],
+      "deliverables": [
+        "On-site production support and team communication",
+        "Performance and audience imagery delivery"
+      ],
+      "outcomes": [
+        "The assignment produced performance content alongside production support, demonstrating the connection between live execution and content delivery."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/lil-ghost-london-live-2026/C10-02.avif",
+      "alt": {
+        "zh": "红色灯光下的现场演出竖幅画面",
+        "en": "Portrait-format live-performance image under red lighting"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1280,
+      "height": 1920,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "1280 / 1920",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/lil-ghost-london-live-2026/C10-02.avif",
+      "alt": {
+        "zh": "红色灯光下的现场演出竖幅画面",
+        "en": "Portrait-format live-performance image under red lighting"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1280,
+      "height": 1920,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/lil-ghost-london-live-2026/C10-02.avif",
+      "alt": {
+        "zh": "红色灯光下的现场演出竖幅画面",
+        "en": "Portrait-format live-performance image under red lighting"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1280,
+      "height": 1920,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "4 / 5",
+          "fit": "cover",
+          "position": "50% 0%"
+        }
+      }
+    },
+    "gallery": [
+      {
+        "src": "/case-studies/lil-ghost-london-live-2026/C10-03.avif",
+        "alt": {
+          "zh": "侧逆光中的现场演出画面",
+          "en": "Live-performance image in side and back lighting"
+        },
+        "caption": {
+          "zh": "",
+          "en": ""
+        },
+        "width": 958,
+        "height": 1438,
+        "focalPoint": "center"
+      },
+      {
+        "src": "/case-studies/lil-ghost-london-live-2026/C10-01.avif",
+        "alt": {
+          "zh": "演出结束阶段的台前与观众合影",
+          "en": "Stage-and-audience group photograph"
+        },
+        "caption": {
+          "zh": "",
+          "en": ""
+        },
+        "width": 1600,
+        "height": 1000,
+        "focalPoint": "center"
+      }
+    ],
+    "layoutFamily": "portrait",
+    "layoutVariant": "portrait-to-crowd"
+  }
+}

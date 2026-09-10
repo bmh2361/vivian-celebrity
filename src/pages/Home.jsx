@@ -1,10 +1,56 @@
 import '../index.css';
-import { motion } from 'framer-motion';
+import './home.css';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useLang } from '../layout/Layout.jsx';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
+
+// Optical bounds preserve the complete source canvas; percentages are relative to each tile.
+const partnerLogos = [
+	{ file: '1.png', name: 'Charm 昌荣传媒', width: 78, height: 72 },
+	{ file: '2.png', name: 'London Fashion Week', width: 58, height: 58 },
+	{ file: '3.png', name: 'Holiland 好利来', width: 78, height: 72 },
+	{ file: '4.png', name: 'iQIYI 爱奇艺', width: 86, height: 84 },
+	{ file: '5.png', name: 'Geely', width: 90, height: 88 },
+	{ file: '6.png', name: '德云红', width: 78, height: 72 },
+	{ file: '7.png', name: 'China National Tourist Office London', width: 66, height: 72 },
+	{ file: '8.png', name: 'Vogue', width: 78, height: 72 },
+	{ file: '9.jpg', name: 'Marie Claire', width: 78, height: 72 },
+	{ file: '10.png', name: 'Cartier', width: 78, height: 72 },
+	{ file: '11.png', name: 'Prada', width: 78, height: 72 },
+	{ file: '12.jpg', name: 'MAC', width: 78, height: 72 },
+	{ file: '13.png', name: 'Lanvin', width: 66, height: 68 },
+	{ file: '14.png', name: 'Harper’s Bazaar', width: 78, height: 72 },
+	{ file: '15.png', name: 'Chanel', width: 68, height: 72 },
+	{ file: '16.jpg', name: 'Hugo Boss', width: 78, height: 72 },
+	{ file: '17.png', name: 'Caroline', width: 78, height: 72 },
+	{ file: '18.png', name: 'Gucci', width: 78, height: 72 },
+	{ file: '19.jpg', name: 'NARS', width: 70, height: 66 },
+	{ file: '20.png', name: 'MaxMara', width: 78, height: 72 },
+	{ file: '21.jpg', name: 'ELLE China', width: 46, height: 58 },
+	{ file: '22.png', name: 'Shiseido', width: 88, height: 92 },
+	{ file: '23.png', name: 'Bobbi Brown', width: 84, height: 72 },
+	{ file: '24.png', name: 'Sandro', width: 78, height: 72 },
+	{ file: '25.png', name: 'Tasaki', width: 84, height: 72 },
+	{ file: '26.png', name: 'Pinko', width: 78, height: 72 },
+	{ file: '27.png', name: 'Dyson', width: 78, height: 72 },
+	{ file: '28.png', name: 'Rolex', width: 68, height: 76 },
+	{ file: '29.jpg', name: 'YSL', width: 62, height: 66 },
+	{ file: '30.png', name: 'Givenchy', width: 72, height: 70 },
+	{ file: '31.png', name: 'Giorgio Armani', width: 84, height: 72 },
+	{ file: '32.png', name: 'Sina', width: 78, height: 72 },
+	{ file: '33.png', name: 'Tencent', width: 78, height: 72 },
+	{ file: '34.png', name: 'Pepsi', width: 78, height: 72 },
+	{ file: '35.png', name: 'MangoFun', width: 62, height: 72 },
+	{ file: '36.png', name: '东方卫视', width: 80, height: 84 },
+	{ file: '37.png', name: 'Mango TV', width: 78, height: 72 },
+	{ file: '38.png', name: 'King’s College London', width: 56, height: 60 },
+	{ file: '39.png', name: 'UCL', width: 68, height: 58 },
+	{ file: '40.png', name: 'University of Cambridge', width: 84, height: 70 },
+];
 
 export default function Home() {
 	const { lang } = useLang();
+	const reducedMotion = useReducedMotion();
 	// 适配 GitHub Pages 子路径部署
 	const base = (import.meta.env.BASE_URL || '/').replace(/\/+$/, '');
 	const withBase = (p) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
@@ -20,8 +66,7 @@ export default function Home() {
 					title: '私人形象',
 					description: '围绕个人气质、场景与表达，完成从妆造到影像的整体形象塑造。',
 					items: [
-						{ label: '妆造美学', href: '/pages/makeup.html' },
-						{ label: '影像美学', href: '/pages/photography.html' },
+						{ label: '形象美学', href: '/pages/image-direction.html' },
 						{ label: '高端定制', href: '/pages/bespoke.html' },
 					],
 				},
@@ -32,7 +77,7 @@ export default function Home() {
 					description: '从品牌内容到活动执行，将创意方向转化为真正落地的英国商业表达。',
 					items: [
 						{ label: '品牌与商业执行', href: '/business/' },
-						{ label: '企业策划', href: '/pages/corporate.html' },
+						{ label: '企业策划案例', href: '/pages/corporate.html' },
 						{ label: '商业内容' },
 						{ label: '英国本地项目落地' },
 					],
@@ -81,8 +126,7 @@ export default function Home() {
 					eyebrow: 'PRIVATE CLIENTS',
 					description: 'Refined image-making shaped around identity, occasion and presence.',
 					items: [
-						{ label: 'Makeup & Styling', href: '/pages/makeup.html' },
-						{ label: 'Visual Aesthetics', href: '/pages/photography.html' },
+						{ label: 'Image Direction', href: '/pages/image-direction.html' },
 						{ label: 'Bespoke', href: '/pages/bespoke.html' },
 					],
 				},
@@ -92,7 +136,7 @@ export default function Home() {
 					description: 'From brand content to activations, we translate creative direction into polished UK-based execution.',
 					items: [
 						{ label: 'Brand & Commercial Execution', href: '/business/' },
-						{ label: 'Business Planning', href: '/pages/corporate.html' },
+						{ label: 'Commercial Case Studies', href: '/pages/corporate.html' },
 						{ label: 'Commercial Content' },
 						{ label: 'UK Delivery' },
 					],
@@ -134,76 +178,18 @@ export default function Home() {
 	};
 	const t = copy[lang] || copy.zh;
 	// 动画配置
-	const fadeUp = (delay = 0) => ({ initial: { y: 20, opacity: 0 }, animate: { y: 0, opacity: 1 }, transition: { duration: 0.6, ease: 'easeOut', delay } });
+	const fadeUp = (delay = 0) => ({ initial: reducedMotion ? false : { y: 10, opacity: 0 }, animate: { y: 0, opacity: 1 }, transition: { duration: 0.6, ease: 'easeOut', delay } });
 	const fade = (delay = 0) => ({ initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 0.7, ease: 'easeOut', delay } });
 
-	// 合作伙伴 LOGO 数量：按序号命名（1.png/1.svg ... N.png/N.svg）
-	// 你只要往 /public/partners-logos/ 继续放 13.png、14.svg…，再把这里的数量加大即可。
-	const PARTNER_LOGO_COUNT = 40;
-	const partnerIndices = useMemo(() => Array.from({ length: PARTNER_LOGO_COUNT }).map((_, i) => i + 1), []);
-
-	// 合作伙伴 LOGO：多后缀兜底，自动尝试 .png/.jpg/.jpeg/.webp/.svg
-	const PartnerLogo = ({ index, className = '' }) => {
-		const exts = ['.png', '.jpg', '.jpeg', '.webp', '.svg'];
-		const [ei, setEi] = useState(0);
-		const [found, setFound] = useState(false);
-		const src = withBase(`/partners-logos/${index}${exts[ei]}`);
-		return (
-			<div className={`relative grid place-items-center p-5 sm:p-6 ${className}`}>
-				<img
-					src={src}
-					alt={`Partner Logo ${index}`}
-					className="block max-h-[86%] max-w-[92%] h-auto w-auto object-contain relative z-[1]"
-					loading="lazy"
-					decoding="async"
-					onLoad={() => setFound(true)}
-					onError={() => {
-						if (ei < exts.length - 1) setEi(ei + 1);
-					}}
-				/>
-				{!found && (
-					<div className="absolute inset-0 grid place-items-center text-xs text-[#888] pointer-events-none z-0">LOGO</div>
-				)}
-			</div>
-		);
-	};
-
-	const PartnersGrid = () => (
-		<div className="mt-7 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-			{partnerIndices.map((idx, i) => (
-				<motion.div
-					key={idx}
-					initial={{ opacity: 0, y: 10 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true, amount: 0.25 }}
-					transition={{ duration: 0.45, delay: i * 0.02 }}
-					className="group relative overflow-hidden h-24 sm:h-28 md:h-32 rounded-2xl border border-[#eee] bg-[#fbfaf7] shadow-[0_6px_18px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(0,0,0,0.10)] transition-all"
-				>
-					<PartnerLogo index={idx} className="h-full w-full" />
-				</motion.div>
-			))}
-			<motion.div
-				initial={{ opacity: 0, y: 10 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ once: true, amount: 0.25 }}
-				transition={{ duration: 0.45, delay: Math.min(partnerIndices.length, 40) * 0.02 }}
-				className="group relative overflow-hidden h-24 sm:h-28 md:h-32 rounded-2xl border border-[#eee] bg-[#fbfaf7] shadow-[0_6px_18px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(0,0,0,0.10)] transition-all col-span-2 sm:col-span-2"
-			>
-				<div className="h-full w-full grid place-items-center px-6">
-					<div className="text-[#9A7B4F] text-sm sm:text-base font-semibold tracking-[0.18em]">More To Come...</div>
-				</div>
-			</motion.div>
-		</div>
-	);
 
 	return (
 		<div className="">
 			{/* Hero：文字在左，图卡片置于右上角（非全屏背景） */}
 			<section className="relative overflow-hidden bg-white">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 pt-14 md:pt-20 pb-12 md:pb-16 relative">
-					<div className="grid gap-6 lg:grid-cols-2 lg:items-stretch">
+				<div className="home-hero-container layout-standard mx-auto px-4 sm:px-6 pt-14 md:pt-20 pb-12 md:pb-16 relative">
+					<div className="home-hero-layout grid gap-6 lg:grid-cols-2 lg:items-start">
 						{/* 内容容器 */}
-						<div className="w-full h-full bg-white/85 backdrop-blur-[2px] rounded-2xl p-5 sm:p-7 md:p-8 shadow-[0_8px_28px_-4px_rgba(0,0,0,0.10)] border border-[#f2f2f2] flex flex-col">
+						<div className="home-hero-card w-full bg-white/85 backdrop-blur-[2px] rounded-2xl p-5 sm:p-7 md:p-8 shadow-[0_8px_28px_-4px_rgba(0,0,0,0.10)] border border-[#f2f2f2] flex flex-col">
 							<motion.div {...fadeUp(0)} className="flex items-center gap-3 text-[#CFAF6B]">
 								<span className="text-xs font-semibold tracking-[0.15em]">VIVIAN ADVENTURE</span>
 								<span className="h-px flex-1 bg-[#E6CF9A]" />
@@ -217,24 +203,24 @@ export default function Home() {
 							<motion.div {...fadeUp(0.3)} className="mt-5">
 								<div className="border-t border-[#eee]">
 									{t.pillars.map((pillar) => (
-										<div key={pillar.index} className="grid grid-cols-[28px_minmax(0,1fr)] gap-3 border-b border-[#eee] py-5">
+										<div key={pillar.index} className="home-pillar">
 											<div className="pt-0.5 text-[11px] font-semibold tracking-[0.16em] text-[#CFAF6B]">{pillar.index}</div>
-											<div className="min-w-0 xl:grid xl:grid-cols-[minmax(0,1.05fr)_minmax(190px,.95fr)] xl:gap-5">
+											<div className="home-pillar-body">
 											<div>
-												<div className="text-[10px] font-semibold tracking-[0.18em] text-[#9A7B4F]">{pillar.eyebrow}</div>
+												<div className="text-[11px] font-semibold tracking-[0.18em] text-[#9A7B4F]">{pillar.eyebrow}</div>
 												{pillar.title && <h2 className="mt-1 text-lg font-semibold leading-snug text-[#111]">{pillar.title}</h2>}
-													<p className="mt-2 text-[13px] leading-5 text-[#555]">{pillar.description}</p>
+													<p className="home-pillar-description">{pillar.description}</p>
 												</div>
-												<div className="mt-3 xl:mt-0">
-													<div className="flex flex-wrap gap-x-3 gap-y-2 text-xs leading-5">
+												<div className="home-capabilities">
+													<div className="home-capability-index">
 														{pillar.items.map((item) => item.href ? (
-															<a key={item.label} href={withBase(item.href)} className="border-b border-[#E6CF9A] text-[#333] transition-colors hover:border-[#9A7B4F] hover:text-[#9A7B4F]">{item.label}</a>
+															<a key={item.label} href={withBase(item.href)} className="text-[#333] transition-colors hover:text-[#9A7B4F]">{item.label}</a>
 														) : (
 															<span key={item.label} className="text-[#666]">{item.label}</span>
 														))}
 													</div>
 													{pillar.cta && (
-														<a href={withBase(pillar.ctaHref)} className="group mt-3 inline-flex items-center gap-2 text-xs font-medium tracking-[0.08em] text-[#8B7048] transition-colors hover:text-[#6F5737]">
+														<a href={withBase(pillar.ctaHref)} className="home-pillar-cta group mt-3 inline-flex items-center gap-2 text-xs font-medium tracking-[0.08em] text-[#8B7048] transition-colors hover:text-[#6F5737]">
 															{pillar.cta}<span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
 														</a>
 													)}
@@ -245,7 +231,7 @@ export default function Home() {
 								</div>
 							</motion.div>
 
-							<motion.div {...fadeUp(0.3)} className="mt-5 flex justify-start sm:justify-end">
+							<motion.div {...fadeUp(0.3)} className="home-selected-work flex justify-end">
 								<a href={withBase('/pages/portfolio.html')} className="group inline-flex items-center gap-2 border-b border-[#E6CF9A] pb-1 text-xs font-medium tracking-[0.08em] text-[#8B7048] transition-colors hover:border-[#9A7B4F] hover:text-[#6F5737]">
 									{t.ctaPortfolio}
 									<span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -254,10 +240,10 @@ export default function Home() {
 						</div>
 
 						{/* 右侧图片卡片（移动端也展示） */}
-						<motion.div initial={{ opacity: 0, y: -6 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, ease: 'easeOut' }} className="w-full lg:h-full">
-							<div className="group rounded-3xl p-[1.5px] bg-gradient-to-br from-[#F4E7BE] via-[#CFAF6B] to-[#9A7B4F] shadow-[0_18px_42px_rgba(0,0,0,0.14)] transition-transform duration-500 will-change-transform lg:h-full">
-								<div className="overflow-hidden rounded-[22px] bg-[#fbfaf7] group-hover:shadow-[0_22px_48px_rgba(0,0,0,0.16)] group-hover:-translate-y-1 transition-all duration-500 lg:h-full">
-									<HeroImage withBase={withBase} className="block h-auto w-full object-contain lg:h-full" />
+						<motion.div initial={{ opacity: 0, y: -6 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, ease: 'easeOut' }} className="w-full">
+							<div className="group rounded-3xl p-[1.5px] bg-gradient-to-br from-[#F4E7BE] via-[#CFAF6B] to-[#9A7B4F] shadow-[0_18px_42px_rgba(0,0,0,0.14)] transition-transform duration-500 will-change-transform">
+								<div className="overflow-hidden rounded-[22px] bg-[#fbfaf7] group-hover:shadow-[0_22px_48px_rgba(0,0,0,0.16)] group-hover:-translate-y-1 transition-all duration-500">
+									<HeroImage withBase={withBase} className="block h-auto w-full object-contain" />
 								</div>
 							</div>
 						</motion.div>
@@ -266,11 +252,11 @@ export default function Home() {
 			</section>
 
 			{/* 影视传媒 · 企业策划：合作伙伴（首页展示） */}
-			<section className="max-w-7xl mx-auto px-6 pb-16">
+			<section className="home-partners-container layout-wide mx-auto px-6 pb-16">
 				<motion.section
-					initial={{ opacity: 0, y: 12 }}
+					initial={reducedMotion ? false : { opacity: 0, y: 12 }}
 					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true, amount: 0.25 }}
+					viewport={{ once: true, amount: 0.05 }}
 					transition={{ duration: 0.6, ease: 'easeOut' }}
 					className="rounded-3xl border border-[#eee] bg-white p-5 md:p-7 shadow-[0_10px_34px_rgba(0,0,0,0.06)] relative overflow-hidden"
 				>
@@ -280,21 +266,29 @@ export default function Home() {
 							<div className="inline-flex items-center gap-2 text-xs tracking-[0.18em] text-[#9A7B4F]">
 								<span className="px-3 py-1 rounded-full border border-[#E6CF9A] bg-[#fbf8ef]">BUSINESS</span>
 								<span className="hidden sm:inline h-px w-10 bg-[#E6CF9A]" />
-								<span className="hidden sm:inline">CORPORATE PLANNING</span>
+								<span className="hidden sm:inline">COMMERCIAL CASE STUDIES</span>
 							</div>
 							<h2 className="mt-3 text-xl md:text-2xl font-extrabold text-[#111]">{lang === 'en' ? 'Partners' : '合作伙伴'}</h2>
 							<p className="mt-2 text-sm text-[#555] break-words">{lang === 'en' ? 'One project, long‑term partnership · Trusted by leading brands' : '一次合作，长久合作 · 携手共赢'}</p>
 						</div>
 						<a
-							href={withBase('/business/')}
+							href={withBase('/pages/corporate.html#selected-projects')}
 							className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors"
 						>
-							{lang === 'en' ? 'Corporate Planning' : '查看企业策划'}
+							{lang === 'en' ? 'Commercial Case Studies' : '查看企业策划案例'}
 						</a>
 					</div>
 
 					{/* 合作伙伴 LOGO 网格（全端展示） */}
-					<PartnersGrid />
+					<div className="home-partners-grid">
+						{partnerLogos.map((logo) => (
+							<div key={logo.file} className="home-partner-tile">
+								<img src={withBase(`/partners-logos/${logo.file}`)} alt={logo.name} loading="lazy" decoding="async"
+									style={{ width: `${logo.width}%`, height: `${logo.height}%` }} />
+							</div>
+						))}
+					</div>
+					<p className="home-partners-note">More to come.</p>
 				</motion.section>
 			</section>
 		</div>
@@ -319,4 +313,3 @@ function HeroImage({ withBase, className }) {
 		/>
 	);
 }
-

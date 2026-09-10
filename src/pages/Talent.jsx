@@ -68,7 +68,7 @@ export default function Talent() {
 	const enquiry = withBase('/pages/contact.html?project=talent');
 
 	return (
-		<div className="max-w-7xl mx-auto px-6 py-12 space-y-12">
+		<div className="layout-wide max-w-7xl mx-auto px-6 py-12 space-y-12">
 			<motion.section initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="rounded-2xl border border-[#eee] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.05)] relative overflow-hidden">
 				<div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[rgba(207,175,107,0.18)] to-transparent" />
 				<p className="relative text-xs font-semibold tracking-[0.18em] text-[#9A7B4F]">TALENT & CREATOR SERVICES</p>
@@ -80,7 +80,7 @@ export default function Talent() {
 				</div>
 			</motion.section>
 
-			<section>
+			<section className="talent-support">
 				<p className="text-xs font-semibold tracking-[0.22em] text-[#9A7B4F]">CAPABILITIES</p>
 				<h2 className="mt-4 text-2xl md:text-3xl font-semibold text-[#111] uppercase tracking-wide">{t.supportTitle}</h2>
 				<p className="mt-3 max-w-2xl leading-7 text-[#666]">{t.supportIntro}</p>
@@ -110,7 +110,7 @@ export default function Talent() {
 				</div>
 			</section>
 
-			<section>
+			<section className="talent-process">
 				<h2 className="text-xl md:text-2xl font-bold text-[#111] uppercase tracking-wide">{t.howTitle}</h2>
 				<ol className="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
 					{t.steps.map(([number, title, text], index) => <motion.li key={number} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: index * 0.04 }} className="rounded-xl border border-[#eee] bg-white px-5 py-4"><div className="text-xs tracking-[0.2em] text-[#CFAF6B]">{number}</div><h3 className="mt-3 font-semibold text-[#111] uppercase text-sm">{title}</h3><p className="mt-2 text-sm leading-6 text-[#666]">{text}</p></motion.li>)}

@@ -1,0 +1,153 @@
+{
+  "id": "C08",
+  "slug": "geely-ex5-uk-launch-2025",
+  "status": "published",
+  "sortOrder": 100,
+  "primaryCategory": "brand-cultural-events",
+  "year": 2025,
+  "date": null,
+  "location": "London",
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "Geely EX5 英国发布",
+      "summary": "Geely EX5 英国发布：展陈、人员联络与发布现场影像。",
+      "preview": "EX5 是 Geely Auto 在英国推出的首款车型。本案参与围绕发布现场的展陈、人员联络与摄影展开。",
+      "role": "项目团队参与人员联络、展陈配合及现场摄影，将现场协作与发布内容记录连接起来。",
+      "context": "Geely Auto 于 2025 年在英国推出纯电 SUV EX5，作为该品牌进入英国市场的首款车型。这场发布的背景是新车型与品牌在英国的正式亮相。",
+      "narrativeSections": [
+        {
+          "heading": "展陈与现场协作",
+          "text": "汽车发布需要让产品在现场得到呈现。本案中的展陈配合与人员联络服务于这一具体任务，摄影则记录发布与车辆亮相。"
+        },
+        {
+          "heading": "记录产品进入现场的时刻",
+          "text": "交付包括展陈和人员配合，以及发布现场与车辆亮相影像。案例体现汽车发布中将现场支持与内容记录结合的能力。"
+        }
+      ],
+      "deliverables": [
+        "现场人员联络与展陈配合",
+        "发布及车辆亮相影像"
+      ],
+      "outcomes": [
+        "项目团队的交付包括现场人员与展陈配合，以及发布和车辆亮相影像。"
+      ],
+      "publicEventOutcome": "Geely Auto 在英国正式推出 EX5 纯电 SUV。"
+    },
+    "en": {
+      "ready": true,
+      "title": "Geely EX5 UK Launch",
+      "summary": "On-site liaison, display support and photography for the Geely EX5 UK launch.",
+      "preview": "The EX5 was Geely Auto’s first model introduced in the UK. This assignment focused on the launch setting through display support, people liaison and photography.",
+      "role": "The project team contributed to people liaison, display support and on-site photography, connecting practical event support with documentation of the launch.",
+      "context": "Geely Auto introduced the all-electric EX5 SUV in the UK in 2025 as its first model in the market. The event sat within the brand’s formal UK introduction and the launch of the vehicle.",
+      "narrativeSections": [
+        {
+          "heading": "Supporting the product presentation",
+          "text": "The launch brought the vehicle into a physical event setting. Display support and people liaison served that practical task, while photography documented the presentation and vehicle reveal."
+        },
+        {
+          "heading": "A launch record alongside event support",
+          "text": "The delivery combined display and personnel support with launch and vehicle imagery. It demonstrates the ability to pair practical support at an automotive event with content production."
+        }
+      ],
+      "deliverables": [
+        "On-site people liaison and display support",
+        "Launch and vehicle-reveal photography"
+      ],
+      "outcomes": [
+        "The project team’s delivery comprised people liaison, display support and imagery of the launch and vehicle reveal."
+      ],
+      "publicEventOutcome": "Geely Auto formally introduced the all-electric EX5 SUV in the UK."
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/geely-ex5-uk-launch-2025/C08-03.webp",
+      "alt": {
+        "zh": "车辆、发布舞台与现场观众",
+        "en": "Vehicle reveal, presentation stage and audience"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 922,
+      "height": 1230,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "922 / 1230",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/geely-ex5-uk-launch-2025/C08-03.webp",
+      "alt": {
+        "zh": "车辆、发布舞台与现场观众",
+        "en": "Vehicle reveal, presentation stage and audience"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 922,
+      "height": 1230,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/geely-ex5-uk-launch-2025/C08-01.webp",
+      "alt": {
+        "zh": "GEELY GLOBAL DESIGN演讲画面与观众",
+        "en": "Geely Global Design presentation and audience"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1440,
+      "height": 1080,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "1440 / 1080",
+          "fit": "contain"
+        }
+      }
+    },
+    "gallery": [
+      {
+        "src": "/case-studies/geely-ex5-uk-launch-2025/C08-01.webp",
+        "alt": {
+          "zh": "GEELY GLOBAL DESIGN演讲画面与观众",
+          "en": "Geely Global Design presentation and audience"
+        },
+        "caption": {
+          "zh": "",
+          "en": ""
+        },
+        "width": 1440,
+        "height": 1080,
+        "focalPoint": "center"
+      },
+      {
+        "src": "/case-studies/geely-ex5-uk-launch-2025/C08-02.webp",
+        "alt": {
+          "zh": "Geely EX5品牌标识与舞台灯光",
+          "en": "Geely EX5 identifier within a lit stage setting"
+        },
+        "caption": {
+          "zh": "",
+          "en": ""
+        },
+        "width": 1080,
+        "height": 1584,
+        "focalPoint": "center"
+      }
+    ],
+    "layoutFamily": "wide",
+    "layoutVariant": "product-reveal"
+  }
+}

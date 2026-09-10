@@ -1,0 +1,35 @@
+/* Expand compositions only on desktop; existing laptop/mobile gutters remain intact. */
+:root {
+  --layout-focused: 1280px;
+  --layout-standard: 1440px;
+  --layout-wide: 1600px;
+  --layout-visual: 1800px;
+  --layout-reading: 65ch;
+}
+
+@media (min-width: 1400px) {
+  [data-page] .layout-focused,
+  [data-page] .layout-standard,
+  [data-page] .layout-wide,
+  [data-page] .layout-visual { margin-inline: auto; padding-inline: 0; }
+  [data-page] .layout-focused { width: 88%; max-width: var(--layout-focused); }
+  [data-page] .layout-standard { width: 90%; max-width: var(--layout-standard); }
+  [data-page] .layout-wide { width: 92%; max-width: var(--layout-wide); }
+  [data-page] .layout-visual { width: 94%; max-width: var(--layout-visual); }
+
+  [data-page] .case-browser-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; }
+  [data-page] .case-row { grid-template-columns: 24px 112px minmax(0, 1fr) 18px; }
+  [data-page] .case-preview-media { height: clamp(360px, 24vw, 460px); }
+  [data-page] .case-preview-image { max-height: clamp(360px, 24vw, 460px); }
+  [data-page] .case-detail p, [data-page] .case-detail ul { max-width: var(--layout-reading); }
+  [data-page] .case-detail-hero, [data-page] .case-gallery-image { max-height: 880px; }
+
+  [data-page] .bespoke-hero { max-width: var(--layout-wide); margin-inline: auto; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 5vw, 88px); }
+  [data-page] .bespoke-process,
+  [data-page] .image-direction-person,
+  [data-page] .image-direction-start,
+  [data-page] .talent-support,
+  [data-page] .talent-process { max-width: var(--layout-standard); margin-inline: auto; }
+  [data-page] .contact-page > div { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 64px; }
+  [data-page="business"] article > p { max-width: var(--layout-reading); }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "C06-A",
+  "slug": "beauty-lifestyle-dior-candidate",
+  "status": "published",
+  "sortOrder": 60,
+  "primaryCategory": "product-content",
+  "year": null,
+  "date": null,
+  "location": null,
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "美妆生活方式内容",
+      "summary": "美妆生活方式内容制作：围绕产品宣传组织拍摄。",
+      "preview": "产品宣传需要与具体内容制作相连接。本案以美妆产品的生活方式内容为任务，Vivian Adventure 参与宣传内容与拍摄制作。",
+      "role": "Vivian Adventure 参与产品宣传内容与拍摄制作，让传播主题与实际内容产出在同一项制作任务中衔接。",
+      "context": "这是一项围绕美妆产品展开的生活方式内容项目。项目需求是制作与产品相关的人物内容，把产品宣传落实到拍摄任务。",
+      "narrativeSections": [
+        {
+          "heading": "从产品宣传到内容制作",
+          "text": "本案的工作重点是将美妆产品纳入生活方式内容。宣传内容与拍摄制作相互关联：产品是内容的主题，制作则承担将这一主题具体呈现的任务。"
+        }
+      ],
+      "deliverables": [
+        "美妆产品生活方式影像"
+      ],
+      "outcomes": [
+        "交付为围绕产品制作的生活方式内容，体现产品宣传内容的制作能力。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "Beauty Lifestyle Content",
+      "summary": "Beauty lifestyle content production, connecting product promotion with the shoot.",
+      "preview": "Product promotion needs a practical content assignment. This project centred on lifestyle imagery for a beauty product, with Vivian Adventure involved in promotional content and production.",
+      "role": "Vivian Adventure contributed to product promotional content and photography, connecting the subject of the communication with the work of producing it.",
+      "context": "This was a beauty product lifestyle content project. The assignment concerned talent-led product content, translating a promotional need into a photographic production task.",
+      "narrativeSections": [
+        {
+          "heading": "From product to content assignment",
+          "text": "The product was the subject of the lifestyle content. Promotional content and photography were related parts of the work: one established what the content concerned, while production gave it a tangible form."
+        }
+      ],
+      "deliverables": [
+        "Beauty product lifestyle imagery"
+      ],
+      "outcomes": [
+        "The output was product-centred lifestyle content, demonstrating production capability for product promotion."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/beauty-lifestyle-dior-candidate/C06-01.avif",
+      "alt": {
+        "zh": "梳妆环境中的人物与美妆产品",
+        "en": "Beauty products and a person in a dressing-table setting"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1080,
+      "height": 1620,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "1080 / 1620",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/beauty-lifestyle-dior-candidate/C06-01.avif",
+      "alt": {
+        "zh": "梳妆环境中的人物与美妆产品",
+        "en": "Beauty products and a person in a dressing-table setting"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1080,
+      "height": 1620,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/beauty-lifestyle-dior-candidate/C06-01.avif",
+      "alt": {
+        "zh": "梳妆环境中的人物与美妆产品",
+        "en": "Beauty products and a person in a dressing-table setting"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1080,
+      "height": 1620,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "1080 / 1620",
+          "fit": "contain"
+        }
+      }
+    },
+    "gallery": [],
+    "layoutFamily": "single",
+    "layoutVariant": "single-artwork-story"
+  }
+}

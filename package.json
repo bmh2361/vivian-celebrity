@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "validate:cases": "node scripts/validate-case-studies.mjs",
+    "test:cases": "node scripts/test-case-studies.mjs",
+    "build": "npm run validate:cases && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -1,0 +1,153 @@
+{
+  "id": "C03",
+  "slug": "cambridge-chinese-new-year-gala-2026",
+  "status": "published",
+  "sortOrder": 30,
+  "primaryCategory": "live-performance",
+  "year": 2026,
+  "date": null,
+  "location": "Cambridge",
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "剑桥春晚 2026",
+      "summary": "剑桥春晚 2026：连接节目、舞台、人员与妆造的晚会制作。",
+      "preview": "一场多节目晚会需要节目衔接与舞台准备相互配合。我们的参与从策划和舞美搭建协调，延伸到人员、妆造与现场记录。",
+      "role": "Vivian Adventure 参与晚会策划，将舞美与搭建协调、节目衔接、人员联系、妆造及现场记录结合起来。节目是这些工作共同围绕的执行单位。",
+      "context": "剑桥春晚是一场新春演出项目。本案涉及晚会策划、舞台准备与多个节目之间的衔接，执行重点是把节目所需的人员与制作工作组织成一场演出。",
+      "narrativeSections": [
+        {
+          "heading": "围绕节目组织工作",
+          "text": "节目衔接与舞台准备彼此关联，人员联系和妆造也需要配合演出。本案的工作范围跨越这些环节，要求策划与现场制作保持联系。"
+        },
+        {
+          "heading": "从晚会准备到现场记录",
+          "text": "现场记录是本案交付的一部分，与策划和制作协调共同构成项目范围。这一组合体现多节目演出中连接台前呈现与执行工作的能力。"
+        }
+      ],
+      "deliverables": [
+        "晚会策划、舞美与搭建协调",
+        "节目衔接、人员联系及妆造配合",
+        "舞台与现场影像记录"
+      ],
+      "outcomes": [
+        "交付覆盖晚会的策划制作配合及现场记录，而非单一节目或单项影像工作。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "Cambridge Chinese New Year Gala 2026",
+      "summary": "Gala production in Cambridge, connecting the programme, stage, people and styling.",
+      "preview": "A gala’s programme and stage preparation depend on one another. Our involvement extended from planning and stage-build coordination to people, styling and documentation.",
+      "role": "Vivian Adventure contributed to gala planning, stage design and build coordination, programme transitions, people liaison, styling and documentation. The programme connected these responsibilities.",
+      "context": "The 2026 Cambridge Chinese New Year Gala was a seasonal performance project. The assignment spanned planning, stage preparation and programme transitions, connecting the people and production work required for a multi-act show.",
+      "narrativeSections": [
+        {
+          "heading": "Organising around the programme",
+          "text": "Stage preparation and programme transitions are related, while people liaison and styling also have to serve the performance. Our scope crossed these areas, linking planning with the work of staging the gala."
+        },
+        {
+          "heading": "Preparation and documentation",
+          "text": "Documentation formed part of the assignment alongside planning and production coordination. Together, these responsibilities demonstrate the ability to connect performance preparation with on-site production across a multi-act event."
+        }
+      ],
+      "deliverables": [
+        "Gala planning, stage design and build coordination",
+        "Programme transitions, people liaison and styling support",
+        "Stage and event documentation"
+      ],
+      "outcomes": [
+        "The delivery covered planning and production support alongside event documentation across the gala."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/cambridge-chinese-new-year-gala-2026/C03-03.jpg",
+      "alt": {
+        "zh": "主题舞台上的集体谢幕",
+        "en": "Collective finale on the gala stage"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1440,
+      "height": 884,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "1440 / 884",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/cambridge-chinese-new-year-gala-2026/C03-03.jpg",
+      "alt": {
+        "zh": "主题舞台上的集体谢幕",
+        "en": "Collective finale on the gala stage"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1440,
+      "height": 884,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/cambridge-chinese-new-year-gala-2026/C03-03.jpg",
+      "alt": {
+        "zh": "主题舞台上的集体谢幕",
+        "en": "Collective finale on the gala stage"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1440,
+      "height": 884,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "1440 / 884",
+          "fit": "contain"
+        }
+      }
+    },
+    "gallery": [
+      {
+        "src": "/case-studies/cambridge-chinese-new-year-gala-2026/C03-01.jpg",
+        "alt": {
+          "zh": "标有2026剑桥春晚主题的舞台",
+          "en": "Stage graphics for the 2026 Cambridge Chinese New Year Gala"
+        },
+        "caption": {
+          "zh": "",
+          "en": ""
+        },
+        "width": 1433,
+        "height": 934,
+        "focalPoint": "center"
+      },
+      {
+        "src": "/case-studies/cambridge-chinese-new-year-gala-2026/C03-02.jpg",
+        "alt": {
+          "zh": "晚会中的舞台发言场景",
+          "en": "A speaking segment during the gala"
+        },
+        "caption": {
+          "zh": "",
+          "en": ""
+        },
+        "width": 1080,
+        "height": 1440,
+        "focalPoint": "center"
+      }
+    ],
+    "layoutFamily": "wide",
+    "layoutVariant": "stage-to-finale"
+  }
+}

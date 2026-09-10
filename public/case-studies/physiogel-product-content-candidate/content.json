@@ -1,0 +1,112 @@
+{
+  "id": "C06-C",
+  "slug": "physiogel-product-content-candidate",
+  "status": "published",
+  "sortOrder": 70,
+  "primaryCategory": "product-content",
+  "year": null,
+  "date": null,
+  "location": null,
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "护肤产品内容",
+      "summary": "护肤产品内容：将人物形象准备与产品制作任务结合。",
+      "preview": "护肤内容需要明确产品与人物的关系。本案围绕产品内容制作与妆造形象设计展开，以具体内容交付承接制作需求。",
+      "role": "Vivian Adventure 参与内容制作与妆造形象设计，使人物准备与护肤产品的内容任务相互配合。",
+      "context": "这是一项护肤产品人物内容项目。制作目标是围绕产品形成相关影像，工作范围包括内容制作与人物形象准备。",
+      "narrativeSections": [
+        {
+          "heading": "围绕产品组织人物内容",
+          "text": "本案以护肤产品为内容主体，人物形象设计属于制作过程中的配套工作。两项工作围绕同一产品任务展开，最终落在产品与人物共同出现的内容交付上。"
+        }
+      ],
+      "deliverables": [
+        "护肤产品人物视觉内容及相关形象设计"
+      ],
+      "outcomes": [
+        "交付为护肤产品人物内容，体现产品任务与人物形象准备相结合的制作能力。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "Skincare Product Content",
+      "summary": "Skincare product content connecting talent preparation with the production brief.",
+      "preview": "The assignment centred on the relationship between the product and the person presenting it. Content production and image preparation supported that defined product brief.",
+      "role": "Vivian Adventure contributed to content production and makeup design, connecting preparation for the talent with the skincare product assignment.",
+      "context": "This was a talent-led skincare product content project. The production objective was product imagery, with content production and talent image preparation included in the scope.",
+      "narrativeSections": [
+        {
+          "heading": "A product-centred assignment",
+          "text": "The skincare product was the subject of the content, with image preparation supporting the production. Both areas served the same product assignment, resulting in content featuring the product and talent together."
+        }
+      ],
+      "deliverables": [
+        "Talent-led skincare product imagery and associated image preparation"
+      ],
+      "outcomes": [
+        "The output was skincare product content, demonstrating production that connects a product brief with talent preparation."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/physiogel-product-content-candidate/C06-03.webp",
+      "alt": {
+        "zh": "带PHYSIOGEL标识的人物与产品画面",
+        "en": "Product-and-talent visual carrying PHYSIOGEL branding"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1000,
+      "height": 852,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "1000 / 852",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/physiogel-product-content-candidate/C06-03.webp",
+      "alt": {
+        "zh": "带PHYSIOGEL标识的人物与产品画面",
+        "en": "Product-and-talent visual carrying PHYSIOGEL branding"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1000,
+      "height": 852,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/physiogel-product-content-candidate/C06-03.webp",
+      "alt": {
+        "zh": "带PHYSIOGEL标识的人物与产品画面",
+        "en": "Product-and-talent visual carrying PHYSIOGEL branding"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1000,
+      "height": 852,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "1000 / 852",
+          "fit": "contain"
+        }
+      }
+    },
+    "gallery": [],
+    "layoutFamily": "single",
+    "layoutVariant": "single-artwork-story"
+  }
+}

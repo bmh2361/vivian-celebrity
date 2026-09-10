@@ -1,0 +1,112 @@
+{
+  "id": "C06-B",
+  "slug": "beauty-colour-mac-candidate",
+  "status": "published",
+  "sortOrder": 65,
+  "primaryCategory": "product-content",
+  "year": null,
+  "date": null,
+  "location": null,
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "彩妆内容制作",
+      "summary": "彩妆内容制作：将妆造形象设计纳入产品内容交付。",
+      "preview": "彩妆内容中，人物妆造与产品表达直接相关。本案将内容制作与妆造形象设计结合，围绕同一项彩妆任务展开。",
+      "role": "Vivian Adventure 参与内容制作与妆造形象设计，把人物准备与彩妆内容联系起来，共同服务于本案交付。",
+      "context": "本案是一项彩妆视觉内容项目。制作需要同时处理人物形象与产品内容，妆造因此是内容工作的一部分。",
+      "narrativeSections": [
+        {
+          "heading": "妆造也是内容工作",
+          "text": "彩妆项目中，人物形象直接参与产品表达。将妆造设计与内容制作纳入同一工作范围，体现的是对产品内容与人物准备之间关系的处理。"
+        }
+      ],
+      "deliverables": [
+        "彩妆形象设计与视觉内容"
+      ],
+      "outcomes": [
+        "本案形成彩妆人物内容及相关形象设计交付，体现妆造与内容制作的协同能力。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "Colour Cosmetics Content",
+      "summary": "Colour cosmetics content, with makeup design integrated into production.",
+      "preview": "In cosmetics content, the talent’s makeup is part of the product presentation. This assignment brought content production and makeup design together around the same brief.",
+      "role": "Vivian Adventure contributed to content production and makeup design, connecting talent preparation with the cosmetics content being made.",
+      "context": "This was a colour cosmetics content project. Production involved both the talent’s appearance and the product, making makeup design part of the content assignment.",
+      "narrativeSections": [
+        {
+          "heading": "Makeup as part of the brief",
+          "text": "The talent’s appearance plays a direct part in cosmetics communication. Including makeup design and content production within the same scope addresses the relationship between preparation and the product content."
+        }
+      ],
+      "deliverables": [
+        "Makeup design and colour cosmetics imagery"
+      ],
+      "outcomes": [
+        "The delivery combined cosmetics content with the associated makeup design, demonstrating collaboration between talent preparation and production."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/beauty-colour-mac-candidate/C06-02.avif",
+      "alt": {
+        "zh": "暖色背景下手持彩妆产品的棚拍画面",
+        "en": "Studio beauty visual with a held makeup product"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 711,
+      "height": 771,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "711 / 771",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/beauty-colour-mac-candidate/C06-02.avif",
+      "alt": {
+        "zh": "暖色背景下手持彩妆产品的棚拍画面",
+        "en": "Studio beauty visual with a held makeup product"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 711,
+      "height": 771,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/beauty-colour-mac-candidate/C06-02.avif",
+      "alt": {
+        "zh": "暖色背景下手持彩妆产品的棚拍画面",
+        "en": "Studio beauty visual with a held makeup product"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 711,
+      "height": 771,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "711 / 771",
+          "fit": "contain"
+        }
+      }
+    },
+    "gallery": [],
+    "layoutFamily": "single",
+    "layoutVariant": "single-artwork-story"
+  }
+}

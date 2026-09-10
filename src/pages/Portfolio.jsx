@@ -1,185 +1,177 @@
 import '../index.css';
-import { useEffect, useState, useRef } from 'react';
+import './portfolio.css';
+import { useEffect, useState, useRef, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import { useLang } from '../layout/Layout.jsx';
 
-// 动态加载逻辑说明：
-// 1. 优先尝试 /portfolio/index.json （数组：可为字符串数组或对象数组 { src }），保持可控顺序
-// 2. 若不存在或为空，则按序号自动探测：1,2,3,... 直到遇到连续 miss 达到阈值 (gapLimit)
-// 3. 支持扩展名：.jpg/.jpeg/.png/.webp；按编号升序排序，未来新增只需上传命名为数字即可自动生效
-// 4. 使用 HEAD 探测避免加载失败产生多余网络体积
+const base = (import.meta.env.BASE_URL || '/').replace(/\/+$/, '');
+const url = (path) => `${base}${path}`;
+const text = {
+	zh: { title: '作品集', intro: '人物、妆造与时尚，延伸至舞台与品牌现场。', pause: '暂停动态', play: '继续动态', open: '查看作品', close: '关闭', prev: '上一张', next: '下一张', loading: '作品加载中', error: '作品暂时无法加载。', retry: '重试', still: '静态浏览' },
+	en: { title: 'Selected imagery', intro: 'People, beauty and fashion. On stage and in the world of brands.', pause: 'Pause motion', play: 'Resume motion', open: 'View image', close: 'Close', prev: 'Previous', next: 'Next', loading: 'Loading imagery', error: 'The imagery could not be loaded.', retry: 'Try again', still: 'Still view' },
+};
 
-const exts = ['jpg', 'jpeg', 'png', 'webp'];
-const gapLimit = 6;         // 允许的连续缺失上限（超过则停止）
-const maxProbe = 400;       // 为未来扩展预留上界
-
-async function probeSequential(withBase) {
-	const found = [];
-	let consecutiveMiss = 0;
-	for (let i = 1; i <= maxProbe; i++) {
-		let hit = null;
-		for (const ext of exts) {
-			const url = withBase(`/portfolio/${i}.${ext}`);
-			try {
-				const r = await fetch(url, { method: 'HEAD' });
-				if (r.ok) { hit = `/portfolio/${i}.${ext}`; break; }
-			} catch {}
-		}
-		if (hit) {
-			found.push(hit);
-			consecutiveMiss = 0; // 重置
-		} else {
-			if (found.length) {
-				consecutiveMiss++;
-				if (consecutiveMiss >= gapLimit) break;
-			}
-		}
-	}
-	return found;
+function WorkImage({ work, lang, eager = false, detail = false }) {
+	const previews = work.previews || [];
+	return <img src={url(detail ? work.detail || work.src : previews[0]?.src || work.src)} srcSet={detail ? undefined : previews.map(p => `${url(p.src)} ${p.width}w`).join(', ') || undefined} sizes="(max-width: 767px) 54vw, (max-width: 1023px) 34vw, 30vw" width={work.width} height={work.height} alt={work.alt[lang]} loading={eager || detail ? 'eager' : 'lazy'} decoding="async" draggable={false} onLoad={event => event.currentTarget.classList.add('portfolio-image-ready')} />;
 }
 
-async function loadImages(withBase) {
-	// 1) 尝试 index.json
-	try {
-		const r = await fetch(withBase('/portfolio/index.json') + '?v=1', { cache: 'no-store' });
-		if (r.ok) {
-			const data = await r.json();
-			if (Array.isArray(data) && data.length) {
-				const list = data.map(it => {
-					if (typeof it === 'string') return it;
-					if (it && typeof it === 'object') return it.src || it.url || it.path || '';
-					return '';
-				}).filter(Boolean);
-				if (list.length) return list;
-			}
-		}
-	} catch {}
-	// 2) 回退顺序探测
-	return await probeSequential(withBase);
+function MarqueeColumn({ works, index, lang, paused, reduced, onOpen }) {
+	const runner = useRef(null);
+	const group = useRef(null);
+	const animation = useRef(null);
+	const rateFrame = useRef(null);
+	const [hovered, setHovered] = useState(false);
+	const [focused, setFocused] = useState(false);
+	const stopped = paused || hovered || focused;
+	const stoppedRef = useRef(stopped);
+	stoppedRef.current = stopped;
+
+
+	useEffect(() => {
+		if (reduced) return;
+		const element = runner.current;
+		const list = group.current;
+		let bounds = [];
+		let columnTop = 0;
+		let distance = 0;
+		const preloadNearby = () => {
+			const current = animation.current;
+			if (!current || document.hidden) return;
+			const duration = current.effect.getTiming().duration;
+			const phase = ((current.currentTime || 0) % duration) / duration;
+			const viewportTop = window.scrollY - columnTop;
+			if (viewportTop + window.innerHeight < -400 || viewportTop > distance + 400) return;
+			const top = distance * (index % 2 ? 1 - phase : phase) + Math.max(0, viewportTop);
+			bounds.forEach(({ image, start, end }) => {
+				if (end > top - 400 && start < top + window.innerHeight + 400) image.loading = 'eager';
+			});
+		};
+		const measure = () => {
+			distance = list.getBoundingClientRect().height;
+			if (!distance) return;
+			const old = animation.current;
+			const progress = old ? ((old.currentTime || 0) / old.effect.getTiming().duration) % 1 : 0;
+			old?.cancel();
+			const speed = (window.matchMedia('(max-width: 767px)').matches ? 24 : 42) * [1, .9, 1.06, .96][index];
+			const duration = distance / speed * 1000;
+			const frames = [{ transform: 'translateY(0)' }, { transform: `translateY(-${distance}px)` }];
+			const next = element.animate(index % 2 ? [...frames].reverse() : frames, { duration, iterations: Infinity, easing: 'linear' });
+			next.currentTime = progress * duration;
+			if (stoppedRef.current) { next.playbackRate = 0; next.pause(); }
+			animation.current = next;
+			columnTop = element.parentElement.getBoundingClientRect().top + window.scrollY;
+			const origin = element.getBoundingClientRect().top;
+			bounds = [...element.querySelectorAll('img')].map(image => {
+				const rect = image.getBoundingClientRect();
+				return { image, start: rect.top - origin, end: rect.bottom - origin };
+			});
+			preloadNearby();
+		};
+		const observer = new ResizeObserver(measure);
+		observer.observe(list);
+		observer.observe(element.parentElement);
+		// Cached bounds and animation time also work when compositor motion skips lazy-load checks.
+		const preloadTimer = setInterval(preloadNearby, 750);
+		window.addEventListener('scroll', preloadNearby, { passive: true });
+		return () => { window.removeEventListener('scroll', preloadNearby); clearInterval(preloadTimer); observer.disconnect(); cancelAnimationFrame(rateFrame.current); animation.current?.cancel(); animation.current = null; };
+	}, [works, index, reduced]);
+
+	useEffect(() => {
+		cancelAnimationFrame(rateFrame.current);
+		const current = animation.current;
+		if (!current || reduced) return;
+		if (document.hidden) { current.pause(); current.playbackRate = 0; return; }
+		const from = current.playbackRate;
+		const target = stopped ? 0 : 1;
+		const start = performance.now();
+		current.play();
+		const easeRate = (now) => {
+			const progress = Math.min((now - start) / 450, 1);
+			current.updatePlaybackRate(from + (target - from) * (1 - (1 - progress) ** 3));
+			if (progress < 1) rateFrame.current = requestAnimationFrame(easeRate);
+			else if (!target) current.pause();
+		};
+		rateFrame.current = requestAnimationFrame(easeRate);
+		return () => cancelAnimationFrame(rateFrame.current);
+	}, [stopped, reduced]);
+
+	return <motion.div className="portfolio-column" initial={reduced ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8, delay: index * .08 }} onPointerEnter={e => { if (e.pointerType === 'mouse') setHovered(true); }} onPointerLeave={() => setHovered(false)} onFocusCapture={() => setFocused(true)} onBlurCapture={e => { if (!e.currentTarget.contains(e.relatedTarget)) setFocused(false); }}>
+		<div ref={runner} className="portfolio-runner">
+			{(reduced ? [0] : [0, 1]).map(copy => <div className="portfolio-group" key={copy} ref={copy === 0 ? group : undefined} aria-hidden={copy === 1 ? true : undefined}>
+				{works.map((work, position) => <button type="button" className="portfolio-work" key={work.id} tabIndex={copy || (!reduced && position > 0) ? -1 : 0} aria-label={`${text[lang].open}: ${work.alt[lang]}`} onClick={event => onOpen(work, event.currentTarget, event.detail === 0)}>
+					<WorkImage work={work} lang={lang} eager={copy === 0 && position < 2} />
+				</button>)}
+			</div>)}
+		</div>
+		{!reduced && <><span className="portfolio-edge portfolio-edge-top" aria-hidden="true" /><span className="portfolio-edge portfolio-edge-bottom" aria-hidden="true" /></>}
+	</motion.div>;
+}
+
+function Lightbox({ works, selected, setSelected, lang, onClose }) {
+	const dialog = useRef(null);
+	const [closing, setClosing] = useState(false);
+	const close = () => setClosing(true);
+	useEffect(() => {
+		if (!closing) return;
+		const timer = setTimeout(onClose, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 200);
+		return () => clearTimeout(timer);
+	}, [closing, onClose]);
+	useEffect(() => {
+		const element = dialog.current;
+		const previous = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+		element.showModal();
+		return () => { element.close(); document.body.style.overflow = previous; };
+	}, []);
+	const move = (step) => setSelected(index => (index + step + works.length) % works.length);
+	return <dialog ref={dialog} className={`portfolio-lightbox${closing ? ' portfolio-lightbox-closing' : ''}`} aria-label={text[lang].open} onCancel={event => { event.preventDefault(); close(); }} onClick={event => { if (event.target === event.currentTarget) close(); }} onKeyDown={event => { if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); move(event.key === 'ArrowLeft' ? -1 : 1); } }}>
+		<div className="portfolio-lightbox-toolbar"><span aria-live="polite">{String(selected + 1).padStart(2, '0')} / {works.length}</span><button type="button" onClick={close} autoFocus>{text[lang].close} ×</button></div>
+		<div className="portfolio-lightbox-image" onClick={event => { if (event.target === event.currentTarget) close(); }}><WorkImage key={works[selected].id} work={works[selected]} lang={lang} detail /></div>
+		<div className="portfolio-lightbox-controls"><button type="button" onClick={() => move(-1)}>← {text[lang].prev}</button><button type="button" onClick={() => move(1)}>{text[lang].next} →</button></div>
+	</dialog>;
 }
 
 export default function Portfolio() {
-	const { lang } = useLang ? useLang() : { lang: 'zh' };
-	const base = (import.meta.env.BASE_URL || '/').replace(/\/+$/, '');
-	const withBase = (p) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
-	const moreText = lang === 'en' ? 'Contact us for more work' : '联系我们，获取更多案例';
-	const titleText = lang === 'en' ? 'Portfolio' : '作品集';
-	const [images, setImages] = useState([]);
-	const [loading, setLoading] = useState(true);
-
+	const { lang } = useLang();
+	const t = text[lang];
+	const [reduced, setReduced] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+	const [works, setWorks] = useState([]);
+	const [error, setError] = useState(false);
+	const [attempt, setAttempt] = useState(0);
+	const [paused, setPaused] = useState(false);
+	const [hidden, setHidden] = useState(document.hidden);
+	const [columns, setColumns] = useState(() => window.innerWidth < 768 ? 2 : window.innerWidth < 1024 ? 3 : 4);
+	const [selected, setSelected] = useState(null);
+	const opener = useRef(null);
 	useEffect(() => {
-		let cancelled = false;
-		(async () => {
-			setLoading(true);
-			const list = await loadImages(withBase);
-			if (!cancelled) {
-				// 统一排序：按数字编号；非纯数字项排到后面
-				const sorted = [...list].sort((a, b) => {
-					const ra = /\/portfolio\/(\d+)\./.exec(a); const rb = /\/portfolio\/(\d+)\./.exec(b);
-					if (ra && rb) return Number(ra[1]) - Number(rb[1]);
-					if (ra) return -1; if (rb) return 1; return a.localeCompare(b);
-				});
-				setImages(sorted);
-				setLoading(false);
-			}
-		})();
-		return () => { cancelled = true; };
+		const controller = new AbortController();
+		setError(false);
+		fetch(url('/portfolio/index.json'), { signal: controller.signal }).then(response => { if (!response.ok) throw new Error('Manifest unavailable'); return response.json(); }).then(data => { if (!Array.isArray(data) || !data.length) throw new Error('Empty manifest'); setWorks(data); }).catch(e => { if (e.name !== 'AbortError') setError(true); });
+		return () => controller.abort();
+	}, [attempt]);
+	useEffect(() => {
+		const mobile = window.matchMedia('(max-width: 767px)');
+		const tablet = window.matchMedia('(max-width: 1023px)');
+		const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+		const updateMotion = () => setReduced(motionPreference.matches);
+		const resize = () => setColumns(mobile.matches ? 2 : tablet.matches ? 3 : 4);
+		const visibility = () => setHidden(document.hidden);
+		mobile.addEventListener('change', resize); tablet.addEventListener('change', resize); motionPreference.addEventListener('change', updateMotion); document.addEventListener('visibilitychange', visibility);
+		return () => { mobile.removeEventListener('change', resize); tablet.removeEventListener('change', resize); motionPreference.removeEventListener('change', updateMotion); document.removeEventListener('visibilitychange', visibility); };
 	}, []);
-
-	const col = (start) => images.filter((_, i) => i % 3 === start);
-
-	return (
-		<section className="max-w-6xl mx-auto px-6 py-12">
-			<div className="flex items-end justify-between mb-5">
-				<h1 className="text-2xl md:text-3xl font-semibold">{titleText}</h1>
-				<a href={withBase('/pages/contact.html')} className="text-sm text-[#9A7B4F] hover:underline">{moreText}</a>
-			</div>
-			{loading && (
-				<div className="text-sm text-[#999] py-8">{lang === 'en' ? 'Loading...' : '图片加载中...'}</div>
-			)}
-			{!loading && images.length === 0 && (
-				<div className="text-sm text-[#999] py-8">{lang === 'en' ? 'No works found.' : '暂无图片。'}</div>
-			)}
-			{!loading && images.length > 0 && (
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-4 [--dur:36s] [--gap:1rem]">
-					{[0, 1, 2].map((s) => (
-						<MarqueeColumn key={s} images={col(s)} reverse={s !== 1} />
-					))}
-				</div>
-			)}
-		</section>
-	);
+	// Keep column arrays stable while opening a work or changing language.
+	const columnWorks = useMemo(() => Array.from({ length: columns }, (_, column) => works.filter((_, index) => index % columns === column)), [works, columns]);
+	const close = () => {
+		setSelected(null);
+		requestAnimationFrame(() => {
+			if (opener.current?.keyboard) opener.current.element.focus({ preventScroll: true });
+			else opener.current?.element.blur();
+		});
+	};
+	return <section className={`portfolio-page layout-visual${reduced ? ' portfolio-still' : ''}`} lang={lang === 'zh' ? 'zh-CN' : 'en-GB'}>
+		<motion.header className="portfolio-heading" initial={reduced ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }}><div><p className="portfolio-kicker">Vivian Adventure / Portfolio</p><h1>{t.title}</h1><p>{t.intro}</p></div>{works.length > 0 && (reduced ? <span className="portfolio-motion-label">{t.still}</span> : <button className="portfolio-motion-control" type="button" aria-pressed={paused} onClick={() => setPaused(value => !value)}>{paused ? t.play : t.pause} <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button>)}</motion.header>
+		{error ? <p role="alert">{t.error} <button type="button" onClick={() => setAttempt(value => value + 1)}>{t.retry}</button></p> : !works.length ? <p role="status">{t.loading}</p> : <div className="portfolio-wall">{columnWorks.map((group, index) => <MarqueeColumn key={`${columns}-${index}`} works={group} index={index} lang={lang} paused={paused || hidden || selected !== null} reduced={reduced} onOpen={(work, element, keyboard) => { opener.current = { element, keyboard }; setSelected(works.indexOf(work)); }} />)}</div>}
+		{selected !== null && <Lightbox works={works} selected={selected} setSelected={setSelected} lang={lang} onClose={close} />}
+	</section>;
 }
-
-function MarqueeColumn({ images, reverse }) {
-		// 动态测量首份列表高度 + 绝对定位 runner + 双份内容，无需固定容器高度
-		const onErr = (e) => { e.currentTarget.style.display = 'none'; };
-		const eagerCount = 2; // 仅首屏顶部2张设为 eager
-		const containerRef = useRef(null);
-		const listRef = useRef(null);
-
-		useEffect(() => {
-			if (!listRef.current || !containerRef.current) return;
-			const el = listRef.current;
-			const container = containerRef.current;
-			const ro = new ResizeObserver(() => {
-				const h = el.offsetHeight || 0;
-				if (h > 0) {
-					container.style.setProperty('--h', `${h}px`);
-					container.style.height = `${h}px`;
-				}
-			});
-			ro.observe(el);
-			return () => ro.disconnect();
-		}, [images.length]);
-
-		return (
-			<div ref={containerRef} className="relative overflow-hidden rounded-xl border border-[#eee] pt-0 px-2 pb-2 bg-white/70">
-				<div
-					className="absolute inset-0 flex flex-col gap-4 marquee-runner marquee-allow-motion will-change-transform"
-					style={{
-						['--gap']: '1rem',
-						animationName: 'marquee-dyn',
-						animationDuration: 'var(--dur, 80s)',
-						animationTimingFunction: 'linear',
-						animationIterationCount: 'infinite',
-						animationDirection: reverse ? 'reverse' : 'normal'
-					}}
-				>
-					{/* 第一份列表：用于测量真实高度 */}
-					<div ref={listRef} className="flex flex-col gap-4">
-						{images.map((src, i) => (
-							<img
-								key={`a-${src}-${i}`}
-								src={src}
-								alt=""
-								loading={i < eagerCount ? 'eager' : 'lazy'}
-								decoding="async"
-								fetchpriority={i === 0 ? 'high' : 'auto'}
-								sizes="(min-width: 768px) 33vw, 100vw"
-								onError={onErr}
-								className="w-full max-w-full h-auto object-cover rounded-lg bg-[#f5f5f5] select-none"
-								draggable={false}
-							/>
-						))}
-					</div>
-					{/* 第二份列表：无缝循环 */}
-					<div className="flex flex-col gap-4">
-						{images.map((src, i) => (
-							<img
-								key={`b-${src}-${i}`}
-								src={src}
-								alt=""
-								loading="lazy"
-								decoding="async"
-								sizes="(min-width: 768px) 33vw, 100vw"
-								onError={onErr}
-								className="w-full max-w-full h-auto object-cover rounded-lg bg-[#f5f5f5] select-none"
-								draggable={false}
-							/>
-						))}
-					</div>
-				</div>
-			</div>
-		);
-}
-

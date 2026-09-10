@@ -1,0 +1,112 @@
+{
+  "id": "C07-A",
+  "slug": "menswear-editorial-brand-review",
+  "status": "published",
+  "sortOrder": 75,
+  "primaryCategory": "product-content",
+  "year": null,
+  "date": null,
+  "location": null,
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "男装内容制作",
+      "summary": "男装内容制作：围绕服饰任务组织人物形象与内容。",
+      "preview": "服饰是本案内容的主体。Vivian Adventure 参与服饰内容制作与妆造形象设计，让人物准备配合服饰呈现。",
+      "role": "Vivian Adventure 参与服饰内容制作与妆造形象设计，将人物准备作为服饰制作任务的一部分。",
+      "context": "本案是一项男装人物内容项目。任务围绕服饰展开，需要将人物形象准备与内容制作结合，形成以服饰为主题的交付。",
+      "narrativeSections": [
+        {
+          "heading": "以服饰任务组织人物制作",
+          "text": "人物形象需要服务于服饰内容。本案同时涉及形象设计与制作，工作的关联在于将准备阶段的人物呈现带入服饰内容的实际产出。"
+        }
+      ],
+      "deliverables": [
+        "服饰人物视觉内容及相关形象设计"
+      ],
+      "outcomes": [
+        "交付形成以男装为主题的人物内容，体现服饰制作与人物准备的配合能力。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "Menswear Content",
+      "summary": "Menswear content production, connecting talent image preparation with the clothing brief.",
+      "preview": "Clothing was the subject of this assignment. Vivian Adventure contributed to apparel content and image preparation, with the talent’s presentation serving the menswear brief.",
+      "role": "Vivian Adventure contributed to apparel content production and makeup design, making talent preparation part of the clothing assignment.",
+      "context": "This was a talent-led menswear content project. It brought image preparation and production together to create content centred on the clothing.",
+      "narrativeSections": [
+        {
+          "heading": "Production around the clothing brief",
+          "text": "The talent’s preparation served the apparel content. With both image design and production within scope, the work connected the preparation of the person with the practical task of making the clothing content."
+        }
+      ],
+      "deliverables": [
+        "Talent-led apparel imagery and associated image preparation"
+      ],
+      "outcomes": [
+        "The delivery was menswear content, demonstrating the relationship between apparel production and talent preparation."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/menswear-editorial-brand-review/C07-01.avif",
+      "alt": {
+        "zh": "条纹服装的男装视觉素材",
+        "en": "Menswear visual featuring a striped garment"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 788,
+      "height": 1493,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "788 / 1493",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/menswear-editorial-brand-review/C07-01.avif",
+      "alt": {
+        "zh": "条纹服装的男装视觉素材",
+        "en": "Menswear visual featuring a striped garment"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 788,
+      "height": 1493,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/menswear-editorial-brand-review/C07-01.avif",
+      "alt": {
+        "zh": "条纹服装的男装视觉素材",
+        "en": "Menswear visual featuring a striped garment"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 788,
+      "height": 1493,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "788 / 1493",
+          "fit": "contain"
+        }
+      }
+    },
+    "gallery": [],
+    "layoutFamily": "single",
+    "layoutVariant": "single-artwork-story"
+  }
+}

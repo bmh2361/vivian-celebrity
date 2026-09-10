@@ -67,7 +67,7 @@ export default function About() {
 	const fade = (d = 0) => ({ initial: { opacity: 0, y: 12 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.2 }, transition: { duration: 0.5, delay: d } });
 
 	return (
-		<div className="max-w-7xl mx-auto px-6 py-12">
+		<div className="layout-standard max-w-7xl mx-auto px-6 py-12">
 			<motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="flex items-start justify-between gap-4">
 				<div>
 					<h1 className="text-2xl md:text-3xl font-extrabold tracking-wide text-[#111]">{t.title}</h1>

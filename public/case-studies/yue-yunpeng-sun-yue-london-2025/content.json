@@ -1,0 +1,139 @@
+{
+  "id": "C09",
+  "slug": "yue-yunpeng-sun-yue-london-2025",
+  "status": "published",
+  "sortOrder": 40,
+  "primaryCategory": "live-performance",
+  "year": 2025,
+  "date": null,
+  "location": "London",
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "岳云鹏·孙越｜伦敦相声专场",
+      "summary": "岳云鹏、孙越伦敦相声专场：围绕语言型演出组织本地制作配合。",
+      "preview": "相声专场的核心是演员与观众之间的交流。本地制作需要围绕表演展开，连接舞台技术、人员、节目、妆造与记录。",
+      "role": "Vivian Adventure 参与本地制作，将舞台及技术对接与人员、节目衔接联系起来，并配合妆造和现场记录。",
+      "context": "岳云鹏与孙越是相声表演搭档。本案为两人在伦敦的演出提供本地制作配合，执行工作的重点是服务节目与演员的现场呈现。",
+      "narrativeSections": [
+        {
+          "heading": "语言型演出的制作接口",
+          "text": "演员、节目与舞台技术是这项工作的共同参照。我们的参与范围连接了这些接口，使人员与节目衔接的工作能够围绕演出本身展开。"
+        },
+        {
+          "heading": "表演支持与现场记录",
+          "text": "妆造配合与现场记录同属本案范围。交付既包括演出背后的本地制作支持，也包括双人表演与舞台内容的记录，体现巡演落地中的协作能力。"
+        }
+      ],
+      "deliverables": [
+        "本地制作、舞台与技术对接",
+        "人员及节目衔接、妆造配合",
+        "双人表演与舞台影像"
+      ],
+      "outcomes": [
+        "交付包括伦敦演出的本地制作支持、妆造配合及双人表演与舞台记录。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "Yue Yunpeng & Sun Yue | London Crosstalk",
+      "summary": "Local production support for Yue Yunpeng and Sun Yue’s London crosstalk performance.",
+      "preview": "The relationship between performers and audience is central to crosstalk. Local production supports that performance by connecting stage and technical liaison with people, programme, styling and documentation.",
+      "role": "Vivian Adventure contributed to local production, connecting stage and technical liaison with people and programme transitions, alongside styling and documentation.",
+      "context": "Yue Yunpeng and Sun Yue perform crosstalk as a duo. This assignment supported their London performance, with local production work centred on the programme and its presentation on stage.",
+      "narrativeSections": [
+        {
+          "heading": "The interfaces behind the performance",
+          "text": "The performers, programme and stage requirements provided the shared reference for the work. Our involvement connected these interfaces, organising people and programme liaison around the performance itself."
+        },
+        {
+          "heading": "Support and documentation",
+          "text": "Styling support and event documentation were also within scope. The delivery combined local production support with a record of the duo and the stage, demonstrating collaboration within a touring performance."
+        }
+      ],
+      "deliverables": [
+        "Local production, stage and technical liaison",
+        "People, programme transitions and styling support",
+        "Duo performance and stage imagery"
+      ],
+      "outcomes": [
+        "The delivery comprised local production support, styling support and documentation of the duo and stage at the London performance."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/yue-yunpeng-sun-yue-london-2025/C09-02.avif",
+      "alt": {
+        "zh": "标有2025相声巡演信息的舞台全景",
+        "en": "Wide stage view with 2025 crosstalk-tour graphics"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1600,
+      "height": 1200,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "1600 / 1200",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/yue-yunpeng-sun-yue-london-2025/C09-02.avif",
+      "alt": {
+        "zh": "标有2025相声巡演信息的舞台全景",
+        "en": "Wide stage view with 2025 crosstalk-tour graphics"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1600,
+      "height": 1200,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/yue-yunpeng-sun-yue-london-2025/C09-01.avif",
+      "alt": {
+        "zh": "双人相声表演与舞台陈设",
+        "en": "Two-person crosstalk performance and stage setting"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1440,
+      "height": 1080,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "1440 / 1080",
+          "fit": "contain"
+        }
+      }
+    },
+    "gallery": [
+      {
+        "src": "/case-studies/yue-yunpeng-sun-yue-london-2025/C09-01.avif",
+        "alt": {
+          "zh": "双人相声表演与舞台陈设",
+          "en": "Two-person crosstalk performance and stage setting"
+        },
+        "caption": {
+          "zh": "",
+          "en": ""
+        },
+        "width": 1440,
+        "height": 1080,
+        "focalPoint": "center"
+      }
+    ],
+    "layoutFamily": "wide",
+    "layoutVariant": "performance-dialogue"
+  }
+}

@@ -8,7 +8,7 @@ const copy = {
 		title: '帮助品牌在英国开展业务、创造内容并落地执行。',
 		text: '从品牌策划、内容制作到达人、活动与英国本地执行，Vivian Adventure 根据项目目标组织合适的人、资源与执行团队。',
 		items: [
-			{ no: '01', title: '企业策划', en: 'Business Planning', text: '品牌活动、视觉内容、合作策划与英国本地执行。', href: '/pages/corporate.html', cta: '查看企业策划' },
+			{ no: '01', title: '企业策划案例', en: 'Commercial Case Studies', text: '品牌活动、视觉内容、合作策划与英国本地执行。', href: '/pages/corporate.html', cta: '查看企业策划案例' },
 			{ no: '02', title: '达人 · 网红 · 模特', en: 'Talent & Creator Services', text: '为广告、内容、展会与品牌活动寻找并协调合适的人才。', href: '/talent/', cta: '查看人才服务' },
 		],
 		deliverTitle: '企业可以委托我们做什么？',
@@ -54,7 +54,7 @@ const copy = {
 		title: 'Helping brands operate, create and activate in the UK.',
 		text: 'From brand planning and content production to talent, events and UK-based execution, Vivian Adventure organises the right people, resources and delivery team around each project objective.',
 		items: [
-			{ no: '01', title: 'Business Planning', en: '企业策划', text: 'Brand events, visual content, partnership planning and UK-based execution.', href: '/pages/corporate.html', cta: 'Explore Business Planning' },
+			{ no: '01', title: 'Commercial Case Studies', en: '企业策划案例', text: 'Brand events, visual content, partnership planning and UK-based execution.', href: '/pages/corporate.html', cta: 'Explore Commercial Case Studies' },
 			{ no: '02', title: 'Talent & Creator Services', en: '达人 · 网红 · 模特', text: 'Talent sourcing and coordination for campaigns, content, exhibitions and brand activations.', href: '/talent/', cta: 'Explore Talent Services' },
 		],
 		deliverTitle: 'What can you entrust us to deliver?',
@@ -105,7 +105,7 @@ export default function Business() {
 	const enquiry = withBase('/pages/contact.html?project=business');
 
 	return (
-		<div className="max-w-7xl mx-auto px-6 py-12 space-y-16 md:space-y-20">
+		<div className="layout-standard max-w-7xl mx-auto px-6 py-12 space-y-16 md:space-y-20">
 			<motion.section initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="rounded-2xl border border-[#eee] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.05)] relative overflow-hidden">
 				<div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[rgba(207,175,107,0.18)] to-transparent" />
 				<p className="relative text-xs font-semibold tracking-[0.18em] text-[#9A7B4F]">{t.eyebrow}</p>

@@ -1,0 +1,112 @@
+{
+  "id": "C07-B",
+  "slug": "superga-footwear-content-candidate",
+  "status": "published",
+  "sortOrder": 72,
+  "primaryCategory": "product-content",
+  "year": null,
+  "date": null,
+  "location": null,
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "鞋履内容制作",
+      "summary": "鞋履内容制作：衔接产品呈现、人物形象与制作。",
+      "preview": "鞋履是内容任务的核心，人物呈现需要围绕产品展开。本案将内容制作与妆造形象设计结合，交付人物与鞋履内容。",
+      "role": "Vivian Adventure 参与鞋履内容制作与妆造形象设计，将人物准备连接到产品内容任务。",
+      "context": "本案围绕鞋履产品制作人物内容。项目需求是让产品进入人物呈现，制作范围包括内容工作与妆造形象设计。",
+      "narrativeSections": [
+        {
+          "heading": "人物服务于鞋履任务",
+          "text": "鞋履项目中的人物准备需要与产品内容相配合。本案把妆造形象设计与内容制作放在同一工作范围内，围绕鞋履完成人物内容。"
+        }
+      ],
+      "deliverables": [
+        "人物与鞋履整合视觉内容及相关形象设计"
+      ],
+      "outcomes": [
+        "交付为人物与鞋履共同构成的产品内容，体现产品导向的人物制作能力。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "Footwear Content",
+      "summary": "Footwear content production linking the product, talent preparation and imagery.",
+      "preview": "Footwear was the focus, with the talent’s presentation serving the product assignment. Content production and image preparation came together in imagery featuring both.",
+      "role": "Vivian Adventure contributed to footwear content production and makeup design, connecting preparation for the talent with the product assignment.",
+      "context": "This project concerned talent-led footwear content. The assignment brought the product into a talent presentation, with content production and makeup design included in the work.",
+      "narrativeSections": [
+        {
+          "heading": "Talent within a footwear brief",
+          "text": "Talent preparation had to relate to the footwear content. The scope brought makeup design and content production together around that product task, resulting in imagery featuring the person and the shoes."
+        }
+      ],
+      "deliverables": [
+        "Combined talent and footwear imagery with associated image preparation"
+      ],
+      "outcomes": [
+        "The delivery was talent-led footwear content, demonstrating product-focused talent production."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/superga-footwear-content-candidate/C07-02.avif",
+      "alt": {
+        "zh": "人物手持白色鞋履的品牌内容画面",
+        "en": "Fashion visual with white footwear held by the subject"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1080,
+      "height": 1580,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "1080 / 1580",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/superga-footwear-content-candidate/C07-02.avif",
+      "alt": {
+        "zh": "人物手持白色鞋履的品牌内容画面",
+        "en": "Fashion visual with white footwear held by the subject"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1080,
+      "height": 1580,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/superga-footwear-content-candidate/C07-02.avif",
+      "alt": {
+        "zh": "人物手持白色鞋履的品牌内容画面",
+        "en": "Fashion visual with white footwear held by the subject"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1080,
+      "height": 1580,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "1080 / 1580",
+          "fit": "contain"
+        }
+      }
+    },
+    "gallery": [],
+    "layoutFamily": "single",
+    "layoutVariant": "single-artwork-story"
+  }
+}

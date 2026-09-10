@@ -1,0 +1,151 @@
+{
+  "id": "C04",
+  "slug": "agibot-uk-launch-2026",
+  "status": "published",
+  "sortOrder": 90,
+  "primaryCategory": "brand-cultural-events",
+  "year": 2026,
+  "date": null,
+  "location": "London",
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "AGIBOT 英国发布",
+      "summary": "AGIBOT 英国发布：连接舞台、展位设计与现场搭建协调。",
+      "preview": "机器人发布既包含品牌介绍，也包含产品展示。项目团队参与舞台与展位设计，并将设计工作与搭建供应商及现场人员衔接。",
+      "role": "项目团队参与舞台和展位设计、搭建供应商协调与现场人员安排，工作范围连接设计方案与现场执行。",
+      "context": "AGIBOT 是具身智能与机器人企业，其伦敦英国发布活动包含产品展示、现场演示和主题演讲。这样的发布需要同时承接讲述与展示两类现场内容。",
+      "narrativeSections": [
+        {
+          "heading": "设计与搭建之间",
+          "text": "舞台和展位承担不同的展示任务，但都需要通过搭建与人员配合落实。本案的参与跨越设计与供应商协调，关注展示空间如何进入实际执行。"
+        },
+        {
+          "heading": "把发布内容落实到现场",
+          "text": "本案交付集中在舞台与展位设计，以及相关搭建供应商和人员协调。这项工作体现科技发布项目中连接空间设计与现场制作的能力。"
+        }
+      ],
+      "deliverables": [
+        "舞台与展位设计",
+        "搭建供应商协调及现场人员安排"
+      ],
+      "outcomes": [
+        "交付包括发布现场的舞台与展位设计，以及对应的搭建供应商和人员协调。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "AGIBOT UK Launch",
+      "summary": "AGIBOT’s UK launch: stage and stand design linked with build coordination.",
+      "preview": "A robotics launch combines a brand presentation with product demonstrations. The project team’s contribution connected stage and stand design with build suppliers and on-site personnel.",
+      "role": "The project team contributed to stage and stand design, build-supplier coordination and on-site personnel arrangements, connecting design work with execution.",
+      "context": "AGIBOT develops embodied AI and robotics. Its London UK launch featured product displays, live demonstrations and keynote presentations, requiring a setting for both the brand’s message and its technology.",
+      "narrativeSections": [
+        {
+          "heading": "Between design and build",
+          "text": "The stage and stands serve different presentation needs, but both depend on construction and people. Our project scope crossed design and supplier coordination, linking the display spaces with their practical execution."
+        },
+        {
+          "heading": "A defined launch contribution",
+          "text": "The delivery centred on stage and stand design and the associated supplier and personnel coordination. It demonstrates the connection between spatial design and on-site production for a technology launch."
+        }
+      ],
+      "deliverables": [
+        "Stage and stand design",
+        "Build-supplier coordination and on-site personnel arrangements"
+      ],
+      "outcomes": [
+        "The delivery comprised stage and stand design for the launch, with associated build-supplier and personnel coordination."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/agibot-uk-launch-2026/C04-01.avif",
+      "alt": {
+        "zh": "AGIBOT产品发布主舞台",
+        "en": "Main presentation stage at an AGIBOT product launch"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1600,
+      "height": 1067,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "1600 / 1067",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/agibot-uk-launch-2026/C04-01.avif",
+      "alt": {
+        "zh": "AGIBOT产品发布主舞台",
+        "en": "Main presentation stage at an AGIBOT product launch"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1600,
+      "height": 1067,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/agibot-uk-launch-2026/C04-01.avif",
+      "alt": {
+        "zh": "AGIBOT产品发布主舞台",
+        "en": "Main presentation stage at an AGIBOT product launch"
+      },
+      "caption": {
+        "zh": "",
+        "en": ""
+      },
+      "width": 1600,
+      "height": 1067,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "1600 / 1067",
+          "fit": "contain"
+        }
+      }
+    },
+    "gallery": [
+      {
+        "src": "/case-studies/agibot-uk-launch-2026/C04-02.avif",
+        "alt": {
+          "zh": "机器人桌面演示区域",
+          "en": "Robotics demonstration area"
+        },
+        "caption": {
+          "zh": "",
+          "en": ""
+        },
+        "width": 1280,
+        "height": 1920,
+        "focalPoint": "center"
+      },
+      {
+        "src": "/case-studies/agibot-uk-launch-2026/C04-03.avif",
+        "alt": {
+          "zh": "带有合作方标识的机器人展示区域",
+          "en": "Robotics display with partner branding"
+        },
+        "caption": {
+          "zh": "",
+          "en": ""
+        },
+        "width": 1280,
+        "height": 1920,
+        "focalPoint": "center"
+      }
+    ],
+    "layoutFamily": "wide",
+    "layoutVariant": "launch-and-demo"
+  }
+}

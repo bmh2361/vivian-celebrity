@@ -1,15 +1,15 @@
 import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { Icon } from '../icons.jsx';
 import '../index.css';
+import './desktop-layout.css';
 
 const brand = { glass: 'backdrop-blur-sm bg-white/70 border border-[#e8e8e8]' };
 const dict = {
   zh: {
-    nav: { home: '主页', private: '私人形象', commercial: '商业项目', businessOverview: '品牌与商业执行', makeup: '妆造美学', bespoke: '高端定制', photography: '影像美学', corporate: '企业策划', talent: 'Talent', portfolio: '作品集', about: '团队', contact: '联系我们' },
+    nav: { home: '主页', private: '私人形象', commercial: '商业项目', businessOverview: '品牌与商业执行', imageDirection: '形象美学', bespoke: '高端定制', corporate: '企业策划案例', talent: 'Talent', portfolio: '作品集', about: '团队', contact: '联系我们' },
     navDesc: {
-      makeup: '影视/时尚/婚礼造型 · 妆发与风格统筹',
-      bespoke: '高定级私人定制 · 形象顾问与试妆',
-      photography: '短剧/短视频制作 · 拍摄策划 · 后期与传播',
+      imageDirection: '人物方向、妆发造型与个人影像',
+      bespoke: '私人场合、花艺空间与特别拍摄',
       businessOverview: '品牌、内容、活动与英国本地项目落地',
       corporate: '品牌活动策划 · 执行统筹 · 传播物料',
       talent: '达人 · 网红 · 模特 · 企业人才服务',
@@ -18,11 +18,10 @@ const dict = {
     footer: '© VIVIAN ADVENTURE. All rights reserved.'
   },
   en: {
-    nav: { home: 'Home', private: 'Private Clients', commercial: 'Commercial', businessOverview: 'Brand & Commercial Execution', makeup: 'Makeup & Styling', bespoke: 'Bespoke', photography: 'Visual Aesthetics', corporate: 'Business Planning', talent: 'Talent', portfolio: 'Portfolio', about: 'Team', contact: 'Contact Us' },
+    nav: { home: 'Home', private: 'Private Clients', commercial: 'Commercial', businessOverview: 'Brand & Commercial Execution', imageDirection: 'Image Direction', bespoke: 'Bespoke', corporate: 'Commercial Case Studies', talent: 'Talent', portfolio: 'Portfolio', about: 'Team', contact: 'Contact Us' },
     navDesc: {
-      makeup: 'Film/Fashion/Bridal styling · Beauty & wardrobe direction',
-      bespoke: 'Private bespoke looks · Image consulting',
-      photography: 'Short-form / short drama · Production · Post & delivery',
+      imageDirection: 'Personal direction, beauty, styling & imagery',
+      bespoke: 'Private occasions, flowers, spaces & special productions',
       businessOverview: 'Brand, content, activations & UK delivery',
       corporate: 'Brand events · Execution · Content & communication',
       talent: 'Models · Creators · Influencers · Brand talent',
@@ -62,7 +61,7 @@ export default function Layout({ pageKey, children }) {
   const t = useMemo(() => dict[lang], [lang]);
 
   const isActiveKey = (key) => pageKey === key;
-  const isPrivateActive = ['makeup', 'photography', 'bespoke'].includes(pageKey);
+  const isPrivateActive = ['image-direction', 'makeup', 'photography', 'bespoke'].includes(pageKey);
   const isCommercialActive = ['business', 'corporate'].includes(pageKey);
 
   const link = (href, label, key) => {
@@ -102,8 +101,7 @@ export default function Layout({ pageKey, children }) {
   const mobileTriggerRef = useRef(null);
 
   const privateItems = [
-    { href: '/pages/makeup.html', label: t.nav.makeup, desc: t.navDesc?.makeup, active: isActiveKey('makeup') },
-    { href: '/pages/photography.html', label: t.nav.photography, desc: t.navDesc?.photography, active: isActiveKey('photography') },
+    { href: '/pages/image-direction.html', label: t.nav.imageDirection, desc: t.navDesc?.imageDirection, active: isActiveKey('image-direction') },
     { href: '/pages/bespoke.html', label: t.nav.bespoke, desc: t.navDesc?.bespoke, active: isActiveKey('bespoke') },
   ];
   const commercialItems = [
@@ -227,21 +225,19 @@ export default function Layout({ pageKey, children }) {
   }, [open]);
 
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      document.body.style.overflow = open ? 'hidden' : '';
-      return () => {
-        document.body.style.overflow = '';
-      };
-    }
-  }, [open]);
+    const desktop = window.matchMedia('(min-width: 1280px)');
+    const closeMobileMenu = () => { if (desktop.matches) setOpen(false); };
+    desktop.addEventListener('change', closeMobileMenu);
+    return () => desktop.removeEventListener('change', closeMobileMenu);
+  }, []);
 
   const ctx = useMemo(() => ({ lang, t, setLang }), [lang, t]);
 
   return (
     <LangContext.Provider value={ctx}>
-    <div className="min-h-screen flex flex-col bg-white text-[#111]">
+    <div data-page={pageKey} className="min-h-screen flex flex-col bg-white text-[#111]">
       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
-        <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+        <div className="layout-wide max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
           <a href={withBase('/pages/home.html')} className="flex items-center gap-1 sm:gap-2 font-semibold tracking-widest text-[#CFAF6B]">
             <img src={withBase('/logo.png')} alt="logo" className="h-10 w-auto object-contain" loading="eager" decoding="async" fetchpriority="high" />
             <span className="tracking-[0.15em]">VIVIAN ADVENTURE</span>
@@ -374,7 +370,7 @@ export default function Layout({ pageKey, children }) {
       </header>
       <main className="flex-1">{children}</main>
       <footer className="py-12 border-t border-[#e8e8e8] mt-12">
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between text-[#666] text-sm">
+        <div className="layout-wide max-w-7xl mx-auto px-6 flex items-center justify-between text-[#666] text-sm">
           <div>VIVIAN ADVENTURE</div>
           <div>{t.footer}</div>
         </div>

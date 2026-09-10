@@ -1,29 +1,750 @@
 [
-  "/portfolio/1.jpg",
-  "/portfolio/2.jpg",
-  "/portfolio/3.jpg",
-  "/portfolio/4.jpg",
-  "/portfolio/5.jpg",
-  "/portfolio/6.jpg",
-  "/portfolio/7.jpg",
-  "/portfolio/8.jpg",
-  "/portfolio/9.jpg",
-  "/portfolio/10.jpg",
-  "/portfolio/11.jpg",
-  "/portfolio/12.jpg",
-  "/portfolio/13.jpg",
-  "/portfolio/14.jpg",
-  "/portfolio/15.jpg",
-  "/portfolio/16.jpg",
-  "/portfolio/17.jpg",
-  "/portfolio/18.jpg",
-  "/portfolio/19.jpg",
-  "/portfolio/20.jpg",
-  "/portfolio/21.jpg",
-  "/portfolio/22.jpg",
-  "/portfolio/23.jpg",
-  "/portfolio/24.jpg",
-  "/portfolio/25.jpg",
-  "/portfolio/26.jpg",
-  "/portfolio/27.jpg"
+  {
+    "id": "work-001",
+    "src": "/portfolio/1.jpg",
+    "width": 1080,
+    "height": 1440,
+    "alt": {
+      "zh": "黑色造型的近景人像",
+      "en": "A close portrait in a black look"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-001-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-001-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-001-1080.webp"
+  },
+  {
+    "id": "work-092",
+    "src": "/case-studies/wang-qing-london-fashion-week-2025/0d6cfe2df525acb231b8980d9100ff8c.jpg",
+    "width": 1279,
+    "height": 1972,
+    "alt": {
+      "zh": "深色刺绣西装街头人像",
+      "en": "A street portrait in an embroidered dark suit"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-092-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-092-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-092-1279.webp"
+  },
+  {
+    "id": "work-041",
+    "src": "/talent/emily/01.jpg",
+    "width": 946,
+    "height": 1613,
+    "alt": {
+      "zh": "自然肤色妆容特写",
+      "en": "A beauty portrait with a natural palette"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-041-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-041-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-041-946.webp"
+  },
+  {
+    "id": "work-019",
+    "src": "/portfolio/26.jpg",
+    "width": 10000,
+    "height": 13333,
+    "alt": {
+      "zh": "蓝绿色外套的户外人像",
+      "en": "An outdoor portrait in a teal coat"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-019-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-019-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-019-1600.webp"
+  },
+  {
+    "id": "work-004",
+    "src": "/portfolio/12.jpg",
+    "width": 580,
+    "height": 871,
+    "alt": {
+      "zh": "灰色连帽衫棚拍人像",
+      "en": "A studio portrait in a grey hoodie"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-004-320.webp",
+        "width": 320
+      }
+    ],
+    "detail": "/portfolio/previews/work-004-580.webp"
+  },
+  {
+    "id": "work-054",
+    "src": "/talent/hangphan/02.jpg",
+    "width": 918,
+    "height": 1270,
+    "alt": {
+      "zh": "绿叶旁的人像特写",
+      "en": "A close portrait beside green foliage"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-054-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-054-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-054-918.webp"
+  },
+  {
+    "id": "work-081",
+    "src": "/case-studies/lil-ghost-london-live-2026/C10-02.avif",
+    "width": 1280,
+    "height": 1920,
+    "alt": {
+      "zh": "红色舞台灯光下的表演者",
+      "en": "A performer under red stage lighting"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-081-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-081-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-081-1280.webp"
+  },
+  {
+    "id": "work-005",
+    "src": "/portfolio/13.jpg",
+    "width": 781,
+    "height": 1093,
+    "alt": {
+      "zh": "白色花朵旁的妆容特写",
+      "en": "A beauty portrait framed by white flowers"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-005-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-005-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-005-781.webp"
+  },
+  {
+    "id": "work-091",
+    "src": "/case-studies/superga-footwear-content-candidate/C07-02.avif",
+    "width": 1080,
+    "height": 1580,
+    "alt": {
+      "zh": "手持白色鞋履的时尚人像",
+      "en": "A fashion portrait holding white footwear"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-091-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-091-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-091-1080.webp"
+  },
+  {
+    "id": "work-047",
+    "src": "/talent/gabriele-rayan/01.jpg",
+    "width": 873,
+    "height": 1500,
+    "alt": {
+      "zh": "飞鸟与双人黑白街拍",
+      "en": "A black and white street portrait with birds"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-047-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-047-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-047-873.webp"
+  },
+  {
+    "id": "work-003",
+    "src": "/portfolio/11.jpg",
+    "width": 1080,
+    "height": 1813,
+    "alt": {
+      "zh": "夜间灯光下的皮衣造型",
+      "en": "A leather look against evening lights"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-003-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-003-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-003-1080.webp"
+  },
+  {
+    "id": "work-046",
+    "src": "/talent/emily/cover.jpg",
+    "width": 1047,
+    "height": 1800,
+    "alt": {
+      "zh": "黑色造型的棚拍人像",
+      "en": "A studio portrait in a sculptural black look"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-046-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-046-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-046-1047.webp"
+  },
+  {
+    "id": "work-059",
+    "src": "/bespoke/private-occasions/garden-portrait.jpg",
+    "width": 1280,
+    "height": 1280,
+    "alt": {
+      "zh": "花篮旁的草地人像",
+      "en": "A portrait beside flowers on a lawn"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-059-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-059-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-059-1280.webp"
+  },
+  {
+    "id": "work-084",
+    "src": "/case-studies/menswear-editorial-brand-review/C07-01.avif",
+    "width": 788,
+    "height": 1493,
+    "alt": {
+      "zh": "条纹上衣的服装人像",
+      "en": "A menswear portrait in a striped top"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-084-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-084-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-084-788.webp"
+  },
+  {
+    "id": "work-048",
+    "src": "/talent/gabriele-rayan/02.jpg",
+    "width": 1080,
+    "height": 893,
+    "alt": {
+      "zh": "双人红白蓝服装造型",
+      "en": "A paired portrait in red, white and blue"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-048-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-048-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-048-1080.webp"
+  },
+  {
+    "id": "work-030",
+    "src": "/makeup/3.png",
+    "width": 4160,
+    "height": 6240,
+    "alt": {
+      "zh": "暖光下的白色礼服人像",
+      "en": "A portrait in a white dress in warm light"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-030-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-030-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-030-1600.webp"
+  },
+  {
+    "id": "work-086",
+    "src": "/case-studies/qinglian-london-fashion-week-2025/2a79b8f2933f914bbcfa6852f244cea0.jpg",
+    "width": 1080,
+    "height": 1510,
+    "alt": {
+      "zh": "棕色丝绒造型人物",
+      "en": "A portrait in a brown velvet look"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-086-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-086-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-086-1080.webp"
+  },
+  {
+    "id": "work-008",
+    "src": "/portfolio/16.jpg",
+    "width": 838,
+    "height": 1135,
+    "alt": {
+      "zh": "水边白色服装人像",
+      "en": "A portrait in white beside water"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-008-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-008-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-008-838.webp"
+  },
+  {
+    "id": "work-066",
+    "src": "/bespoke-cases/4.jpg",
+    "width": 1440,
+    "height": 1920,
+    "alt": {
+      "zh": "黑色着装人物与车辆",
+      "en": "A portrait in black beside a car"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-066-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-066-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-066-1440.webp"
+  },
+  {
+    "id": "work-043",
+    "src": "/talent/emily/03.jpg",
+    "width": 1049,
+    "height": 1800,
+    "alt": {
+      "zh": "蓝色连衣裙的活动造型",
+      "en": "An event look in a blue dress"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-043-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-043-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-043-1049.webp"
+  },
+  {
+    "id": "work-027",
+    "src": "/portfolio/9.jpg",
+    "width": 660,
+    "height": 990,
+    "alt": {
+      "zh": "长款格纹服装造型",
+      "en": "A full-length look in a checked outfit"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-027-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-027-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-027-660.webp"
+  },
+  {
+    "id": "work-082",
+    "src": "/case-studies/lil-ghost-london-live-2026/C10-03.avif",
+    "width": 958,
+    "height": 1438,
+    "alt": {
+      "zh": "舞台上手持话筒的表演者",
+      "en": "A performer holding a microphone on stage"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-082-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-082-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-082-958.webp"
+  },
+  {
+    "id": "work-055",
+    "src": "/talent/hangphan/03.jpg",
+    "width": 954,
+    "height": 1224,
+    "alt": {
+      "zh": "白色羽毛造型人像",
+      "en": "A portrait with white feather styling"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-055-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-055-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-055-954.webp"
+  },
+  {
+    "id": "work-002",
+    "src": "/portfolio/10.jpg",
+    "width": 659,
+    "height": 990,
+    "alt": {
+      "zh": "皮衣与牛仔裤全身造型",
+      "en": "A full-length leather and denim look"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-002-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-002-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-002-659.webp"
+  },
+  {
+    "id": "work-035",
+    "src": "/photography/2.jpg",
+    "width": 942,
+    "height": 1694,
+    "alt": {
+      "zh": "城市夜景前的人像",
+      "en": "A portrait against city lights at night"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-035-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-035-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-035-942.webp"
+  },
+  {
+    "id": "work-073",
+    "src": "/case-studies/beauty-lifestyle-dior-candidate/C06-01.avif",
+    "width": 1080,
+    "height": 1620,
+    "alt": {
+      "zh": "梳妆台旁的美妆内容",
+      "en": "Beauty content at a dressing table"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-073-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-073-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-073-1080.webp"
+  },
+  {
+    "id": "work-087",
+    "src": "/case-studies/qinglian-london-fashion-week-2025/2c969285e14ac73cf16f5399bd72b0c3.jpg",
+    "width": 1080,
+    "height": 1622,
+    "alt": {
+      "zh": "建筑光线中的丝绒造型",
+      "en": "A velvet look in architectural light"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-087-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-087-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-087-1080.webp"
+  },
+  {
+    "id": "work-018",
+    "src": "/portfolio/25.jpg",
+    "width": 756,
+    "height": 1098,
+    "alt": {
+      "zh": "彩色墙面前的时尚人像",
+      "en": "A fashion portrait against a colourful wall"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-018-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-018-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-018-756.webp"
+  },
+  {
+    "id": "work-052",
+    "src": "/talent/gabriele-rayan/cover.jpg",
+    "width": 747,
+    "height": 1280,
+    "alt": {
+      "zh": "植物元素中的双人造型",
+      "en": "A paired fashion portrait with botanical elements"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-052-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-052-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-052-747.webp"
+  },
+  {
+    "id": "work-023",
+    "src": "/portfolio/5.jpg",
+    "width": 671,
+    "height": 1007,
+    "alt": {
+      "zh": "蓝色舞台背景前的表演者",
+      "en": "A performer against a blue stage setting"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-023-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-023-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-023-671.webp"
+  },
+  {
+    "id": "work-072",
+    "src": "/case-studies/beauty-colour-mac-candidate/C06-02.avif",
+    "width": 711,
+    "height": 771,
+    "alt": {
+      "zh": "手持彩妆产品的妆容特写",
+      "en": "A beauty portrait holding a make-up product"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-072-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-072-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-072-711.webp"
+  },
+  {
+    "id": "work-053",
+    "src": "/talent/hangphan/01.jpg",
+    "width": 1194,
+    "height": 1714,
+    "alt": {
+      "zh": "户外白色礼服人像",
+      "en": "An outdoor portrait in a white dress"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-053-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-053-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-053-1194.webp"
+  },
+  {
+    "id": "work-095",
+    "src": "/case-studies/wang-qing-london-fashion-week-2025/87a20c4874efc1107a896524d9f2f8dc.jpg",
+    "width": 960,
+    "height": 1604,
+    "alt": {
+      "zh": "深色服装的侧面人像",
+      "en": "A side portrait in a dark tailored look"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-095-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-095-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-095-960.webp"
+  },
+  {
+    "id": "work-026",
+    "src": "/portfolio/8.jpg",
+    "width": 495,
+    "height": 743,
+    "alt": {
+      "zh": "暖色调短发人像",
+      "en": "A warm-toned short-haired portrait"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-026-320.webp",
+        "width": 320
+      }
+    ],
+    "detail": "/portfolio/previews/work-026-495.webp"
+  },
+  {
+    "id": "work-020",
+    "src": "/portfolio/27.jpg",
+    "width": 1248,
+    "height": 871,
+    "alt": {
+      "zh": "品牌活动背景前的全身造型",
+      "en": "A full-length look at a branded event"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-020-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-020-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-020-1248.webp"
+  },
+  {
+    "id": "work-068",
+    "src": "/bespoke-cases/6.jpg",
+    "width": 1440,
+    "height": 2160,
+    "alt": {
+      "zh": "车内人物侧面",
+      "en": "A seated portrait inside a car"
+    },
+    "previews": [
+      {
+        "src": "/portfolio/previews/work-068-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/portfolio/previews/work-068-640.webp",
+        "width": 640
+      }
+    ],
+    "detail": "/portfolio/previews/work-068-1440.webp"
+  }
 ]

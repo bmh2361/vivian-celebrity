@@ -7,6 +7,7 @@ Vivian Adventure — 前端站点（Vite + React + Tailwind）
 本地开发
 - 安装依赖：npm ci
 - 启动开发：npm run dev  然后用浏览器打开终端给出的 http://localhost:xxxx
+- 案例内容与图片维护：[案例维护指南](docs/CASE-STUDY-GUIDE.md)
 
 构建与部署
 - 运行构建：npm run build（产物在 dist/）

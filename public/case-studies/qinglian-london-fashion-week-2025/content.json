@@ -1,0 +1,132 @@
+{
+  "id": "C11",
+  "slug": "qinglian-london-fashion-week-2025",
+  "status": "published",
+  "sortOrder": 15,
+  "primaryCategory": "fashion-week",
+  "year": 2025,
+  "date": null,
+  "location": "London",
+  "services": [],
+  "languages": {
+    "zh": {
+      "ready": true,
+      "title": "庆怜｜伦敦时装周 2025",
+      "summary": "庆怜伦敦时装周人物内容：衔接形象准备与不同场景下的制作。",
+      "preview": "人物内容跨越不同场景时，形象准备与制作安排需要相互配合。庆怜项目将人员沟通、场景安排和影像工作放在同一项内容任务中。",
+      "role": "Vivian Adventure 参与形象准备、场景安排、人员沟通与影像制作，把人物准备与场景中的拍摄工作衔接起来。",
+      "context": "本案围绕庆怜在伦敦时装周期间的人物内容展开。工作重点是将人物形象落实到具体场景中的制作，完成与此次伦敦项目对应的内容。",
+      "narrativeSections": [
+        {
+          "heading": "场景变化中的制作配合",
+          "text": "每个场景都涉及人物准备与制作人员的配合。本案的工作范围同时包含形象与场景，因此内容制作需要兼顾两者，而不是分别处理完再临时拼接。"
+        },
+        {
+          "heading": "人物与环境共同进入交付",
+          "text": "交付包括庆怜的人物造型与城市环境影像，以及对应的形象准备和制作配合。案例体现的是围绕同一人物组织不同场景内容的能力。"
+        }
+      ],
+      "deliverables": [
+        "形象准备、场景与人员配合",
+        "庆怜人物造型及城市环境影像"
+      ],
+      "outcomes": [
+        "人物与环境内容构成此次项目的影像交付，制作范围同时覆盖拍摄前的形象准备。"
+      ]
+    },
+    "en": {
+      "ready": true,
+      "title": "Qinglian | London Fashion Week 2025",
+      "summary": "Fashion week content for Qinglian, linking talent preparation with production across settings.",
+      "preview": "Content made across settings depends on preparation and production working together. Qinglian’s London project combined people liaison, settings and photography within one content assignment.",
+      "role": "Vivian Adventure contributed to image preparation, settings, people liaison and photography, connecting preparation for the talent with the shoot.",
+      "context": "This project centred on Qinglian’s talent content during London Fashion Week. Its focus was the practical relationship between image preparation and production in the settings used for the London project.",
+      "narrativeSections": [
+        {
+          "heading": "Working across settings",
+          "text": "Each setting involves both the talent’s preparation and the people making the content. With both within our scope, the production work had to account for their relationship throughout the assignment."
+        },
+        {
+          "heading": "Content built around one person",
+          "text": "The delivery comprised fashion portraits and imagery within the city, together with the preparation and production support behind them. The case demonstrates talent content production across settings."
+        }
+      ],
+      "deliverables": [
+        "Image preparation, settings and people liaison",
+        "Qinglian fashion portraits and city-setting imagery"
+      ],
+      "outcomes": [
+        "The project produced a set of talent and location imagery, with image preparation included in the production scope."
+      ]
+    }
+  },
+  "media": {
+    "cover": {
+      "src": "/case-studies/qinglian-london-fashion-week-2025/2c969285e14ac73cf16f5399bd72b0c3.jpg",
+      "alt": {
+        "zh": "室内闪光灯下的棕色丝绒造型",
+        "en": "Brown velvet look photographed with interior flash"
+      },
+      "width": 1080,
+      "height": 1622,
+      "focalPoint": "center",
+      "display": {
+        "preview": {
+          "ratio": "1080 / 1622",
+          "fit": "contain"
+        }
+      }
+    },
+    "hero": {
+      "src": "/case-studies/qinglian-london-fashion-week-2025/63d5d1373040bf84d76f0e0e19e182d8.jpg",
+      "alt": {
+        "zh": "贝克街地铁站内保留鞋履的完整造型",
+        "en": "Complete look, including footwear, at Baker Street station"
+      },
+      "width": 804,
+      "height": 1614,
+      "focalPoint": "center"
+    },
+    "thumbnail": {
+      "src": "/case-studies/qinglian-london-fashion-week-2025/2c969285e14ac73cf16f5399bd72b0c3.jpg",
+      "alt": {
+        "zh": "室内闪光灯下的棕色丝绒造型",
+        "en": "Brown velvet look photographed with interior flash"
+      },
+      "width": 1080,
+      "height": 1622,
+      "focalPoint": "center",
+      "display": {
+        "thumbnail": {
+          "ratio": "4 / 5",
+          "fit": "cover",
+          "position": "50% 40%"
+        }
+      }
+    },
+    "gallery": [
+      {
+        "src": "/case-studies/qinglian-london-fashion-week-2025/2c969285e14ac73cf16f5399bd72b0c3.jpg",
+        "alt": {
+          "zh": "室内闪光灯下的棕色丝绒造型",
+          "en": "Brown velvet look photographed with interior flash"
+        },
+        "width": 1080,
+        "height": 1622,
+        "focalPoint": "center"
+      },
+      {
+        "src": "/case-studies/qinglian-london-fashion-week-2025/2a79b8f2933f914bbcfa6852f244cea0.jpg",
+        "alt": {
+          "zh": "棕色花饰造型的侧面人物近景",
+          "en": "Profile portrait highlighting the brown floral look"
+        },
+        "width": 1080,
+        "height": 1510,
+        "focalPoint": "center"
+      }
+    ],
+    "layoutFamily": "portrait",
+    "layoutVariant": "fashion-diptych"
+  }
+}
