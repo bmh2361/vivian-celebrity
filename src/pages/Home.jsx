@@ -297,10 +297,14 @@ export default function Home() {
 
 // 右上角图片卡片组件，带缺图回退
 function HeroImage({ withBase, className }) {
-	// Hero 右侧主图：优先使用 /public/hero-right.jpg（可按需替换），失败则回退到现有图片
-	const [rel, setRel] = useState('/hero-right.jpg');
+	// 正式版本化资产；历史图片仅作为应急回退。
+	const [rel, setRel] = useState('/home/home-hero-editorial-v2.jpg');
 	const src = withBase(rel);
-	const onError = () => setRel(prev => (prev === '/hero-company.jpg' ? prev : '/hero-company.jpg'));
+	const onError = () => {
+		if (rel === '/hero-company.jpg') return;
+		if (import.meta.env.DEV) console.warn(`Primary Hero failed: ${src}; fallback activated.`);
+		setRel('/hero-company.jpg');
+	};
 	return (
 		<img
 			src={src}
