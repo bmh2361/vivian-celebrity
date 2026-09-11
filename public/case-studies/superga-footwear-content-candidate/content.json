@@ -11,42 +11,62 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "鞋履内容制作",
-      "summary": "鞋履内容制作：衔接产品呈现、人物形象与制作。",
-      "preview": "鞋履是内容任务的核心，人物呈现需要围绕产品展开。本案将内容制作与妆造形象设计结合，交付人物与鞋履内容。",
-      "role": "Vivian Adventure 参与鞋履内容制作与妆造形象设计，将人物准备连接到产品内容任务。",
-      "context": "本案围绕鞋履产品制作人物内容。项目需求是让产品进入人物呈现，制作范围包括内容工作与妆造形象设计。",
+      "title": "鞋履内容｜让产品成为人物叙事的焦点",
+      "summary": "通过人物与手持鞋履的直接关系，把产品带入视觉中心，让鞋履内容兼具人物表达与产品辨识度。",
+      "preview": "鞋履进入人物画面后，可以承担比穿搭配件更主动的角色。本案围绕这一产品主题结合形象准备与制作，交付人物和白色鞋履共同构成的内容。",
+      "role": "Vivian Adventure 参与鞋履内容制作与妆造形象设计，将人物准备纳入产品导向的影像任务。",
+      "context": "这是一项以鞋履为核心的人物内容项目。手持白色鞋履的呈现方式，使产品直接参与人物画面；制作需要同时处理整体形象与产品在画面中的地位。",
       "narrativeSections": [
         {
-          "heading": "人物服务于鞋履任务",
-          "text": "鞋履项目中的人物准备需要与产品内容相配合。本案把妆造形象设计与内容制作放在同一工作范围内，围绕鞋履完成人物内容。"
+          "heading": "把鞋履带到观看中心",
+          "text": "手持产品让鞋履成为人物表达的一部分，同时为产品提供明确的观看位置。画面由此建立人与物的直接关系，为鞋履主题提供不同于单独静物的表达方式。"
+        },
+        {
+          "heading": "人物准备回应产品任务",
+          "text": "内容制作与妆造设计围绕鞋履主题展开。人物准备服务于整体呈现，最终影像则将人物与产品一同保留，让产品任务贯穿制作过程。"
+        },
+        {
+          "heading": "产品形象的另一种使用空间",
+          "text": "人物与鞋履同框的内容可作为社交主题、产品介绍或创意讨论的视觉材料。交付的意义在于提供一种可见的产品叙事方式，让后续编辑拥有明确的画面参考。"
         }
       ],
       "deliverables": [
-        "人物与鞋履整合视觉内容及相关形象设计"
+        "配合鞋履主题的人物妆造设计",
+        "人物手持白色鞋履的视觉内容"
       ],
       "outcomes": [
-        "交付为人物与鞋履共同构成的产品内容，体现产品导向的人物制作能力。"
+        "交付人物与鞋履共同构成的产品主题画面。",
+        "内容可为鞋履介绍及后续创意编辑提供视觉参考。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "Footwear Content",
-      "summary": "Footwear content production linking the product, talent preparation and imagery.",
-      "preview": "Footwear was the focus, with the talent’s presentation serving the product assignment. Content production and image preparation came together in imagery featuring both.",
-      "role": "Vivian Adventure contributed to footwear content production and makeup design, connecting preparation for the talent with the product assignment.",
-      "context": "This project concerned talent-led footwear content. The assignment brought the product into a talent presentation, with content production and makeup design included in the work.",
+      "title": "Footwear in Focus | Product Meets Personal Expression",
+      "summary": "A held pair of shoes brings the product into the centre of a talent-led image, combining personal expression with a clear footwear subject.",
+      "preview": "Footwear takes an active role in the portrait. Image preparation and production served the same product assignment, resulting in content featuring the person and white shoes together.",
+      "role": "Vivian Adventure contributed to footwear content production and makeup design, making talent preparation part of a product-focused visual assignment.",
+      "context": "This talent-led project centred on footwear. Holding the white shoes brings the product directly into the portrait, asking the image to accommodate both the person’s presentation and the product’s visual role.",
       "narrativeSections": [
         {
-          "heading": "Talent within a footwear brief",
-          "text": "Talent preparation had to relate to the footwear content. The scope brought makeup design and content production together around that product task, resulting in imagery featuring the person and the shoes."
+          "heading": "Bringing the product forward",
+          "text": "Holding the footwear makes it part of the person’s expression while giving it a clear place in the frame. The direct relationship between person and object offers an alternative reading to a product still life."
+        },
+        {
+          "heading": "A shared product focus",
+          "text": "Content production and makeup design addressed the footwear subject together. Preparation served the overall appearance, with the finished image retaining both talent and product as parts of the same assignment."
+        },
+        {
+          "heading": "An image with editorial uses",
+          "text": "The person-and-product composition offers material for social themes, product introductions or creative discussions. Its value is a visible approach to footwear storytelling that subsequent editing can draw on."
         }
       ],
       "deliverables": [
-        "Combined talent and footwear imagery with associated image preparation"
+        "Makeup design for the footwear theme",
+        "Talent-led imagery featuring held white footwear"
       ],
       "outcomes": [
-        "The delivery was talent-led footwear content, demonstrating product-focused talent production."
+        "The delivered image presents the person and footwear within one product-led composition.",
+        "The content offers a visual reference for footwear introductions and later creative editing."
       ]
     }
   },

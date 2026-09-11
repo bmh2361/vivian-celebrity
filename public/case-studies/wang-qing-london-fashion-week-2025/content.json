@@ -11,52 +11,64 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "王青｜伦敦时装周 2025",
-      "summary": "王青伦敦时装周人物项目：统筹形象准备、场景与内容制作。",
-      "preview": "时装周人物项目需要把出席时的形象准备与内容制作衔接起来。本案围绕王青在伦敦的项目，将人员沟通和场景安排纳入同一组制作工作。",
-      "role": "Vivian Adventure 将形象准备、场景安排与人员沟通连接到影像制作，承担人物项目中这些环节的统筹。场景与人员的安排服务于同一项内容交付。",
-      "context": "王青是本次伦敦时装周人物项目的核心。项目围绕形象准备与时尚内容制作展开，需要把人物、场景和参与制作的人员组织起来。",
+      "title": "王青 × 伦敦时装周｜从人物造型到时尚叙事",
+      "summary": "把形象准备、场景安排与人物摄影作为连续的制作任务，让王青的造型在伦敦街头、建筑与活动语境中形成可供传播的时尚内容。",
+      "preview": "刺绣细节、完整造型与城市环境分别提供不同的观看尺度。围绕同一人物统筹准备与拍摄，使时装周内容既有形象辨识度，也有伦敦现场的具体背景。",
+      "role": "Vivian Adventure 统筹形象准备、场景安排和人员沟通，并结合影像制作，将人物造型落实到具体拍摄场景。",
+      "context": "伦敦时装周汇集品牌、设计师、艺人和媒体的关注，人物如何出现也成为时尚表达的一部分。王青的 2025 年项目围绕形象准备与人物内容展开，需要让造型在不同场景中保持清晰的表达。",
       "narrativeSections": [
         {
-          "heading": "从形象准备进入制作",
-          "text": "人物项目的准备工作直接影响后续拍摄：形象需要结合出现场景，场景安排又需要与参与人员沟通。我们的工作覆盖这些相互依赖的环节，使形象准备与现场制作成为连续的工作。"
+          "heading": "时装周语境中的人物辨识度",
+          "text": "人物内容既要呈现服饰，也要保留艺人自身的形象。深色刺绣造型贯穿街头、建筑与活动画面，为不同场景提供共同的视觉线索，使一组影像能够围绕同一人物展开。"
         },
         {
-          "heading": "交付围绕人物项目",
-          "text": "本案交付包括形象准备、制作协调、场景安排和人物造型影像。它体现的是将时装周人物呈现落实为具体制作的能力，覆盖准备与内容产出两个阶段。"
+          "heading": "准备工作决定拍摄如何发生",
+          "text": "形象准备与场景选择相互影响，人员安排则决定这些想法如何进入制作。我们的统筹覆盖这些相互依赖的环节，将造型、场景与拍摄所需的协作放在同一项任务中处理。"
+        },
+        {
+          "heading": "由细节走向完整语境",
+          "text": "近景保留造型细节，完整人物画面展示穿着关系，环境画面补充伦敦的空间背景。这些不同尺度让内容可用于人物介绍与时装周回顾，也为后续时尚合作沟通提供形象参考。"
         }
       ],
       "deliverables": [
-        "形象准备、场景安排与人员沟通",
-        "王青人物造型影像及相关制作协调"
+        "人物形象准备与场景安排",
+        "拍摄人员沟通及制作协调",
+        "王青造型近景、完整人物与环境影像"
       ],
       "outcomes": [
-        "形成与王青此次伦敦项目对应的人物内容，连同前期形象准备和现场制作工作一并完成。"
+        "形成以刺绣造型为线索、包含人物细节和伦敦场景的时装周内容。",
+        "影像可为艺人形象传播及后续时尚项目沟通提供具体的视觉参考。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "Wang Qing | London Fashion Week 2025",
-      "summary": "Talent production for Wang Qing at London Fashion Week, connecting image preparation, settings and content.",
-      "preview": "A fashion week talent project links the preparation for an appearance with the work needed to produce content. For Wang Qing in London, that included people liaison and the settings for the shoot.",
-      "role": "Vivian Adventure coordinated image preparation, settings and people liaison alongside photography. These connected responsibilities supported the same talent content brief.",
-      "context": "Wang Qing was the subject of this London Fashion Week talent project. The work centred on image preparation and fashion content, bringing together the person, the settings and the people involved in production.",
+      "title": "Wang Qing at London Fashion Week | A Look in Context",
+      "summary": "Image preparation, location coordination and photography placed Wang Qing’s look within London’s streets, architecture and event settings, creating fashion content with a sense of place.",
+      "preview": "Close details, complete looks and city settings offer different ways into the same appearance. Coordinating preparation and photography gave the content both a recognisable subject and a London context.",
+      "role": "Vivian Adventure coordinated image preparation, settings and people liaison alongside photography, taking the talent’s look into the practical conditions of the shoot.",
+      "context": "London Fashion Week concentrates attention across brands, designers, talent and media. For Wang Qing’s 2025 project, image preparation and content production needed to make the look legible across different settings within that fashion context.",
       "narrativeSections": [
         {
-          "heading": "Preparation that carries into production",
-          "text": "The chosen look informs the setting, while the setting requires coordination with the people taking part. Our scope covered these dependencies, connecting preparation for the talent with the practical work of making the content."
+          "heading": "A recognisable thread",
+          "text": "The dark embroidered look runs through street, architectural and event imagery. It gives the set a consistent point of reference while leaving room for the artist’s own presence, allowing the clothing and the person to be read together."
         },
         {
-          "heading": "A defined talent delivery",
-          "text": "The work comprised image preparation, production coordination, settings and photographs of Wang Qing’s looks. It demonstrates the ability to take a fashion week talent project through preparation and into content production."
+          "heading": "The production behind an appearance",
+          "text": "Image preparation informs the setting; the setting brings its own coordination needs. Our scope covered these dependencies, organising the look, locations and people involved as parts of the same photographic assignment."
+        },
+        {
+          "heading": "Detail, silhouette and place",
+          "text": "Close portraits retain detail, full-length views show the complete look, and wider frames introduce London. Together they offer material for talent profiles and fashion week recaps, with a visual reference for later fashion conversations."
         }
       ],
       "deliverables": [
-        "Image preparation, settings and people liaison",
-        "Wang Qing fashion imagery and associated production coordination"
+        "Talent image preparation and settings",
+        "People liaison and shoot coordination",
+        "Wang Qing detail portraits, complete looks and environmental imagery"
       ],
       "outcomes": [
-        "The project brought together the preparation and production work behind a set of talent content specific to Wang Qing’s London project."
+        "The fashion week content carries a consistent embroidered look across portraits and London settings.",
+        "The imagery offers a reference for artist communication and future fashion project discussions."
       ]
     }
   },

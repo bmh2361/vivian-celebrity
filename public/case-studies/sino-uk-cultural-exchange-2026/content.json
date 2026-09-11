@@ -11,44 +11,64 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "中英生命科学与文化交流",
-      "summary": "中英生命科学与文化交流活动：将现场安排与人员协作纳入整体统筹。",
-      "preview": "交流活动需要把参与人员与现场安排组织到一起。Vivian Adventure 的职责是活动整体统筹，重点落在现场与人员之间的衔接。",
-      "role": "Vivian Adventure 承担活动整体统筹，将现场安排与人员协作作为相互关联的工作处理。现场需求通过人员协调落实，人员安排也需要与活动现场相匹配。",
-      "context": "这是一项以中英生命科学与文化交流为主题的活动。本案的执行任务围绕活动组织展开，为参与者的现场交流提供配套安排。",
+      "title": "中英生命科学与文化交流｜为对话组织现场",
+      "summary": "以正式交流的现场需求为中心，将活动统筹、人员协调与现场安排组织在一起，为跨领域、跨文化对话提供实际支撑。",
+      "preview": "交流的内容由参与者创造，统筹工作则为相遇提供条件。本案把现场与人员安排纳入整体组织，使交流主题能够在具体场合中展开。",
+      "role": "Vivian Adventure 承担活动整体统筹，负责现场安排与人员协调，将执行需求落实到活动组织中。",
+      "context": "本次活动以中英生命科学与文化交流为主题。跨领域的正式交流需要清楚的现场组织，让参与者能够围绕活动内容展开互动；统筹工作的重点在于提供与这一目的相匹配的执行支持。",
       "narrativeSections": [
         {
-          "heading": "交流背后的组织工作",
-          "text": "项目的核心是交流活动本身。我们的工作落在组织层面：把现场安排与参与执行的人员联系起来，让活动内容有对应的执行支持。整体统筹的范围在本案中体现为现场与人员两条工作线。"
+          "heading": "对话需要具体的场合",
+          "text": "生命科学与文化交流涉及不同知识和经验背景。活动的价值由参与者之间的互动产生，现场组织则为这些互动提供空间与实际安排，让交流主题拥有可发生的场景。"
+        },
+        {
+          "heading": "现场与人员作为整体处理",
+          "text": "整体统筹需要同时考虑现场需求和执行人员。Vivian Adventure 的工作覆盖这两条相互依赖的线索，将人员协调用于落实活动安排，并使现场执行围绕交流需求展开。"
+        },
+        {
+          "heading": "把交流目的落实为活动体验",
+          "text": "正式交流的组织质量体现在参与者面对的具体现场。本案交付聚焦统筹与执行支持，为主题交流提供实际条件；其价值是组织一次相遇，而非替参与者定义合作成果。"
         }
       ],
       "deliverables": [
         "活动整体统筹",
-        "现场安排与人员协调"
+        "围绕交流需求的现场安排",
+        "执行人员协调"
       ],
       "outcomes": [
-        "本案形成了活动现场与人员协作的组织交付，体现正式交流活动的统筹能力。"
+        "形成现场安排与人员协作相结合的活动组织交付。",
+        "统筹工作为中英生命科学与文化主题的现场交流提供执行支持。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "Sino–UK Life Sciences & Cultural Exchange",
-      "summary": "Event coordination for Sino-UK life sciences and cultural exchange, connecting people with on-site arrangements.",
-      "preview": "An exchange event needs its people and practical arrangements to work together. Vivian Adventure’s scope was overall event coordination, centred on the relationship between the site and those involved.",
-      "role": "Vivian Adventure undertook overall event coordination, linking on-site arrangements with people liaison. Each part of the work informed the other: practical requirements needed people in place, and people needed arrangements that matched the event.",
-      "context": "The event focused on Sino-UK life sciences and cultural exchange. The production assignment concerned the organisation behind that meeting and the arrangements supporting it on site.",
+      "title": "Sino–UK Exchange | Setting the Scene for Dialogue",
+      "summary": "Overall coordination brought people and on-site arrangements together around a life sciences and cultural exchange, providing practical support for a cross-sector conversation.",
+      "preview": "Participants create the exchange; event organisation provides the conditions around it. The assignment brought site arrangements and people coordination into one operational scope.",
+      "role": "Vivian Adventure undertook overall event coordination, covering on-site arrangements and people liaison to put the event’s practical requirements into place.",
+      "context": "The event focused on Sino–UK life sciences and cultural exchange. A formal meeting across fields needs clear organisation around the conversation, with practical arrangements suited to the people and purpose of the occasion.",
       "narrativeSections": [
         {
-          "heading": "The organisation behind the exchange",
-          "text": "The exchange itself was the purpose of the event. Our contribution was its practical organisation: connecting on-site arrangements with the people involved in execution. These were the two linked strands of the overall coordination scope."
+          "heading": "A conversation needs a setting",
+          "text": "Life sciences and cultural exchange bring different experiences into the same room. The interaction belongs to the participants; event organisation provides the setting and arrangements that allow the theme to take a practical form."
+        },
+        {
+          "heading": "People and place considered together",
+          "text": "Overall coordination involves both site requirements and the people implementing them. Vivian Adventure’s work covered these interdependent areas, relating personnel coordination to the arrangements needed around the exchange."
+        },
+        {
+          "heading": "Purpose expressed through the occasion",
+          "text": "Participants encounter the event through its practical setting. The delivery focused on coordination and execution support, providing conditions for dialogue while leaving the substance and outcomes of that dialogue with those taking part."
         }
       ],
       "deliverables": [
         "Overall event coordination",
-        "On-site arrangements and people liaison"
+        "On-site arrangements around the exchange",
+        "Execution-team liaison"
       ],
       "outcomes": [
-        "The delivery comprised the event’s on-site organisation and people coordination, demonstrating practical coordination for a formal exchange event."
+        "The delivery combined on-site organisation with people coordination.",
+        "The coordination contribution provided practical support for the life sciences and cultural exchange."
       ]
     }
   },

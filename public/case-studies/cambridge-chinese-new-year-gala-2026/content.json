@@ -11,54 +11,64 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "剑桥春晚 2026",
-      "summary": "剑桥春晚 2026：连接节目、舞台、人员与妆造的晚会制作。",
-      "preview": "一场多节目晚会需要节目衔接与舞台准备相互配合。我们的参与从策划和舞美搭建协调，延伸到人员、妆造与现场记录。",
-      "role": "Vivian Adventure 参与晚会策划，将舞美与搭建协调、节目衔接、人员联系、妆造及现场记录结合起来。节目是这些工作共同围绕的执行单位。",
-      "context": "剑桥春晚是一场新春演出项目。本案涉及晚会策划、舞台准备与多个节目之间的衔接，执行重点是把节目所需的人员与制作工作组织成一场演出。",
+      "title": "剑桥春晚｜把多节目制作汇成文化现场",
+      "summary": "以新春演出为共同目标，组织策划、舞台、节目与人物准备，让多项制作工作服务同一现场，并留下可用于活动回顾的影像。",
+      "preview": "晚会的连贯体验来自节目背后的组织。我们的参与从策划与舞美搭建协调延伸至节目、人员、妆造和记录，覆盖台前呈现所依赖的多项工作。",
+      "role": "Vivian Adventure 参与晚会策划、舞美与搭建协调、节目衔接、人员联系、妆造及现场记录，以演出节目为工作参照。",
+      "context": "2026 年剑桥春晚以新春为文化背景，将多个节目汇集成一场演出。每个节目都涉及舞台和人物准备，制作需要兼顾单项演出的要求与整场晚会的连续性。",
       "narrativeSections": [
         {
-          "heading": "围绕节目组织工作",
-          "text": "节目衔接与舞台准备彼此关联，人员联系和妆造也需要配合演出。本案的工作范围跨越这些环节，要求策划与现场制作保持联系。"
+          "heading": "共同节日，多种舞台表达",
+          "text": "新春主题为不同节目提供共同背景，而舞台呈现需要容纳各自的表达。晚会策划与制作的关联，在于把分散的节目任务组织到整场演出的框架之中。"
         },
         {
-          "heading": "从晚会准备到现场记录",
-          "text": "现场记录是本案交付的一部分，与策划和制作协调共同构成项目范围。这一组合体现多节目演出中连接台前呈现与执行工作的能力。"
+          "heading": "以节目为单位处理制作依赖",
+          "text": "舞美搭建、人员到位与妆造准备都影响节目如何进入舞台。团队参与策划及这些执行环节，使节目衔接能够与舞台条件、人员安排共同考虑。"
+        },
+        {
+          "heading": "留下可以回看的文化现场",
+          "text": "主题舞台、发言和集体谢幕影像保留了晚会的不同侧面。现场记录与制作支持共同构成交付，既服务演出当下，也为活动回顾与后续文化项目介绍提供具体材料。"
         }
       ],
       "deliverables": [
         "晚会策划、舞美与搭建协调",
         "节目衔接、人员联系及妆造配合",
-        "舞台与现场影像记录"
+        "主题舞台、发言与集体谢幕等现场影像"
       ],
       "outcomes": [
-        "交付覆盖晚会的策划制作配合及现场记录，而非单一节目或单项影像工作。"
+        "交付覆盖晚会策划制作支持及现场记录，围绕多个节目组织执行。",
+        "影像保留新春主题与集体演出场景，可用于活动回顾和文化项目介绍。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "Cambridge Chinese New Year Gala 2026",
-      "summary": "Gala production in Cambridge, connecting the programme, stage, people and styling.",
-      "preview": "A gala’s programme and stage preparation depend on one another. Our involvement extended from planning and stage-build coordination to people, styling and documentation.",
-      "role": "Vivian Adventure contributed to gala planning, stage design and build coordination, programme transitions, people liaison, styling and documentation. The programme connected these responsibilities.",
-      "context": "The 2026 Cambridge Chinese New Year Gala was a seasonal performance project. The assignment spanned planning, stage preparation and programme transitions, connecting the people and production work required for a multi-act show.",
+      "title": "Cambridge New Year Gala | Many Acts, One Cultural Occasion",
+      "summary": "Planning, stage coordination and performer preparation served a shared New Year programme, with event imagery giving the occasion a record for later recaps.",
+      "preview": "A coherent gala depends on the work behind each act. Our involvement spanned planning, stage-build coordination, programme transitions, people, styling and documentation.",
+      "role": "Vivian Adventure contributed to gala planning, stage design and build coordination, programme transitions, people liaison, styling and documentation, organising its work around the performances.",
+      "context": "The 2026 Cambridge Chinese New Year Gala brought multiple acts together around a shared cultural occasion. Each performance had preparation needs, while the production also had to account for the continuity of the evening.",
       "narrativeSections": [
         {
-          "heading": "Organising around the programme",
-          "text": "Stage preparation and programme transitions are related, while people liaison and styling also have to serve the performance. Our scope crossed these areas, linking planning with the work of staging the gala."
+          "heading": "A shared occasion, different performances",
+          "text": "The New Year theme gave the programme a common setting while allowing different acts their own expression. Planning and production concerned how those individual requirements could sit within one gala."
         },
         {
-          "heading": "Preparation and documentation",
-          "text": "Documentation formed part of the assignment alongside planning and production coordination. Together, these responsibilities demonstrate the ability to connect performance preparation with on-site production across a multi-act event."
+          "heading": "Working through the needs of each act",
+          "text": "Stage preparation, people and styling all affect how a performance reaches the audience. Involvement across these areas allowed programme transitions to be considered alongside the stage conditions and personnel arrangements."
+        },
+        {
+          "heading": "A cultural event that can be revisited",
+          "text": "Images of the themed stage, speaking segment and collective finale retain different aspects of the gala. Documentation sat alongside production support, leaving material for event recaps and introductions to later cultural projects."
         }
       ],
       "deliverables": [
         "Gala planning, stage design and build coordination",
         "Programme transitions, people liaison and styling support",
-        "Stage and event documentation"
+        "Event imagery including the themed stage, speaking segment and finale"
       ],
       "outcomes": [
-        "The delivery covered planning and production support alongside event documentation across the gala."
+        "The delivery combined planning and production support across the programme with event documentation.",
+        "The imagery retains the New Year setting and collective performance for recaps and cultural project introductions."
       ]
     }
   },

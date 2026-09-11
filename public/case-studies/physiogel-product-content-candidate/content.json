@@ -11,42 +11,62 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "护肤产品内容",
-      "summary": "护肤产品内容：将人物形象准备与产品制作任务结合。",
-      "preview": "护肤内容需要明确产品与人物的关系。本案围绕产品内容制作与妆造形象设计展开，以具体内容交付承接制作需求。",
-      "role": "Vivian Adventure 参与内容制作与妆造形象设计，使人物准备与护肤产品的内容任务相互配合。",
-      "context": "这是一项护肤产品人物内容项目。制作目标是围绕产品形成相关影像，工作范围包括内容制作与人物形象准备。",
+      "title": "护肤产品视觉｜让人物表达服务产品识别",
+      "summary": "围绕护肤产品组织人物形象与视觉内容，在人物吸引力与产品可识别性之间建立清晰关系，为产品主题传播提供具体画面。",
+      "preview": "人物吸引注意，产品信息说明内容主题。本案将妆造准备与产品制作纳入同一任务，使两者共同服务护肤内容。",
+      "role": "Vivian Adventure 参与护肤产品内容制作与妆造形象设计，围绕产品呈现完成人物准备及相关影像。",
+      "context": "本案是一项人物参与的护肤产品内容项目。画面同时包含人物、产品与标识，需要让人物表达保持吸引力，也让产品主题能够被直接辨认。",
       "narrativeSections": [
         {
-          "heading": "围绕产品组织人物内容",
-          "text": "本案以护肤产品为内容主体，人物形象设计属于制作过程中的配套工作。两项工作围绕同一产品任务展开，最终落在产品与人物共同出现的内容交付上。"
+          "heading": "人物与产品各有信息任务",
+          "text": "人物为观看者提供情绪与形象入口，产品和标识则交代内容所指。二者在同一画面中出现，使护肤主题拥有可识别的视觉对象。"
+        },
+        {
+          "heading": "形象设计服从内容主题",
+          "text": "妆造设计是本案制作范围的一部分，人物准备因此需要回应护肤产品的呈现。内容制作将人物与产品共同组织在画面中，而非分别作为互不相关的交付。"
+        },
+        {
+          "heading": "产品沟通的视觉基础",
+          "text": "这类影像可用于产品主题介绍与内容编辑，为传播提供人物和产品同框的材料。清楚的人物与产品关系，让后续编辑可以从整体形象或产品主题两个角度使用这份材料。"
         }
       ],
       "deliverables": [
-        "护肤产品人物视觉内容及相关形象设计"
+        "围绕护肤产品内容的人物妆造设计",
+        "包含人物、产品及标识的视觉内容"
       ],
       "outcomes": [
-        "交付为护肤产品人物内容，体现产品任务与人物形象准备相结合的制作能力。"
+        "形成兼具人物呈现与产品识别信息的护肤内容。",
+        "交付可作为产品主题编辑与视觉沟通的素材。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "Skincare Product Content",
-      "summary": "Skincare product content connecting talent preparation with the production brief.",
-      "preview": "The assignment centred on the relationship between the product and the person presenting it. Content production and image preparation supported that defined product brief.",
-      "role": "Vivian Adventure contributed to content production and makeup design, connecting preparation for the talent with the skincare product assignment.",
-      "context": "This was a talent-led skincare product content project. The production objective was product imagery, with content production and talent image preparation included in the scope.",
+      "title": "Skincare Content | A Human Focus, a Clear Product",
+      "summary": "Talent preparation and product imagery brought personal expression and product recognition into the same frame, providing a clear visual starting point for skincare communication.",
+      "preview": "The person draws attention; the product information identifies the subject. Makeup preparation and production addressed both within a focused skincare assignment.",
+      "role": "Vivian Adventure contributed to skincare content production and makeup design, preparing the talent in relation to the product imagery.",
+      "context": "This was a talent-led skincare content project. The image brings together a person, product and identifying graphics, requiring personal expression and a recognisable product subject to share the composition.",
       "narrativeSections": [
         {
-          "heading": "A product-centred assignment",
-          "text": "The skincare product was the subject of the content, with image preparation supporting the production. Both areas served the same product assignment, resulting in content featuring the product and talent together."
+          "heading": "Two kinds of information",
+          "text": "The person offers an expressive point of entry, while the product and graphics identify the subject. Their presence in one frame gives the skincare theme a clear visual reference."
+        },
+        {
+          "heading": "Preparation in service of the subject",
+          "text": "Makeup design formed part of the production scope, making talent preparation relevant to the skincare presentation. Content production brought the person and product together as parts of one image."
+        },
+        {
+          "heading": "A basis for product communication",
+          "text": "The imagery offers material for product-led introductions and content editing. Its usefulness rests in a clear person-and-product relationship, with the visual presentation carrying the story."
         }
       ],
       "deliverables": [
-        "Talent-led skincare product imagery and associated image preparation"
+        "Makeup design for the skincare content",
+        "Visual content featuring talent, product and identifying graphics"
       ],
       "outcomes": [
-        "The output was skincare product content, demonstrating production that connects a product brief with talent preparation."
+        "The resulting skincare content combines personal presentation with product recognition.",
+        "The delivery provides material for product-led editing and visual communication."
       ]
     }
   },

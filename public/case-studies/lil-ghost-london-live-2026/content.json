@@ -11,52 +11,72 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "小鬼王琳凯｜伦敦现场 2026",
-      "summary": "小鬼王琳凯伦敦演出：衔接现场制作执行、团队沟通与影像交付。",
-      "preview": "现场演出与内容制作发生在同一项目中。我们的工作把团队沟通和综合制作执行连接到影像任务及后续交付。",
-      "role": "Vivian Adventure 承担演出影像工作，并参与综合制作执行、团队沟通与内容交付。这些职责把现场协作与最终影像交付联系起来。",
-      "context": "本案围绕小鬼王琳凯 2026 年的伦敦现场演出展开。项目同时涉及演出执行配合与内容制作，需要让影像工作与演出团队的沟通保持联系。",
+      "title": "小鬼王琳凯伦敦现场｜将舞台能量留作传播资产",
+      "summary": "以演出与观众之间的真实互动为内容核心，将现场执行、团队沟通与影像交付结合，为艺人的海外现场表现留下可持续使用的视觉资产。",
+      "preview": "舞台表现与观众同框，让艺人的伦敦演出拥有完整的现场语境。制作协作与摄影共同服务于这一记录，使内容能在演出结束后继续讲述这次海外亮相。",
+      "role": "Vivian Adventure 承担演出影像工作，并参与综合制作执行、团队沟通与内容交付，将摄影任务纳入演出的实际工作节奏。",
+      "context": "小鬼王琳凯 2026 年的伦敦演出，是艺人与海外现场观众直接相遇的文化场景。影像需要保留人物表现，也需要交代舞台与观众的关系，才能使这次亮相在后续艺人传播中具有具体内容。",
       "narrativeSections": [
         {
-          "heading": "影像工作进入演出执行",
-          "text": "演出影像工作需要与现场执行相互配合。本案中，团队沟通和综合制作执行都在参与范围内，影像任务因此与演出项目的实际工作衔接。"
+          "heading": "舞台状态构成艺人表达",
+          "text": "演出中的动作、神态与灯光共同形成艺人的现场形象。红色舞台和侧逆光影像保留了不同表演状态，让人物的表达有现场依据，而非脱离演出的静态形象。"
         },
         {
-          "heading": "从现场延伸到交付",
-          "text": "演出与观众内容构成影像交付。案例的商业价值在于参与范围覆盖现场制作配合、团队沟通和内容交付，连接了执行现场与最终产出。"
+          "heading": "镜头置于演出节奏之中",
+          "text": "现场不会为拍摄停下来。团队沟通与制作执行的参与，使影像工作与演出安排保持联系；摄影任务需要在这些实际条件中完成，再落实到最终内容交付。"
+        },
+        {
+          "heading": "观众让海外现场变得具体",
+          "text": "舞台与观众合影补充了人物演出画面，让观看者看到艺人所面对的人群与空间。两类内容共同讲述一次真实的海外演出经历，而不以单张人物照片代表整个现场。"
+        },
+        {
+          "heading": "从演出记忆到形象资产",
+          "text": "这组内容可为艺人社交传播、媒体介绍和演出回顾提供材料，也可在未来品牌沟通中作为现场表现的视觉参考。人物状态与海外场景共同构成可供讨论的形象材料，让后续沟通有具体的现场参照。"
         }
       ],
       "deliverables": [
-        "现场制作执行配合与团队沟通",
-        "演出及观众影像内容交付"
+        "现场制作执行配合与演出团队沟通",
+        "舞台表演与艺人状态影像",
+        "观众及台前合影内容交付"
       ],
       "outcomes": [
-        "完成演出影像内容及相关执行配合，体现现场制作与内容交付相衔接的能力。"
+        "形成包含表演状态及观众场景的伦敦演出影像，保留人物与现场之间的关系。",
+        "交付可继续服务艺人介绍、社交内容与演出回顾，提供海外现场表现的视觉参考。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "Lil Ghost | Live in London 2026",
-      "summary": "Live production, team liaison and content delivery for Lil Ghost in London.",
-      "preview": "The live show and its content production formed part of the same assignment. Our work connected team liaison and production execution with photography and delivery.",
-      "role": "Vivian Adventure undertook performance photography and contributed to production execution, team communication and content delivery, connecting work on site with the final output.",
-      "context": "This project centred on Lil Ghost’s 2026 London live performance. It involved both production support and content, linking the visual assignment with communication around the show.",
+      "title": "Lil Ghost in London | Live Energy, Lasting Imagery",
+      "summary": "Performance and audience imagery captured the artist’s encounter with a London crowd, supported by production work and team liaison that carried through to content delivery.",
+      "preview": "The artist on stage and the crowd in frame tell different parts of the same story. Together they give the London appearance a visual life beyond the performance itself.",
+      "role": "Vivian Adventure undertook performance photography and contributed to production execution, team communication and content delivery, placing the visual assignment within the working rhythm of the show.",
+      "context": "Lil Ghost’s 2026 London performance brought the artist into direct contact with an overseas audience. A useful visual account needed to hold both the performance and its setting, giving later artist communication something specific to draw on.",
       "narrativeSections": [
         {
-          "heading": "Photography within the production",
-          "text": "Performance photography depends on its relationship with the live event. Team communication and production execution were both within our involvement, connecting the visual assignment with the practical work around the show."
+          "heading": "Performance as a form of identity",
+          "text": "Gesture, expression and stage light shape how an artist appears live. The red-lit and backlit images retain different performance states, grounding the artist’s image in the event rather than separating the portrait from the show."
         },
         {
-          "heading": "From the event to the content",
-          "text": "The imagery covered the performance and its audience. The case demonstrates a scope extending across production support, team liaison and content delivery, linking the live event with its resulting assets."
+          "heading": "Working at the pace of live",
+          "text": "A performance does not pause for photography. Team liaison and production involvement kept the visual assignment in contact with the practical event, with photography and subsequent delivery carried out within those conditions."
+        },
+        {
+          "heading": "The crowd completes the account",
+          "text": "The stage-and-audience photograph adds the people and space facing the artist. Alongside performance portraits, it gives the overseas appearance a fuller context and makes the live encounter visible."
+        },
+        {
+          "heading": "Material for the next conversation",
+          "text": "The content offers material for artist socials, media introductions and show recaps. It can also serve as a visual reference for live presence in future brand discussions, giving those conversations a concrete account of the artist on stage."
         }
       ],
       "deliverables": [
-        "On-site production support and team communication",
-        "Performance and audience imagery delivery"
+        "On-site production support and show-team communication",
+        "Stage performance and artist imagery",
+        "Audience and stage-group content delivery"
       ],
       "outcomes": [
-        "The assignment produced performance content alongside production support, demonstrating the connection between live execution and content delivery."
+        "The London imagery records both performance and audience, retaining the relationship between artist and setting.",
+        "The delivered assets provide material for artist introductions, social content and show recaps."
       ]
     }
   },

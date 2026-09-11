@@ -11,44 +11,62 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "新春音乐会",
-      "summary": "新春文化音乐会：围绕演出呈现提供制作统筹与支持。",
-      "preview": "音乐是此次文化交流的主体。项目需要将演出支持与制作统筹衔接，使艺术呈现有相应的执行配合。",
-      "role": "Vivian Adventure 参与音乐会制作统筹与演出支持，将制作层面的配合工作围绕演出需要组织起来。",
-      "context": "《唐诗的回响》新春音乐会在伦敦举行，由中国对外文化交流协会主办。多国歌唱家以中文演绎根据唐诗创作的音乐作品，通过演出开展文化交流。",
+      "title": "《唐诗的回响》伦敦音乐会｜以制作支持跨文化表达",
+      "summary": "让以唐诗为主题的音乐演出获得相应的制作支持，以现场协调服务不同文化背景的艺术表达与交流。",
+      "preview": "当中文诗意由多国歌唱家演绎，制作的任务是为艺术呈现提供实际支撑。本案围绕音乐会需求参与统筹与演出支持，让文化主题落实于现场。",
+      "role": "Vivian Adventure 参与音乐会制作统筹与演出支持，工作围绕节目呈现所需的实际安排展开。",
+      "context": "《唐诗的回响》新春音乐会在伦敦举行，由中国对外文化交流协会主办。多国歌唱家以中文演绎根据唐诗创作的音乐作品，诗歌与音乐共同构成跨文化交流的载体。",
       "narrativeSections": [
         {
-          "heading": "以演出为中心的制作支持",
-          "text": "音乐会的文化内容由艺术家通过表演传达。本案中，制作统筹与演出支持是连接活动安排和艺术呈现的工作；我们的参与集中在这两个相互配合的环节。"
+          "heading": "以表演承载文化内容",
+          "text": "诗歌的语言与音乐的表达共同进入现场，艺术家成为文化内容的传递者。这类项目的制作价值，在于为表演提供适当支持，让活动主题拥有具体的舞台呈现。"
+        },
+        {
+          "heading": "统筹围绕艺术呈现展开",
+          "text": "我们的参与集中于制作统筹配合与演出支持。两项工作以音乐会需求为参照，将活动安排与表演所需的执行工作放在一起考虑。"
+        },
+        {
+          "heading": "文化项目需要可落地的协作",
+          "text": "跨文化主题最终仍需通过具体演出与观众相遇。本案的价值落在这一执行层面：为文化节目在伦敦的呈现提供制作支持，让交流目标有实际的现场载体。"
         }
       ],
       "deliverables": [
-        "音乐会制作统筹配合",
-        "演出支持"
+        "围绕音乐会需求的制作统筹配合",
+        "服务节目呈现的演出支持"
       ],
       "outcomes": [
-        "本案的交付是音乐会制作与演出支持，体现文化演出项目的执行配合能力。"
+        "交付音乐会制作统筹配合与演出支持，服务唐诗音乐作品的现场呈现。",
+        "项目参与将文化主题与演出执行联系起来，为伦敦文化交流场景提供实际支持。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "New Year Concert",
-      "summary": "Production coordination and performance support for a London New Year cultural concert.",
-      "preview": "The concert used music as a setting for cultural exchange. The production assignment connected coordination with the support needed around the performance.",
-      "role": "Vivian Adventure contributed to production coordination and performance support, organising its production contribution around the needs of the concert.",
-      "context": "The Echoes of Tang Poetry New Year concert took place in London, organised by the China International Culture Association. Singers from different countries performed Chinese-language works based on Tang poetry as part of a cultural exchange programme.",
+      "title": "Echoes of Tang Poetry | Supporting Cultural Expression in London",
+      "summary": "Production coordination and performance support gave a poetry-led concert practical backing, serving a cultural exchange expressed through music.",
+      "preview": "With singers from different countries performing in Chinese, the production task was to support the artistic presentation. Our contribution centred on the practical work around the concert.",
+      "role": "Vivian Adventure contributed to production coordination and performance support, organising its involvement around the concert’s practical presentation needs.",
+      "context": "The Echoes of Tang Poetry New Year concert took place in London, organised by the China International Culture Association. Singers from different countries performed Chinese-language works based on Tang poetry, bringing poetry and music together as a form of cultural exchange.",
       "narrativeSections": [
         {
-          "heading": "Production in service of performance",
-          "text": "The artists carried the cultural programme through their performance. Production coordination and performance support connected the practical arrangements with that presentation. Our involvement centred on these two related parts of the concert."
+          "heading": "Culture carried through performance",
+          "text": "Poetic language and musical expression meet on stage, with the artists carrying the programme. Production has a supporting role: providing practical backing so the cultural theme can take a live form."
+        },
+        {
+          "heading": "Coordination around the concert",
+          "text": "Our involvement centred on production coordination and performance support. Both took the concert’s needs as their reference, relating event arrangements to the practical work required around the presentation."
+        },
+        {
+          "heading": "Making an exchange possible on site",
+          "text": "A cross-cultural programme ultimately reaches people through a specific performance. This contribution sat at that practical level, supporting the concert’s presentation in London and giving the cultural occasion an operational foundation."
         }
       ],
       "deliverables": [
-        "Production coordination support",
-        "Performance support"
+        "Production coordination support around the concert’s needs",
+        "Performance support for the programme"
       ],
       "outcomes": [
-        "The delivery was the concert’s production and performance support contribution, demonstrating execution support for a cultural performance."
+        "Production coordination and performance support served the live presentation of works based on Tang poetry.",
+        "The contribution provided practical support for a cultural exchange occasion in London."
       ]
     }
   },

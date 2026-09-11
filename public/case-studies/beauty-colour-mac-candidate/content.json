@@ -11,42 +11,62 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "彩妆内容制作",
-      "summary": "彩妆内容制作：将妆造形象设计纳入产品内容交付。",
-      "preview": "彩妆内容中，人物妆造与产品表达直接相关。本案将内容制作与妆造形象设计结合，围绕同一项彩妆任务展开。",
-      "role": "Vivian Adventure 参与内容制作与妆造形象设计，把人物准备与彩妆内容联系起来，共同服务于本案交付。",
-      "context": "本案是一项彩妆视觉内容项目。制作需要同时处理人物形象与产品内容，妆造因此是内容工作的一部分。",
+      "title": "彩妆视觉｜以人物与色彩呈现产品",
+      "summary": "让妆容成为产品叙事的一部分，以人物、手持产品与暖色画面建立鲜明的彩妆表达，为产品沟通提供视觉切入点。",
+      "preview": "彩妆内容的吸引力来自人物与产品共同构成的观感。妆造设计纳入制作后，形象准备与最终画面围绕同一产品主题展开。",
+      "role": "Vivian Adventure 参与彩妆内容制作与妆造形象设计，处理人物呈现与产品画面之间的关系。",
+      "context": "这是一项以彩妆为主题的视觉内容项目。产品需要在人物画面中保持可见，妆容又是观看者理解整体美感的重要部分，因此形象准备直接影响内容表达。",
       "narrativeSections": [
         {
-          "heading": "妆造也是内容工作",
-          "text": "彩妆项目中，人物形象直接参与产品表达。将妆造设计与内容制作纳入同一工作范围，体现的是对产品内容与人物准备之间关系的处理。"
+          "heading": "让色彩成为观看入口",
+          "text": "暖色背景、人物妆容与手持产品共同构成画面的视觉关系。彩妆在这里既是被展示的物件，也是整体观感的主题，为观看者提供从人物进入产品的路径。"
+        },
+        {
+          "heading": "妆造参与产品表达",
+          "text": "制作范围同时包含妆造设计与彩妆内容。将两者放在同一任务中，意味着人物准备需要回应产品呈现，而最终影像也承载妆造的视觉作用。"
+        },
+        {
+          "heading": "小篇幅中的产品叙事",
+          "text": "单幅画面可以同时呈现人物气质与产品信息，适合作为美妆主题内容的视觉材料。这种集中的表达使小规模制作也能拥有明确的产品主题，并为后续视觉编辑提供参照。"
         }
       ],
       "deliverables": [
-        "彩妆形象设计与视觉内容"
+        "服务彩妆主题的人物妆造设计",
+        "人物与手持彩妆产品视觉内容"
       ],
       "outcomes": [
-        "本案形成彩妆人物内容及相关形象设计交付，体现妆造与内容制作的协同能力。"
+        "形成将人物妆容与产品呈现结合的彩妆画面。",
+        "可作为美妆主题传播的视觉素材与后续创意讨论的参考。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "Colour Cosmetics Content",
-      "summary": "Colour cosmetics content, with makeup design integrated into production.",
-      "preview": "In cosmetics content, the talent’s makeup is part of the product presentation. This assignment brought content production and makeup design together around the same brief.",
-      "role": "Vivian Adventure contributed to content production and makeup design, connecting talent preparation with the cosmetics content being made.",
-      "context": "This was a colour cosmetics content project. Production involved both the talent’s appearance and the product, making makeup design part of the content assignment.",
+      "title": "Colour Cosmetics | A Portrait Built Around Colour",
+      "summary": "Makeup, a held product and a warm visual setting bring the person and cosmetics into one composition, offering an expressive starting point for product communication.",
+      "preview": "The makeup is part of the message. Including image preparation within production brought the talent’s appearance and the product into the same visual assignment.",
+      "role": "Vivian Adventure contributed to colour cosmetics production and makeup design, addressing the relationship between the person and the product in frame.",
+      "context": "This colour cosmetics content project required the product to remain visible within a portrait. Makeup also shaped the image’s overall character, making talent preparation part of the product expression.",
       "narrativeSections": [
         {
-          "heading": "Makeup as part of the brief",
-          "text": "The talent’s appearance plays a direct part in cosmetics communication. Including makeup design and content production within the same scope addresses the relationship between preparation and the product content."
+          "heading": "Colour as a way in",
+          "text": "The warm background, makeup and held product establish a visual relationship. Cosmetics appear both as an object and as the subject of the image, giving the viewer a route from the portrait to the product."
+        },
+        {
+          "heading": "Preparation carries the message",
+          "text": "The scope included makeup design and cosmetics content. Treating them as one assignment made the talent’s preparation relevant to the product presentation, with the resulting image carrying both aspects of the work."
+        },
+        {
+          "heading": "A concentrated visual story",
+          "text": "A single composition can hold personal expression and product information together. It offers material for beauty-led communication and a reference for creative discussion, giving a focused production a clear product story."
         }
       ],
       "deliverables": [
-        "Makeup design and colour cosmetics imagery"
+        "Makeup design for the cosmetics theme",
+        "Portrait content featuring a held cosmetics product"
       ],
       "outcomes": [
-        "The delivery combined cosmetics content with the associated makeup design, demonstrating collaboration between talent preparation and production."
+        "The delivered image brings makeup and product presentation into one composition.",
+        "It offers visual material for beauty content and a reference for subsequent creative development."
       ]
     }
   },

@@ -11,53 +11,65 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "Geely EX5 英国发布",
-      "summary": "Geely EX5 英国发布：展陈、人员联络与发布现场影像。",
-      "preview": "EX5 是 Geely Auto 在英国推出的首款车型。本案参与围绕发布现场的展陈、人员联络与摄影展开。",
-      "role": "项目团队参与人员联络、展陈配合及现场摄影，将现场协作与发布内容记录连接起来。",
-      "context": "Geely Auto 于 2025 年在英国推出纯电 SUV EX5，作为该品牌进入英国市场的首款车型。这场发布的背景是新车型与品牌在英国的正式亮相。",
+      "title": "Geely EX5 英国首发｜市场亮相的现场与影像",
+      "summary": "以新车型进入英国市场为节点，将展陈支持、人员联络与发布摄影结合，形成品牌本地亮相的视觉记录。",
+      "preview": "一场汽车首发同时关乎产品呈现与品牌初印象。团队在展陈和现场协作中参与执行，并以车辆、舞台和发布现场影像保存这一市场节点。",
+      "role": "项目团队参与现场人员联络、展陈配合及摄影，支持车辆呈现并记录发布内容。",
+      "context": "Geely Auto 于 2025 年在英国推出纯电 SUV EX5，作为该品牌进入英国市场的首款车型。发布现场承载着车型介绍与品牌亮相两项任务，本地执行与影像记录因此具有超出单次活动的传播意义。",
       "narrativeSections": [
         {
-          "heading": "展陈与现场协作",
-          "text": "汽车发布需要让产品在现场得到呈现。本案中的展陈配合与人员联络服务于这一具体任务，摄影则记录发布与车辆亮相。"
+          "heading": "首款车型也是品牌介绍",
+          "text": "新市场中的产品亮相，需要让车辆与品牌信息在同一个场景中被理解。EX5 的发布将实车、演讲与舞台呈现放在一起，为英国市场沟通提供了具体的产品背景。"
         },
         {
-          "heading": "记录产品进入现场的时刻",
-          "text": "交付包括展陈和人员配合，以及发布现场与车辆亮相影像。案例体现汽车发布中将现场支持与内容记录结合的能力。"
+          "heading": "展陈与记录围绕同一现场",
+          "text": "团队的展陈配合和人员联络服务于发布执行，摄影则记录车辆亮相及相关场景。这些工作共同面对现场条件，使影像交付保留产品与发布环境之间的关系。"
+        },
+        {
+          "heading": "让市场节点留下视觉材料",
+          "text": "车辆、舞台与观众共同说明这次亮相发生于怎样的现场。交付影像可作为后续发布回顾、媒体材料与市场介绍的视觉基础；真实的本地场景使后续品牌介绍能够引用具体的发布时刻。"
         }
       ],
       "deliverables": [
-        "现场人员联络与展陈配合",
-        "发布及车辆亮相影像"
+        "发布现场人员联络",
+        "车辆展陈配合",
+        "发布现场与车辆亮相影像"
       ],
       "outcomes": [
-        "项目团队的交付包括现场人员与展陈配合，以及发布和车辆亮相影像。"
+        "交付现场协作及发布摄影，保留 EX5 在英国亮相的产品与活动语境。",
+        "影像为后续市场介绍与发布回顾提供可使用的视觉材料。"
       ],
       "publicEventOutcome": "Geely Auto 在英国正式推出 EX5 纯电 SUV。"
     },
     "en": {
       "ready": true,
-      "title": "Geely EX5 UK Launch",
-      "summary": "On-site liaison, display support and photography for the Geely EX5 UK launch.",
-      "preview": "The EX5 was Geely Auto’s first model introduced in the UK. This assignment focused on the launch setting through display support, people liaison and photography.",
-      "role": "The project team contributed to people liaison, display support and on-site photography, connecting practical event support with documentation of the launch.",
-      "context": "Geely Auto introduced the all-electric EX5 SUV in the UK in 2025 as its first model in the market. The event sat within the brand’s formal UK introduction and the launch of the vehicle.",
+      "title": "Geely EX5 UK Launch | A Market Debut in Focus",
+      "summary": "Display support, on-site liaison and photography documented a new model’s arrival in the UK, giving the brand’s local introduction a visual record.",
+      "preview": "A vehicle launch also shapes a first encounter with the brand. The team supported the display and on-site activity, then documented the vehicle within the wider launch setting.",
+      "role": "The project team contributed to on-site people liaison, display support and photography, supporting the vehicle presentation and recording the launch.",
+      "context": "Geely Auto introduced the all-electric EX5 SUV in the UK in 2025 as its first model in the market. The event presented both a vehicle and a brand making its UK debut, giving local execution and documentation a role in the wider market introduction.",
       "narrativeSections": [
         {
-          "heading": "Supporting the product presentation",
-          "text": "The launch brought the vehicle into a physical event setting. Display support and people liaison served that practical task, while photography documented the presentation and vehicle reveal."
+          "heading": "The vehicle introduces the brand",
+          "text": "For a new market, the physical vehicle gives substance to the brand message. The EX5 launch brought the car, presentations and stage setting together, creating a concrete product context for UK communication."
         },
         {
-          "heading": "A launch record alongside event support",
-          "text": "The delivery combined display and personnel support with launch and vehicle imagery. It demonstrates the ability to pair practical support at an automotive event with content production."
+          "heading": "One event, connected responsibilities",
+          "text": "Display support and people liaison served the practical launch, while photography recorded the vehicle reveal and its surroundings. Working within the same event conditions meant the imagery retained the relationship between the product and its presentation."
+        },
+        {
+          "heading": "A record with a use beyond launch day",
+          "text": "The vehicle, stage and audience locate the debut in a real event. The delivered imagery provides material for launch recaps, press materials and subsequent market introductions; the local setting gives later brand communication a specific launch moment to draw on."
         }
       ],
       "deliverables": [
-        "On-site people liaison and display support",
+        "On-site people liaison",
+        "Vehicle display support",
         "Launch and vehicle-reveal photography"
       ],
       "outcomes": [
-        "The project team’s delivery comprised people liaison, display support and imagery of the launch and vehicle reveal."
+        "Event support and photography produced a record of the EX5 within its UK launch setting.",
+        "The imagery provides visual material for subsequent market introductions and launch recaps."
       ],
       "publicEventOutcome": "Geely Auto formally introduced the all-electric EX5 SUV in the UK."
     }

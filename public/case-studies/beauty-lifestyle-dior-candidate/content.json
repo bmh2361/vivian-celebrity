@@ -11,42 +11,62 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "美妆生活方式内容",
-      "summary": "美妆生活方式内容制作：围绕产品宣传组织拍摄。",
-      "preview": "产品宣传需要与具体内容制作相连接。本案以美妆产品的生活方式内容为任务，Vivian Adventure 参与宣传内容与拍摄制作。",
-      "role": "Vivian Adventure 参与产品宣传内容与拍摄制作，让传播主题与实际内容产出在同一项制作任务中衔接。",
-      "context": "这是一项围绕美妆产品展开的生活方式内容项目。项目需求是制作与产品相关的人物内容，把产品宣传落实到拍摄任务。",
+      "title": "美妆生活方式｜将产品置于日常仪式",
+      "summary": "以梳妆场景赋予美妆产品可理解的生活背景，让人物与产品共同讲述日常使用情境，为产品内容增加亲近感与叙事空间。",
+      "preview": "梳妆台不只是背景，也让美妆产品拥有出现的理由。本案通过人物与生活场景组织产品主题，将宣传内容落实为具体影像。",
+      "role": "Vivian Adventure 参与美妆产品宣传内容与摄影制作，围绕人物和生活场景呈现产品主题。",
+      "context": "本案是一项美妆生活方式内容项目。与单独展示产品相比，人物所处的梳妆环境提供了日常语境，使观看者能够从场景理解产品与生活之间的关系。",
       "narrativeSections": [
         {
-          "heading": "从产品宣传到内容制作",
-          "text": "本案的工作重点是将美妆产品纳入生活方式内容。宣传内容与拍摄制作相互关联：产品是内容的主题，制作则承担将这一主题具体呈现的任务。"
+          "heading": "让场景解释产品",
+          "text": "梳妆环境天然包含准备、选择与个人习惯的意味。产品与人物出现在同一空间中，画面便有了具体的生活背景，产品介绍也由此拥有叙事入口。"
+        },
+        {
+          "heading": "以生活片段承载宣传主题",
+          "text": "本案的宣传内容与拍摄制作围绕同一美妆主题展开。人物和产品共同构成画面，制作的重点是将主题转化为可观看的情境，让产品表达有具体依托。"
+        },
+        {
+          "heading": "一幅生活方式内容的用途",
+          "text": "交付影像可作为美妆主题社交内容或视觉编辑的材料，提供有别于产品静物的信息层次。熟悉的场景为产品增加日常生活的含义，也为后续内容编排提供一个完整的视觉片段。"
         }
       ],
       "deliverables": [
-        "美妆产品生活方式影像"
+        "围绕美妆产品的生活方式宣传内容",
+        "梳妆场景中的人物与产品影像"
       ],
       "outcomes": [
-        "交付为围绕产品制作的生活方式内容，体现产品宣传内容的制作能力。"
+        "交付具有梳妆生活语境的美妆产品内容。",
+        "人物与场景为后续产品主题编辑提供可使用的叙事材料。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "Beauty Lifestyle Content",
-      "summary": "Beauty lifestyle content production, connecting product promotion with the shoot.",
-      "preview": "Product promotion needs a practical content assignment. This project centred on lifestyle imagery for a beauty product, with Vivian Adventure involved in promotional content and production.",
-      "role": "Vivian Adventure contributed to product promotional content and photography, connecting the subject of the communication with the work of producing it.",
-      "context": "This was a beauty product lifestyle content project. The assignment concerned talent-led product content, translating a promotional need into a photographic production task.",
+      "title": "Beauty in Everyday Ritual | Product Storytelling in Context",
+      "summary": "A dressing-table setting gives beauty products a place in everyday life, using the person and their surroundings to make product content more relatable.",
+      "preview": "The dressing table gives the product a reason to be in frame. This assignment used a familiar personal setting to turn a beauty theme into photographic content.",
+      "role": "Vivian Adventure contributed to beauty product promotional content and photography, presenting the product through a person and a lifestyle setting.",
+      "context": "This was a beauty lifestyle content project. A dressing-table scene introduces the context of personal preparation, allowing the viewer to read the product in relation to everyday life.",
       "narrativeSections": [
         {
-          "heading": "From product to content assignment",
-          "text": "The product was the subject of the lifestyle content. Promotional content and photography were related parts of the work: one established what the content concerned, while production gave it a tangible form."
+          "heading": "A setting that explains the product",
+          "text": "A dressing table suggests preparation, choice and personal habits. Placing products and a person within that space gives the image a specific context and provides an accessible route into the beauty theme."
+        },
+        {
+          "heading": "A photographic scene for the message",
+          "text": "Promotional content and photography addressed the same product subject. The person and beauty products share the composition, giving the promotional theme a scene the viewer can recognise."
+        },
+        {
+          "heading": "Material for lifestyle-led communication",
+          "text": "The image offers material for beauty social content or visual editing, adding a narrative layer to the product. The familiar setting adds an everyday dimension to the product and supplies a complete visual scene for subsequent editorial use."
         }
       ],
       "deliverables": [
-        "Beauty product lifestyle imagery"
+        "Lifestyle promotional content around beauty products",
+        "Person-and-product photography in a dressing-table setting"
       ],
       "outcomes": [
-        "The output was product-centred lifestyle content, demonstrating production capability for product promotion."
+        "The delivered content presents beauty products within a recognisable personal setting.",
+        "The person and surroundings offer narrative material for subsequent product-led editing."
       ]
     }
   },

@@ -11,54 +11,64 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "岳云鹏·孙越｜伦敦相声专场",
-      "summary": "岳云鹏、孙越伦敦相声专场：围绕语言型演出组织本地制作配合。",
-      "preview": "相声专场的核心是演员与观众之间的交流。本地制作需要围绕表演展开，连接舞台技术、人员、节目、妆造与记录。",
-      "role": "Vivian Adventure 参与本地制作，将舞台及技术对接与人员、节目衔接联系起来，并配合妆造和现场记录。",
-      "context": "岳云鹏与孙越是相声表演搭档。本案为两人在伦敦的演出提供本地制作配合，执行工作的重点是服务节目与演员的现场呈现。",
+      "title": "岳云鹏·孙越伦敦专场｜相声巡演的本地制作与现场记忆",
+      "summary": "围绕双人表演的舞台需求组织本地制作、技术及人物支持，以演出影像保留相声在伦敦现场的具体呈现。",
+      "preview": "语言、节奏与双人默契构成相声的核心。舞台技术、节目安排与妆造支持需要服务表演本身，现场记录则为这次伦敦演出留下可继续使用的内容。",
+      "role": "Vivian Adventure 参与本地制作、舞台与技术对接、人员及节目衔接，并提供妆造配合与现场记录。",
+      "context": "岳云鹏与孙越的伦敦相声专场，将以语言和双人互动为核心的表演带入海外现场。本地制作需要围绕演员与节目组织实际支持，让舞台呈现与演出要求对应。",
       "narrativeSections": [
         {
-          "heading": "语言型演出的制作接口",
-          "text": "演员、节目与舞台技术是这项工作的共同参照。我们的参与范围连接了这些接口，使人员与节目衔接的工作能够围绕演出本身展开。"
+          "heading": "服务语言型表演的舞台",
+          "text": "相声的叙事由演员之间以及演员与观众之间的交流推进。舞台与技术对接的意义，在于让制作工作回应这种表演形式，为节目提供相应的现场条件。"
         },
         {
-          "heading": "表演支持与现场记录",
-          "text": "妆造配合与现场记录同属本案范围。交付既包括演出背后的本地制作支持，也包括双人表演与舞台内容的记录，体现巡演落地中的协作能力。"
+          "heading": "把巡演要求转为本地工作",
+          "text": "团队参与人员、节目与舞台技术之间的对接，并配合人物妆造。多项职责围绕同一演出展开，将演员准备和舞台执行所需的协作落实到伦敦现场。"
+        },
+        {
+          "heading": "让演出拥有具体的海外记录",
+          "text": "双人表演画面保留舞台关系，带巡演信息的全景说明活动背景。影像可用于艺人演出回顾和巡演介绍，使后续沟通能够引用真实的伦敦现场。"
         }
       ],
       "deliverables": [
         "本地制作、舞台与技术对接",
         "人员及节目衔接、妆造配合",
-        "双人表演与舞台影像"
+        "双人表演与巡演舞台影像"
       ],
       "outcomes": [
-        "交付包括伦敦演出的本地制作支持、妆造配合及双人表演与舞台记录。"
+        "本地制作支持与现场记录共同服务伦敦相声专场。",
+        "交付影像保留双人表演和巡演背景，可用于演出回顾及艺人演出经历介绍。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "Yue Yunpeng & Sun Yue | London Crosstalk",
-      "summary": "Local production support for Yue Yunpeng and Sun Yue’s London crosstalk performance.",
-      "preview": "The relationship between performers and audience is central to crosstalk. Local production supports that performance by connecting stage and technical liaison with people, programme, styling and documentation.",
-      "role": "Vivian Adventure contributed to local production, connecting stage and technical liaison with people and programme transitions, alongside styling and documentation.",
-      "context": "Yue Yunpeng and Sun Yue perform crosstalk as a duo. This assignment supported their London performance, with local production work centred on the programme and its presentation on stage.",
+      "title": "Yue Yunpeng & Sun Yue | Bringing Crosstalk to a London Stage",
+      "summary": "Local production, technical liaison and styling support served the duo’s performance, with imagery preserving its specific London stage setting.",
+      "preview": "Crosstalk relies on language, timing and the relationship between two performers. Practical stage support served that form, while documentation gave the London show a continuing visual record.",
+      "role": "Vivian Adventure contributed to local production, stage and technical liaison, people and programme transitions, alongside styling support and event documentation.",
+      "context": "Yue Yunpeng and Sun Yue’s London crosstalk show brought a performance built on language and dialogue to an overseas stage. The local assignment needed to translate the needs of the duo and programme into practical production support.",
       "narrativeSections": [
         {
-          "heading": "The interfaces behind the performance",
-          "text": "The performers, programme and stage requirements provided the shared reference for the work. Our involvement connected these interfaces, organising people and programme liaison around the performance itself."
+          "heading": "A stage in service of dialogue",
+          "text": "Crosstalk develops through exchanges between the performers and with their audience. Stage and technical liaison matter because the production must respond to that form, providing the conditions around the programme."
         },
         {
-          "heading": "Support and documentation",
-          "text": "Styling support and event documentation were also within scope. The delivery combined local production support with a record of the duo and the stage, demonstrating collaboration within a touring performance."
+          "heading": "Touring requirements, local coordination",
+          "text": "The team contributed to liaison across people, programme and stage requirements, with styling support for the performers. Those responsibilities brought talent preparation and practical stage work together at the London event."
+        },
+        {
+          "heading": "A specific record of the overseas show",
+          "text": "Duo imagery retains the on-stage relationship, while wider views with tour graphics locate the performance. The resulting material can support show recaps and tour introductions with a visual reference to the London appearance."
         }
       ],
       "deliverables": [
         "Local production, stage and technical liaison",
         "People, programme transitions and styling support",
-        "Duo performance and stage imagery"
+        "Duo performance and touring-stage imagery"
       ],
       "outcomes": [
-        "The delivery comprised local production support, styling support and documentation of the duo and stage at the London performance."
+        "Local production support and documentation served the London crosstalk show together.",
+        "The imagery records the duo and tour setting for performance recaps and artist introductions."
       ]
     }
   },

@@ -11,52 +11,64 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "AGIBOT 英国发布",
-      "summary": "AGIBOT 英国发布：连接舞台、展位设计与现场搭建协调。",
-      "preview": "机器人发布既包含品牌介绍，也包含产品展示。项目团队参与舞台与展位设计，并将设计工作与搭建供应商及现场人员衔接。",
-      "role": "项目团队参与舞台和展位设计、搭建供应商协调与现场人员安排，工作范围连接设计方案与现场执行。",
-      "context": "AGIBOT 是具身智能与机器人企业，其伦敦英国发布活动包含产品展示、现场演示和主题演讲。这样的发布需要同时承接讲述与展示两类现场内容。",
+      "title": "AGIBOT 英国发布｜让具身智能走进现场体验",
+      "summary": "将技术讲述与产品演示放入可感知的品牌空间，以舞台、展位和本地搭建协作，支持具身智能企业在英国的现场亮相。",
+      "preview": "从主题演讲到机器人演示，发布空间需要同时解释品牌与产品。项目团队参与设计及搭建协调，让不同展示任务拥有相应的现场承载。",
+      "role": "项目团队参与舞台与展位设计、搭建供应商协调及现场人员安排，工作覆盖空间方案到现场执行的落地环节。",
+      "context": "AGIBOT 的伦敦英国发布包含产品展示、现场演示与主题演讲。对于具身智能企业，市场介绍既要说明技术方向，也要让参与者在真实空间中理解产品；发布现场由此成为英国本地品牌认知的一个具体接触点。",
       "narrativeSections": [
         {
-          "heading": "设计与搭建之间",
-          "text": "舞台和展位承担不同的展示任务，但都需要通过搭建与人员配合落实。本案的参与跨越设计与供应商协调，关注展示空间如何进入实际执行。"
+          "heading": "技术需要一个可理解的现场",
+          "text": "主题演讲提供理解技术的框架，演示区域则让抽象概念对应到可见的产品。舞台与展位承担不同信息层次，设计工作的意义在于为讲述和观看各自提供清楚的空间载体。"
         },
         {
-          "heading": "把发布内容落实到现场",
-          "text": "本案交付集中在舞台与展位设计，以及相关搭建供应商和人员协调。这项工作体现科技发布项目中连接空间设计与现场制作的能力。"
+          "heading": "从展示方案到搭建条件",
+          "text": "空间呈现依赖设计、搭建供应商和现场人员共同落实。团队参与这些环节，使舞台与展位的展示需求能够进入搭建沟通，而现场安排也围绕实际展示任务展开。"
+        },
+        {
+          "heading": "英国亮相的实体表达",
+          "text": "本案的交付是设计与现场协调。其商业意义在于为品牌的英国发布提供实体呈现基础，让技术介绍有可见的场景依托，并为参与者理解品牌提供比产品名称更具体的参照。"
         }
       ],
       "deliverables": [
-        "舞台与展位设计",
-        "搭建供应商协调及现场人员安排"
+        "发布舞台与产品展位设计",
+        "围绕展示需求的搭建供应商协调",
+        "发布现场人员安排"
       ],
       "outcomes": [
-        "交付包括发布现场的舞台与展位设计，以及对应的搭建供应商和人员协调。"
+        "交付舞台、展位设计与相应的搭建及人员协调，支持技术讲述和产品演示在同一发布现场展开。",
+        "空间交付服务于品牌的英国市场介绍，为产品与技术定位提供可感知的现场背景。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "AGIBOT UK Launch",
-      "summary": "AGIBOT’s UK launch: stage and stand design linked with build coordination.",
-      "preview": "A robotics launch combines a brand presentation with product demonstrations. The project team’s contribution connected stage and stand design with build suppliers and on-site personnel.",
-      "role": "The project team contributed to stage and stand design, build-supplier coordination and on-site personnel arrangements, connecting design work with execution.",
-      "context": "AGIBOT develops embodied AI and robotics. Its London UK launch featured product displays, live demonstrations and keynote presentations, requiring a setting for both the brand’s message and its technology.",
+      "title": "AGIBOT UK Launch | Giving Robotics a Physical Presence",
+      "summary": "Stage and stand design brought the brand presentation and product demonstrations into a physical setting, supported by local build and personnel coordination.",
+      "preview": "A keynote explains the technology; a demonstration makes it tangible. The project team contributed to the spaces and practical arrangements needed to accommodate both at AGIBOT’s UK launch.",
+      "role": "The project team contributed to stage and stand design, build-supplier coordination and on-site personnel arrangements, taking spatial requirements into practical execution.",
+      "context": "AGIBOT’s London UK launch combined product displays, live demonstrations and keynote presentations. For an embodied AI business, a market introduction needs to give people a way to understand the technology in person. The event provided a physical point of contact with the brand in the UK.",
       "narrativeSections": [
         {
-          "heading": "Between design and build",
-          "text": "The stage and stands serve different presentation needs, but both depend on construction and people. Our project scope crossed design and supplier coordination, linking the display spaces with their practical execution."
+          "heading": "Making room for the technology",
+          "text": "The keynote and demonstration areas served different purposes: one framed the technology, the other put a product in front of people. Stage and stand design gave each form of communication an appropriate physical setting."
         },
         {
-          "heading": "A defined launch contribution",
-          "text": "The delivery centred on stage and stand design and the associated supplier and personnel coordination. It demonstrates the connection between spatial design and on-site production for a technology launch."
+          "heading": "Design that reaches the build",
+          "text": "A display depends on the suppliers and people who put it in place. The team’s contribution spanned design and build coordination, bringing presentation requirements into supplier discussions and relating personnel arrangements to the work on site."
+        },
+        {
+          "heading": "A tangible market introduction",
+          "text": "The delivery centred on spatial design and coordination. Its commercial relevance lies in giving the UK introduction a physical expression: a setting in which the brand’s technology could be explained and demonstrated, with a concrete reference for those encountering it."
         }
       ],
       "deliverables": [
-        "Stage and stand design",
-        "Build-supplier coordination and on-site personnel arrangements"
+        "Stage and product-stand design",
+        "Build-supplier coordination around display requirements",
+        "On-site personnel arrangements"
       ],
       "outcomes": [
-        "The delivery comprised stage and stand design for the launch, with associated build-supplier and personnel coordination."
+        "Stage and stand design, supported by build and personnel coordination, accommodated brand presentations and product demonstrations within the launch.",
+        "The spatial contribution supported the UK introduction by giving the product and its technology a tangible setting."
       ]
     }
   },

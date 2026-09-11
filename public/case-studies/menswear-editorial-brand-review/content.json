@@ -11,42 +11,62 @@
   "languages": {
     "zh": {
       "ready": true,
-      "title": "男装内容制作",
-      "summary": "男装内容制作：围绕服饰任务组织人物形象与内容。",
-      "preview": "服饰是本案内容的主体。Vivian Adventure 参与服饰内容制作与妆造形象设计，让人物准备配合服饰呈现。",
-      "role": "Vivian Adventure 参与服饰内容制作与妆造形象设计，将人物准备作为服饰制作任务的一部分。",
-      "context": "本案是一项男装人物内容项目。任务围绕服饰展开，需要将人物形象准备与内容制作结合，形成以服饰为主题的交付。",
+      "title": "男装 Editorial｜以人物呈现服饰性格",
+      "summary": "以条纹服饰为视觉主线，将人物形象准备纳入服饰制作，让穿着者的呈现赋予产品更具体的时尚表达。",
+      "preview": "男装内容需要同时让人看见衣服与穿着者。围绕服饰开展妆造及制作，使人物形象成为理解造型的入口。",
+      "role": "Vivian Adventure 参与服饰内容制作与妆造形象设计，以男装主题组织人物准备与影像产出。",
+      "context": "本案以人物方式呈现男装，条纹服饰构成明确的视觉线索。制作任务需要处理服装与人物的关系，让观众既能辨识服饰，也能理解整体形象。",
       "narrativeSections": [
         {
-          "heading": "以服饰任务组织人物制作",
-          "text": "人物形象需要服务于服饰内容。本案同时涉及形象设计与制作，工作的关联在于将准备阶段的人物呈现带入服饰内容的实际产出。"
+          "heading": "服饰的性格由人物带出",
+          "text": "条纹提供服饰自身的图形特征，人物则让衣服拥有穿着状态。两者共同组成画面，使服饰内容能够传达整体风格，而不仅是单件产品的信息。"
+        },
+        {
+          "heading": "形象准备围绕服装展开",
+          "text": "妆造形象设计与服饰制作属于同一工作范围。人物准备服务于穿着呈现，制作则将这一关系保留在最终影像中，让服饰主题贯穿准备与产出。"
+        },
+        {
+          "heading": "为时尚表达提供具体参考",
+          "text": "人物服饰影像可用于主题编辑、造型展示与创意讨论。这个小型项目的价值，是提供一份可被观看和讨论的风格材料，为后续服饰内容提供参照。"
         }
       ],
       "deliverables": [
-        "服饰人物视觉内容及相关形象设计"
+        "围绕男装呈现的人物妆造设计",
+        "以条纹服饰为主题的人物视觉内容"
       ],
       "outcomes": [
-        "交付形成以男装为主题的人物内容，体现服饰制作与人物准备的配合能力。"
+        "交付以人物呈现服饰风格的男装内容。",
+        "成片可作为造型展示与服饰视觉讨论的素材。"
       ]
     },
     "en": {
       "ready": true,
-      "title": "Menswear Content",
-      "summary": "Menswear content production, connecting talent image preparation with the clothing brief.",
-      "preview": "Clothing was the subject of this assignment. Vivian Adventure contributed to apparel content and image preparation, with the talent’s presentation serving the menswear brief.",
-      "role": "Vivian Adventure contributed to apparel content production and makeup design, making talent preparation part of the clothing assignment.",
-      "context": "This was a talent-led menswear content project. It brought image preparation and production together to create content centred on the clothing.",
+      "title": "Menswear Editorial | Giving Clothing Character",
+      "summary": "A striped garment anchors the image, with talent preparation and production bringing the clothing into a distinct personal presentation.",
+      "preview": "Menswear imagery needs to show both the garment and the person wearing it. Makeup design and production addressed that relationship within a focused clothing assignment.",
+      "role": "Vivian Adventure contributed to apparel content production and makeup design, organising talent preparation around the menswear subject.",
+      "context": "This talent-led menswear project used a striped garment as a clear visual thread. The production task concerned how clothing and personal appearance work together, making the garment legible within the overall look.",
       "narrativeSections": [
         {
-          "heading": "Production around the clothing brief",
-          "text": "The talent’s preparation served the apparel content. With both image design and production within scope, the work connected the preparation of the person with the practical task of making the clothing content."
+          "heading": "The wearer gives the garment context",
+          "text": "Stripes supply the clothing’s graphic character; the person gives it a worn presence. Together they communicate a look, adding a stylistic reading to the information carried by the garment itself."
+        },
+        {
+          "heading": "Preparation follows the clothing",
+          "text": "Makeup design and apparel production sat within the same scope. Talent preparation served the way the clothing was presented, with the finished image holding that relationship in frame."
+        },
+        {
+          "heading": "A useful point of reference",
+          "text": "Talent-led apparel imagery can support thematic editing, styling presentations and creative discussions. This focused project supplies a visible reference for those conversations, grounding an idea about style in a finished image."
         }
       ],
       "deliverables": [
-        "Talent-led apparel imagery and associated image preparation"
+        "Makeup design for the menswear presentation",
+        "Talent-led imagery centred on a striped garment"
       ],
       "outcomes": [
-        "The delivery was menswear content, demonstrating the relationship between apparel production and talent preparation."
+        "The delivered menswear content presents clothing through personal style.",
+        "The image offers material for styling presentations and apparel-focused creative discussions."
       ]
     }
   },
