@@ -73,7 +73,7 @@ export default function ProjectIndex({ projects, categories, lang, withBase }) {
             return (
               <a
                 key={project.id}
-                href={projectHref(withBase, project.slug)}
+                href={projectHref(withBase, project)}
                 onPointerEnter={(event) => { if (event.pointerType === 'mouse') setActiveSlug(project.slug); }}
                 onFocusCapture={() => setActiveSlug(project.slug)}
                 data-active={isActive ? 'true' : 'false'}

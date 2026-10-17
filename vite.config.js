@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve, sep } from 'path';
+import { readFileSync } from 'node:fs';
 import { CASE_CATEGORIES, loadCaseStudies } from './scripts/case-studies-lib.mjs';
+import { renderCaseStudyHtml } from './scripts/case-study-html.mjs';
 
 // Compute base for GitHub Pages automatically
 const explicitBase = process.env.VITE_BASE; // e.g. "/repo-name/"
@@ -11,6 +13,7 @@ const base = explicitBase || autoPagesBase;
 
 const virtualCaseStudiesId = 'virtual:case-studies';
 const resolvedVirtualCaseStudiesId = `\0${virtualCaseStudiesId}`;
+const siteOrigin = `https://${readFileSync(resolve(__dirname, 'CNAME'), 'utf8').trim()}`;
 
 function caseStudiesPlugin() {
 	return {
@@ -27,6 +30,21 @@ function caseStudiesPlugin() {
 			].join('\n');
 		},
 		configureServer(server) {
+			server.middlewares.use(async (req, res, next) => {
+				const pathname = new URL(req.url, 'http://localhost').pathname;
+				if (!/\/case-studies\/[^/]+\/(?:index\.html)?$/.test(pathname)) return next();
+				try {
+					const project = loadCaseStudies({ root: __dirname }).find((item) => item.languages.en?.seo && [
+						`${server.config.base}case-studies/${item.slug}/`,
+						`${server.config.base}case-studies/${item.slug}/index.html`,
+					].includes(pathname));
+					if (!project) return next();
+					const template = readFileSync(resolve(__dirname, 'pages/project.html'), 'utf8');
+					const html = renderCaseStudyHtml(template, project, { base: server.config.base, origin: siteOrigin });
+					res.setHeader('Content-Type', 'text/html; charset=utf-8');
+					res.end(await server.transformIndexHtml(`${server.config.base}pages/project.html`, html));
+				} catch (error) { next(error); }
+			});
 			const directories = [resolve(__dirname, 'public/case-studies')];
 			server.watcher.add(directories);
 			const reloadCaseStudies = (file) => {
@@ -36,6 +54,19 @@ function caseStudiesPlugin() {
 				server.ws.send({ type: 'full-reload' });
 			};
 			['add', 'change', 'unlink'].forEach((event) => server.watcher.on(event, reloadCaseStudies));
+		},
+		generateBundle: {
+			order: 'post',
+			handler(options, bundle) {
+				const template = bundle['pages/project.html'].source;
+				for (const project of loadCaseStudies({ root: __dirname }).filter((item) => item.languages.en?.seo)) {
+					this.emitFile({
+						type: 'asset',
+						fileName: `case-studies/${project.slug}/index.html`,
+						source: renderCaseStudyHtml(template, project, { base, origin: siteOrigin }),
+					});
+				}
+			},
 		},
 	};
 }

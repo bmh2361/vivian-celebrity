@@ -1,0 +1,143 @@
+{
+  "id": "C12",
+  "slug": "london-fashion-week-2026",
+  "status": "published",
+  "sortOrder": 5,
+  "primaryCategory": "fashion-week",
+  "year": 2026,
+  "services": [
+    "Hair & Makeup",
+    "Runway Photography",
+    "Event Photography"
+  ],
+  "languages": {
+    "en": {
+      "ready": true,
+      "title": "London Fashion Week 2026",
+      "summary": "Officially appointed hair, makeup and photography partner for this London Fashion Week 2026 project.",
+      "role": "Officially Appointed Hair, Makeup & Photography Partner",
+      "overview": "Vivian Adventure was the officially appointed hair, makeup and photography partner for this London Fashion Week 2026 project. The collaboration brought together our beauty and photography services, with this portfolio presenting selected runway and event images from the project.",
+      "deliverables": [
+        "Hair & Makeup",
+        "Runway Photography",
+        "Event Photography"
+      ],
+      "galleryHeading": "Selected Work",
+      "galleryIntroduction": "A selection of runway looks, event portraits and moments from the project.",
+      "inquiry": {
+        "heading": "Discuss Your Next Project",
+        "text": "Contact Vivian Adventure to discuss hair, makeup and photography for your next fashion or brand event.",
+        "button": "Enquire About a Project"
+      },
+      "seo": {
+        "title": "London Fashion Week 2026 | Vivian Adventure",
+        "description": "Explore Vivian Adventure’s hair, makeup and photography portfolio as the officially appointed partner for this London Fashion Week 2026 project."
+      }
+    },
+    "zh": {
+      "ready": true,
+      "title": "2026 伦敦时装周",
+      "summary": "Vivian Adventure 担任本次 2026 伦敦时装周项目官方指定妆造与摄影合作伙伴。",
+      "role": "本项目官方指定妆造与摄影合作伙伴",
+      "overview": "作为本次 2026 伦敦时装周项目官方指定的妆造与摄影合作伙伴，Vivian Adventure 为项目提供妆造与摄影服务。本作品集精选秀场造型、活动肖像与现场影像，呈现此次合作的部分作品。",
+      "deliverables": [
+        "化妆与发型设计",
+        "秀场摄影",
+        "活动摄影"
+      ],
+      "galleryHeading": "精选作品",
+      "galleryIntroduction": "项目中的秀场造型、活动肖像与现场瞬间。",
+      "inquiry": {
+        "heading": "洽谈您的下一个项目",
+        "text": "欢迎联系 Vivian Adventure，沟通时尚或品牌活动中的妆造与摄影需求。",
+        "button": "咨询项目合作"
+      },
+      "seo": {
+        "title": "2026 伦敦时装周合作案例 | Vivian Adventure",
+        "description": "查看 Vivian Adventure 作为本次 2026 伦敦时装周项目官方指定妆造与摄影合作伙伴的精选作品，涵盖秀场与活动影像。"
+      }
+    }
+  },
+  "media": {
+    "layoutFamily": "portrait",
+    "cover": {
+      "src": "/case-studies/london-fashion-week-2026/01-cover.jpg",
+      "alt": {
+        "en": "Two people photographed together at the London Fashion Week 2026 project.",
+        "zh": "2026 伦敦时装周项目中的双人合影。"
+      },
+      "width": 1440,
+      "height": 1920,
+      "display": {
+        "thumbnail": { "ratio": "3 / 4", "fit": "contain" },
+        "preview": { "ratio": "3 / 4", "fit": "contain" },
+        "hero": { "ratio": "3 / 4", "fit": "contain" }
+      }
+    },
+    "share": {
+      "src": "/case-studies/london-fashion-week-2026/01-cover-share.jpg",
+      "alt": {
+        "en": "Two people photographed together at the London Fashion Week 2026 project.",
+        "zh": "2026 伦敦时装周项目中的双人合影。"
+      },
+      "width": 1200,
+      "height": 630
+    },
+    "gallery": [
+      {
+        "src": "/case-studies/london-fashion-week-2026/02-runway-green-knit.jpg",
+        "alt": {
+          "en": "Model wearing a green knit jumper and a distressed indigo denim jacket on the runway.",
+          "zh": "模特身穿绿色针织衫与做旧靛蓝牛仔外套走秀。"
+        },
+        "width": 1365,
+        "height": 2048
+      },
+      {
+        "src": "/case-studies/london-fashion-week-2026/03-runway-lilac-tailoring.jpg",
+        "alt": {
+          "en": "Model wearing a lilac sleeveless tailored outfit on the runway.",
+          "zh": "模特身穿淡紫色无袖剪裁套装走秀。"
+        },
+        "width": 1365,
+        "height": 2048
+      },
+      {
+        "src": "/case-studies/london-fashion-week-2026/04-runway-red-jacket.jpg",
+        "alt": {
+          "en": "Model wearing a glossy red jacket on the runway.",
+          "zh": "模特身穿亮面红色外套走秀。"
+        },
+        "width": 1365,
+        "height": 2048
+      },
+      {
+        "src": "/case-studies/london-fashion-week-2026/05-runway-purple-jacket.jpg",
+        "alt": {
+          "en": "Model wearing a metallic purple jacket on the runway.",
+          "zh": "模特身穿金属质感紫色外套走秀。"
+        },
+        "width": 1365,
+        "height": 2048
+      },
+      {
+        "src": "/case-studies/london-fashion-week-2026/06-front-row-group.jpg",
+        "alt": {
+          "en": "Group portrait in the front row at the fashion event.",
+          "zh": "时尚活动前排的集体合影。"
+        },
+        "width": 1440,
+        "height": 960
+      },
+      {
+        "src": "/case-studies/london-fashion-week-2026/07-event-guest-portrait.jpg",
+        "alt": {
+          "en": "Two people at a fashion event, wearing a black leather jacket and a blue jacket.",
+          "zh": "时尚活动中的双人肖像，两人分别身穿黑色皮衣和蓝色外套。"
+        },
+        "width": 1440,
+        "height": 960
+      }
+    ]
+  }
+}

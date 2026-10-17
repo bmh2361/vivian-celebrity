@@ -47,7 +47,7 @@ export default function ProjectPreview({ project, categories, lang, withBase }) 
             <p className="mt-1 text-xs text-[#777]">{copy.available}: {availableLanguageLabels(project, lang).join(' · ')}</p>
           </div>
         )}
-        <a href={projectHref(withBase, project.slug)} className="group mt-5 inline-flex items-center gap-2 border-b border-[#E6CF9A] pb-1 text-sm font-medium text-[#8B7048] transition-colors hover:border-[#9A7B4F] hover:text-[#6F5737] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CFAF6B] focus-visible:ring-offset-4">
+        <a href={projectHref(withBase, project)} className="group mt-5 inline-flex items-center gap-2 border-b border-[#E6CF9A] pb-1 text-sm font-medium text-[#8B7048] transition-colors hover:border-[#9A7B4F] hover:text-[#6F5737] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CFAF6B] focus-visible:ring-offset-4">
           {copy.view}<span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
         </a>
       </div>

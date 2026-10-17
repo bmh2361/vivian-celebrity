@@ -15,6 +15,12 @@
 5. 图片 `display` 按 `thumbnail` / `preview` / `hero` / `gallery` 用途设置 `{ "ratio": "4 / 5", "fit": "cover", "position": "50% 15%" }`；`fit` 可为 `contain`。`sources` 仅用于图片格式／断点替代源，每项为 `{srcSet, media?, type?}`，srcSet 为本案的一条图片路径，不是内部研究来源。
 6. `media.layoutFamily` 沿用 `wide`、`portrait` 或 `single`。正文、交付和成果通过数据编排，无需新增 JSX 或审核 adapter。
 
+London Fashion Week 2026 使用可选 `overview` 展示项目简介，并将 `deliverables` 作为双语服务范围与封面分栏展示。作品区可用 `galleryHeading`、`galleryIntroduction` 设置标题和说明。咨询文案使用 `inquiry: {heading, text, button}`，按钮统一进入现有 `/pages/contact.html?project=business`。
+
+需要独立分享入口时，在英文及中文正文中填写 `seo: {title, description}`。英文 SEO 就绪的案例会从同一份 JSON 自动生成 `/case-studies/<slug>/index.html`，列表自动链接至 `/case-studies/<slug>/`；仍复用原详情组件，原查询参数地址继续可用。标题、摘要、canonical 和分享标签在构建时写入 HTML，分享图使用可选 `media.share`（同样填写路径、双语 alt 和尺寸），未填时使用 cover，域名读取根目录 CNAME，并兼容 `VITE_BASE`。静态分享文案默认英文，网站内语言切换同步更新标题与摘要。不要手工维护另一份 HTML 或正文副本。
+
+本案 `01-cover-share.jpg` 仅将 `01-cover.jpg` 等比缩至 450×600，再添加四周留白至 1200×630，保留完整双人构图。列表、详情和作品区仍只使用原始 7 张 JPG。
+
 ## 分类
 
 每案只设一个主分类，按核心项目目的选择。显示顺序与中英文名称在 `scripts/case-studies-lib.mjs` 的 `CASE_CATEGORIES` 中统一维护；没有已发布案例的分类不会显示。
@@ -44,6 +50,6 @@
 
 图片和导航在组件中通过 `BASE_URL` / `withBase` 加前缀。JSON 内使用站点根相对路径，不能写入 localhost、部署域名或仓库前缀。
 
-案例列表、预览及详情正文不放联系 CTA；预览保留 View Project，详情提供返回项目。全站 Header 的联系导航与咨询入口保留。
+案例列表及预览不放联系 CTA；预览保留 View Project，详情提供返回项目。详情默认不放咨询区，按项目需要填写上述双语 `inquiry` 即可启用。全站 Header 的联系导航与咨询入口保留。
 
 `public/corporate-cases/` 为尚未匹配项目的历史原图，不是当前案例来源。未证明重复或被替代前保留，勿自动导入为真实案例。其他原始素材、编辑器历史和非案例项目资料也不属于自动清理范围。

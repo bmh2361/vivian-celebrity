@@ -2,21 +2,29 @@ import { useEffect } from 'react';
 import { caseStudies, caseStudyCategories } from 'virtual:case-studies';
 import { useLang } from '../layout/Layout.jsx';
 import ProjectImage from '../components/cases/ProjectImage.jsx';
-import { availableLanguageLabels, categoryLabel, localizedMediaText, projectContent, projectMeta } from '../components/cases/caseStudyUtils.js';
+import { availableLanguageLabels, categoryLabel, localizedMediaText, projectContent } from '../components/cases/caseStudyUtils.js';
 import '../index.css';
-import '../components/cases/cases.css';
+import './project-detail.css';
 
 function TextSection({ title, children }) {
   if (!children || (Array.isArray(children) && children.length === 0)) return null;
   return (
-    <section className="border-t border-[#e8e8e8] pt-8">
-      <h2 className="text-lg font-semibold text-[#111]">{title}</h2>
-      {Array.isArray(children) ? (
-        <ul className="mt-4 space-y-2 text-sm leading-7 text-[#555]">
-          {children.map((item) => <li key={item} className="flex gap-3"><span className="mt-[11px] h-1 w-1 shrink-0 rounded-full bg-[#CFAF6B]" /><span>{item}</span></li>)}
-        </ul>
-      ) : <p className="mt-4 whitespace-pre-line text-sm leading-7 text-[#555]">{children}</p>}
+    <section className="project-detail-text-section">
+      <h2>{title}</h2>
+      {Array.isArray(children) ? <ul>{children.map((item) => <li key={item}>{item}</li>)}</ul> : <p>{children}</p>}
     </section>
+  );
+}
+
+function ProjectFigure({ image, lang, withBase, className = '', usage = 'gallery' }) {
+  const caption = localizedMediaText(image, 'caption', lang);
+  return (
+    <figure className={`project-detail-figure ${className}`} style={{ '--detail-image-ratio': image.width / image.height }}>
+      <div className="project-detail-frame">
+        <ProjectImage image={image} usage={usage} lang={lang} withBase={withBase} className="project-detail-image" fallbackClassName="project-detail-image-fallback" loading={usage === 'hero' ? 'eager' : 'lazy'} />
+      </div>
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
   );
 }
 
@@ -24,7 +32,7 @@ export default function ProjectDetail() {
   const { lang } = useLang();
   const base = (import.meta.env.BASE_URL || '/').replace(/\/+$/, '');
   const withBase = (p) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
-  const slug = new URLSearchParams(window.location.search).get('slug') || '';
+  const slug = new URLSearchParams(window.location.search).get('slug') || document.querySelector('meta[name="project-slug"]')?.content || '';
   const project = caseStudies.find((item) => item.slug === slug) || null;
   const content = projectContent(project, lang);
   const copy = lang === 'zh' ? {
@@ -34,6 +42,8 @@ export default function ProjectDetail() {
     languageUnavailable: '该项目暂未提供中文版本。',
     available: '可用语言',
     role: '我们的角色',
+    overview: '项目简介',
+    services: '服务范围',
     context: '项目背景',
     brief: '项目要求',
     approach: '执行方式',
@@ -43,6 +53,9 @@ export default function ProjectDetail() {
     eventOutcome: '活动层面结果',
     measuredImpact: '我方可归因效果',
     credits: '合作与署名',
+    year: '年份',
+    location: '地点',
+    skip: '跳至项目正文',
   } : {
     back: 'Commercial Case Studies',
     unavailableTitle: 'Project unavailable',
@@ -50,6 +63,8 @@ export default function ProjectDetail() {
     languageUnavailable: 'This project is not yet available in English.',
     available: 'Available in',
     role: 'Our Role',
+    overview: 'Project Overview',
+    services: 'Services',
     context: 'Project Context',
     brief: 'The Brief',
     approach: 'Our Approach',
@@ -59,112 +74,128 @@ export default function ProjectDetail() {
     eventOutcome: 'Event-level Outcome',
     measuredImpact: 'Our Attributable Impact',
     credits: 'Credits',
+    year: 'Year',
+    location: 'Location',
+    skip: 'Skip to project content',
   };
   const backHref = withBase('/pages/corporate.html#selected-projects');
 
   useEffect(() => {
-    document.title = content?.title ? `${content.title} · Vivian Adventure` : `${copy.unavailableTitle} · Vivian Adventure`;
-  }, [content, copy.unavailableTitle]);
+    document.title = content?.seo?.title || (content?.title ? `${content.title} · Vivian Adventure` : `${copy.unavailableTitle} · Vivian Adventure`);
+    if (!content?.seo) return;
+    const metadata = {
+      'meta[name="description"]': content.seo.description,
+      'meta[property="og:title"]': content.seo.title,
+      'meta[property="og:description"]': content.seo.description,
+      'meta[property="og:locale"]': lang === 'zh' ? 'zh_CN' : 'en_GB',
+      'meta[property="og:image:alt"]': localizedMediaText(project.media.cover, 'alt', lang),
+      'meta[name="twitter:title"]': content.seo.title,
+      'meta[name="twitter:description"]': content.seo.description,
+      'meta[name="twitter:image:alt"]': localizedMediaText(project.media.cover, 'alt', lang),
+    };
+    for (const [selector, value] of Object.entries(metadata)) {
+      const tag = document.querySelector(selector);
+      if (tag) tag.content = value;
+    }
+  }, [content, copy.unavailableTitle, lang, project]);
 
-  if (!project) {
+  if (!project || !content) {
     return (
-      <main className="mx-auto max-w-4xl px-6 py-14 md:py-20">
-        <a href={backHref} className="inline-flex border-b border-[#E6CF9A] pb-1 text-sm text-[#8B7048] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CFAF6B] focus-visible:ring-offset-4">← {copy.back}</a>
-        <section className="mt-8 rounded-2xl border border-[#eee] bg-white p-8 shadow-[0_8px_30px_rgba(0,0,0,0.05)]">
-          <h1 className="text-2xl font-bold text-[#111]">{copy.unavailableTitle}</h1>
-          <p className="mt-3 text-sm leading-7 text-[#555]">{copy.unavailableText}</p>
-          <div className="mt-6 flex flex-wrap gap-5 text-sm">
-            <a href={backHref} className="border-b border-[#E6CF9A] pb-1 text-[#8B7048]">{copy.back}</a>
-          </div>
+      <article className="project-detail project-detail-unavailable" lang={lang === 'zh' ? 'zh-CN' : 'en-GB'}>
+        <a href={backHref} className="project-detail-back"><span aria-hidden="true">←</span> {copy.back}</a>
+        <section>
+          <h1>{project ? copy.languageUnavailable : copy.unavailableTitle}</h1>
+          <p>{project ? `${copy.available}: ${availableLanguageLabels(project, lang).join(' · ')}` : copy.unavailableText}</p>
         </section>
-      </main>
+      </article>
     );
   }
 
-  if (!content) {
-    return (
-      <main className="mx-auto max-w-4xl px-6 py-14 md:py-20">
-        <a href={backHref} className="inline-flex border-b border-[#E6CF9A] pb-1 text-sm text-[#8B7048]">← {copy.back}</a>
-        <section className="mt-8 rounded-2xl border border-[#eee] bg-white p-8 shadow-[0_8px_30px_rgba(0,0,0,0.05)]">
-          <h1 className="text-2xl font-bold text-[#111]">{copy.languageUnavailable}</h1>
-          <p className="mt-3 text-sm leading-7 text-[#555]">{copy.available}: {availableLanguageLabels(project, lang).join(' · ')}</p>
-          <div className="mt-6 flex flex-wrap gap-5 text-sm">
-            <a href={backHref} className="border-b border-[#E6CF9A] pb-1 text-[#8B7048]">{copy.back}</a>
-          </div>
-        </section>
-      </main>
-    );
-  }
-
-  const secondaryMeta = projectMeta(project, caseStudyCategories, lang).slice(1);
+  const [title, subtitle] = content.title.split(/\s*[|｜]\s*/, 2);
+  const hero = project.media.hero || project.media.cover;
+  const gallery = project.media.gallery.filter((image) => image.src !== hero.src);
+  const storySections = [
+    ...(content.brief ? [{ heading: copy.brief, text: content.brief }] : []),
+    ...(content.approach ? [{ heading: copy.approach, text: content.approach }] : []),
+    ...(content.narrativeSections || []),
+  ];
+  const remainingGallery = gallery.slice(storySections.length);
 
   return (
-    <main className="case-detail layout-wide mx-auto max-w-6xl px-6 py-12 md:py-16" lang={lang === 'zh' ? 'zh-CN' : 'en-GB'}>
-      <a href={backHref} className="inline-flex border-b border-[#E6CF9A] pb-1 text-sm text-[#8B7048] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CFAF6B] focus-visible:ring-offset-4">← {copy.back}</a>
+    <article className="project-detail" data-project={project.slug} lang={lang === 'zh' ? 'zh-CN' : 'en-GB'}>
+      <a href="#project-content" className="project-detail-skip">{copy.skip}</a>
+      <a href={backHref} className="project-detail-back"><span aria-hidden="true">←</span> {copy.back}</a>
 
-      <header className="mt-8 max-w-4xl">
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[#9A7B4F]">{categoryLabel(caseStudyCategories, project.primaryCategory, lang)}</div>
-        <h1 className="mt-3 text-3xl font-extrabold leading-tight text-[#111] md:text-5xl">{content.title}</h1>
-        <p className="mt-5 max-w-3xl text-base leading-8 text-[#555]">{content.summary}</p>
-        {secondaryMeta.length > 0 && <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-[#777]">{secondaryMeta.map((item) => <span key={item}>{item}</span>)}</div>}
-        {content.narrativeSections?.length > 0 && content.context && <p className="mt-6 max-w-3xl text-sm leading-7 text-[#555]">{content.context}</p>}
-      </header>
-
-      <div className={`mt-10 grid items-start gap-8 ${project.media.layoutFamily === 'wide' ? '' : 'lg:grid-cols-[minmax(0,1.4fr)_minmax(280px,0.6fr)]'}`}>
-        <ProjectImage image={project.media.hero || project.media.cover} lang={lang} withBase={withBase} className="case-detail-hero h-auto w-full rounded-2xl border border-[#eee] object-contain shadow-[0_8px_30px_rgba(0,0,0,0.06)]" fallbackClassName="aspect-[4/3] w-full rounded-2xl border border-[#eee]" loading="eager" />
-        <aside className="rounded-2xl border border-[#eee] bg-white p-6 shadow-[0_4px_18px_rgba(0,0,0,0.04)]">
-          <div className="text-xs font-semibold uppercase tracking-[0.16em] text-[#9A7B4F]">{copy.role}</div>
-          <p className="mt-3 text-sm leading-7 text-[#444]">{content.role}</p>
-          {project.services.length > 0 && <div className="mt-5 flex flex-wrap gap-2">{project.services.map((service) => <span key={service} className="rounded-full border border-[#E6CF9A] px-3 py-1 text-xs text-[#6F5737]">{service}</span>)}</div>}
-        </aside>
+      <div className="project-detail-hero">
+        <header className="project-detail-heading">
+          <p className="project-detail-category">{categoryLabel(caseStudyCategories, project.primaryCategory, lang)}</p>
+          <h1><span>{title}</span>{subtitle && <span className="project-detail-subtitle">{subtitle}</span>}</h1>
+          <p className="project-detail-lead">{content.overview ? content.role : content.summary}</p>
+          {(project.year || project.date || project.location) && (
+            <dl className="project-detail-meta">
+              {(project.year || project.date) && <div><dt>{copy.year}</dt><dd>{project.year || project.date}</dd></div>}
+              {project.location && <div><dt>{copy.location}</dt><dd>{project.location}</dd></div>}
+            </dl>
+          )}
+        </header>
+        <ProjectFigure image={hero} usage="hero" lang={lang} withBase={withBase} className="project-detail-hero-media" />
       </div>
 
-      {content.narrativeSections?.length > 0 ? (
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <section className="border-t border-[#e8e8e8] pt-8 md:col-span-2">
-            <div className={`mt-5 grid gap-6 ${project.media.layoutFamily === 'single' ? '' : 'md:grid-cols-2'}`}>
-              {content.narrativeSections.map((section) => (
-                <article key={section.heading} className="py-2">
-                  <h2 className="text-base font-semibold text-[#111]">{section.heading}</h2>
-                  <p className="mt-3 text-sm leading-7 text-[#555]">{section.text}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-          <TextSection title={copy.deliverables}>{content.deliverables}</TextSection>
-          <TextSection title={copy.outcomes}>{content.outcomes}</TextSection>
-          <TextSection title={copy.eventOutcome}>{content.publicEventOutcome}</TextSection>
-          {content.ourMeasuredImpact && <TextSection title={copy.measuredImpact}>{content.ourMeasuredImpact}</TextSection>}
+      <div id="project-content" className="project-detail-content" tabIndex={-1}>
+        <div className="project-detail-brief">
+          <TextSection title={content.overview ? copy.overview : copy.context}>{content.overview || content.context}</TextSection>
+          <aside className="project-detail-scope">
+            {!content.overview && <TextSection title={copy.role}>{content.role}</TextSection>}
+            <TextSection title={content.overview ? copy.services : copy.deliverables}>{content.deliverables}</TextSection>
+          </aside>
         </div>
-      ) : (
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <TextSection title={copy.context}>{content.context}</TextSection>
-          <TextSection title={copy.brief}>{content.brief}</TextSection>
-          <TextSection title={copy.approach}>{content.approach}</TextSection>
-          <TextSection title={copy.deliverables}>{content.deliverables}</TextSection>
-          <TextSection title={copy.outcomes}>{content.outcomes}</TextSection>
-          <TextSection title={copy.credits}>{content.credits}</TextSection>
-        </div>
-      )}
 
-      {project.media.gallery.length > 0 && (
-        <section className="mt-14 border-t border-[#e8e8e8] pt-8">
-          <h2 className="text-xl font-semibold text-[#111]">{copy.gallery}</h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
-            {project.media.gallery.map((image) => (
-              <figure key={image.src}>
-                <ProjectImage image={image} lang={lang} withBase={withBase} className="case-gallery-image h-auto w-full rounded-xl border border-[#eee] object-contain" fallbackClassName="aspect-[4/3] w-full rounded-xl border border-[#eee]" />
-                {localizedMediaText(image, 'caption', lang) && <figcaption className="mt-2 text-xs leading-5 text-[#777]">{localizedMediaText(image, 'caption', lang)}</figcaption>}
-              </figure>
+        {storySections.length > 0 && (
+          <div className="project-detail-story">
+            {storySections.map((section, index) => (
+              <section key={section.heading} className="project-detail-story-row" data-illustrated={gallery[index] ? 'true' : 'false'}>
+                <div className="project-detail-story-copy">
+                  <h2>{section.heading}</h2>
+                  <p>{section.text}</p>
+                </div>
+                {gallery[index] && <ProjectFigure image={gallery[index]} lang={lang} withBase={withBase} />}
+              </section>
             ))}
           </div>
-        </section>
-      )}
+        )}
 
+        {remainingGallery.length > 0 && (
+          <section className="project-detail-gallery-section">
+            <header className="project-detail-section-heading">
+              <h2>{content.galleryHeading || copy.gallery}</h2>
+              {content.galleryIntroduction && <p>{content.galleryIntroduction}</p>}
+            </header>
+            <div className="project-detail-gallery" data-single={remainingGallery.length === 1 ? 'true' : 'false'}>
+              {remainingGallery.map((image) => <ProjectFigure key={image.src} image={image} lang={lang} withBase={withBase} />)}
+            </div>
+          </section>
+        )}
 
-      <div className="mt-12 border-t border-[#e8e8e8] pt-6">
-        <a href={backHref} className="text-sm text-[#8B7048] underline decoration-[#E6CF9A] underline-offset-4">← {copy.back}</a>
+        {(content.outcomes?.length > 0 || content.publicEventOutcome || content.ourMeasuredImpact || content.credits?.length > 0) && (
+          <div className="project-detail-results">
+            <TextSection title={copy.outcomes}>{content.outcomes}</TextSection>
+            <TextSection title={copy.eventOutcome}>{content.publicEventOutcome}</TextSection>
+            <TextSection title={copy.measuredImpact}>{content.ourMeasuredImpact}</TextSection>
+            <TextSection title={copy.credits}>{content.credits}</TextSection>
+          </div>
+        )}
+
+        {content.inquiry && (
+          <section className="project-detail-inquiry">
+            <div><h2>{content.inquiry.heading}</h2><p>{content.inquiry.text}</p></div>
+            <a href={withBase('/pages/contact.html?project=business')} className="project-detail-button">{content.inquiry.button}</a>
+          </section>
+        )}
       </div>
-    </main>
+
+      <footer className="project-detail-footer">
+        <a href={backHref} className="project-detail-back"><span aria-hidden="true">←</span> {copy.back}</a>
+      </footer>
+    </article>
   );
 }

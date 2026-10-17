@@ -11,7 +11,7 @@ export const CASE_CATEGORIES = {
 const LANGUAGE_KEYS = ['zh', 'en'];
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const PUBLIC_FIELDS = ['id', 'slug', 'status', 'sortOrder', 'primaryCategory', 'year', 'date', 'location', 'services', 'languages', 'media'];
-const CONTENT_FIELDS = ['ready', 'title', 'summary', 'preview', 'role', 'context', 'brief', 'approach', 'narrativeSections', 'deliverables', 'outcomes', 'publicEventOutcome', 'ourMeasuredImpact', 'credits'];
+const CONTENT_FIELDS = ['ready', 'title', 'summary', 'preview', 'role', 'overview', 'context', 'brief', 'approach', 'narrativeSections', 'deliverables', 'outcomes', 'publicEventOutcome', 'ourMeasuredImpact', 'credits', 'galleryHeading', 'galleryIntroduction', 'inquiry', 'seo'];
 const IMAGE_FIELDS = ['src', 'alt', 'caption', 'width', 'height', 'focalPoint', 'display', 'sources'];
 
 function isNonEmptyString(value) {
@@ -65,6 +65,16 @@ export function validateCaseStudy(project, { root = process.cwd(), source = 'cas
         if (!isNonEmptyString(content[field])) errors.push(`languages.${key}.${field} is required when ready`);
       });
       if (content.preview != null && !isNonEmptyString(content.preview)) errors.push(`languages.${key}.preview must be a non-empty string`);
+      for (const field of ['overview', 'galleryHeading', 'galleryIntroduction']) {
+        if (content[field] != null && !isNonEmptyString(content[field])) errors.push(`languages.${key}.${field} must be a non-empty string`);
+      }
+      for (const [field, fields] of [['inquiry', ['heading', 'text', 'button']], ['seo', ['title', 'description']]]) {
+        if (content[field] == null) continue;
+        checkFields(content[field], fields, `languages.${key}.${field}`, errors);
+        fields.forEach((name) => {
+          if (!isNonEmptyString(content[field]?.[name])) errors.push(`languages.${key}.${field}.${name} is required`);
+        });
+      }
       if (content.narrativeSections != null) {
         if (!Array.isArray(content.narrativeSections)) errors.push(`languages.${key}.narrativeSections must contain headings and text`);
         else content.narrativeSections.forEach((section) => {
@@ -77,11 +87,11 @@ export function validateCaseStudy(project, { root = process.cwd(), source = 'cas
         if (!Array.isArray(content[field]) || (field === 'deliverables' && !content[field].length) || content[field].some((item) => !isNonEmptyString(item))) errors.push(`languages.${key}.${field} must contain text items`);
       }
     });
-    checkFields(project.media, ['cover', 'hero', 'thumbnail', 'gallery', 'layoutFamily', 'layoutVariant'], 'media', errors);
+    checkFields(project.media, ['cover', 'hero', 'thumbnail', 'share', 'gallery', 'layoutFamily', 'layoutVariant'], 'media', errors);
     validateMediaPath(root, project.media?.cover?.src, project.slug, 'media.cover.src', errors);
     if (project.media?.gallery != null && !Array.isArray(project.media.gallery)) errors.push('media.gallery must be an array');
     const gallery = Array.isArray(project.media?.gallery) ? project.media.gallery : [];
-    [project.media?.cover, project.media?.hero, project.media?.thumbnail, ...gallery].filter(Boolean).forEach((image) => {
+    [project.media?.cover, project.media?.hero, project.media?.thumbnail, project.media?.share, ...gallery].filter(Boolean).forEach((image) => {
       checkFields(image, IMAGE_FIELDS, 'image', errors);
       validateMediaPath(root, image.src, project.slug, 'image.src', errors);
       for (const field of ['alt', 'caption']) if (image[field]) checkFields(image[field], LANGUAGE_KEYS, `image.${field}`, errors);

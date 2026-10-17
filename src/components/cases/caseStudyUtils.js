@@ -16,8 +16,8 @@ export function projectMeta(project, categories, lang) {
   return [categoryLabel(categories, project.primaryCategory, lang), project.location, project.year || project.date].filter(Boolean);
 }
 
-export function projectHref(withBase, slug) {
-  return withBase(`/pages/project.html?slug=${encodeURIComponent(slug)}`);
+export function projectHref(withBase, project) {
+  return withBase(project.languages.en?.seo ? `/case-studies/${project.slug}/` : `/pages/project.html?slug=${encodeURIComponent(project.slug)}`);
 }
 
 export function localizedMediaText(image, field, lang) {
