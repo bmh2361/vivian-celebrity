@@ -6,7 +6,7 @@ import './desktop-layout.css';
 const brand = { glass: 'backdrop-blur-sm bg-white/70 border border-[#e8e8e8]' };
 const dict = {
   zh: {
-    nav: { home: '主页', private: '私人形象', commercial: '商业项目', businessOverview: '品牌与商业执行', imageDirection: '形象美学', bespoke: '高端定制', corporate: '企业策划案例', talent: 'Talent', portfolio: '作品集', about: '团队', contact: '联系我们' },
+    nav: { home: '主页', private: '私人形象', commercial: '商业项目', businessOverview: '品牌与商业执行', imageDirection: '形象美学', bespoke: '高端定制', corporate: '商业项目案例', talent: 'Talent', portfolio: '作品集', about: '团队', contact: '联系我们' },
     navDesc: {
       imageDirection: '人物方向、妆发造型与个人影像',
       bespoke: '私人场合、花艺空间与特别拍摄',
@@ -18,7 +18,7 @@ const dict = {
     footer: '© VIVIAN ADVENTURE. All rights reserved.'
   },
   en: {
-    nav: { home: 'Home', private: 'Private Clients', commercial: 'Commercial', businessOverview: 'Brand & Commercial Execution', imageDirection: 'Image Direction', bespoke: 'Bespoke', corporate: 'Commercial Case Studies', talent: 'Talent', portfolio: 'Portfolio', about: 'Team', contact: 'Contact Us' },
+    nav: { home: 'Home', private: 'Private Clients', commercial: 'Commercial', businessOverview: 'Brand & Commercial Execution', imageDirection: 'Image Direction', bespoke: 'Bespoke', corporate: 'Commercial Projects', talent: 'Talent', portfolio: 'Portfolio', about: 'Team', contact: 'Contact Us' },
     navDesc: {
       imageDirection: 'Personal direction, beauty, styling & imagery',
       bespoke: 'Private occasions, flowers, spaces & special productions',

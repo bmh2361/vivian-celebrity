@@ -11,14 +11,14 @@ export default function Corporate() {
   const withBase = (p) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
   const copy = {
     zh: {
-      heroTitle: '企业策划案例',
+      heroTitle: '商业项目案例',
       heroSub: '时装周 · 产品内容 · 演出 · 品牌与文化活动',
       heroDesc: '从人物与产品内容，到舞台演出、品牌发布和文化交流，记录不同项目中的制作与执行。',
       caseTitle: '精选项目',
       caseDesc: '按项目类型浏览制作、协作与交付。',
     },
     en: {
-      heroTitle: 'Commercial Case Studies',
+      heroTitle: 'Commercial Projects',
       heroSub: 'Fashion Week · Product Content · Performance · Events',
       heroDesc: 'Selected work across talent and product content, live performance, brand launches and cultural events.',
       caseTitle: 'Selected Work',

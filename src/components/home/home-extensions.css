@@ -1,0 +1,56 @@
+.home-extensions .home-image-direction-feature { margin-block: 40px 80px; }
+.home-image-direction-feature .image-direction-heading h2 { margin: 0; font-size: clamp(72px, 7.2vw, 128px); line-height: .98; letter-spacing: -.055em; font-weight: 400; white-space: pre-line; text-wrap: wrap; }
+.home-image-direction-feature .image-direction-intro h3 { margin: 0 0 22px; font-size: clamp(25px, 2.1vw, 36px); line-height: 1.45; letter-spacing: -.035em; font-weight: 400; white-space: pre-line; text-wrap: balance; }
+.home-image-direction-link { display: flex; justify-content: flex-end; margin-top: 28px; }
+.home-extension-link { display: inline-flex; align-items: center; gap: 16px; min-height: 44px; max-width: 100%; border-bottom: 1px solid #b8a386; color: #8b7048; font-size: 14px; line-height: 1.6; }
+.home-extension-link:hover { color: #111; border-color: #8b7048; }
+.home-extensions a:focus-visible { outline: 2px solid #9a7b4f; outline-offset: 5px; }
+.home-commercial-capabilities { margin-block: 0 80px; }
+.home-selected-commercial-work { margin-block: 0 32px; padding-top: 48px; border-top: 1px solid #ddd8d0; }
+.home-selected-commercial-work > header { max-width: 768px; }
+.home-selected-commercial-work > header h2 { margin: 0; font-size: 30px; line-height: 1.35; font-weight: 600; letter-spacing: .025em; text-wrap: balance; }
+.home-selected-commercial-work > header p { margin-top: 16px; color: #666; font-size: 16px; line-height: 1.75; }
+.home-selected-projects-more { margin-top: 40px; }
+.home-projects-unavailable { min-height: 240px; display: grid; align-content: center; margin-top: 32px; color: #666; font-size: 15px; line-height: 1.8; }
+
+@media (min-width: 1024px) {
+  .home-page .home-extensions { display: flex; flex-direction: column; gap: 96px; margin-top: 96px; }
+  .home-page .home-image-direction-feature { margin-block: 0; padding-block: 0; }
+  .home-page .home-image-direction-feature .image-direction-hero { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; }
+  .home-page .home-image-direction-feature .image-direction-intro { max-width: none; }
+  .home-page .home-commercial-capabilities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; margin-block: 0; }
+  .home-page .home-commercial-capabilities > p:first-child { grid-column: 1 / -1; }
+  .home-page .home-commercial-capabilities > h2 { grid-column: 1; max-width: none; line-height: 1.35; letter-spacing: .025em; }
+  .home-page .home-commercial-capabilities > p:nth-child(3) { grid-column: 2; max-width: none; }
+  .home-page .home-commercial-capabilities > .grid { grid-column: 1 / -1; }
+  .home-page .home-selected-commercial-work { margin-block: 0 32px; padding-top: 40px; }
+  .home-page .home-selected-commercial-work > header { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; max-width: none; }
+  .home-page .home-selected-commercial-work > header p { margin-top: 0; }
+}
+
+@media (min-width: 1280px) {
+  .home-page .home-selected-commercial-work .case-browser-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+}
+
+@media (max-width: 1100px) and (min-width: 768px) {
+  .home-image-direction-feature .image-direction-heading h2 { font-size: 65px; }
+  .home-extensions[lang="zh-CN"] .home-image-direction-feature .image-direction-heading h2 { font-size: 68px; }
+  .home-image-direction-feature .image-direction-intro h3 { font-size: 24px; }
+}
+
+@media (max-width: 767px) {
+  .home-extensions .home-image-direction-feature { margin-block: 24px 56px; }
+  .home-image-direction-feature .image-direction-heading h2 { font-size: clamp(41px, 11vw, 60px); line-height: 1.1; white-space: normal; letter-spacing: -.045em; margin-bottom: 22px; }
+  .home-extensions[lang="zh-CN"] .home-image-direction-feature .image-direction-heading h2 { font-size: 48px; }
+  .home-image-direction-feature .image-direction-intro h3 { font-size: 31px; margin-bottom: 18px; }
+  .home-image-direction-link { justify-content: flex-start; margin-top: 22px; }
+  .home-commercial-capabilities { margin-bottom: 56px; }
+  .home-selected-commercial-work { padding-top: 32px; }
+  .home-selected-commercial-work > header h2 { font-size: 24px; }
+  .home-selected-projects-more { margin-top: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-commercial-capabilities article, .home-commercial-capabilities a, .home-commercial-capabilities a span { transition: none; }
+  .home-commercial-capabilities article:hover, .home-commercial-capabilities a:hover span { transform: none; }
+}

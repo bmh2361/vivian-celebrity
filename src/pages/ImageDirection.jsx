@@ -2,13 +2,11 @@ import '../index.css';
 import './image-direction.css';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useLang } from '../layout/Layout.jsx';
+import ImageDirectionHero, { imageDirectionHeroCopy } from '../components/ImageDirectionHero.jsx';
 
 const base = (import.meta.env.BASE_URL || '/').replace(/\/+$/, '');
 const copy = {
   zh: {
-    title: '形象美学', lead: '先理解你，\n再让形象有自己的表达。',
-    intro: '你的气质、所处的场合与想传递的感受，共同决定形象的方向。Vivian Adventure 从人物出发，将妆发、服装、场景与镜头一起考虑，让现场的呈现与留下的内容相互呼应。',
-    note: '妆发、造型、摄影与个人内容，均可独立委托；也可由我们统筹完整人物视觉。',
     personLabel: '人物，是所有判断的起点。',
     personTitle: '让每一个决定，\n都有同一个出发点。',
     personText: '我们先了解你希望保留的特点、这次出现的场合，以及内容将用于哪里。以此确定形象方向，再安排妆发、衣橱搭配与拍摄。共同的参考让准备时的选择更清楚，也让现场调整有据可循。',
@@ -35,14 +33,11 @@ const copy = {
     practice: '人物方向也延伸至影视造型指导、短剧和短视频的视觉体系、跨团队沟通及多机位协调。品牌与产品的英国制作由 Commercial 承接。',
     boundary: '形象美学围绕人物与个人内容。私人场合中的花艺、空间、场景及特别制作，由 Bespoke 组织整体体验。',
     workLink: '查看精选作品', bespokeLink: '了解高端定制',
-    alts: ['人物依偎在苔藓与绿植旁的近景肖像', '夜间灯光下穿黑色皮衣的人物', '伦敦眼与巴士旁穿黑色造型的人物', '浅色礼服人物在户外的肖像', '自然肤色妆容的人物近景'],
+    alts: [imageDirectionHeroCopy.zh.alt, '夜间灯光下穿黑色皮衣的人物', '伦敦眼与巴士旁穿黑色造型的人物', '浅色礼服人物在户外的肖像', '自然肤色妆容的人物近景'],
     captions: ['人物与造型', '人物与场景', '私人肖像', 'Beauty study'],
     videos: ['棕色丝绒造型人物短片', '刺绣造型人物短片'],
   },
   en: {
-    title: 'Image\nDirection', lead: 'The person comes first.',
-    intro: 'How you want to be seen begins with who you are. From our London studio, we connect beauty, styling, setting and camera around your character, the occasion and the images you want to make.',
-    note: 'Commission make-up, styling, photography or personal content individually, or bring them together through complete image direction.',
     personLabel: 'A point of view, built around you.',
     personTitle: 'One direction.\nConsidered all the way through.',
     personText: 'We agree what the image needs to say before deciding on the look or the shoot. Your character, the setting and the intended use give everyone a shared reference, making choices clearer in preparation and refinements more considered on the day.',
@@ -69,7 +64,7 @@ const copy = {
     practice: 'Our attention to character also informs film and television styling, short-form drama, visual systems, cross-team planning and multicamera coordination. UK production for brands and products sits within Commercial.',
     boundary: 'Image Direction centres on the person and their content. Bespoke develops the wider experience for private occasions, flowers, spaces, scene design and special productions.',
     workLink: 'View selected work', bespokeLink: 'Explore Bespoke',
-    alts: ['A close portrait beside moss and green foliage', 'A portrait in a black leather look under evening lights', 'A portrait in black beside the London Eye and a bus', 'An outdoor portrait in a pale dress', 'A close beauty portrait with a natural palette'],
+    alts: [imageDirectionHeroCopy.en.alt, 'A portrait in a black leather look under evening lights', 'A portrait in black beside the London Eye and a bus', 'An outdoor portrait in a pale dress', 'A close beauty portrait with a natural palette'],
     captions: ['Person & styling', 'Person & place', 'Personal portrait', 'Beauty study'],
     videos: ['Personal film in a brown velvet look', 'Personal film in an embroidered look'],
   },
@@ -93,11 +88,7 @@ export default function ImageDirection() {
   const reduced = useReducedMotion();
   const reveal = { initial: reduced ? false : { opacity: 0, y: 14 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: .12 }, transition: { duration: .55 } };
   return <article className="image-direction layout-visual" lang={lang === 'zh' ? 'zh-CN' : 'en-GB'}>
-    <header className="image-direction-hero">
-      <div className="image-direction-heading"><p className="image-direction-eyebrow">Vivian Adventure / Private Clients / London</p><motion.h1 initial={reduced ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .5 }}>{t.title}</motion.h1></div>
-      <motion.figure className="image-direction-hero-photo" initial={reduced ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}><img src={`${base}/talent/hangphan/02.jpg`} width="918" height="1270" alt={t.alts[0]} fetchPriority="high" loading="eager" decoding="async" /></motion.figure>
-      <motion.div className="image-direction-intro" initial={reduced ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .55, delay: .1 }}><h2>{t.lead}</h2><p>{t.intro}</p><p className="image-direction-note">{t.note}</p></motion.div>
-    </header>
+    <ImageDirectionHero lang={lang} />
     <motion.section className="image-direction-person" {...reveal}><p className="image-direction-eyebrow">{t.personLabel}</p><h2>{t.personTitle}</h2><div><p>{t.personText}</p><p>{t.personValue}</p></div></motion.section>
     <section className="image-direction-scope"><motion.div className="image-direction-section-heading" {...reveal}><p className="image-direction-eyebrow">{t.scopeLabel}</p><h2>{t.scopeTitle}</h2></motion.div><div className="image-direction-style"><motion.div {...reveal}><Photo index={0} t={t} /></motion.div><motion.div {...reveal}><Photo index={1} t={t} /></motion.div></div><dl className="image-direction-capabilities">{t.capabilities.map(([title, list, description]) => <div key={title}><dt>{title}</dt><dd className="image-direction-services">{list}</dd><dd>{description}</dd></div>)}</dl></section>
     <section className="image-direction-occasions"><motion.div className="image-direction-occasion-copy" {...reveal}><p className="image-direction-eyebrow">{t.occasionsLabel}</p><h2>{t.occasionsTitle}</h2><p>{t.occasionsText}</p><p>{t.bridal}</p></motion.div><div className="image-direction-occasion-images"><motion.div className="image-direction-occasion-main" {...reveal}><Photo index={2} t={t} /></motion.div><motion.div className="image-direction-occasion-detail" {...reveal}><Photo index={3} t={t} /></motion.div></div></section>

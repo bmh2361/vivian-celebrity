@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useLang } from '../layout/Layout.jsx';
 import '../index.css';
+import CommercialCapabilities from '../components/CommercialCapabilities.jsx';
+import { commercialCapabilities } from '../data/commercialCapabilities.js';
 
 const copy = {
 	zh: {
@@ -8,19 +10,12 @@ const copy = {
 		title: '帮助品牌在英国开展业务、创造内容并落地执行。',
 		text: '从品牌策划、内容制作到达人、活动与英国本地执行，Vivian Adventure 根据项目目标组织合适的人、资源与执行团队。',
 		items: [
-			{ no: '01', title: '企业策划案例', en: 'Commercial Case Studies', text: '品牌活动、视觉内容、合作策划与英国本地执行。', href: '/pages/corporate.html', cta: '查看企业策划案例' },
+			{ no: '01', title: '商业项目案例', en: 'Commercial Projects', text: '品牌活动、视觉内容、合作策划与英国本地执行。', href: '/pages/corporate.html', cta: '查看商业项目案例' },
 			{ no: '02', title: '达人 · 网红 · 模特', en: 'Talent & Creator Services', text: '为广告、内容、展会与品牌活动寻找并协调合适的人才。', href: '/talent/', cta: '查看人才服务' },
 		],
 		deliverTitle: '企业可以委托我们做什么？',
 		deliverText: '从一次品牌活动、一场展会、一组商业内容，到完整的英国本地 Campaign，我们可以根据项目目标组合策划、人才、内容与现场执行。',
-		deliver: [
-			{ no: '01', en: 'UK BRAND ENTRY & LOCAL EXECUTION', title: '品牌进入英国与本地落地', text: '帮助准备进入或已经进入英国市场的品牌，把品牌目标转化为可实际执行的本地项目，包括内容、活动、人才与执行资源的组织。', keywords: ['Planning', 'Localisation', 'Campaign', 'Local Execution'] },
-			{ no: '02', en: 'EVENTS & BRAND ACTIVATION', title: '品牌活动 · 发布会 · 展会', text: '从展会、发布会到品牌快闪和客户活动，我们可以根据 Brief 协调场地、人才、内容、拍摄与现场执行需求。', keywords: ['Exhibition', 'Launch', 'Pop-up', 'Brand Activation', 'VIP Events'] },
-			{ no: '03', en: 'TALENT & CREATOR SOURCING', title: '达人 · 网红 · 模特 · 演员', text: '根据品牌、受众、平台和项目要求寻找合适的人才，并协助候选筛选、档期确认、Brief 沟通及项目协调。', keywords: ['Models', 'Creators', 'Influencers', 'Actors', 'Event Talent'], href: '/talent/', cta: '查看 Talent & Creator Services' },
-			{ no: '04', en: 'COMMERCIAL CONTENT PRODUCTION', title: '商业摄影 · 视频 · 品牌内容', text: '为品牌制作商业摄影、视频、社交媒体与 Campaign 内容，并根据需要协调创意、拍摄团队、人才和现场制作。', keywords: ['Photography', 'Video', 'Campaign', 'Social Content'] },
-			{ no: '05', en: 'INTEGRATED CAMPAIGN DELIVERY', title: 'Campaign 整合执行', text: '如果项目同时涉及人才、拍摄、内容、活动或英国本地执行，我们可以将不同环节整合为一个统一的项目执行流程，减少品牌方协调多个供应商的成本。', keywords: ['Planning', 'Talent', 'Production', 'Activation', 'Delivery'], flow: true },
-			{ no: '06', en: 'BRAND PARTNERSHIPS', title: '品牌合作与商业资源协调', text: '针对适合的品牌、人才与内容项目，协助建立商业合作、Campaign 出镜、Creator Collaboration 及长期合作机会。', keywords: ['Collaborations', 'Appearances', 'Ambassadors', 'Long-term Partnerships'] },
-		],
+		deliver: commercialCapabilities.zh,
 		needTitle: '你现在需要解决什么？',
 		needText: '无需先研究我们的服务架构，从您当前的项目需求开始即可。',
 		needs: [
@@ -54,19 +49,12 @@ const copy = {
 		title: 'Helping brands operate, create and activate in the UK.',
 		text: 'From brand planning and content production to talent, events and UK-based execution, Vivian Adventure organises the right people, resources and delivery team around each project objective.',
 		items: [
-			{ no: '01', title: 'Commercial Case Studies', en: '企业策划案例', text: 'Brand events, visual content, partnership planning and UK-based execution.', href: '/pages/corporate.html', cta: 'Explore Commercial Case Studies' },
+			{ no: '01', title: 'Commercial Projects', en: '商业项目案例', text: 'Brand events, visual content, partnership planning and UK-based execution.', href: '/pages/corporate.html', cta: 'Explore Commercial Projects' },
 			{ no: '02', title: 'Talent & Creator Services', en: '达人 · 网红 · 模特', text: 'Talent sourcing and coordination for campaigns, content, exhibitions and brand activations.', href: '/talent/', cta: 'Explore Talent Services' },
 		],
 		deliverTitle: 'What can you entrust us to deliver?',
 		deliverText: 'From a brand event, exhibition or commercial content shoot to a coordinated UK campaign, we combine planning, talent, content and on-site delivery around the project objective.',
-		deliver: [
-			{ no: '01', en: 'UK BRAND ENTRY & LOCAL EXECUTION', title: 'UK Brand Entry & Local Execution', text: 'For brands preparing to enter or already operating in the UK, we help translate brand objectives into executable local projects by organising content, activations, talent and delivery resources.', keywords: ['Planning', 'Localisation', 'Campaign', 'Local Execution'] },
-			{ no: '02', en: 'EVENTS & BRAND ACTIVATION', title: 'Events, Launches & Exhibitions', text: 'From exhibitions and product launches to pop-ups and client events, we can coordinate venue requirements, talent, content, filming and on-site delivery around the brief.', keywords: ['Exhibition', 'Launch', 'Pop-up', 'Brand Activation', 'VIP Events'] },
-			{ no: '03', en: 'TALENT & CREATOR SOURCING', title: 'Talent & Creator Sourcing', text: 'We source around the brand, audience, platform and project requirements, supporting shortlisting, availability checks, brief communication and project coordination.', keywords: ['Models', 'Creators', 'Influencers', 'Actors', 'Event Talent'], href: '/talent/', cta: 'View Talent & Creator Services' },
-			{ no: '04', en: 'COMMERCIAL CONTENT PRODUCTION', title: 'Commercial Content Production', text: 'We produce commercial photography, video, social and campaign content, coordinating creative, crew, talent and on-site production as the project requires.', keywords: ['Photography', 'Video', 'Campaign', 'Social Content'] },
-			{ no: '05', en: 'INTEGRATED CAMPAIGN DELIVERY', title: 'Integrated Campaign Delivery', text: 'When a project spans talent, production, content, activation or local execution, we can organise the moving parts into one coordinated delivery process, reducing the need to manage multiple suppliers.', keywords: ['Planning', 'Talent', 'Production', 'Activation', 'Delivery'], flow: true },
-			{ no: '06', en: 'BRAND PARTNERSHIPS', title: 'Brand Partnerships', text: 'For suitable brands, talent and content projects, we support collaborations, campaign appearances, creator partnerships and longer-term opportunities.', keywords: ['Collaborations', 'Appearances', 'Ambassadors', 'Long-term Partnerships'] },
-		],
+		deliver: commercialCapabilities.en,
 		needTitle: 'What do you need to solve right now?',
 		needText: 'You do not need to navigate our service structure first. Start with the project in front of you.',
 		needs: [
@@ -125,23 +113,7 @@ export default function Business() {
 				))}
 			</section>
 
-			<motion.section initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.08 }} transition={{ duration: 0.55 }}>
-				<p className="text-xs font-semibold tracking-[0.22em] text-[#9A7B4F]">WHAT WE CAN DELIVER</p>
-				<h2 className="mt-4 max-w-4xl text-2xl md:text-3xl font-semibold tracking-wide text-[#111]">{t.deliverTitle}</h2>
-				<p className="mt-4 max-w-3xl leading-7 text-[#666]">{t.deliverText}</p>
-				<div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-					{t.deliver.map((item, index) => (
-						<motion.article key={item.no} initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.45, delay: index * 0.06 }} className={`${item.flow ? 'border-[#E6CF9A] bg-[#fbf8f1]' : 'border-[#e9e3d8] bg-[#fffdfa]'} rounded-2xl border p-7 md:p-8 transition-[transform,border-color,background-color] duration-300 ease-out hover:-translate-y-[3px] hover:border-[#d5bd84] hover:bg-[#fffaf1]`}>
-							<div className="flex items-center gap-3 text-[10px] font-semibold tracking-[0.18em] text-[#B08B43]"><span>{item.no}</span><span aria-hidden="true" className="h-px w-5 bg-[#D8BE83]" /></div>
-							<p className="mt-5 text-[10px] font-semibold leading-5 tracking-[0.14em] text-[#9A7B4F]">{item.en}</p>
-							<h3 className="mt-3 text-xl font-semibold leading-snug text-[#111]">{item.title}</h3>
-							<p className="mt-4 text-sm leading-7 text-[#666]">{item.text}</p>
-							<p className="mt-7 border-t border-[#e9e3d8] pt-5 text-[10px] font-medium uppercase leading-6 tracking-[0.11em] text-[#746c60]">{item.keywords.join(' · ')}</p>
-							{item.href && <a href={withBase(item.href)} className="group mt-5 inline-flex items-center gap-2 border-b border-[#E6CF9A] pb-1 text-xs font-medium text-[#8B7048] transition-colors hover:border-[#9A7B4F] hover:text-[#6F5737]">{item.cta}<span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span></a>}
-						</motion.article>
-					))}
-				</div>
-			</motion.section>
+			<CommercialCapabilities title={t.deliverTitle} text={t.deliverText} items={t.deliver} withBase={withBase} />
 
 			<motion.section initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.08 }} transition={{ duration: 0.55 }}>
 				<p className="text-xs font-semibold tracking-[0.22em] text-[#9A7B4F]">START WITH YOUR NEED</p>

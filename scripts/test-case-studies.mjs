@@ -6,6 +6,7 @@ import crypto from 'node:crypto';
 import { CASE_CATEGORIES, loadCaseStudies, validateCaseStudy } from './case-studies-lib.mjs';
 import { renderCaseStudyHtml } from './case-study-html.mjs';
 import { projectHref } from '../src/components/cases/caseStudyUtils.js';
+import { selectFeaturedProjects } from '../src/components/home/featuredProjects.js';
 
 const root = fs.mkdtempSync(path.join(os.tmpdir(), 'va-case-tests-'));
 const contentDir = path.join(root, 'public/case-studies');
@@ -102,6 +103,20 @@ try {
   assert.ok(live.every((p) => p.status === 'published'));
   assert.equal(new Set(live.map((p) => p.slug)).size, live.length);
   assert.ok(live.every((p) => CASE_CATEGORIES[p.primaryCategory]));
+  const originalCases = JSON.stringify(live);
+  for (const lang of ['zh', 'en']) {
+    const featured = selectFeaturedProjects(live, lang);
+    assert.deepEqual(featured.map((project) => project.slug), ['london-fashion-week-2026', 'lil-ghost-london-live-2026', 'agibot-uk-launch-2026', 'geely-ex5-uk-launch-2025']);
+    assert.equal(featured[0].media.cover.src, '/case-studies/london-fashion-week-2026/01-cover.jpg');
+    const fallback = selectFeaturedProjects(live.filter((project) => project.slug !== 'lil-ghost-london-live-2026'), lang);
+    assert.equal(fallback.length, 4);
+    assert.ok(!fallback.some((project) => project.slug === 'lil-ghost-london-live-2026'));
+  }
+  for (const invalid of [undefined, null, {}, [], [null], [{ status: 'draft' }]]) assert.deepEqual(selectFeaturedProjects(invalid, 'en'), []);
+  const unavailable = { ...live[0], languages: { en: { ready: false } } };
+  assert.deepEqual(selectFeaturedProjects([unavailable], 'en'), []);
+  assert.deepEqual(selectFeaturedProjects([{ ...live[0], media: {} }], 'en'), []);
+  assert.equal(JSON.stringify(live), originalCases, 'home curation must not mutate the shared case data');
   const hashes = (p) => new Set([p.media.cover, p.media.hero, p.media.thumbnail, ...p.media.gallery].map((image) => crypto.createHash('sha256').update(fs.readFileSync(path.resolve('public', image.src.slice(1)))).digest('hex')));
   const wang = live.find((p) => p.slug === 'wang-qing-london-fashion-week-2025');
   const qinglian = live.find((p) => p.slug === 'qinglian-london-fashion-week-2025');

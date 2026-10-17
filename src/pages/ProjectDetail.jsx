@@ -36,7 +36,7 @@ export default function ProjectDetail() {
   const project = caseStudies.find((item) => item.slug === slug) || null;
   const content = projectContent(project, lang);
   const copy = lang === 'zh' ? {
-    back: '企业策划案例',
+    back: '商业项目案例',
     unavailableTitle: '项目暂不可用',
     unavailableText: '该项目不存在、尚未发布，或当前不可公开访问。',
     languageUnavailable: '该项目暂未提供中文版本。',
@@ -57,7 +57,7 @@ export default function ProjectDetail() {
     location: '地点',
     skip: '跳至项目正文',
   } : {
-    back: 'Commercial Case Studies',
+    back: 'Commercial Projects',
     unavailableTitle: 'Project unavailable',
     unavailableText: 'This project does not exist, is not published, or is not currently available for public access.',
     languageUnavailable: 'This project is not yet available in English.',

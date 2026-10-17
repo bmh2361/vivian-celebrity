@@ -3,6 +3,8 @@ import './home.css';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useLang } from '../layout/Layout.jsx';
 import { useState } from 'react';
+import HomeExtensions from '../components/home/HomeExtensions.jsx';
+import PartnerMarquee from '../components/home/PartnerMarquee.jsx';
 
 // Optical bounds preserve the complete source canvas; percentages are relative to each tile.
 const partnerLogos = [
@@ -77,7 +79,7 @@ export default function Home() {
 					description: '从品牌内容到活动执行，将创意方向转化为真正落地的英国商业表达。',
 					items: [
 						{ label: '品牌与商业执行', href: '/business/' },
-						{ label: '企业策划案例', href: '/pages/corporate.html' },
+						{ label: '商业项目案例', href: '/pages/corporate.html' },
 						{ label: '商业内容' },
 						{ label: '英国本地项目落地' },
 					],
@@ -136,7 +138,7 @@ export default function Home() {
 					description: 'From brand content to activations, we translate creative direction into polished UK-based execution.',
 					items: [
 						{ label: 'Brand & Commercial Execution', href: '/business/' },
-						{ label: 'Commercial Case Studies', href: '/pages/corporate.html' },
+						{ label: 'Commercial Projects', href: '/pages/corporate.html' },
 						{ label: 'Commercial Content' },
 						{ label: 'UK Delivery' },
 					],
@@ -183,7 +185,7 @@ export default function Home() {
 
 
 	return (
-		<div className="">
+		<div className="home-page">
 			{/* Hero：文字在左，图卡片置于右上角（非全屏背景） */}
 			<section className="relative overflow-hidden bg-white">
 				<div className="home-hero-container layout-standard mx-auto px-4 sm:px-6 pt-14 md:pt-20 pb-12 md:pb-16 relative">
@@ -240,7 +242,7 @@ export default function Home() {
 						</div>
 
 						{/* 右侧图片卡片（移动端也展示） */}
-						<motion.div initial={{ opacity: 0, y: -6 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, ease: 'easeOut' }} className="w-full">
+						<motion.div initial={{ opacity: 0, y: -6 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, ease: 'easeOut' }} className="home-hero-media w-full">
 							<div className="group rounded-3xl p-[1.5px] bg-gradient-to-br from-[#F4E7BE] via-[#CFAF6B] to-[#9A7B4F] shadow-[0_18px_42px_rgba(0,0,0,0.14)] transition-transform duration-500 will-change-transform">
 								<div className="overflow-hidden rounded-[22px] bg-[#fbfaf7] group-hover:shadow-[0_22px_48px_rgba(0,0,0,0.16)] group-hover:-translate-y-1 transition-all duration-500">
 									<HeroImage withBase={withBase} className="block h-auto w-full object-contain" />
@@ -266,7 +268,7 @@ export default function Home() {
 							<div className="inline-flex items-center gap-2 text-xs tracking-[0.18em] text-[#9A7B4F]">
 								<span className="px-3 py-1 rounded-full border border-[#E6CF9A] bg-[#fbf8ef]">BUSINESS</span>
 								<span className="hidden sm:inline h-px w-10 bg-[#E6CF9A]" />
-								<span className="hidden sm:inline">COMMERCIAL CASE STUDIES</span>
+								<span className="hidden sm:inline">COMMERCIAL PROJECTS</span>
 							</div>
 							<h2 className="mt-3 text-xl md:text-2xl font-extrabold text-[#111]">{lang === 'en' ? 'Partners' : '合作伙伴'}</h2>
 							<p className="mt-2 text-sm text-[#555] break-words">{lang === 'en' ? 'One project, long‑term partnership · Trusted by leading brands' : '一次合作，长久合作 · 携手共赢'}</p>
@@ -275,22 +277,14 @@ export default function Home() {
 							href={withBase('/pages/corporate.html#selected-projects')}
 							className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[#9A7B4F] border border-[#E6CF9A] bg-white hover:bg-[#f8f3e7] transition-colors"
 						>
-							{lang === 'en' ? 'Commercial Case Studies' : '查看企业策划案例'}
+							{lang === 'en' ? 'Commercial Projects' : '查看商业项目案例'}
 						</a>
 					</div>
 
-					{/* 合作伙伴 LOGO 网格（全端展示） */}
-					<div className="home-partners-grid">
-						{partnerLogos.map((logo) => (
-							<div key={logo.file} className="home-partner-tile">
-								<img src={withBase(`/partners-logos/${logo.file}`)} alt={logo.name} loading="lazy" decoding="async"
-									style={{ width: `${logo.width}%`, height: `${logo.height}%` }} />
-							</div>
-						))}
-					</div>
-					<p className="home-partners-note">More to come.</p>
+					<PartnerMarquee logos={partnerLogos} withBase={withBase} lang={lang} />
 				</motion.section>
 			</section>
+			<HomeExtensions lang={lang} withBase={withBase} />
 		</div>
 	);
 }

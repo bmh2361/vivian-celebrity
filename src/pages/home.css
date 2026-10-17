@@ -5,7 +5,6 @@
   .home-hero-layout { grid-template-columns: minmax(584px, 45fr) minmax(0, 55fr); gap: 32px; }
   .home-hero-card h1 { max-width: 18em; }
   .home-hero-card > p { max-width: 38em; }
-  .home-partners-container .home-partners-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 }
 .home-pillar { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 14px; padding: 20px 0; border-bottom: 1px solid #eee; }
 .home-pillar-body { min-width: 0; }
@@ -17,13 +16,19 @@
 .home-pillar-cta { margin-top: 8px; min-height: 24px; }
 .home-selected-work { margin-top: 20px; }
 .home-selected-work a { min-height: 32px; align-items: center; }
-.home-partners-grid { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
-.home-partner-tile { height: 124px; display: flex; align-items: center; justify-content: center; border: 1px solid #eee; border-radius: 12px; background: #fff; transition: border-color .3s, box-shadow .3s; }
-.home-partner-tile img { display: block; min-width: 0; min-height: 0; object-fit: contain; }
-.home-partner-tile:hover { border-color: #dfd4bf; box-shadow: 0 4px 16px rgb(0 0 0 / 3%); }
-.home-partners-note { margin-top: 22px; text-align: right; font-size: 12px; letter-spacing: .08em; color: #888; }
-@media (min-width: 640px) { .home-partners-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; } .home-partner-tile { height: 144px; } }
-@media (min-width: 1024px) { .home-partners-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+@media (min-width: 1024px) {
+  [data-page="home"] .home-page :is(.home-hero-container, .home-partners-container, .home-image-direction-feature, .home-commercial-capabilities, .home-selected-commercial-work) { width: calc(100% - 96px); max-width: 1280px; margin-inline: auto; padding-inline: 0; }
+  .home-page .home-hero-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+  .home-page .home-hero-card { align-self: stretch; }
+  .home-page .home-selected-work { margin-top: auto; padding-top: 20px; }
+  .home-page .home-partners-container { padding-bottom: 0; }
+}
+@media (min-width: 1280px) {
+  .home-page .home-hero-media { align-self: stretch; }
+  .home-page .home-hero-media > div, .home-page .home-hero-media > div > div { height: 100%; }
+  .home-page .home-hero-media > div > div { display: grid; place-items: center; }
+  .home-page .home-hero-media img { height: 100%; object-fit: contain; }
+}
 @media (max-width: 639px) {
   .home-pillar { grid-template-columns: 18px minmax(0, 1fr); gap: 10px; padding: 16px 0; }
   .home-pillar-description { font-size: 13px; line-height: 1.65; }
@@ -31,5 +36,4 @@
   .home-capability-index { column-gap: 16px; }
   .home-pillar-cta { margin-top: 8px; min-height: 32px; }
 }
-@media (prefers-reduced-motion: reduce) { .home-partner-tile { transition: none; } }
 
